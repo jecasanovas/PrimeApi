@@ -1,0 +1,25 @@
+LessonId, Description
+1, Comandos esenciales
+2, Buscar ficheros
+3, Buscar y ejecutar comandos con los ficheros encontrados
+4, Listar contenido de ficheros
+5, Fichero de ejemplo
+6, Tratar contenido vertical de ficheros
+7, Tratar contenido horizontal de ficheros
+8, Estadísticas del contenido de ficheros
+9, Buscar en contenido de ficheros
+10, Ordenar contenido de ficheros
+11, Transformar contenido de ficheros - Comando tr
+12, Transformar contenido de ficheros - Comando sed
+13, Compresión - Comando tr
+14, Utilidades varias
+15, Gestión de usuarios y permisos
+16, Gestión de procesos
+17, Programar comandos
+18, Alias
+19, Información del SO
+20, Monitorización
+21, Conectividad
+22, Comandos SSH (Secure SHell)
+23, Utilidades extra
+24, ¡Enhorabuena!
