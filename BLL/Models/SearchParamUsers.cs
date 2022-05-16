@@ -18,7 +18,7 @@ namespace BLL.Models
 
         public string Email { get; set; }
 
-        public string? Order { get; set; }
+        public string Order { get; set; }
 
 
     }

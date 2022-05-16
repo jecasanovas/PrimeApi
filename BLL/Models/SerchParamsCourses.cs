@@ -23,7 +23,7 @@ namespace BLL.Models
         public object Name { get; internal set; }
         public string order { get; set; }
         
-        public string? idteacher { get; set; }
+        public string idteacher { get; set; }
 
         public bool onlycount { get; set; }
 
