@@ -13,9 +13,7 @@ namespace BLL.Interfaces.Services
         Task<Adresses> InsertAddresses(Adresses Addresses);
         Task<Adresses> UpdateAddresses(Adresses Addresses);
         Task<int> GetTotalRowsAsysnc(SearchParamsAddresses searchParams);
-      
         Task<int> DeleteAddresses(int id);
         Task<IEnumerable<Adresses>> GetAddressess(SearchParamsAddresses searchParameters);
     }
-    
 }

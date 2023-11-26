@@ -20,9 +20,9 @@ namespace BLL.Services
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
         private readonly IGenericRepository<Technology> _technologyRepository;
-        private readonly IGenericRepository<TechnologyDetails> _technologyDetailRepository;
+        private readonly IGenericRepository<TechnologyDetail> _technologyDetailRepository;
 
-        public TechnologyService(IUnitOfWork unitOfWork, IMapper mapper, IGenericRepository<Technology> technologyRepository, IGenericRepository<TechnologyDetails> technologyDetailRepository)
+        public TechnologyService(IUnitOfWork unitOfWork, IMapper mapper, IGenericRepository<Technology> technologyRepository, IGenericRepository<TechnologyDetail> technologyDetailRepository)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
@@ -45,8 +45,8 @@ namespace BLL.Services
         public async Task DeleteTechnologyDetail(int id)
         {
             await _unitOfWork.BeginTransactionAsync();
-            var entityTechnology = await _unitOfWork.Repository<TechnologyDetails>().GetByIdAsync(id);
-            _unitOfWork.Repository<TechnologyDetails>().Delete(entityTechnology);
+            var entityTechnology = await _unitOfWork.Repository<TechnologyDetail>().GetByIdAsync(id);
+            _unitOfWork.Repository<TechnologyDetail>().Delete(entityTechnology);
             await _unitOfWork.Complete();
             await _unitOfWork.CommitTransaction();
 
@@ -57,9 +57,9 @@ namespace BLL.Services
             return await _technologyRepository.ListAsync(new GenericParams<Technology>(searchParam));
         }
 
-        public async Task<IEnumerable<TechnologyDetails>> GetTechnologyDetails(SearchParam searchParam)
+        public async Task<IEnumerable<TechnologyDetail>> GetTechnologyDetails(SearchParam searchParam)
         {
-            return await _technologyDetailRepository.ListAsync(new GenericParams<TechnologyDetails>(searchParam));
+            return await _technologyDetailRepository.ListAsync(new GenericParams<TechnologyDetail>(searchParam));
         }
 
         public async Task<int> GetTotalRowsTechnology(SearchParam searchParam)
@@ -69,23 +69,23 @@ namespace BLL.Services
 
         public async Task<int> GetTotalRowsTechnologyDetails(SearchParam searchParam)
         {
-            return await _technologyDetailRepository.CountAsync(new GenericParams<TechnologyDetails>(searchParam, true));
+            return await _technologyDetailRepository.CountAsync(new GenericParams<TechnologyDetail>(searchParam, true));
         }
 
 
-        public async Task<int> InsertTechnology(TechnologyDto technology)
+        public async Task<int> InsertTechnology(Technology technology)
         {
-           return  await UpdateTechnology(technology);
-            
+            return await UpdateTechnology(technology);
+
         }
 
-        public async Task<int> InsertTechnologyDetail(TechnologyDetailsDto technologyDetails)
+        public async Task<int> InsertTechnologyDetail(TechnologyDetail technologyDetail)
         {
-            return await UpdateTechnologyDetail(technologyDetails);
-            
+            return await UpdateTechnologyDetail(technologyDetail);
+
         }
 
-        public async Task<int> UpdateTechnology(TechnologyDto technology)
+        public async Task<int> UpdateTechnology(Technology technology)
         {
             await _unitOfWork.BeginTransactionAsync();
 
@@ -102,17 +102,17 @@ namespace BLL.Services
             return entityTechnology.Id;
         }
 
-        public async Task<int> UpdateTechnologyDetail(TechnologyDetailsDto technologyDetails)
+        public async Task<int> UpdateTechnologyDetail(TechnologyDetail technologyDetails)
         {
 
             await _unitOfWork.BeginTransactionAsync();
 
-            var entityTechnology = _mapper.Map<TechnologyDetails>(technologyDetails);
+            var entityTechnology = _mapper.Map<TechnologyDetail>(technologyDetails);
 
             if (entityTechnology.Id > 0)
-                _unitOfWork.Repository<TechnologyDetails>().Update(entityTechnology);
+                _unitOfWork.Repository<TechnologyDetail>().Update(entityTechnology);
             else
-                _unitOfWork.Repository<TechnologyDetails>().Add(entityTechnology);
+                _unitOfWork.Repository<TechnologyDetail>().Add(entityTechnology);
 
             await _unitOfWork.Complete();
 
@@ -122,5 +122,5 @@ namespace BLL.Services
         }
     }
 }
- 
+
 

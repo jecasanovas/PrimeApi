@@ -13,22 +13,22 @@ using System.Threading.Tasks;
 
 namespace BLL.CQRS.Queries
 {
-    public class CourseQueries : IRequest<DataResults<CourseDto>>
+    public record GetCourseQuery : IRequest<DataResults<CourseDto>>
     {
         public SearchParamCourses searchParams;
     }
-    
-    public class CourseQueriesHandler:IRequestHandler<CourseQueries, DataResults<CourseDto>>
+
+    public class GetCourseQueryHandler : IRequestHandler<GetCourseQuery, DataResults<CourseDto>>
     {
         private ICourseService _courseService;
         private IMapper _mapper;
-        public CourseQueriesHandler(ICourseService course, IMapper mapper)
-        {   
+        public GetCourseQueryHandler(ICourseService course, IMapper mapper)
+        {
             _courseService = course;
-            _mapper = mapper;   
+            _mapper = mapper;
         }
 
-        public async Task<DataResults<CourseDto>> Handle(CourseQueries request, CancellationToken cancellationToken)
+        public async Task<DataResults<CourseDto>> Handle(GetCourseQuery request, CancellationToken cancellationToken)
         {
             var courses = await _courseService.GetCourses(request.searchParams);
             //Count results without pagination active, for paging info

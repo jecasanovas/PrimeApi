@@ -11,18 +11,20 @@ using BLL.Models;
 using Microsoft.AspNetCore.Mvc;
 using Courses.Api.Controllers;
 using BLL.Dtos;
+using BLL.Interfaces.Services;
+using Identity.Models;
 
 namespace PrimeApi.Api.Controllers
 {
 
-    public class AddressesController: BaseApiController
+    public class AddressesController : BaseApiController
     {
 
 
-        private readonly IAddressesRepository _addresses;
+        private readonly IAddressesService _addresses;
         public readonly IMapper _mapper;
 
-        public AddressesController(IMapper mapper, IAddressesRepository userRepository)
+        public AddressesController(IMapper mapper, IAddressesService userRepository)
         {
             _addresses = userRepository;
             _mapper = mapper;
@@ -37,9 +39,9 @@ namespace PrimeApi.Api.Controllers
             {
                 var result = await _addresses.GetAddressess(searchParameters);
                 IEnumerable<AdressesDto> data = _mapper.Map<IEnumerable<Adresses>, IEnumerable<AdressesDto>>(result);
-                var rows = await _addresses.GetTotalAddresses(searchParameters);
+                var rows = await _addresses.GetTotalRowsAsysnc(searchParameters);
 
-                return  new Pagination<BLL.Dtos.AdressesDto> (searchParameters.page, searchParameters.pageSize, rows, (IReadOnlyList<BLL.Dtos.AdressesDto>)data);
+                return new Pagination<BLL.Dtos.AdressesDto>(searchParameters.page, searchParameters.pageSize, rows, (IReadOnlyList<BLL.Dtos.AdressesDto>)data);
 
             }
             catch (Exception ex)
@@ -57,7 +59,7 @@ namespace PrimeApi.Api.Controllers
 
             try
             {
-                var addreses = await _addresses.UpdateAddresses(addressDto);
+                var addreses = await _addresses.UpdateAddresses(_mapper.Map<Adresses>(addressDto));
                 return Ok(_mapper.Map<AdressesDto>(addreses));
             }
             catch (Exception ex)
@@ -74,7 +76,7 @@ namespace PrimeApi.Api.Controllers
 
             try
             {
-                var addresses = await _addresses.InsertAddresses(addressesDto);
+                var addresses = await _addresses.InsertAddresses(_mapper.Map<Adresses>(addressesDto));
                 return Ok(_mapper.Map<AdressesDto>(addresses));
 
 

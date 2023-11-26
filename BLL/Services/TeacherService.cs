@@ -23,7 +23,7 @@ namespace BLL.Services
         private readonly IGenericRepository<Teacher> _teacherRepository;
         private readonly IPhotoService _photoService;
 
-     
+
 
         public TeacherService(IUnitOfWork unitOfWork, IMapper mapper, IGenericRepository<Teacher> teacherRepository, IPhotoService photoService)
         {
@@ -31,7 +31,7 @@ namespace BLL.Services
             _mapper = mapper;
             _teacherRepository = teacherRepository;
             _photoService = photoService;
-     
+
         }
         public async Task<IEnumerable<Teacher>> GetTeachers(SearchParamTeachers searchParameters)
         {
@@ -47,17 +47,17 @@ namespace BLL.Services
         public async Task<Teacher> InsertTeacher(Teacher teacher)
         {
 
-            return await  UpdateTeacher(teacher);
+            return await UpdateTeacher(teacher);
         }
 
         public async Task<Teacher> PostFile(int id, IFormFile file)
         {
             try
             {
-              var result =  await _photoService.AddPhotoAsync(file);
-              await _unitOfWork.BeginTransactionAsync();
+                var result = await _photoService.AddPhotoAsync(file);
+                await _unitOfWork.BeginTransactionAsync();
 
-              var teacher = await _teacherRepository.GetByIdAsync(id);
+                var teacher = await _teacherRepository.GetByIdAsync(id);
                 Uri url = result.SecureUrl;
                 teacher.Photo = url.AbsoluteUri;
 
@@ -66,7 +66,7 @@ namespace BLL.Services
                 await _unitOfWork.Complete();
 
                 await _unitOfWork.CommitTransaction();
-               
+
                 return teacher;
 
 
@@ -81,14 +81,12 @@ namespace BLL.Services
         {
             await _unitOfWork.BeginTransactionAsync();
 
-     
-
-            if (teacher.Id > 0) 
+            if (teacher.Id > 0)
                 _unitOfWork.Repository<Teacher>().Update(teacher);
             else
-                _unitOfWork.Repository<Teacher>().Add(teacher); 
+                _unitOfWork.Repository<Teacher>().Add(teacher);
 
-  
+
             await _unitOfWork.Complete();
 
             await _unitOfWork.CommitTransaction();
@@ -97,8 +95,8 @@ namespace BLL.Services
         }
 
         public async Task<int> DeleteTeacher(int id)
-         {
-           await _unitOfWork.BeginTransactionAsync();
+        {
+            await _unitOfWork.BeginTransactionAsync();
 
             var entityTeacher = await _teacherRepository.GetByIdAsync(id);
 

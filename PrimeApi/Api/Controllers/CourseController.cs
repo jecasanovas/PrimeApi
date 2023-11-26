@@ -3,11 +3,8 @@ using AutoMapper;
 using BLL.CQRS.Commands;
 using BLL.CQRS.Queries;
 using BLL.Dtos;
-using BLL.Interfaces.Repositories;
+using BLL.Interfaces;
 using BLL.Models;
-using Core.DBContext;
-using Core.Entities;
-using CsvHelper;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -19,40 +16,34 @@ namespace Courses.Api.Controllers
 {
     public class CourseController : BaseApiController
     {
-        private readonly ICourseRepository _courseRepository;
+        private readonly ICourseService _courseService;
         public readonly IMapper _mapper;
         public readonly IMediator _mediator;
         public readonly IConfiguration _configuration;
 
-        public CourseController(GestionCursosContext context, IMapper mapper, ICourseRepository courseRepository,IMediator mediator, IConfiguration configuration)
+        public CourseController(IMapper mapper, ICourseService courseService, IMediator mediator, IConfiguration configuration)
         {
-            _courseRepository = courseRepository;
+            _courseService = courseService;
             _mapper = mapper;
             _mediator = mediator;
             _configuration = configuration;
         }
 
         [HttpGet]
-
         public async Task<ActionResult<Pagination<CourseDto>>> Course([FromQuery] SearchParamCourses searchParameters)
         {
             try
             {
-                bool useCQRS = false;
-
-                var result = useCQRS ?  await  _mediator.Send(new CourseQueries() 
+                var result = await _mediator.Send(new GetCourseQuery()
                 {
                     searchParams = searchParameters
-                }) :   await _courseRepository.GetCourses(searchParameters);
-
-                return Ok(new Pagination<CourseDto>(searchParameters.page, searchParameters.pageSize, result.Results,(IReadOnlyList<CourseDto>)result.Dto)); 
+                });
+                return Ok(new Pagination<CourseDto>(searchParameters.page, searchParameters.pageSize, result.Results, (IReadOnlyList<CourseDto>)result.Dto));
             }
             catch (Exception ex)
             {
                 return StatusCode(500, $"Internal server error: {ex}");
             }
-
-
         }
 
         [HttpGet]
@@ -62,11 +53,11 @@ namespace Courses.Api.Controllers
         {
             try
             {
-                var result = await _courseRepository.GetCourseDetails(searchParameters);
-                IEnumerable<CourseDetailDto> DetailsDto = _mapper.Map<IEnumerable<CourseDetail>, IEnumerable<CourseDetailDto>>(result);
-                var rows = await _courseRepository.GetTotalCoursesDetails(searchParameters);
-                return new Pagination<CourseDetailDto>(searchParameters.page, searchParameters.pageSize, rows, (IReadOnlyList<CourseDetailDto>)DetailsDto);
-
+                var result = await _mediator.Send(new GetCourseDetailQuery()
+                {
+                    searchParams = searchParameters
+                });
+                return Ok(new Pagination<CourseDetailDto>(searchParameters.page, searchParameters.pageSize, result.Results, (IReadOnlyList<CourseDetailDto>)result.Dto));
             }
             catch (Exception ex)
             {
@@ -74,27 +65,21 @@ namespace Courses.Api.Controllers
             }
         }
 
-        // POST api/<CourseController>
         [HttpPut]
         [Authorize]
         public async Task<ActionResult<CourseDto>> UpdateCourse([FromBody] CourseDto courseDto)
         {
             try
             {
-                bool useCQRS = false;
-
-                return Ok(useCQRS ? await _mediator.Send(new CourseCommand()
+                return Ok(await _mediator.Send(new UpdateCourseCommand()
                 {
-                    Course = courseDto,
-                    OperationDB = Operation.InsertUpdate
-                }): await _courseRepository.UpdateCourse(courseDto));
-
-              }
+                    Course = courseDto
+                }));
+            }
             catch (Exception ex)
             {
                 return StatusCode(500, $"Internal server error: {ex}");
             }
-
         }
 
         [HttpPost]
@@ -103,20 +88,17 @@ namespace Courses.Api.Controllers
         {
             try
             {
-                bool useCQRS = false;
-
-                return Ok(useCQRS ? await _mediator.Send(new CourseCommand() {
-                    OperationDB = Operation.InsertUpdate,
-                    Course = courseDto }) : await _courseRepository.InsertCourse(courseDto));
+                return Ok(await _mediator.Send(new InsertCourseCommand()
+                {
+                    Course = courseDto
+                }));
 
             }
             catch (Exception ex)
             {
                 return StatusCode(500, $"Internal server error: {ex}");
             }
-
         }
-
 
         [HttpPut]
         [Authorize]
@@ -125,13 +107,15 @@ namespace Courses.Api.Controllers
         {
             try
             {
-                return Ok(await _courseRepository.UpdateCourseDetail(courseDetailDto));
+                return Ok(await _mediator.Send(new UpdateCourseDetailCommand()
+                {
+                    Course = courseDetailDto
+                }));
             }
             catch (Exception ex)
             {
                 return StatusCode(500, $"Internal server error: {ex}");
             }
-
         }
 
         [HttpPost]
@@ -141,7 +125,10 @@ namespace Courses.Api.Controllers
         {
             try
             {
-                return Ok(await _courseRepository.InsertCourseDetail(courseDetailDto));
+                return Ok(await _mediator.Send(new InsertCourseDetailCommand()
+                {
+                    Course = courseDetailDto
+                }));
             }
             catch (Exception ex)
             {
@@ -151,29 +138,15 @@ namespace Courses.Api.Controllers
 
         [HttpDelete]
         [Authorize]
-        public async Task<ActionResult> DeleteCourse(int id)
+        public async Task<ActionResult<bool>> DeleteCourse(int id)
         {
             try
             {
-                bool useCQRS = false;
-
-                SearchParamCourses searchParameters = new SearchParamCourses()
+                return await _mediator.Send(new DeleteCourseCommand()
                 {
-                    id = id,
-                    page = 1,
-                    pageSize = 1
-                };
+                    CourseId = id
+                });
 
-                var course = useCQRS ? await _mediator.Send(new CourseQueries()
-                {
-                    searchParams = searchParameters
-                }) : await _courseRepository.GetCourses(searchParameters);
-
-                return Ok(useCQRS ? await _mediator.Send(new CourseCommand()
-                {
-                    Course = course.Dto.ElementAt(0),
-                    OperationDB = Operation.Delete
-                }) : await _courseRepository.DeleteCourse(id));
             }
             catch (Exception ex)
             {
@@ -185,15 +158,17 @@ namespace Courses.Api.Controllers
         [Route("Download")]
         public async Task<ActionResult> DownloadIndex(int id)
         {
-            var result = await _courseRepository.GetCourseDetails(new SearchParamCourses
+            var searchParams = new SearchParamCourses()
             {
-                CourseId = id,
-                page = 1,
-                pageSize = int.MaxValue
+                CourseId = id
+            };
+            var result = await _mediator.Send(new GetCourseDetailQuery()
+            {
+                searchParams = searchParams
             });
-            Reports.CreateReport(result, "CourseIndex.xls", false);
+            Reports.CreateReport(result.Dto, "CourseIndex.xls", false);
 
-            _ = new FileExtensionContentTypeProvider().TryGetContentType("CourseIndex.xls", out string ? contentType);
+            _ = new FileExtensionContentTypeProvider().TryGetContentType("CourseIndex.xls", out string? contentType);
 
             var memory = new MemoryStream();
             using (var stream = new FileStream(@"../files/CourseIndex.xls", FileMode.Open))
@@ -209,18 +184,16 @@ namespace Courses.Api.Controllers
         [Route("File")]
         public async Task<ActionResult<CourseDto>> PostFile(int id)
         {
-
             try
             {
                 var file = Request.Form;
                 if (file.Files == null || file.Files.Count == 0) return NoContent();
-                return Ok(await _courseRepository.PostFile(id, Request.Form.Files[0]));
+                return Ok(await _courseService.PostFile(id, Request.Form.Files[0]));
             }
             catch (Exception ex)
             {
                 return StatusCode(500, $"Internal server error: {ex}");
             }
-
         }
 
         [Authorize]
@@ -236,7 +209,13 @@ namespace Courses.Api.Controllers
                 if (Request.Form?.Files?.Count > 0)
                 {
                     filePath = await FileUtilities.CreateFile(Request.Form.Files[0]);
-                    return Ok(await _courseRepository.InsertCourseDetailsMasive(Reports.ReadCsv(filePath, id)));
+                    var result = Reports.ReadCsv(filePath, id);
+
+                    return Ok(await _mediator.Send(new InsertCourseDetailMasiveCommand()
+                    {
+                        Course = result
+
+                    }));
                 }
                 return NoContent();
             }

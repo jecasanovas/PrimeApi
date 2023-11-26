@@ -9,11 +9,11 @@ namespace BLL.Interfaces.Services
 {
     public interface ITechnologyService
     {
-        Task<int> InsertTechnology(TechnologyDto technology);
-        Task<int> InsertTechnologyDetail(TechnologyDetailsDto technologyDetails);
+        Task<int> InsertTechnology(Technology technology);
+        Task<int> InsertTechnologyDetail(TechnologyDetail technologyDetail);
 
-        Task<int> UpdateTechnology(TechnologyDto technology);
-        Task<int> UpdateTechnologyDetail(TechnologyDetailsDto technologyDetails);
+        Task<int> UpdateTechnology(Technology technology);
+        Task<int> UpdateTechnologyDetail(TechnologyDetail technologyDetail);
 
         Task<int> GetTotalRowsTechnology(SearchParam searchParam);
         Task<int> GetTotalRowsTechnologyDetails(SearchParam searchParam);
@@ -23,7 +23,7 @@ namespace BLL.Interfaces.Services
         Task DeleteTechnologyDetail(int id);
         Task<IEnumerable<Technology>> GetTechnology(SearchParam searchParam);
 
-        Task<IEnumerable<TechnologyDetails>> GetTechnologyDetails(SearchParam searchParam);
+        Task<IEnumerable<TechnologyDetail>> GetTechnologyDetails(SearchParam searchParam);
 
 
     }

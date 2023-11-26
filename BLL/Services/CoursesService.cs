@@ -15,14 +15,14 @@ using System.Threading.Tasks;
 
 namespace BLL.Services
 {
-    public class CoursesService  : ICourseService
+    public class CoursesService : ICourseService
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IGenericRepository<Course> _courseRepository;
         private readonly IGenericRepository<CourseDetail> _courseDetailRepository;
         private readonly IPhotoService _photoService;
 
-        public CoursesService(IUnitOfWork unitOfWork,  IGenericRepository<Course> courseRepository, 
+        public CoursesService(IUnitOfWork unitOfWork, IGenericRepository<Course> courseRepository,
             IGenericRepository<CourseDetail> courseDetailRepository, IPhotoService photoService)
         {
             _unitOfWork = unitOfWork;

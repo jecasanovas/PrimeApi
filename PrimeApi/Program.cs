@@ -6,7 +6,6 @@ using BLL.Interfaces.Repositories;
 using BLL.Interfaces.Services;
 using BLL.Models;
 using BLL.Reposititories;
-using BLL.Repositories;
 using BLL.Services;
 using Core.DBContext;
 using Courses.API.Extensions;
@@ -36,7 +35,7 @@ builder.Services.AddDbContext<AppIdentityDbContext>(x =>
 
 builder.Services.AddIdentityCore<AppUser>()
   .AddEntityFrameworkStores<AppIdentityDbContext>()
-  .AddDefaultTokenProviders(); 
+  .AddDefaultTokenProviders();
 
 
 builder.Services.AddApplicationServices();
@@ -57,19 +56,11 @@ builder.Services.AddCors(opt =>
 builder.Services.AddIdentityServices(builder.Configuration);
 builder.Services.Configure<CloudinarySettings>(builder.Configuration.GetSection("CloudinarySettings"));
 
-builder.Services.AddScoped(typeof(IGenericRepository<>), (typeof(GenericRepository<>)));
-builder.Services.AddScoped<ICourseRepository, CourseRepository>();
-builder.Services.AddScoped<IPaymentInfoRepository,PaymentInfoRepository>();
-builder.Services.AddScoped<ITeacherRepository, TeacherRepository>();
-builder.Services.AddScoped<ICourseRepository, CourseRepository>();
-builder.Services.AddScoped<IUserRepository, UserRepository>();
-builder.Services.AddScoped<IAddressesRepository, AddressesRepository>();
+builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<ICourseService, CoursesService>();
 builder.Services.AddScoped<IPaymentInfo, PaymentInfoService>();
 builder.Services.AddScoped<ITeacherService, TeacherService>();
-builder.Services.AddScoped<ITechnologyDetailRepository, TechnologyDetailRepository>();
-builder.Services.AddScoped<ITechnologyRepository, TechnologyRepository>();
 builder.Services.AddScoped<ITechnologyService, TechnologyService>();
 builder.Services.AddScoped<IPhotoService, PhotoService>();
 builder.Services.AddScoped<IUserService, UserService>();
@@ -77,7 +68,7 @@ builder.Services.AddScoped<IAddressesService, AddressesService>();
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddMediatR(typeof(BLL.CQRS.Queries.CourseQueries).Assembly);
+builder.Services.AddMediatR(typeof(BLL.CQRS.Queries.GetCourseQuery).Assembly);
 
 var app = builder.Build();
 

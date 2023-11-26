@@ -10,17 +10,18 @@ using API.Helpers;
 using BLL.Interfaces.Repositories;
 using AutoMapper;
 using BLL.Models;
+using BLL.Interfaces.Services;
 
 namespace Courses.Api.Controllers
 {
     public class UserInfoController : BaseApiController
     {
-        private readonly IUserRepository _user;
+        private readonly IUserService _user;
         public readonly IMapper _mapper;
 
-        public UserInfoController(IMapper mapper, IUserRepository userRepository)
+        public UserInfoController(IMapper mapper, IUserService userService)
         {
-            _user = userRepository;
+            _user = userService;
             _mapper = mapper;
         }
 
@@ -34,7 +35,7 @@ namespace Courses.Api.Controllers
             {
                 var result = await _user.GetUsers(searchParameters);
                 IEnumerable<UserInfoDto> data = _mapper.Map<IEnumerable<UserInfo>, IEnumerable<UserInfoDto>>(result);
-                var rows = await _user.GetTotalUsers(searchParameters);
+                var rows = await _user.GetTotalRowsAsysnc(searchParameters);
 
                 return new Pagination<UserInfoDto>(searchParameters.page, searchParameters.pageSize, rows, (IReadOnlyList<UserInfoDto>)data);
 
@@ -56,7 +57,7 @@ namespace Courses.Api.Controllers
 
             try
             {
-                var teacherResponse = await _user.UpdateUser(UserInfoDto);
+                var teacherResponse = await _user.UpdateUser(_mapper.Map<UserInfo>(UserInfoDto));
                 return Ok(_mapper.Map<UserInfoDto>(teacherResponse));
             }
             catch (Exception ex)
@@ -73,7 +74,7 @@ namespace Courses.Api.Controllers
 
             try
             {
-                var teacherResponse = await _user.UpdateUser(UserInfoDto);
+                var teacherResponse = await _user.UpdateUser(_mapper.Map<UserInfo>(UserInfoDto));
                 return Ok(_mapper.Map<UserInfoDto>(teacherResponse));
 
 
@@ -113,7 +114,7 @@ namespace Courses.Api.Controllers
             try
             {
                 var file = Request.Form?.Files;
-                if (file != null && file.Count > 0 )
+                if (file != null && file.Count > 0)
                 {
                     var teacherResponse = await _user.PostFile(id, file[0]);
                     return Ok(_mapper.Map<UserInfoDto>(teacherResponse));
@@ -124,7 +125,7 @@ namespace Courses.Api.Controllers
             {
                 return StatusCode(500, $"Internal server error: {ex}");
             }
-        
+
         }
 
 

@@ -1,26 +1,28 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using Core.DBContext;
-using Core.Entities;
 using Microsoft.AspNetCore.Authorization;
 using BLL.Dtos;
 using API.Helpers;
-using BLL.Interfaces.Repositories;
-using AutoMapper;
 using BLL.Models;
+using BLL.Interfaces;
+using MediatR;
+using BLL.CQRS.Queries;
+using BLL.CQRS.Commands;
+using AutoMapper;
 
 namespace Courses.Api.Controllers
 {
     public class TeacherController : BaseApiController
     {
-        private readonly ITeacherRepository _teacher;
-        public readonly IMapper _mapper;
+        private readonly ITeacherService _teacherService;
+        private readonly IMediator _mediator;
 
-        public TeacherController(GestionCursosContext context, IMapper mapper, ITeacherRepository teacher)
+        private readonly IMapper _mapper;
+
+
+        public TeacherController(IMapper mapper, IMediator mediator, ITeacherService teacherService)
         {
-            _teacher = teacher;
+            _teacherService = teacherService;
+            _mediator = mediator;
             _mapper = mapper;
         }
 
@@ -32,32 +34,30 @@ namespace Courses.Api.Controllers
         {
             try
             {
-                var result = await _teacher.GetTeachers(searchParameters);
-               IEnumerable<TeacherDto> data = _mapper.Map<IEnumerable<Teacher>, IEnumerable<TeacherDto>>(result);
-                var rows = await _teacher.GetTotalTeachers(searchParameters);
+                var result = await _mediator.Send(new GetTeacherQuery()
+                {
+                    searchParams = searchParameters
+                });
 
-                return new Pagination<TeacherDto>(searchParameters.page, searchParameters.pageSize, rows, (IReadOnlyList<TeacherDto>)data);
+                return new Pagination<TeacherDto>(searchParameters.page, searchParameters.pageSize, result.Results, (IReadOnlyList<TeacherDto>)result.Dto);
 
             }
             catch (Exception ex)
             {
                 return StatusCode(500, $"Internal server error: {ex}");
             }
-
-
         }
-        
+
         [Authorize]
         [HttpPut]
-  
-     
         public async Task<ActionResult<TeacherDto>> UpdateTeacher([FromBody] TeacherDto teacherDto)
         {
-
             try
             {
-                var teacherResponse =  await _teacher.UpdateTeacher(teacherDto);
-                return Ok(_mapper.Map<TeacherDto>(teacherResponse));
+                return Ok(await _mediator.Send(new UpdateTeacherCommand()
+                {
+                    Teacher = teacherDto
+                }));
             }
             catch (Exception ex)
             {
@@ -73,26 +73,28 @@ namespace Courses.Api.Controllers
 
             try
             {
-                var teacherResponse = await _teacher.UpdateTeacher(teacherDto);
-                return Ok(_mapper.Map<TeacherDto>(teacherResponse));
-
-             
+                return Ok(await _mediator.Send(new InsertTeacherCommand()
+                {
+                    Teacher = teacherDto
+                }));
             }
             catch (Exception ex)
             {
                 return StatusCode(500, $"Internal server error: {ex}");
             }
-
         }
 
         [Authorize]
         [HttpDelete]
-        public async Task<ActionResult> DeleteTeacher([FromQuery]int id)
+        public async Task<ActionResult> DeleteTeacher([FromQuery] int id)
         {
 
             try
             {
-                await _teacher.DeleteTeacher(id);
+                await _mediator.Send(new DeleteTeacherCommand()
+                {
+                    TeacherId = id
+                });
                 return Ok();
             }
             catch (Exception ex)
@@ -117,7 +119,7 @@ namespace Courses.Api.Controllers
                 {
                     return BadRequest();
                 }
-                var teacherResponse = await _teacher.PostFile(id, Request.Form.Files[0]);
+                var teacherResponse = await _teacherService.PostFile(id, Request.Form.Files[0]);
                 return Ok(_mapper.Map<TeacherDto>(teacherResponse));
             }
             catch (Exception ex)

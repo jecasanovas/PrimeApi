@@ -4,6 +4,5 @@ namespace BLL.Dtos
     {
         public int LessonId { get; set; }
         public string Description { get; set; }
-
     }
 }

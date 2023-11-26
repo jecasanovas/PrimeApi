@@ -21,7 +21,7 @@ namespace Core.Entities
         public virtual Technology Technology { get; set; }
 
         public int TechnologyDetailsId { get; set; }
-        public virtual TechnologyDetails TechnologyDetails { get; set; }
+        public virtual TechnologyDetail TechnologyDetails { get; set; }
 
 
 

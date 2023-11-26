@@ -28,7 +28,7 @@ namespace Core.DBContext
         public virtual DbSet<CourseDetail> CourseDetails { get; set; }
         public virtual DbSet<Teacher> Teachers { get; set; }
         public virtual DbSet<Technology> Technologies { get; set; }
-        public virtual DbSet<TechnologyDetails> TechnologyDetails { get; set; }
+        public virtual DbSet<TechnologyDetail> TechnologyDetails { get; set; }
         public virtual DbSet<UserInfo> UserInfo { get; set; }
         public virtual DbSet<Adresses> Adresses { get; set; }
 
