@@ -38,7 +38,7 @@ namespace BLL.CQRS.Commands
 
         public async Task<bool> Handle(InsertCourseDetailCommand request, CancellationToken cancellationToken)
         {
-            var result = await _courseService.InsertCourseDetail(_mapper.Map<CourseDetail>(request.Course));
+            var result = await _courseService.InsertCourseDetailAsync(_mapper.Map<CourseDetail>(request.Course), cancellationToken);
             return true;
 
         }

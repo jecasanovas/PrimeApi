@@ -4,15 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BLL.Models
+namespace BLL.SearchParams
 {
-    public class SearchParamUsers
+    public class SearchParamUsers : SearchParam
     {
-        public int ? id  { get; set; }
-
-        public int page { get; set; }
-
-        public int pageSize { get; set; }
+        public int? id { get; set; }
 
         public string Name { get; set; }
 

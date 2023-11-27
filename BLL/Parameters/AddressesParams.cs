@@ -1,4 +1,5 @@
 ﻿using BLL.Models;
+using BLL.SearchParams;
 using BLL.Specification;
 using Core.Entities;
 using System;
@@ -8,14 +9,14 @@ using System.Linq.Expressions;
 
 namespace BLL.Parameters
 {
-        public class AddressesParams : BaseSpecification<Adresses>
+    public class AddressesParams : BaseSpecification<Adresses>
+    {
+        public AddressesParams(SearchParamsAddresses searchParams, bool onlyCount = false)
         {
-            public AddressesParams(SearchParamsAddresses searchParams, bool onlyCount = false)
-            {
-                this.PageIndex = searchParams.page;
-                this.PageSize = searchParams.pageSize;
-                this.OnlyCount = onlyCount;
-                AddInclude(c => c.Country);
+            this.PageIndex = searchParams.page;
+            this.PageSize = searchParams.pageSize;
+            this.OnlyCount = onlyCount;
+            AddInclude(c => c.Country);
 
 
             var OrderAsc = new List<Expression<Func<Adresses, object>>>();
@@ -61,8 +62,8 @@ namespace BLL.Parameters
             ApplyPaging(PageSize * (PageIndex - 1), PageSize);
 
 
-        
 
-            }
+
         }
+    }
 }

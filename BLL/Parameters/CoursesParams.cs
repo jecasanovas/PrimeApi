@@ -1,4 +1,5 @@
 ﻿using BLL.Models;
+using BLL.SearchParams;
 using BLL.Specification;
 using Core.Entities;
 using System;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace BLL.Parameters
 {
-    public  class CoursesParams : BaseSpecification<Course>
+    public class CoursesParams : BaseSpecification<Course>
     {
         public CoursesParams(SearchParamCourses searchParams, bool onlyCount = false)
         {
@@ -58,7 +59,8 @@ namespace BLL.Parameters
             if (OrderAsc.Count == 0 && OrderDesc.Count == 0)
             {
                 this.AddOrderBy(x => x.Name);
-            } else
+            }
+            else
             {
                 if (OrderAsc.Count > 0) this.FieldsAddOrderBy(OrderAsc.ToArray());
                 if (OrderDesc.Count > 0) this.FieldsAddOrderByDesc(OrderDesc.ToArray());
@@ -67,7 +69,8 @@ namespace BLL.Parameters
 
             List<int> idTeachers = new List<int>();
 
-            if (!String.IsNullOrEmpty(searchParams.idteacher) && searchParams.idteacher != "0") {
+            if (!String.IsNullOrEmpty(searchParams.idteacher) && searchParams.idteacher != "0")
+            {
                 searchParams.idteacher.Split(',').ToList().ForEach(x =>
                                  idTeachers.Add(Int32.Parse(x)));
             }
@@ -101,7 +104,7 @@ namespace BLL.Parameters
             AddCondition(criteria);
 
             ApplyPaging(PageSize * (PageIndex - 1), PageSize);
-           
+
 
         }
     }

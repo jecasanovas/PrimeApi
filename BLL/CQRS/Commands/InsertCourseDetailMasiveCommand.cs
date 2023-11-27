@@ -38,7 +38,7 @@ namespace BLL.CQRS.Commands
 
         public async Task<bool> Handle(InsertCourseDetailMasiveCommand request, CancellationToken cancellationToken)
         {
-            var result = await _courseService.InsertCourseDetailsMasive(_mapper.Map<IEnumerable<CourseDetail>>(request.Course));
+            var result = await _courseService.InsertCourseDetailsMasiveAsync(_mapper.Map<IEnumerable<CourseDetail>>(request.Course), cancellationToken);
             return true;
 
         }

@@ -15,8 +15,6 @@ using System.Threading.Tasks;
 namespace BLL.CQRS.Commands
 {
 
-
-
     public record DeleteCourseDetailCommand : IRequest<bool>
     {
         public int CourseId;
@@ -38,7 +36,7 @@ namespace BLL.CQRS.Commands
 
         public async Task<bool> Handle(DeleteCourseDetailCommand request, CancellationToken cancellationToken)
         {
-            var result = await _courseService.DeleteCourse(request.CourseId);
+            var result = await _courseService.DeleteCourseAsync(request.CourseId, cancellationToken);
             return true;
 
         }

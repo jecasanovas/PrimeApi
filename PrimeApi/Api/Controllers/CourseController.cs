@@ -4,7 +4,7 @@ using BLL.CQRS.Commands;
 using BLL.CQRS.Queries;
 using BLL.Dtos;
 using BLL.Interfaces;
-using BLL.Models;
+using BLL.SearchParams;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -188,7 +188,7 @@ namespace Courses.Api.Controllers
             {
                 var file = Request.Form;
                 if (file.Files == null || file.Files.Count == 0) return NoContent();
-                return Ok(await _courseService.PostFile(id, Request.Form.Files[0]));
+                return Ok(await _courseService.PostFileAsync(id, Request.Form.Files[0], CancellationToken.None));
             }
             catch (Exception ex)
             {

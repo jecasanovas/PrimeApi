@@ -3,6 +3,7 @@ using BLL.Dtos;
 using BLL.Interfaces;
 using BLL.Interfaces.Services;
 using BLL.Models;
+using BLL.SearchParams;
 using Core.Entities;
 using MediatR;
 using System;
@@ -31,7 +32,7 @@ namespace BLL.CQRS.Queries
 
         public async Task<IEnumerable<TechnologyDto>> Handle(GetTechnologyQuery request, CancellationToken cancellationToken)
         {
-            var result = await _technologyService.GetTechnology(request.searchParams);
+            var result = await _technologyService.GetTechnologyAsync(request.searchParams, cancellationToken);
             return _mapper.Map<IEnumerable<TechnologyDto>>(result);
         }
     }

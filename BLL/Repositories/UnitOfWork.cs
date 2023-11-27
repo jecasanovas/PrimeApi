@@ -5,6 +5,7 @@ using Core.Entities;
 using Microsoft.EntityFrameworkCore.Storage;
 using System;
 using System.Collections;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace BLL.Reposititories
@@ -20,28 +21,26 @@ namespace BLL.Reposititories
             _context = context;
         }
 
-        public async Task <IDbContextTransaction> BeginTransactionAsync()
+        public async Task<IDbContextTransaction> BeginTransactionAsync(CancellationToken cancellationToken)
         {
-
-              return _transaction = await  _context.Database.BeginTransactionAsync();
-               
+            return _transaction = await _context.Database.BeginTransactionAsync(cancellationToken);
         }
 
-        public async Task<int> Complete()
+        public async Task<int> CompleteAsync(CancellationToken cancellationToken)
         {
-            return await _context.SaveChangesAsync();
-        }
-
-
-         public async Task CommitTransaction()
-        {
-            await _transaction.CommitAsync();
+            return await _context.SaveChangesAsync(cancellationToken);
         }
 
 
-        public async Task RollbackTransaction()
+        public async Task CommitTransactionAsync(CancellationToken cancellationToken)
         {
-            await _transaction.RollbackAsync();
+            await _transaction.CommitAsync(cancellationToken);
+        }
+
+
+        public async Task RollbackTransactionAsync(CancellationToken cancellationToken)
+        {
+            await _transaction.RollbackAsync(cancellationToken);
         }
 
         public void Dispose()
@@ -51,7 +50,7 @@ namespace BLL.Reposititories
 
         public IGenericRepository<TEntity> Repository<TEntity>() where TEntity : BaseEntity
         {
-            if(_repositories == null) _repositories = new Hashtable();
+            if (_repositories == null) _repositories = new Hashtable();
 
             var type = typeof(TEntity).Name;
 
@@ -63,7 +62,7 @@ namespace BLL.Reposititories
                 _repositories.Add(type, repositoryInstance);
             }
 
-            return (IGenericRepository<TEntity>) _repositories[type];
+            return (IGenericRepository<TEntity>)_repositories[type];
         }
     }
 }

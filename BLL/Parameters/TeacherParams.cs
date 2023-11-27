@@ -1,4 +1,5 @@
 ﻿using BLL.Models;
+using BLL.SearchParams;
 using BLL.Specification;
 using Core.Entities;
 using System;
@@ -10,30 +11,26 @@ using System.Threading.Tasks;
 
 namespace BLL.Parameters
 {
-    public  class TeacherParams : BaseSpecification<Teacher>
+    public class TeacherParams : BaseSpecification<Teacher>
     {
-        public  TeacherParams(SearchParamTeachers searchParams, bool onlyCount = false)
+        public TeacherParams(SearchParamTeachers searchParams, bool onlyCount = false)
         {
 
             this.PageIndex = searchParams.page;
             this.PageSize = searchParams.pageSize;
             this.OnlyCount = onlyCount;
 
-           
+
             AddInclude(c => c.Country);
-           
+
 
             //** Remove paging and order for count action
-            
-            
-             ApplyPaging(PageSize * (PageIndex - 1), PageSize);
-            
-            
-             AddOrderBy(x => x.Name);
 
-            //** ADD SELECT Fields **/
-            // AddReturningFields(returingFields);
 
+            ApplyPaging(PageSize * (PageIndex - 1), PageSize);
+
+
+            AddOrderBy(x => x.Name);
 
         }
 

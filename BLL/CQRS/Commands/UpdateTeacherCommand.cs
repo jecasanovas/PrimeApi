@@ -25,7 +25,7 @@ namespace BLL.CQRS.Commands
         }
         public async Task<bool> Handle(UpdateTeacherCommand request, CancellationToken cancellationToken)
         {
-            var result = await _teacherService.UpdateTeacher(_mapper.Map<Teacher>(request.Teacher));
+            var result = await _teacherService.UpdateTeacherAsync(_mapper.Map<Teacher>(request.Teacher), cancellationToken);
             return true;
         }
     }

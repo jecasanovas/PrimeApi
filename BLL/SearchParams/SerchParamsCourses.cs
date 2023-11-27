@@ -4,17 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BLL.Models
+namespace BLL.SearchParams
 {
-    public class SearchParamCourses
+    public class SearchParamCourses : SearchParam
     {
 
-        public int? id  { get; set; }
+        public int? id { get; set; }
         public int? lessonID { get; set; }
-
-        public int page { get; set; }
-
-        public int pageSize { get; set; }
 
         public string description { get; set; }
 
@@ -22,7 +18,7 @@ namespace BLL.Models
         public string name { get; set; }
         public object Name { get; internal set; }
         public string order { get; set; }
-        
+
         public string idteacher { get; set; }
 
         public bool onlycount { get; set; }

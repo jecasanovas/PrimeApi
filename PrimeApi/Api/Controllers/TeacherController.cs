@@ -8,6 +8,7 @@ using MediatR;
 using BLL.CQRS.Queries;
 using BLL.CQRS.Commands;
 using AutoMapper;
+using BLL.SearchParams;
 
 namespace Courses.Api.Controllers
 {
@@ -119,7 +120,7 @@ namespace Courses.Api.Controllers
                 {
                     return BadRequest();
                 }
-                var teacherResponse = await _teacherService.PostFile(id, Request.Form.Files[0]);
+                var teacherResponse = await _teacherService.PostFileAsync(id, Request.Form.Files[0], CancellationToken.None);
                 return Ok(_mapper.Map<TeacherDto>(teacherResponse));
             }
             catch (Exception ex)

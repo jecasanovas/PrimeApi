@@ -4,10 +4,12 @@ using BLL.Interfaces.Repositories;
 using BLL.Interfaces.Services;
 using BLL.Models;
 using BLL.Parameters;
+using BLL.SearchParams;
 using Core.Entities;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace BLL.Services
@@ -30,43 +32,38 @@ namespace BLL.Services
             _photoService = photoService;
 
         }
-        public async Task<IEnumerable<UserInfo>> GetUsers(SearchParamUsers searchParameters)
+        public async Task<IEnumerable<UserInfo>> GetUsersAsync(SearchParamUsers searchParameters, CancellationToken cancellationToken)
         {
-            return await _userRepository.ListAsync(new UserParam(searchParameters));
+            var criteria = new UserParam(searchParameters);
+            return await _userRepository.ListAsync(criteria, cancellationToken);
         }
 
-        public async Task<int> GetTotalRowsAsysnc(SearchParamUsers searchParameters)
+        public async Task<int> GetTotalRowsAsync(SearchParamUsers searchParameters, CancellationToken cancellationToken)
         {
-            return await _userRepository.CountAsync(new UserParam(searchParameters, true));
+            var criteria = new UserParam(searchParameters, true);
+            return await _userRepository.CountAsync(criteria, cancellationToken);
         }
 
 
-        public async Task<UserInfo> InsertUser(UserInfo user)
+        public async Task<UserInfo> InsertUserAsync(UserInfo user, CancellationToken cancellationToken)
         {
-
-            return await UpdateUser(user);
+            return await UpdateUserAsync(user, cancellationToken);
         }
 
-        public async Task<UserInfo> PostFile(int id, IFormFile file)
+        public async Task<UserInfo> PostFileAsync(int id, IFormFile file, CancellationToken cancellationToken)
         {
             try
             {
                 var result = await _photoService.AddPhotoAsync(file);
-                await _unitOfWork.BeginTransactionAsync();
+                await _unitOfWork.BeginTransactionAsync(cancellationToken);
 
                 var user = await _userRepository.GetByIdAsync(id);
                 Uri url = result.SecureUrl;
                 user.Photo = url.AbsoluteUri;
-
                 _unitOfWork.Repository<UserInfo>().Update(user);
-
-                await _unitOfWork.Complete();
-
-                await _unitOfWork.CommitTransaction();
-
+                await _unitOfWork.CompleteAsync(cancellationToken);
+                await _unitOfWork.CommitTransactionAsync(cancellationToken);
                 return user;
-
-
             }
             catch (Exception)
             {
@@ -74,39 +71,26 @@ namespace BLL.Services
             }
         }
 
-        public async Task<UserInfo> UpdateUser(UserInfo user)
+        public async Task<UserInfo> UpdateUserAsync(UserInfo user, CancellationToken cancellationToken)
         {
-            await _unitOfWork.BeginTransactionAsync();
-
-
-
+            await _unitOfWork.BeginTransactionAsync(cancellationToken);
             if (user.Id > 0)
                 _unitOfWork.Repository<UserInfo>().Update(user);
             else
                 _unitOfWork.Repository<UserInfo>().Add(user);
-
-
-            await _unitOfWork.Complete();
-
-            await _unitOfWork.CommitTransaction();
-
+            await _unitOfWork.CompleteAsync(cancellationToken);
+            await _unitOfWork.CommitTransactionAsync(cancellationToken);
             return user;
         }
 
-        public async Task<int> DeleteUser(int id)
+        public async Task<int> DeleteUserAsync(int id, CancellationToken cancellationToken)
         {
-            await _unitOfWork.BeginTransactionAsync();
-
+            await _unitOfWork.BeginTransactionAsync(cancellationToken);
             var entityTeacher = await _userRepository.GetByIdAsync(id);
-
             _unitOfWork.Repository<UserInfo>().Delete(entityTeacher);
-
-            await _unitOfWork.Complete();
-
-            await _unitOfWork.CommitTransaction();
-
+            await _unitOfWork.CompleteAsync(cancellationToken);
+            await _unitOfWork.CommitTransactionAsync(cancellationToken);
             return 1;
-
         }
 
     }

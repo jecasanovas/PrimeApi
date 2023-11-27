@@ -4,11 +4,13 @@ using BLL.Interfaces.Repositories;
 using BLL.Interfaces.Services;
 using BLL.Models;
 using BLL.Parameters;
+using BLL.SearchParams;
 using Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace BLL.Services
@@ -17,59 +19,50 @@ namespace BLL.Services
     {
 
         private readonly IUnitOfWork _unitOfWork;
-        private readonly IMapper _mapper;
         private readonly IGenericRepository<PaymentInfo> _paymentInfo;
 
-        public PaymentInfoService(IUnitOfWork unitOfWork, IMapper mapper, IGenericRepository<PaymentInfo> paymentInfo)
+        public PaymentInfoService(IUnitOfWork unitOfWork, IGenericRepository<PaymentInfo> paymentInfo)
         {
             _unitOfWork = unitOfWork;
-            _mapper = mapper;
             _paymentInfo = paymentInfo;
         }
-           
-        public async Task<int> DeletePayments(int id)
+
+        public async Task<int> DeletePaymentAsync(int id, CancellationToken cancellationToken)
         {
-            await _unitOfWork.BeginTransactionAsync();
-
-            var addrese = await _paymentInfo.GetByIdAsync(id);
-
-            _unitOfWork.Repository<PaymentInfo>().Delete(addrese);
-
-            await _unitOfWork.Complete();
-
-            await _unitOfWork.CommitTransaction();
-
+            await _unitOfWork.BeginTransactionAsync(cancellationToken);
+            var payment = await _paymentInfo.GetByIdAsync(id);
+            _unitOfWork.Repository<PaymentInfo>().Delete(payment);
+            await _unitOfWork.CompleteAsync(cancellationToken);
+            await _unitOfWork.CommitTransactionAsync(cancellationToken);
             return 1;
         }
 
-        public async Task<IEnumerable<PaymentInfo>> GetPayments(SearchParamsPaymentInfo SearchParams)
+        public async Task<IEnumerable<PaymentInfo>> GetPaymentAsync(SearchParamsPaymentInfo SearchParams, CancellationToken cancellationToken)
         {
-            return await _paymentInfo.ListAsync(new PaymentInfoParam(SearchParams));
+            var criteria = new PaymentInfoParam(SearchParams);
+            return await _paymentInfo.ListAsync(criteria, cancellationToken);
         }
 
-        public async Task<int> GetTotalRowsAsysnc(SearchParamsPaymentInfo SearchParams)
-        { 
-            return await _paymentInfo.CountAsync(new PaymentInfoParam(SearchParams, true));
+        public async Task<int> GetTotalRowsAsync(SearchParamsPaymentInfo searchParams, CancellationToken cancellationToken)
+        {
+            var criteria = new PaymentInfoParam(searchParams, true);
+            return await _paymentInfo.CountAsync(criteria, cancellationToken);
         }
 
-        public async Task<PaymentInfo> InsertPayments(PaymentInfo paymentInfo)
+        public async Task<PaymentInfo> InsertPaymentAsync(PaymentInfo paymentInfo, CancellationToken cancellationToken)
         {
-            return await UpdatePayments(paymentInfo);
+            return await UpdatePaymentAsync(paymentInfo, cancellationToken);
         }
 
-        public async Task<PaymentInfo> UpdatePayments(PaymentInfo paymentInfo)
+        public async Task<PaymentInfo> UpdatePaymentAsync(PaymentInfo paymentInfo, CancellationToken cancellationToken)
         {
-            await _unitOfWork.BeginTransactionAsync();
-
+            await _unitOfWork.BeginTransactionAsync(cancellationToken);
             if (paymentInfo.Id > 0)
                 _unitOfWork.Repository<PaymentInfo>().Update(paymentInfo);
             else
                 _unitOfWork.Repository<PaymentInfo>().Add(paymentInfo);
-
-            await _unitOfWork.Complete();
-
-            await _unitOfWork.CommitTransaction();
-
+            await _unitOfWork.CompleteAsync(cancellationToken);
+            await _unitOfWork.CommitTransactionAsync(cancellationToken);
             return paymentInfo;
         }
     }

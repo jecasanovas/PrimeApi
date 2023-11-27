@@ -1,4 +1,5 @@
 ﻿using BLL.Models;
+using BLL.SearchParams;
 using BLL.Specification;
 using Core.Entities;
 using System;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace BLL.Parameters
 {
-    public class PaymentInfoParam: BaseSpecification<PaymentInfo>
+    public class PaymentInfoParam : BaseSpecification<PaymentInfo>
     {
 
         public PaymentInfoParam(SearchParamsPaymentInfo searchParams, bool onlyCount = false)
@@ -18,7 +19,7 @@ namespace BLL.Parameters
             this.PageIndex = searchParams.page;
             this.PageSize = searchParams.pageSize;
             this.OnlyCount = onlyCount;
-           
+
 
 
             var OrderAsc = new List<Expression<Func<PaymentInfo, object>>>();

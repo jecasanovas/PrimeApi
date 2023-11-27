@@ -5,6 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using BLL.Models;
+using BLL.SearchParams;
 using BLL.Specification;
 using Core.Entities;
 
@@ -56,7 +57,7 @@ namespace BLL.Parameters
             Expression<Func<UserInfo, bool>> criteria = x =>
                 (String.IsNullOrEmpty(searchParams.Email) || x.Email.ToLower().Contains(searchParams.Email.ToLower())) &&
                 (String.IsNullOrEmpty(searchParams.Name) || x.Surname.ToLower().Contains(searchParams.Name.ToLower())) &&
-                (!searchParams.id.HasValue || x.Id==searchParams.id) ;
+                (!searchParams.id.HasValue || x.Id == searchParams.id);
 
 
             AddCondition(criteria);

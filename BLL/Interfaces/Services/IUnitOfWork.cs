@@ -1,22 +1,24 @@
 using System;
+using System.Threading;
 using System.Threading.Tasks;
 using BLL.Interfaces.Repositories;
 using Core.Entities;
 using Microsoft.EntityFrameworkCore.Storage;
+using Microsoft.Extensions.Primitives;
 
 namespace BLL.Interfaces
 {
-    public interface IUnitOfWork : IDisposable 
+    public interface IUnitOfWork : IDisposable
     {
         IGenericRepository<TEntity> Repository<TEntity>() where TEntity : BaseEntity;
 
-         Task<int> Complete();
+        Task<int> CompleteAsync(CancellationToken cancellationToken);
 
-        Task <IDbContextTransaction> BeginTransactionAsync();
+        Task<IDbContextTransaction> BeginTransactionAsync(CancellationToken cancellationToken);
 
-         Task CommitTransaction();
+        Task CommitTransactionAsync(CancellationToken cancellationToken);
 
-         Task RollbackTransaction();
+        Task RollbackTransactionAsync(CancellationToken cancellationToken);
 
     }
 }

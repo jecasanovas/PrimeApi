@@ -32,7 +32,7 @@ namespace BLL.CQRS.Commands
 
         public async Task<bool> Handle(InsertCourseCommand request, CancellationToken cancellationToken)
         {
-            var result = await _courseService.InsertCourse(_mapper.Map<Course>(request.Course));
+            var result = await _courseService.InsertCourseAsync(_mapper.Map<Course>(request.Course), cancellationToken);
             return true;
 
         }

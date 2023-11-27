@@ -23,7 +23,7 @@ namespace BLL.CQRS.Commands
         }
         public async Task<bool> Handle(DeleteTeacherCommand request, CancellationToken cancellationToken)
         {
-            var result = await _teacherService.DeleteTeacher(request.TeacherId);
+            var result = await _teacherService.DeleteTeacherAsync(request.TeacherId, cancellationToken);
             return true;
         }
     }

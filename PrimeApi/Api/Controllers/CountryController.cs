@@ -1,37 +1,34 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
-using Core.DBContext;
 using Core.Entities;
 using Microsoft.AspNetCore.Authorization;
 using SelectPdf;
+using BLL.Interfaces.Repositories;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace Courses.Api.Controllers 
+namespace Courses.Api.Controllers
 {
     public class CountryController : BaseApiController
     {
-        private GestionCursosContext _context;
+        private readonly IGenericRepository<Country> _countryRepository;
 
-        public CountryController(GestionCursosContext context)
+        public CountryController(IGenericRepository<Country> countryRepository)
         {
-            _context = context;
+            _countryRepository = countryRepository;
         }
 
 
         // GET: api/<CountryControlller>
         [HttpGet]
         [Authorize]
-        public List<Country> Country()
+        [Route("Country")]
+        public async Task<ActionResult> Country()
         {
-            return _context.Countries.ToList();
-
-
+            return Ok(await _countryRepository.ListAllAsync(CancellationToken.None));
         }
 
         [HttpGet]
         [Route("test")]
-        public async Task<ActionResult>  TestAsync ()
+        public async Task<ActionResult> TestAsync()
         {
             HtmlToPdf converter = new HtmlToPdf();
 
@@ -44,19 +41,13 @@ namespace Courses.Api.Controllers
             // close pdf document
             doc.Close();
 
-
-
             var memory = new MemoryStream();
             using (var stream = new FileStream(@"../files/test.pdf", FileMode.Open))
             {
                 await stream.CopyToAsync(memory);
             }
             memory.Position = 0;
-            return File(memory,"application/pdf", "Cours");
-
-
+            return File(memory, "application/pdf", "Cours");
         }
-
     }
-    
 }

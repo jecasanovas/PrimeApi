@@ -1,19 +1,17 @@
-﻿using BLL.Models;
+﻿using BLL.SearchParams;
 using Core.Entities;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace BLL.Interfaces.Services
 {
     public interface IAddressesService
     {
-        Task<Adresses> InsertAddresses(Adresses Addresses);
-        Task<Adresses> UpdateAddresses(Adresses Addresses);
-        Task<int> GetTotalRowsAsysnc(SearchParamsAddresses searchParams);
-        Task<int> DeleteAddresses(int id);
-        Task<IEnumerable<Adresses>> GetAddressess(SearchParamsAddresses searchParameters);
+        Task<Adresses> InsertAddressesAsync(Adresses Addresses, CancellationToken cancellationToken);
+        Task<Adresses> UpdateAddressesAsync(Adresses Addresses, CancellationToken cancellationToken);
+        Task<int> GetTotalRowsAsync(SearchParamsAddresses searchParams, CancellationToken cancellationToken);
+        Task<int> DeleteAddressesAsync(int id, CancellationToken cancellationToken);
+        Task<IEnumerable<Adresses>> GetAddressessAsync(SearchParamsAddresses searchParameters, CancellationToken cancellationToken);
     }
 }

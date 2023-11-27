@@ -3,6 +3,7 @@ using BLL.CQRS.Queries;
 using BLL.Dtos;
 using BLL.Interfaces.Services;
 using BLL.Models;
+using BLL.SearchParams;
 using Core.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;

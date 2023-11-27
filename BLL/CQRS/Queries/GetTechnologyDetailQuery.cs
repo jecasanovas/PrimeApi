@@ -1,7 +1,7 @@
 using AutoMapper;
 using BLL.Dtos;
 using BLL.Interfaces.Services;
-using BLL.Models;
+using BLL.SearchParams;
 using MediatR;
 using System.Collections.Generic;
 using System.Threading;
@@ -26,7 +26,7 @@ namespace BLL.CQRS.Queries
 
         public async Task<IEnumerable<TechnologyDetailDto>> Handle(GetTechnologyDetailQuery request, CancellationToken cancellationToken)
         {
-            var result = await _technologyService.GetTechnologyDetails(request.searchParams);
+            var result = await _technologyService.GetTechnologyDetailsAsync(request.searchParams, cancellationToken);
             return _mapper.Map<IEnumerable<TechnologyDetailDto>>(result);
         }
     }

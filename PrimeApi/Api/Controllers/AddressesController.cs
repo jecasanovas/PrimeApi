@@ -13,6 +13,7 @@ using Courses.Api.Controllers;
 using BLL.Dtos;
 using BLL.Interfaces.Services;
 using Identity.Models;
+using BLL.SearchParams;
 
 namespace PrimeApi.Api.Controllers
 {
@@ -33,13 +34,13 @@ namespace PrimeApi.Api.Controllers
 
 
         [HttpGet]
-        public async Task<ActionResult<Pagination<AdressesDto>>> GetAddresses([FromQuery] SearchParamsAddresses searchParameters)
+        public async Task<ActionResult<Pagination<AdressesDto>>> GetAddresses([FromQuery] SearchParamsAddresses searchParameters, CancellationToken cancellationToken)
         {
             try
             {
-                var result = await _addresses.GetAddressess(searchParameters);
+                var result = await _addresses.GetAddressessAsync(searchParameters, cancellationToken);
                 IEnumerable<AdressesDto> data = _mapper.Map<IEnumerable<Adresses>, IEnumerable<AdressesDto>>(result);
-                var rows = await _addresses.GetTotalRowsAsysnc(searchParameters);
+                var rows = await _addresses.GetTotalRowsAsync(searchParameters, cancellationToken);
 
                 return new Pagination<BLL.Dtos.AdressesDto>(searchParameters.page, searchParameters.pageSize, rows, (IReadOnlyList<BLL.Dtos.AdressesDto>)data);
 
@@ -59,7 +60,7 @@ namespace PrimeApi.Api.Controllers
 
             try
             {
-                var addreses = await _addresses.UpdateAddresses(_mapper.Map<Adresses>(addressDto));
+                var addreses = await _addresses.UpdateAddressesAsync(_mapper.Map<Adresses>(addressDto), CancellationToken.None);
                 return Ok(_mapper.Map<AdressesDto>(addreses));
             }
             catch (Exception ex)
@@ -76,7 +77,7 @@ namespace PrimeApi.Api.Controllers
 
             try
             {
-                var addresses = await _addresses.InsertAddresses(_mapper.Map<Adresses>(addressesDto));
+                var addresses = await _addresses.InsertAddressesAsync(_mapper.Map<Adresses>(addressesDto), CancellationToken.None);
                 return Ok(_mapper.Map<AdressesDto>(addresses));
 
 
@@ -94,7 +95,7 @@ namespace PrimeApi.Api.Controllers
         {
             try
             {
-                await _addresses.DeleteAddresses(id);
+                await _addresses.DeleteAddressesAsync(id, CancellationToken.None);
                 return Ok();
             }
             catch (Exception ex)

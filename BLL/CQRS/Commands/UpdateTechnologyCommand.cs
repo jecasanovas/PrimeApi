@@ -24,7 +24,7 @@ namespace BLL.CQRS.Commands
         }
         public async Task<bool> Handle(UpdateTechologyCommand request, CancellationToken cancellationToken)
         {
-            var result = await _techologyService.UpdateTechnology(_mapper.Map<Technology>(request.Techology));
+            var result = await _techologyService.UpdateTechnologyAsync(_mapper.Map<Technology>(request.Techology), cancellationToken);
             return true;
         }
     }

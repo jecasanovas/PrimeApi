@@ -1,15 +1,11 @@
-﻿using AutoMapper;
-using BLL.Interfaces;
+﻿using BLL.Interfaces;
 using BLL.Interfaces.Repositories;
 using BLL.Interfaces.Services;
-using BLL.Models;
 using BLL.Parameters;
+using BLL.SearchParams;
 using Core.Entities;
-using Microsoft.AspNetCore.Http;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace BLL.Services
@@ -17,65 +13,45 @@ namespace BLL.Services
     public class AddressesService : IAddressesService
     {
         private readonly IUnitOfWork _unitOfWork;
-        private readonly IMapper _mapper;
         private readonly IGenericRepository<Adresses> _addresesRepository;
-        private readonly IPhotoService _photoService;
-        public AddressesService(IUnitOfWork unitOfWork, IMapper mapper, IGenericRepository<Adresses> addresesRepository, IPhotoService photoService)
+        public AddressesService(IUnitOfWork unitOfWork, IGenericRepository<Adresses> addresesRepository)
         {
             _unitOfWork = unitOfWork;
-            _mapper = mapper;
             _addresesRepository = addresesRepository;
-            _photoService = photoService;
-
         }
-        public async Task<int> DeleteAddresses(int id)
+        public async Task<int> DeleteAddressesAsync(int id, CancellationToken cancellationToken)
         {
-            await _unitOfWork.BeginTransactionAsync();
-
+            await _unitOfWork.BeginTransactionAsync(cancellationToken);
             var addrese = await _addresesRepository.GetByIdAsync(id);
-
             _unitOfWork.Repository<Adresses>().Delete(addrese);
-
-            await _unitOfWork.Complete();
-
-            await _unitOfWork.CommitTransaction();
-
+            await _unitOfWork.CompleteAsync(cancellationToken);
+            await _unitOfWork.CommitTransactionAsync(cancellationToken);
             return 1;
         }
-
-        public async Task<IEnumerable<Adresses>> GetAddressess(SearchParamsAddresses searchParameters)
+        public async Task<IEnumerable<Adresses>> GetAddressessAsync(SearchParamsAddresses searchParameters, CancellationToken cancellationToken)
         {
-            return await _addresesRepository.ListAsync(new AddressesParams(searchParameters));
+            var criteria = new AddressesParams(searchParameters);
+            return await _addresesRepository.ListAsync(criteria, cancellationToken);
         }
-
-        public async Task<int> GetTotalRowsAsysnc(SearchParamsAddresses searchParams)
+        public async Task<int> GetTotalRowsAsync(SearchParamsAddresses searchParams, CancellationToken cancellationToken)
         {
-            return await _addresesRepository.CountAsync(new AddressesParams(searchParams, true));
+            var criteria = new AddressesParams(searchParams);
+            return await _addresesRepository.CountAsync(criteria, cancellationToken);
         }
-
-        public async Task<Adresses> InsertAddresses(Adresses Addresses)
+        public async Task<Adresses> InsertAddressesAsync(Adresses Addresses, CancellationToken cancellationToken)
         {
-            return await UpdateAddresses(Addresses);
+            return await UpdateAddressesAsync(Addresses, cancellationToken);
         }
-
-        public async Task<Adresses> UpdateAddresses(Adresses addresse)
+        public async Task<Adresses> UpdateAddressesAsync(Adresses addresses, CancellationToken cancellationToken)
         {
-            await _unitOfWork.BeginTransactionAsync();
-
-
-
-            if (addresse.Id > 0)
-                _unitOfWork.Repository<Adresses>().Update(addresse);
+            await _unitOfWork.BeginTransactionAsync(cancellationToken);
+            if (addresses.Id > 0)
+                _unitOfWork.Repository<Adresses>().Update(addresses);
             else
-                _unitOfWork.Repository<Adresses>().Add(addresse);
-
-
-            await _unitOfWork.Complete();
-
-            await _unitOfWork.CommitTransaction();
-
-            return addresse;
+                _unitOfWork.Repository<Adresses>().Add(addresses);
+            await _unitOfWork.CompleteAsync(cancellationToken);
+            await _unitOfWork.CommitTransactionAsync(cancellationToken);
+            return addresses;
         }
     }
-
 }

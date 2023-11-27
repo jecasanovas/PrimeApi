@@ -1,13 +1,9 @@
 using AutoMapper;
 using BLL.Dtos;
 using BLL.Interfaces;
-using BLL.Models;
-using Core.Entities;
+using BLL.SearchParams;
 using MediatR;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -30,9 +26,9 @@ namespace BLL.CQRS.Queries
 
         public async Task<DataResults<CourseDetailDto>> Handle(GetCourseDetailQuery request, CancellationToken cancellationToken)
         {
-            var courses = await _courseService.GetCourseDetails(request.searchParams);
+            var courses = await _courseService.GetCourseDetailsAsync(request.searchParams, cancellationToken);
             //Count results without pagination active, for paging info
-            var nrows = await _courseService.GetTotalDetailRowsAsysnc(request.searchParams);
+            var nrows = await _courseService.GetTotalDetailRowsAsysnc(request.searchParams, cancellationToken);
 
             return new DataResults<CourseDetailDto>()
             {

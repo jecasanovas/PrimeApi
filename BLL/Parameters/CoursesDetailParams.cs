@@ -1,4 +1,5 @@
 ﻿using BLL.Models;
+using BLL.SearchParams;
 using BLL.Specification;
 using Core.Entities;
 using System;
@@ -12,15 +13,11 @@ namespace BLL.Parameters
     {
         public CourseDetailsParam(SearchParamCourses searchParams, bool onlyCount = false)
         {
-
             this.PageIndex = searchParams.page;
             this.PageSize = searchParams.pageSize;
             this.OnlyCount = onlyCount;
-
-
             var OrderAsc = new List<Expression<Func<CourseDetail, dynamic>>>();
             var OrderDesc = new List<Expression<Func<CourseDetail, dynamic>>>();
-
 
             if (searchParams.order != null && !string.IsNullOrEmpty(searchParams.order.Trim()))
             {
@@ -31,11 +28,11 @@ namespace BLL.Parameters
                 {
 
                     if (!String.IsNullOrEmpty(x) && x.Contains(char.Parse("A")))
-                        if (order == 0) OrderAsc.Add(x=> x.Lessonid);
+                        if (order == 0) OrderAsc.Add(x => x.Lessonid);
                         else OrderAsc.Add(x => x.Description);
                     else if (!String.IsNullOrEmpty(searchParams.order) && x.Contains(char.Parse("D")))
                         if (order == 0) OrderDesc.Add(x => x.Lessonid);
-                        else OrderDesc.Add(x =>x.Description);
+                        else OrderDesc.Add(x => x.Description);
                     order++;
                 });
             }
@@ -54,7 +51,7 @@ namespace BLL.Parameters
             if (searchParams.CourseId > 0)
             {
                 Expression<Func<CourseDetail, bool>> condition =
-                    x => x.Courseid == searchParams.CourseId && (!searchParams.lessonID.HasValue || searchParams.lessonID == x.Lessonid )
+                    x => x.Courseid == searchParams.CourseId && (!searchParams.lessonID.HasValue || searchParams.lessonID == x.Lessonid)
                     && (String.IsNullOrEmpty(searchParams.description) || x.Description.ToLower().Trim().Contains(searchParams.description.ToLower()));
 
                 ApplyPaging(PageSize * (PageIndex - 1), PageSize);
@@ -64,8 +61,6 @@ namespace BLL.Parameters
                 /////** Add where **/
                 this.AddCondition(condition);
             }
-
         }
-
     }
 }

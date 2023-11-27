@@ -24,7 +24,7 @@ namespace BLL.CQRS.Commands
         }
         public async Task<bool> Handle(InsertTeacherCommand request, CancellationToken cancellationToken)
         {
-            var result = await _teacherService.InsertTeacher(_mapper.Map<Teacher>(request.Teacher));
+            var result = await _teacherService.InsertTeacherAsync(_mapper.Map<Teacher>(request.Teacher), cancellationToken);
             return true;
         }
     }

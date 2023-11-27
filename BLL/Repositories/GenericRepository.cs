@@ -6,9 +6,10 @@ using Core.Entities;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
-namespace  BLL.Reposititories
+namespace BLL.Reposititories
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
     {
@@ -16,7 +17,6 @@ namespace  BLL.Reposititories
 
         public GenericRepository(GestionCursosContext context)
         {
-
             _context = context;
         }
 
@@ -25,47 +25,35 @@ namespace  BLL.Reposititories
             return await _context.Set<T>().FindAsync(id);
         }
 
-        public async Task<IReadOnlyList<T>> ListAllAsync()
+        public async Task<IReadOnlyList<T>> ListAllAsync(CancellationToken cancellationToken)
         {
-
-            return await _context.Set<T>().ToListAsync();
+            return await _context.Set<T>().AsNoTracking().ToListAsync(cancellationToken);
         }
 
-        public async Task<T> GetEntityWithSpec(ISpecification<T> spec)
+        public async Task<T> GetEntityWithSpec(ISpecification<T> spec, CancellationToken cancellationToken)
         {
-
-            return await ApplySpecification(spec).FirstOrDefaultAsync();
+            return await ApplySpecification(spec).AsNoTracking().FirstOrDefaultAsync(cancellationToken);
         }
 
-        public async Task<IReadOnlyList<T>> ListAsync(ISpecification<T> spec)
+        public async Task<IReadOnlyList<T>> ListAsync(ISpecification<T> spec, CancellationToken cancellationToken)
         {
-
-            return await ApplySpecification(spec).ToListAsync();
+            return await ApplySpecification(spec).AsNoTracking().ToListAsync(cancellationToken);
         }
 
-        public async Task<int> CountAsync(ISpecification<T> spec)
+        public async Task<int> CountAsync(ISpecification<T> spec, CancellationToken cancellationToken)
         {
-            return await ApplySpecification(spec).CountAsync();
+            return await ApplySpecification(spec).AsNoTracking().CountAsync(cancellationToken);
         }
 
-        public async Task<int> CountAsync()
+        public async Task<int> CountAsync(CancellationToken cancellationToken)
         {
-            return await _context.Set<T>().CountAsync();
-
+            return await _context.Set<T>().AsNoTracking().CountAsync(cancellationToken);
         }
-
-
-        private IQueryable<T> ApplySpecification(ISpecification<T> spec, string queryresult = "")
+        private IQueryable<T> ApplySpecification(ISpecification<T> spec)
         {
-            var query = SpecificationEvaluator<T>.GetQuery(_context.Set<T>().AsQueryable(), spec);
-            queryresult = query.ToQueryString();
-
+            var query = SpecificationEvaluator<T>.GetQuery(_context.Set<T>().AsQueryable(), spec).AsNoTracking();
             return query;
-
-
-
         }
-
         public void Add(T entity)
         {
             _context.Set<T>().Add(entity);

@@ -11,6 +11,7 @@ using BLL.Interfaces.Repositories;
 using AutoMapper;
 using BLL.Models;
 using BLL.Interfaces.Services;
+using BLL.SearchParams;
 
 namespace Courses.Api.Controllers
 {
@@ -24,18 +25,15 @@ namespace Courses.Api.Controllers
             _user = userService;
             _mapper = mapper;
         }
-
-
-
         [HttpGet]
         [Authorize]
         public async Task<ActionResult<Pagination<UserInfoDto>>> UserInfo([FromQuery] SearchParamUsers searchParameters)
         {
             try
             {
-                var result = await _user.GetUsers(searchParameters);
+                var result = await _user.GetUsersAsync(searchParameters, CancellationToken.None);
                 IEnumerable<UserInfoDto> data = _mapper.Map<IEnumerable<UserInfo>, IEnumerable<UserInfoDto>>(result);
-                var rows = await _user.GetTotalRowsAsysnc(searchParameters);
+                var rows = await _user.GetTotalRowsAsync(searchParameters, CancellationToken.None);
 
                 return new Pagination<UserInfoDto>(searchParameters.page, searchParameters.pageSize, rows, (IReadOnlyList<UserInfoDto>)data);
 
@@ -44,20 +42,16 @@ namespace Courses.Api.Controllers
             {
                 return StatusCode(500, $"Internal server error: {ex}");
             }
-
-
         }
 
         [Authorize]
         [HttpPut]
-
-
         public async Task<ActionResult<UserInfoDto>> UpdateUser([FromBody] UserInfoDto UserInfoDto)
         {
 
             try
             {
-                var teacherResponse = await _user.UpdateUser(_mapper.Map<UserInfo>(UserInfoDto));
+                var teacherResponse = await _user.UpdateUserAsync(_mapper.Map<UserInfo>(UserInfoDto), CancellationToken.None);
                 return Ok(_mapper.Map<UserInfoDto>(teacherResponse));
             }
             catch (Exception ex)
@@ -74,7 +68,7 @@ namespace Courses.Api.Controllers
 
             try
             {
-                var teacherResponse = await _user.UpdateUser(_mapper.Map<UserInfo>(UserInfoDto));
+                var teacherResponse = await _user.UpdateUserAsync(_mapper.Map<UserInfo>(UserInfoDto), CancellationToken.None);
                 return Ok(_mapper.Map<UserInfoDto>(teacherResponse));
 
 
@@ -93,7 +87,7 @@ namespace Courses.Api.Controllers
 
             try
             {
-                await _user.DeleteUser(id);
+                await _user.DeleteUserAsync(id, CancellationToken.None);
                 return Ok();
             }
             catch (Exception ex)
@@ -116,7 +110,7 @@ namespace Courses.Api.Controllers
                 var file = Request.Form?.Files;
                 if (file != null && file.Count > 0)
                 {
-                    var teacherResponse = await _user.PostFile(id, file[0]);
+                    var teacherResponse = await _user.PostFileAsync(id, file[0], CancellationToken.None);
                     return Ok(_mapper.Map<UserInfoDto>(teacherResponse));
                 }
                 return NoContent();
