@@ -8,13 +8,11 @@ namespace BLL.Interfaces
 {
     public interface ITeacherService
     {
-
-        Task<Teacher> InsertTeacherAsync(Teacher teacher, CancellationToken cancellationToken);
-        Task<Teacher> UpdateTeacherAsync(Teacher teacher, CancellationToken cancellationToken);
+        Task<int> InsertTeacherAsync(Teacher teacher, CancellationToken cancellationToken);
+        Task<int> UpdateTeacherAsync(Teacher teacher, CancellationToken cancellationToken);
         Task<int> GetTotalRowsAsync(SearchParamTeachers searchParams, CancellationToken cancellationToken);
-        Task<Teacher> PostFileAsync(int id, Microsoft.AspNetCore.Http.IFormFile file, CancellationToken cancellationToken);
-        Task<int> DeleteTeacherAsync(int id, CancellationToken cancellationToken);
+        Task<int> PostFileAsync(int id, Microsoft.AspNetCore.Http.IFormFile file, CancellationToken cancellationToken);
+        Task<bool> DeleteTeacherAsync(int id, CancellationToken cancellationToken);
         Task<IEnumerable<Teacher>> GetTeachersAsync(SearchParamTeachers searchParameters, CancellationToken cancellationToken);
-
     }
 }

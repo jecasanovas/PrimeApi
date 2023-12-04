@@ -28,7 +28,6 @@ namespace API.Controllers
         }
 
         [Authorize]
-
         [HttpGet("status")]
         public ActionResult<bool> CanActivate()
         {
@@ -130,7 +129,7 @@ namespace API.Controllers
             };
         }
 
- 
+
         [HttpPut("reset")]
         public async Task<ActionResult<UserDto>> ResetPassword(RegisterDto registerDto)
         {

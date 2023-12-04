@@ -16,18 +16,13 @@ namespace Courses.Api.Controllers
     {
         private readonly ITeacherService _teacherService;
         private readonly IMediator _mediator;
-
         private readonly IMapper _mapper;
-
-
         public TeacherController(IMapper mapper, IMediator mediator, ITeacherService teacherService)
         {
             _teacherService = teacherService;
             _mediator = mediator;
             _mapper = mapper;
         }
-
-
 
         [HttpGet]
         [Authorize]
@@ -64,14 +59,12 @@ namespace Courses.Api.Controllers
             {
                 return StatusCode(500, $"Internal server error: {ex}");
             }
-
         }
 
         [Authorize]
         [HttpPost]
         public async Task<ActionResult> CreateTeacher([FromBody] TeacherDto teacherDto)
         {
-
             try
             {
                 return Ok(await _mediator.Send(new InsertTeacherCommand()
@@ -89,30 +82,24 @@ namespace Courses.Api.Controllers
         [HttpDelete]
         public async Task<ActionResult> DeleteTeacher([FromQuery] int id)
         {
-
             try
             {
-                await _mediator.Send(new DeleteTeacherCommand()
+                return Ok(await _mediator.Send(new DeleteTeacherCommand()
                 {
                     TeacherId = id
-                });
-                return Ok();
+                }));
             }
             catch (Exception ex)
             {
                 return StatusCode(500, $"Internal server error: {ex}");
             }
-
         }
-
-
 
         [Authorize]
         [HttpPost]
         [Route("File")]
         public async Task<ActionResult> PostFile(int id)
         {
-
             try
             {
                 var file = Request.Form.Files[0];
@@ -127,10 +114,7 @@ namespace Courses.Api.Controllers
             {
                 return StatusCode(500, $"Internal server error: {ex}");
             }
-
         }
-
-
     }
 }
 

@@ -17,8 +17,8 @@ namespace BLL.Interfaces.Services
         Task<int> UpdateTechnologyDetailAsync(TechnologyDetail technologyDetail, CancellationToken cancellationToken);
         Task<int> GetTotalRowsTechnologyAsync(SearchParam searchParam, CancellationToken cancellationToken);
         Task<int> GetTotalRowsTechnologyDetailsAsync(SearchParam searchParam, CancellationToken cancellationToken);
-        Task DeleteTechnologyAsync(int id, CancellationToken cancellationToken);
-        Task DeleteTechnologyDetailAsync(int id, CancellationToken cancellationToken);
+        Task<bool> DeleteTechnologyAsync(int id, CancellationToken cancellationToken);
+        Task<bool> DeleteTechnologyDetailAsync(int id, CancellationToken cancellationToken);
         Task<IEnumerable<Technology>> GetTechnologyAsync(SearchParam searchParam, CancellationToken cancellationToken);
         Task<IEnumerable<TechnologyDetail>> GetTechnologyDetailsAsync(SearchParam searchParam, CancellationToken cancellationToken);
     }

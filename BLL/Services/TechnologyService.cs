@@ -10,6 +10,8 @@ using Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -29,21 +31,39 @@ namespace BLL.Services
             _technologyRepository = technologyRepository;
             _technologyDetailRepository = technologyDetailRepository;
         }
-        public async Task DeleteTechnologyAsync(int id, CancellationToken cancellationToken)
+        public async Task<bool> DeleteTechnologyAsync(int id, CancellationToken cancellationToken)
         {
-            await _unitOfWork.BeginTransactionAsync(cancellationToken);
-            var entityTechnology = await _unitOfWork.Repository<Technology>().GetByIdAsync(id);
-            _unitOfWork.Repository<Technology>().Delete(entityTechnology);
-            await _unitOfWork.CompleteAsync(cancellationToken);
-            await _unitOfWork.CommitTransactionAsync(cancellationToken);
+            try
+            {
+                await _unitOfWork.BeginTransactionAsync(cancellationToken);
+                var entityTechnology = await _unitOfWork.Repository<Technology>().GetByIdAsync(id);
+                _unitOfWork.Repository<Technology>().Delete(entityTechnology);
+                await _unitOfWork.CompleteAsync(cancellationToken);
+                await _unitOfWork.CommitTransactionAsync(cancellationToken);
+            }
+            catch (Exception)
+            {
+                await _unitOfWork.RollbackTransactionAsync(cancellationToken);
+                throw;
+            }
+            return true;
         }
-        public async Task DeleteTechnologyDetailAsync(int id, CancellationToken cancellationToken)
+        public async Task<bool> DeleteTechnologyDetailAsync(int id, CancellationToken cancellationToken)
         {
-            await _unitOfWork.BeginTransactionAsync(cancellationToken);
-            var entityTechnology = await _unitOfWork.Repository<TechnologyDetail>().GetByIdAsync(id);
-            _unitOfWork.Repository<TechnologyDetail>().Delete(entityTechnology);
-            await _unitOfWork.CompleteAsync(cancellationToken);
-            await _unitOfWork.CommitTransactionAsync(cancellationToken);
+            try
+            {
+                await _unitOfWork.BeginTransactionAsync(cancellationToken);
+                var entityTechnology = await _unitOfWork.Repository<TechnologyDetail>().GetByIdAsync(id);
+                _unitOfWork.Repository<TechnologyDetail>().Delete(entityTechnology);
+                await _unitOfWork.CompleteAsync(cancellationToken);
+                await _unitOfWork.CommitTransactionAsync(cancellationToken);
+                return true;
+            }
+            catch (Exception)
+            {
+                await _unitOfWork.RollbackTransactionAsync(cancellationToken);
+                throw;
+            }
 
         }
         public async Task<IEnumerable<Technology>> GetTechnologyAsync(SearchParam searchParam, CancellationToken cancellationToken)
@@ -76,28 +96,49 @@ namespace BLL.Services
         }
         public async Task<int> UpdateTechnologyAsync(Technology technology, CancellationToken cancellationToken)
         {
-            await _unitOfWork.BeginTransactionAsync(cancellationToken);
-            var entityTechnology = _mapper.Map<Technology>(technology);
-            if (technology.Id > 0)
-                _unitOfWork.Repository<Technology>().Update(entityTechnology);
-            else
-                _unitOfWork.Repository<Technology>().Add(entityTechnology);
-            await _unitOfWork.CompleteAsync(cancellationToken);
-            await _unitOfWork.CommitTransactionAsync(cancellationToken);
-            return entityTechnology.Id;
+            try
+            {
+                await _unitOfWork.BeginTransactionAsync(cancellationToken);
+                var entityTechnology = _mapper.Map<Technology>(technology);
+
+                if (technology.Id > 0)
+                    _unitOfWork.Repository<Technology>().Update(entityTechnology);
+                else
+                    _unitOfWork.Repository<Technology>().Add(entityTechnology);
+
+                await _unitOfWork.CompleteAsync(cancellationToken);
+                await _unitOfWork.CommitTransactionAsync(cancellationToken);
+                return entityTechnology.Id;
+            }
+            catch (Exception)
+            {
+                await _unitOfWork.RollbackTransactionAsync(cancellationToken);
+                throw;
+            }
         }
+
 
         public async Task<int> UpdateTechnologyDetailAsync(TechnologyDetail technologyDetails, CancellationToken cancellationToken)
         {
-            await _unitOfWork.BeginTransactionAsync(cancellationToken);
-            var entityTechnology = _mapper.Map<TechnologyDetail>(technologyDetails);
-            if (entityTechnology.Id > 0)
-                _unitOfWork.Repository<TechnologyDetail>().Update(entityTechnology);
-            else
-                _unitOfWork.Repository<TechnologyDetail>().Add(entityTechnology);
-            await _unitOfWork.CompleteAsync(cancellationToken);
-            await _unitOfWork.CommitTransactionAsync(cancellationToken);
-            return entityTechnology.Id;
+            try
+            {
+                await _unitOfWork.BeginTransactionAsync(cancellationToken);
+                var entityTechnology = _mapper.Map<TechnologyDetail>(technologyDetails);
+
+                if (entityTechnology.Id > 0)
+                    _unitOfWork.Repository<TechnologyDetail>().Update(entityTechnology);
+                else
+                    _unitOfWork.Repository<TechnologyDetail>().Add(entityTechnology);
+
+                await _unitOfWork.CompleteAsync(cancellationToken);
+                await _unitOfWork.CommitTransactionAsync(cancellationToken);
+                return entityTechnology.Id;
+            }
+            catch (Exception)
+            {
+                await _unitOfWork.RollbackTransactionAsync(cancellationToken);
+                throw;
+            }
         }
     }
 }

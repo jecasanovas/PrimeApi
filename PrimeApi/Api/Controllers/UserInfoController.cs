@@ -121,7 +121,5 @@ namespace Courses.Api.Controllers
             }
 
         }
-
-
     }
 }

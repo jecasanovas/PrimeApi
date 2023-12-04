@@ -1,8 +1,5 @@
-﻿using AutoMapper;
-using BLL.Dtos;
-using BLL.Interfaces;
+﻿using BLL.Interfaces;
 using BLL.Interfaces.Repositories;
-using BLL.Models;
 using BLL.Parameters;
 using BLL.SearchParams;
 using Core.Entities;
@@ -16,19 +13,15 @@ namespace BLL.Services
 {
     public class TeacherService : ITeacherService
     {
-
         private readonly IUnitOfWork _unitOfWork;
-        private readonly IMapper _mapper;
         private readonly IGenericRepository<Teacher> _teacherRepository;
         private readonly IPhotoService _photoService;
 
-        public TeacherService(IUnitOfWork unitOfWork, IMapper mapper, IGenericRepository<Teacher> teacherRepository, IPhotoService photoService)
+        public TeacherService(IUnitOfWork unitOfWork, IGenericRepository<Teacher> teacherRepository, IPhotoService photoService)
         {
             _unitOfWork = unitOfWork;
-            _mapper = mapper;
             _teacherRepository = teacherRepository;
             _photoService = photoService;
-
         }
         public async Task<IEnumerable<Teacher>> GetTeachersAsync(SearchParamTeachers searchParameters, CancellationToken cancellationToken)
         {
@@ -38,15 +31,14 @@ namespace BLL.Services
 
         public async Task<int> GetTotalRowsAsync(SearchParamTeachers searchParameters, CancellationToken cancellationToken)
         {
-            var criteria = new TeacherParams(searchParameters);
+            var criteria = new TeacherParams(searchParameters, true);
             return await _teacherRepository.CountAsync(criteria, cancellationToken);
         }
-        public async Task<Teacher> InsertTeacherAsync(Teacher teacher, CancellationToken cancellationToken)
+        public async Task<int> InsertTeacherAsync(Teacher teacher, CancellationToken cancellationToken)
         {
             return await UpdateTeacherAsync(teacher, cancellationToken);
         }
-
-        public async Task<Teacher> PostFileAsync(int id, IFormFile file, CancellationToken cancellationToken)
+        public async Task<int> PostFileAsync(int id, IFormFile file, CancellationToken cancellationToken)
         {
             try
             {
@@ -58,36 +50,49 @@ namespace BLL.Services
                 _unitOfWork.Repository<Teacher>().Update(teacher);
                 await _unitOfWork.CompleteAsync(cancellationToken);
                 await _unitOfWork.CommitTransactionAsync(cancellationToken);
-                return teacher;
+                return teacher.Id;
             }
             catch (Exception)
             {
-                return null;
+                await _unitOfWork.RollbackTransactionAsync(cancellationToken);
+                throw;
             }
         }
-
-        public async Task<Teacher> UpdateTeacherAsync(Teacher teacher, CancellationToken cancellationToken)
+        public async Task<int> UpdateTeacherAsync(Teacher teacher, CancellationToken cancellationToken)
         {
-            await _unitOfWork.BeginTransactionAsync(cancellationToken);
-            if (teacher.Id > 0)
-                _unitOfWork.Repository<Teacher>().Update(teacher);
-            else
-                _unitOfWork.Repository<Teacher>().Add(teacher);
-            await _unitOfWork.CompleteAsync(cancellationToken);
-            await _unitOfWork.CommitTransactionAsync(cancellationToken);
-            return teacher;
+            try
+            {
+                await _unitOfWork.BeginTransactionAsync(cancellationToken);
+                if (teacher.Id > 0)
+                    _unitOfWork.Repository<Teacher>().Update(teacher);
+                else
+                    _unitOfWork.Repository<Teacher>().Add(teacher);
+                await _unitOfWork.CompleteAsync(cancellationToken);
+                await _unitOfWork.CommitTransactionAsync(cancellationToken);
+                return teacher.Id;
+            }
+            catch (Exception)
+            {
+                await _unitOfWork.RollbackTransactionAsync(cancellationToken);
+                throw;
+            }
         }
-
-        public async Task<int> DeleteTeacherAsync(int id, CancellationToken cancellationToken)
+        public async Task<bool> DeleteTeacherAsync(int id, CancellationToken cancellationToken)
         {
-            await _unitOfWork.BeginTransactionAsync(cancellationToken);
-            var entityTeacher = await _teacherRepository.GetByIdAsync(id);
-            _unitOfWork.Repository<Teacher>().Delete(entityTeacher);
-            await _unitOfWork.CompleteAsync(cancellationToken);
-            await _unitOfWork.CommitTransactionAsync(cancellationToken);
-            return 1;
-
+            try
+            {
+                await _unitOfWork.BeginTransactionAsync(cancellationToken);
+                var entityTeacher = await _teacherRepository.GetByIdAsync(id);
+                _unitOfWork.Repository<Teacher>().Delete(entityTeacher);
+                await _unitOfWork.CompleteAsync(cancellationToken);
+                await _unitOfWork.CommitTransactionAsync(cancellationToken);
+                return true;
+            }
+            catch (Exception)
+            {
+                await _unitOfWork.RollbackTransactionAsync(cancellationToken);
+                throw;
+            }
         }
-
     }
 }

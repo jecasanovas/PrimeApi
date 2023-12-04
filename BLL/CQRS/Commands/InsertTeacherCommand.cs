@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace BLL.CQRS.Commands
 {
-    public record InsertTeacherCommand : IRequest<bool>
+    public record InsertTeacherCommand : IRequest<int>
     {
         public TeacherDto Teacher;
     }
 
-    public class InsertTeacherCommandHandler : IRequestHandler<InsertTeacherCommand, bool>
+    public class InsertTeacherCommandHandler : IRequestHandler<InsertTeacherCommand, int>
     {
         public readonly ITeacherService _teacherService;
         public readonly IMapper _mapper;
@@ -22,10 +22,9 @@ namespace BLL.CQRS.Commands
             _teacherService = teacherService;
             _mapper = mapper;
         }
-        public async Task<bool> Handle(InsertTeacherCommand request, CancellationToken cancellationToken)
+        public async Task<int> Handle(InsertTeacherCommand request, CancellationToken cancellationToken)
         {
-            var result = await _teacherService.InsertTeacherAsync(_mapper.Map<Teacher>(request.Teacher), cancellationToken);
-            return true;
+            return await _teacherService.InsertTeacherAsync(_mapper.Map<Teacher>(request.Teacher), cancellationToken);
         }
     }
 }

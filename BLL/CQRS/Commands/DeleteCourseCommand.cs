@@ -9,24 +9,17 @@ namespace BLL.CQRS.Commands
     {
         public int CourseId;
     }
-
     public class DeleteCourseCommandHandler : IRequestHandler<DeleteCourseCommand, bool>
     {
-
         public readonly ICourseService _courseService;
-
-
         public DeleteCourseCommandHandler(ICourseService course)
         {
             _courseService = course;
         }
-
-
         public async Task<bool> Handle(DeleteCourseCommand request, CancellationToken cancellationToken)
         {
             var result = await _courseService.DeleteCourseAsync(request.CourseId, cancellationToken);
             return true;
-
         }
     }
 }

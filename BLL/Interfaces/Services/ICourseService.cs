@@ -12,20 +12,19 @@ namespace BLL.Interfaces
 {
     public interface ICourseService
     {
-        Task<Course> InsertCourseAsync(Course course, CancellationToken cancellationToken);
-        Task<CourseDetail> InsertCourseDetailAsync(CourseDetail courseDetail, CancellationToken cancellationToken);
-        Task<Course> UpdateCourseAsync(Course course, CancellationToken cancellationToken);
-        Task<Course> DeleteCourseAsync(int id, CancellationToken cancellationToken);
-        Task<CourseDetail> UpdateCourseDetailsAsync(CourseDetail courseDetail, CancellationToken cancellationToken);
+        Task<int> InsertCourseAsync(Course course, CancellationToken cancellationToken);
+        Task<int> InsertCourseDetailAsync(CourseDetail courseDetail, CancellationToken cancellationToken);
+        Task<int> UpdateCourseAsync(Course course, CancellationToken cancellationToken);
+        Task<bool> DeleteCourseAsync(int id, CancellationToken cancellationToken);
+        Task<int> UpdateCourseDetailsAsync(CourseDetail courseDetail, CancellationToken cancellationToken);
         Task<IEnumerable<CourseDetail>> GetCourseDetailsAsync(SearchParamCourses searchParam, CancellationToken cancellationToken);
-        Task<Course> PostFileAsync(int id, IFormFile file, CancellationToken cancellationToken);
+        Task<int> PostFileAsync(int id, IFormFile file, CancellationToken cancellationToken);
         Task<IEnumerable<Course>> GetCoursesAsync(SearchParamCourses searchParameters, CancellationToken cancellationToken);
         Task<int> GetTotalRowsAsysnc(SearchParamCourses searchParams, CancellationToken cancellationToken);
         Task<int> GetTotalDetailRowsAsysnc(SearchParamCourses searchParameters, CancellationToken cancellationToken);
         Task<Course> GetCoursebyIdAsync(int id, CancellationToken cancellationToken);
-        Task<IEnumerable<CourseDetail>> InsertCourseDetailsMasiveAsync(IEnumerable<CourseDetail> courseDetails, CancellationToken cancellationToken);
+        Task<bool> InsertCourseDetailsMasiveAsync(IEnumerable<CourseDetail> courseDetails, CancellationToken cancellationToken);
     }
-
 }
 
 

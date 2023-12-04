@@ -29,7 +29,7 @@ namespace BLL.Services
         {
             return await _courseRepository.GetByIdAsync(id);
         }
-        public async Task<Course> PostFileAsync(int id, IFormFile file, CancellationToken cancellationToken = default)
+        public async Task<int> PostFileAsync(int id, IFormFile file, CancellationToken cancellationToken = default)
         {
             try
             {
@@ -41,11 +41,12 @@ namespace BLL.Services
                 _unitOfWork.Repository<Course>().Update(course);
                 await _unitOfWork.CompleteAsync(cancellationToken);
                 await _unitOfWork.CommitTransactionAsync(cancellationToken);
-                return course;
+                return course.Id;
             }
             catch (Exception)
             {
-                return null;
+                await _unitOfWork.RollbackTransactionAsync(cancellationToken);
+                throw;
             }
         }
         public async Task<IEnumerable<Course>> GetCoursesAsync(SearchParamCourses searchParamsCourses, CancellationToken cancellationToken)
@@ -60,7 +61,7 @@ namespace BLL.Services
         }
         public async Task<int> GetTotalRowsAsysnc(SearchParamCourses searchParams, CancellationToken cancellationToken)
         {
-            var criteria = new CoursesParams(searchParams);
+            var criteria = new CoursesParams(searchParams, true);
             return await _courseRepository.CountAsync(criteria, cancellationToken);
         }
         public async Task<int> GetTotalDetailRowsAsysnc(SearchParamCourses searchParameters, CancellationToken cancellationToken)
@@ -68,53 +69,85 @@ namespace BLL.Services
             var criteria = new CourseDetailsParam(searchParameters, true);
             return await _courseDetailRepository.CountAsync(criteria, cancellationToken);
         }
-        public async Task<Course> UpdateCourseAsync(Course course, CancellationToken cancellationToken)
+        public async Task<int> UpdateCourseAsync(Course course, CancellationToken cancellationToken)
         {
-            await _unitOfWork.BeginTransactionAsync(cancellationToken);
-            if (course.Id == 0)
-                _unitOfWork.Repository<Course>().Add(course);
-            else
-                _unitOfWork.Repository<Course>().Update(course);
-            await _unitOfWork.CompleteAsync(cancellationToken);
-            await _unitOfWork.CommitTransactionAsync(cancellationToken);
-            return course;
+            try
+            {
+                await _unitOfWork.BeginTransactionAsync(cancellationToken);
+                if (course.Id == 0)
+                    _unitOfWork.Repository<Course>().Add(course);
+                else
+                    _unitOfWork.Repository<Course>().Update(course);
+                await _unitOfWork.CompleteAsync(cancellationToken);
+                await _unitOfWork.CommitTransactionAsync(cancellationToken);
+                return course.Id;
+            }
+            catch (Exception)
+            {
+                await _unitOfWork.RollbackTransactionAsync(cancellationToken);
+                throw;
+            }
         }
-        public async Task<Course> InsertCourseAsync(Course course, CancellationToken cancellationToken)
+        public async Task<int> InsertCourseAsync(Course course, CancellationToken cancellationToken)
         {
             return await UpdateCourseAsync(course, cancellationToken);
         }
-        public async Task<IEnumerable<CourseDetail>> InsertCourseDetailsMasiveAsync(IEnumerable<CourseDetail> courseDetails, CancellationToken cancellationToken)
+        public async Task<bool> InsertCourseDetailsMasiveAsync(IEnumerable<CourseDetail> courseDetails, CancellationToken cancellationToken)
         {
-            await _unitOfWork.BeginTransactionAsync(cancellationToken);
-            _unitOfWork.Repository<CourseDetail>().AddRange(courseDetails);
-            await _unitOfWork.CompleteAsync(cancellationToken);
-            await _unitOfWork.CommitTransactionAsync(cancellationToken);
-            return courseDetails;
+            try
+            {
+                await _unitOfWork.BeginTransactionAsync(cancellationToken);
+                _unitOfWork.Repository<CourseDetail>().AddRange(courseDetails);
+                await _unitOfWork.CompleteAsync(cancellationToken);
+                await _unitOfWork.CommitTransactionAsync(cancellationToken);
+                return true;
+            }
+            catch (Exception)
+            {
+                await _unitOfWork.RollbackTransactionAsync(cancellationToken);
+                throw;
+            }
         }
 
-        public async Task<CourseDetail> InsertCourseDetailAsync(CourseDetail courseDetail, CancellationToken cancellationToken)
+        public async Task<int> InsertCourseDetailAsync(CourseDetail courseDetail, CancellationToken cancellationToken)
         {
             return await UpdateCourseDetailsAsync(courseDetail, cancellationToken);
         }
-        public async Task<CourseDetail> UpdateCourseDetailsAsync(CourseDetail courseDetail, CancellationToken cancellationToken)
+        public async Task<int> UpdateCourseDetailsAsync(CourseDetail courseDetail, CancellationToken cancellationToken)
         {
-            await _unitOfWork.BeginTransactionAsync(cancellationToken);
-            if (courseDetail.Id == 0)
-                _unitOfWork.Repository<CourseDetail>().Add(courseDetail);
-            else
-                _unitOfWork.Repository<CourseDetail>().Update(courseDetail);
-            await _unitOfWork.CompleteAsync(cancellationToken);
-            await _unitOfWork.CommitTransactionAsync(cancellationToken);
-            return courseDetail;
+            try
+            {
+                await _unitOfWork.BeginTransactionAsync(cancellationToken);
+                if (courseDetail.Id == 0)
+                    _unitOfWork.Repository<CourseDetail>().Add(courseDetail);
+                else
+                    _unitOfWork.Repository<CourseDetail>().Update(courseDetail);
+                await _unitOfWork.CompleteAsync(cancellationToken);
+                await _unitOfWork.CommitTransactionAsync(cancellationToken);
+                return courseDetail.Courseid;
+            }
+            catch (Exception)
+            {
+                await _unitOfWork.RollbackTransactionAsync(cancellationToken);
+                throw;
+            }
         }
-        public async Task<Course> DeleteCourseAsync(int id, CancellationToken cancellationToken)
+        public async Task<bool> DeleteCourseAsync(int id, CancellationToken cancellationToken)
         {
-            await _unitOfWork.BeginTransactionAsync(cancellationToken);
-            var course = await _courseRepository.GetByIdAsync(id);
-            _unitOfWork.Repository<Course>().Delete(course);
-            await _unitOfWork.CompleteAsync(cancellationToken);
-            await _unitOfWork.CommitTransactionAsync(cancellationToken);
-            return course;
+            try
+            {
+                await _unitOfWork.BeginTransactionAsync(cancellationToken);
+                var course = await _courseRepository.GetByIdAsync(id);
+                _unitOfWork.Repository<Course>().Delete(course);
+                await _unitOfWork.CompleteAsync(cancellationToken);
+                await _unitOfWork.CommitTransactionAsync(cancellationToken);
+                return true;
+            }
+            catch (Exception)
+            {
+                await _unitOfWork.RollbackTransactionAsync(cancellationToken);
+                throw;
+            }
         }
     }
 }
