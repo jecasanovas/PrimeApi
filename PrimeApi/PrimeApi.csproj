@@ -1,23 +1,108 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
   <ItemGroup>
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\113.0.5672.0.manifest" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\chrome.dll" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\chrome.exe" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\chrome_100_percent.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\chrome_200_percent.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\chrome_elf.dll" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\chrome_proxy.exe" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\chrome_pwa_launcher.exe" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\chrome_wer.dll" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\D3DCompiler_47.dll" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\elevation_service.exe" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\eventlog_provider.dll" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\icudtl.dat" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\libEGL.dll" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\libGLESv2.dll" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\af.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\am.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\ar-XB.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\ar.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\bg.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\bn.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\ca.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\cs.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\da.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\de.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\el.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\en-GB.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\en-US.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\en-XA.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\es-419.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\es.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\et.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\fa.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\fi.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\fil.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\fr.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\gu.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\he.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\hi.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\hr.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\hu.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\id.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\it.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\ja.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\kn.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\ko.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\lt.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\lv.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\ml.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\mr.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\ms.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\nb.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\nl.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\pl.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\pt-BR.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\pt-PT.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\ro.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\ru.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\sk.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\sl.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\sr.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\sv.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\sw.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\ta.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\te.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\th.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\tr.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\uk.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\ur.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\vi.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\zh-CN.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\locales\zh-TW.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\MEIPreload\manifest.json" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\MEIPreload\preloaded_data.pb" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\mojo_core.dll" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\nacl64.exe" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\nacl_irt_x86_32.nexe" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\nacl_irt_x86_64.nexe" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\notification_helper.exe" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\resources.pak" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\v8_context_snapshot.bin" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\vk_swiftshader.dll" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\vk_swiftshader_icd.json" />
+    <Content Remove="C:\Users\Enrique\.nuget\packages\select.htmltopdf.netcore.blink\23.2.0\contentFiles\any\any\Chromium-113.0.5672.127\vulkan-1.dll" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="CsvHelper" Version="30.0.1" />
     <PackageReference Include="DotNetCore.NPOI" Version="1.2.3" />
-    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="7.0.3" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.3" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.3">
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Select.HtmlToPdf.NetCore" Version="22.2.0" />
-    <PackageReference Include="Select.HtmlToPdf.NetCore.Blink" Version="22.2.0" />
+    <PackageReference Include="Select.HtmlToPdf.NetCore" Version="23.2.0" />
+    <PackageReference Include="Select.HtmlToPdf.NetCore.Blink" Version="23.2.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.3">
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>

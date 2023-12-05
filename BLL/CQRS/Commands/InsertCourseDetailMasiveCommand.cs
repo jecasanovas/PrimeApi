@@ -3,12 +3,7 @@ using BLL.Dtos;
 using BLL.Interfaces;
 using Core.Entities;
 using MediatR;
-using Microsoft.AspNetCore.Razor.Language;
-using Microsoft.EntityFrameworkCore.Query;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
