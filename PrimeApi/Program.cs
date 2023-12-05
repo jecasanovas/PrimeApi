@@ -68,7 +68,7 @@ builder.Services.AddScoped<IAddressesService, AddressesService>();
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(BLL.CQRS.Queries.GetAddressesQuery).Assembly));
 
 var app = builder.Build();
 
