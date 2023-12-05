@@ -14,20 +14,15 @@ using System.Threading.Tasks;
 
 namespace BLL.CQRS.Commands
 {
-
-
-
-    public record UpdateCourseCommand : IRequest<bool>
+    public record UpdateCourseCommand : IRequest<int>
     {
         public CourseDto Course;
     }
 
-    public class UpdateCourseCommandHandler : IRequestHandler<UpdateCourseCommand, bool>
+    public class UpdateCourseCommandHandler : IRequestHandler<UpdateCourseCommand, int>
     {
-
         public readonly ICourseService _courseService;
         public readonly IMapper _mapper;
-
 
         public UpdateCourseCommandHandler(ICourseService course, IMapper mapper)
         {
@@ -36,13 +31,9 @@ namespace BLL.CQRS.Commands
         }
 
 
-        public async Task<bool> Handle(UpdateCourseCommand request, CancellationToken cancellationToken)
+        public async Task<int> Handle(UpdateCourseCommand request, CancellationToken cancellationToken)
         {
-            var result = await _courseService.UpdateCourseAsync(_mapper.Map<Course>(request.Course), cancellationToken);
-            return true;
-
+            return await _courseService.UpdateCourseAsync(_mapper.Map<Course>(request.Course), cancellationToken);
         }
     }
-
-
 }

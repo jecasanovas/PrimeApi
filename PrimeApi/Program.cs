@@ -59,11 +59,11 @@ builder.Services.Configure<CloudinarySettings>(builder.Configuration.GetSection(
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<ICourseService, CoursesService>();
-builder.Services.AddScoped<IPaymentInfo, PaymentInfoService>();
+builder.Services.AddScoped<IPaymentInfoService, PaymentInfoService>();
 builder.Services.AddScoped<ITeacherService, TeacherService>();
 builder.Services.AddScoped<ITechnologyService, TechnologyService>();
 builder.Services.AddScoped<IPhotoService, PhotoService>();
-builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IUserInfoService, UserService>();
 builder.Services.AddScoped<IAddressesService, AddressesService>();
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();

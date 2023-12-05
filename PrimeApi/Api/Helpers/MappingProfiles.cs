@@ -11,7 +11,7 @@ namespace Courses.Helpers
             CreateMap<TeacherDto, Teacher>();
             CreateMap<CourseDetail, CourseDetailDto>().ReverseMap();
             CreateMap<UserInfo, UserInfoDto>().ReverseMap();
-            CreateMap<Adresses, AdressesDto>().ReverseMap();
+            CreateMap<Adresses, AddressesDto>().ReverseMap();
             CreateMap<PaymentInfo, PaymentInfoDto>().ReverseMap();
             CreateMap<Technology, TechnologyDto>().ReverseMap();
             CreateMap<TechnologyDetail, TechnologyDetailDto>().ReverseMap();

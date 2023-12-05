@@ -8,10 +8,10 @@ namespace BLL.Interfaces.Services
 {
     public interface IAddressesService
     {
-        Task<Adresses> InsertAddressesAsync(Adresses Addresses, CancellationToken cancellationToken);
-        Task<Adresses> UpdateAddressesAsync(Adresses Addresses, CancellationToken cancellationToken);
+        Task<int> InsertAddressesAsync(Adresses Addresses, CancellationToken cancellationToken);
+        Task<int> UpdateAddressesAsync(Adresses Addresses, CancellationToken cancellationToken);
         Task<int> GetTotalRowsAsync(SearchParamsAddresses searchParams, CancellationToken cancellationToken);
-        Task<int> DeleteAddressesAsync(int id, CancellationToken cancellationToken);
+        Task<bool> DeleteAddressesAsync(int id, CancellationToken cancellationToken);
         Task<IEnumerable<Adresses>> GetAddressessAsync(SearchParamsAddresses searchParameters, CancellationToken cancellationToken);
     }
 }

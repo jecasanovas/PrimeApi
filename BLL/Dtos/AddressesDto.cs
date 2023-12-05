@@ -1,6 +1,6 @@
 ﻿namespace BLL.Dtos
 {
-    public class AdressesDto
+    public class AddressesDto
     {
         public int Id { get; set; }
         public string Direction { get; set; }

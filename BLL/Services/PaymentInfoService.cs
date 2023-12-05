@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 
 namespace BLL.Services
 {
-    public class PaymentInfoService : IPaymentInfo
+    public class PaymentInfoService : IPaymentInfoService
     {
 
         private readonly IUnitOfWork _unitOfWork;
@@ -27,14 +27,14 @@ namespace BLL.Services
             _paymentInfo = paymentInfo;
         }
 
-        public async Task<int> DeletePaymentAsync(int id, CancellationToken cancellationToken)
+        public async Task<bool> DeletePaymentAsync(int id, CancellationToken cancellationToken)
         {
             await _unitOfWork.BeginTransactionAsync(cancellationToken);
             var payment = await _paymentInfo.GetByIdAsync(id);
             _unitOfWork.Repository<PaymentInfo>().Delete(payment);
             await _unitOfWork.CompleteAsync(cancellationToken);
             await _unitOfWork.CommitTransactionAsync(cancellationToken);
-            return 1;
+            return true;
         }
 
         public async Task<IEnumerable<PaymentInfo>> GetPaymentAsync(SearchParamsPaymentInfo SearchParams, CancellationToken cancellationToken)
@@ -49,12 +49,12 @@ namespace BLL.Services
             return await _paymentInfo.CountAsync(criteria, cancellationToken);
         }
 
-        public async Task<PaymentInfo> InsertPaymentAsync(PaymentInfo paymentInfo, CancellationToken cancellationToken)
+        public async Task<int> InsertPaymentAsync(PaymentInfo paymentInfo, CancellationToken cancellationToken)
         {
             return await UpdatePaymentAsync(paymentInfo, cancellationToken);
         }
 
-        public async Task<PaymentInfo> UpdatePaymentAsync(PaymentInfo paymentInfo, CancellationToken cancellationToken)
+        public async Task<int> UpdatePaymentAsync(PaymentInfo paymentInfo, CancellationToken cancellationToken)
         {
             await _unitOfWork.BeginTransactionAsync(cancellationToken);
             if (paymentInfo.Id > 0)
@@ -63,7 +63,7 @@ namespace BLL.Services
                 _unitOfWork.Repository<PaymentInfo>().Add(paymentInfo);
             await _unitOfWork.CompleteAsync(cancellationToken);
             await _unitOfWork.CommitTransactionAsync(cancellationToken);
-            return paymentInfo;
+            return paymentInfo.Id;
         }
     }
 }
