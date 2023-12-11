@@ -24,7 +24,7 @@ namespace BLL.CQRS.Commands
         }
         public async Task<bool> Handle(DeleteTechologyDetailCommand request, CancellationToken cancellationToken)
         {
-            await _techologyService.DeleteTechnologyAsync(request.idTechologyDetail, cancellationToken);
+            await _techologyService.DeleteTechnologyDetailAsync(request.idTechologyDetail, cancellationToken);
             return true;
         }
     }

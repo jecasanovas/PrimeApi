@@ -100,8 +100,6 @@ namespace API.Controllers
                 DisplayName = user.DisplayName
             };
         }
-
-        [Authorize]
         [HttpPost("register")]
         public async Task<ActionResult<UserDto>> Register(RegisterDto registerDto)
         {
