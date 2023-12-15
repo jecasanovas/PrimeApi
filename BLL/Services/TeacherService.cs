@@ -38,19 +38,19 @@ namespace BLL.Services
         {
             return await UpdateTeacherAsync(teacher, cancellationToken);
         }
-        public async Task<int> PostFileAsync(int id, IFormFile file, CancellationToken cancellationToken)
+        public async Task<Teacher> PostFileAsync(int id, IFormFile file, CancellationToken cancellationToken)
         {
             try
             {
-                var result = await _photoService.AddPhotoAsync(file);
                 await _unitOfWork.BeginTransactionAsync(cancellationToken);
+                var result = await _photoService.AddPhotoAsync(file);
                 var teacher = await _teacherRepository.GetByIdAsync(id);
                 Uri url = result.SecureUrl;
                 teacher.Photo = url.AbsoluteUri;
                 _unitOfWork.Repository<Teacher>().Update(teacher);
                 await _unitOfWork.CompleteAsync(cancellationToken);
                 await _unitOfWork.CommitTransactionAsync(cancellationToken);
-                return teacher.Id;
+                return teacher;
             }
             catch (Exception)
             {

@@ -9,6 +9,7 @@ using BLL.CQRS.Queries;
 using BLL.CQRS.Commands;
 using AutoMapper;
 using BLL.SearchParams;
+using Core.Entities;
 
 namespace Courses.Api.Controllers
 {
@@ -98,7 +99,7 @@ namespace Courses.Api.Controllers
         [Authorize]
         [HttpPost]
         [Route("File")]
-        public async Task<ActionResult> PostFile(int id)
+        public async Task<ActionResult<Teacher>> PostFile(int id)
         {
             try
             {
@@ -107,8 +108,9 @@ namespace Courses.Api.Controllers
                 {
                     return BadRequest();
                 }
-                var teacherResponse = await _teacherService.PostFileAsync(id, Request.Form.Files[0], CancellationToken.None);
-                return Ok(_mapper.Map<TeacherDto>(teacherResponse));
+                var result = await _teacherService.PostFileAsync(id, Request.Form.Files[0], CancellationToken.None);
+                return Ok(_mapper.Map<TeacherDto>(result));
+
             }
             catch (Exception ex)
             {
