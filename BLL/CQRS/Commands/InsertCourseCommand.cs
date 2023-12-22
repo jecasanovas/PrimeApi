@@ -8,35 +8,26 @@ using System.Threading.Tasks;
 
 namespace BLL.CQRS.Commands
 {
-
-
-
-    public record InsertCourseCommand : IRequest<bool>
+    public record InsertCourseCommand : IRequest<int>
     {
         public CourseDto Course;
     }
 
-    public class InsertCourseCommandHandler : IRequestHandler<InsertCourseCommand, bool>
+    public class InsertCourseCommandHandler : IRequestHandler<InsertCourseCommand, int>
     {
 
         public readonly ICourseService _courseService;
         public readonly IMapper _mapper;
-
-
         public InsertCourseCommandHandler(ICourseService courseService, IMapper mapper)
         {
             _courseService = courseService;
             _mapper = mapper;
         }
 
-
-        public async Task<bool> Handle(InsertCourseCommand request, CancellationToken cancellationToken)
+        public async Task<int> Handle(InsertCourseCommand request, CancellationToken cancellationToken)
         {
-            var result = await _courseService.InsertCourseAsync(_mapper.Map<Course>(request.Course), cancellationToken);
-            return true;
+            return await _courseService.InsertCourseAsync(_mapper.Map<Course>(request.Course), cancellationToken);
 
         }
     }
-
-
 }

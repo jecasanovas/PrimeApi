@@ -132,9 +132,9 @@ namespace API.Controllers
         public async Task<ActionResult<UserDto>> ResetPassword(RegisterDto registerDto)
         {
             var user = await _userManager.FindByEmailAsync(registerDto.Email);
-            var token = await _userManager.GeneratePasswordResetTokenAsync(user!);
+            var token = await _userManager.GeneratePasswordResetTokenAsync(user);
 
-            var result = await _userManager.ResetPasswordAsync(user!, token, registerDto.Password);
+            var result = await _userManager.ResetPasswordAsync(user, token, registerDto.Password);
 
             if (!result.Succeeded) return BadRequest(new ApiResponse(500));
 

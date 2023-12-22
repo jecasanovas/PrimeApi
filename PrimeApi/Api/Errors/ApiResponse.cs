@@ -21,10 +21,10 @@ namespace Courses.API.Errors
         {
             return statusCode switch
             {
-                400 => "A bad request, you have made",
-                401 => "Authorized, you are not",
-                404 => "Resource found, it was not",
-                500 => "Errors are the path to the BackEnd",
+                400 => "Bad Request",
+                401 => "Nout Authorized",
+                404 => "Resource not Found",
+                500 => "Server error",
                 _ => String.Empty
             };
         }

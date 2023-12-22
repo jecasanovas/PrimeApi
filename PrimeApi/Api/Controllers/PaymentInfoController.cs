@@ -1,5 +1,4 @@
 ﻿using API.Helpers;
-using AutoMapper;
 using BLL.CQRS.Commands;
 using BLL.CQRS.Queries;
 using BLL.Dtos;
