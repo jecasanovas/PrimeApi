@@ -30,10 +30,10 @@ namespace BLL.CQRS.Queries
             var courses = await _courseService.GetCoursesAsync(request.searchParams, cancellationToken);
             //Count results without pagination active, for paging info
             var nrows = await _courseService.GetTotalRowsAsysnc(request.searchParams, cancellationToken);
-
+            var test = _mapper.Map<IEnumerable<CourseDto>>(courses);
             return new DataResults<CourseDto>()
             {
-                Dto = _mapper.Map<IEnumerable<Course>, IEnumerable<CourseDto>>(courses),
+                Dto = _mapper.Map<IEnumerable<CourseDto>>(courses),
                 Results = nrows
             };
 

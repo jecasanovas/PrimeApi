@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using BLL.Dtos;
+﻿using BLL.Dtos;
 using BLL.Interfaces;
 using BLL.Interfaces.Repositories;
 using BLL.Interfaces.Services;
@@ -21,13 +20,11 @@ namespace BLL.Services
     public class TechnologyService : ITechnologyService
     {
         private readonly IUnitOfWork _unitOfWork;
-        private readonly IMapper _mapper;
         private readonly IGenericRepository<Technology> _technologyRepository;
         private readonly IGenericRepository<TechnologyDetail> _technologyDetailRepository;
-        public TechnologyService(IUnitOfWork unitOfWork, IMapper mapper, IGenericRepository<Technology> technologyRepository, IGenericRepository<TechnologyDetail> technologyDetailRepository)
+        public TechnologyService(IUnitOfWork unitOfWork, IGenericRepository<Technology> technologyRepository, IGenericRepository<TechnologyDetail> technologyDetailRepository)
         {
             _unitOfWork = unitOfWork;
-            _mapper = mapper;
             _technologyRepository = technologyRepository;
             _technologyDetailRepository = technologyDetailRepository;
         }
@@ -99,16 +96,14 @@ namespace BLL.Services
             try
             {
                 await _unitOfWork.BeginTransactionAsync(cancellationToken);
-                var entityTechnology = _mapper.Map<Technology>(technology);
-
                 if (technology.Id > 0)
-                    _unitOfWork.Repository<Technology>().Update(entityTechnology);
+                    _unitOfWork.Repository<Technology>().Update(technology);
                 else
-                    _unitOfWork.Repository<Technology>().Add(entityTechnology);
+                    _unitOfWork.Repository<Technology>().Add(technology);
 
                 await _unitOfWork.CompleteAsync(cancellationToken);
                 await _unitOfWork.CommitTransactionAsync(cancellationToken);
-                return entityTechnology.Id;
+                return technology.Id;
             }
             catch (Exception)
             {
@@ -123,16 +118,14 @@ namespace BLL.Services
             try
             {
                 await _unitOfWork.BeginTransactionAsync(cancellationToken);
-                var entityTechnology = _mapper.Map<TechnologyDetail>(technologyDetails);
-
-                if (entityTechnology.Id > 0)
-                    _unitOfWork.Repository<TechnologyDetail>().Update(entityTechnology);
+                if (technologyDetails.Id > 0)
+                    _unitOfWork.Repository<TechnologyDetail>().Update(technologyDetails);
                 else
-                    _unitOfWork.Repository<TechnologyDetail>().Add(entityTechnology);
+                    _unitOfWork.Repository<TechnologyDetail>().Add(technologyDetails);
 
                 await _unitOfWork.CompleteAsync(cancellationToken);
                 await _unitOfWork.CommitTransactionAsync(cancellationToken);
-                return entityTechnology.Id;
+                return technologyDetails.Id;
             }
             catch (Exception)
             {

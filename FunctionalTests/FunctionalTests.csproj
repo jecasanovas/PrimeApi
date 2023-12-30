@@ -24,6 +24,7 @@
     <ProjectReference Include="..\Core\Core.csproj" />
     <ProjectReference Include="..\Identity\Identity.csproj" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="8.0.0" />
+    <PackageReference Include="Moq" Version="4.20.70" />
   </ItemGroup>
 
 </Project>
