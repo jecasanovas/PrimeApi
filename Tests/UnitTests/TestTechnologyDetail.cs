@@ -7,7 +7,7 @@ using Core.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Testing;
+namespace Tests.UnitTests;
 
 
 public class TestTechnologyDetail

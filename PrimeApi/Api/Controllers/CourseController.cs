@@ -65,7 +65,7 @@ namespace Courses.Api.Controllers
 
         [HttpPut]
         [Authorize]
-        public async Task<ActionResult<CourseDto>> UpdateCourse([FromBody] CourseDto courseDto)
+        public async Task<ActionResult<int>> UpdateCourse([FromBody] CourseDto courseDto)
         {
             try
             {
@@ -82,7 +82,7 @@ namespace Courses.Api.Controllers
 
         [HttpPost]
         [Authorize]
-        public async Task<ActionResult<CourseDto>> InsertCourse([FromBody] CourseDto courseDto)
+        public async Task<ActionResult<int>> InsertCourse([FromBody] CourseDto courseDto)
         {
             try
             {

@@ -9,14 +9,12 @@ using System.Threading.Tasks;
 namespace BLL.CQRS.Commands
 {
 
-
-
-    public record InsertCourseDetailCommand : IRequest<bool>
+    public record InsertCourseDetailCommand : IRequest<int>
     {
         public CourseDetailDto Course;
     }
 
-    public class InsertCourseDetailCommandHandler : IRequestHandler<InsertCourseDetailCommand, bool>
+    public class InsertCourseDetailCommandHandler : IRequestHandler<InsertCourseDetailCommand, int>
     {
 
         public readonly ICourseService _courseService;
@@ -30,11 +28,9 @@ namespace BLL.CQRS.Commands
         }
 
 
-        public async Task<bool> Handle(InsertCourseDetailCommand request, CancellationToken cancellationToken)
+        public async Task<int> Handle(InsertCourseDetailCommand request, CancellationToken cancellationToken)
         {
-            var result = await _courseService.InsertCourseDetailAsync(_mapper.Map<CourseDetail>(request.Course), cancellationToken);
-            return true;
-
+            return await _courseService.InsertCourseDetailAsync(_mapper.Map<CourseDetail>(request.Course), cancellationToken);
         }
     }
 }

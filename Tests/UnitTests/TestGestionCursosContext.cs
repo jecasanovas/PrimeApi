@@ -1,7 +1,7 @@
 using Core.DBContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-
+namespace Tests.UnitTests;
 public class TestGestionCursosContext : GestionCursosContext
 {
     public TestGestionCursosContext() : base(new DbContextOptionsBuilder<GestionCursosContext>()

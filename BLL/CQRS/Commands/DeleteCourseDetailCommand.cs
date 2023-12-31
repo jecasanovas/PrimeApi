@@ -18,8 +18,7 @@ namespace BLL.CQRS.Commands
         }
         public async Task<bool> Handle(DeleteCourseDetailCommand request, CancellationToken cancellationToken)
         {
-            var result = await _courseService.DeleteCourseAsync(request.CourseId, cancellationToken);
-            return true;
+            return await _courseService.DeleteCourseAsync(request.CourseId, cancellationToken);
         }
     }
 }
