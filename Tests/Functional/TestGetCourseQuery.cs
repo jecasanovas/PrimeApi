@@ -8,7 +8,7 @@ using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Moq;
-
+namespace Testing;
 public class GetCourseQueryTests
 {
     private readonly Mediator _mediator;
@@ -25,14 +25,7 @@ public class GetCourseQueryTests
                     Description = "Description of Course 1",
 
                 },
-                new Course()
-                {
-                    Id = 2,
-                    Name = "Course 2",
-                    Description = "Description of Course 2",
-
-                },
-            };
+             };
 
         //Mock handles services call
         var courseService = new Mock<ICourseService>();
@@ -40,8 +33,9 @@ public class GetCourseQueryTests
         courseService.Setup(x => x.GetCoursesAsync(It.IsAny<SearchParamCourses>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(_expectedCourses);
 
-        autoMapper.Setup(m => m.Map<IEnumerable<CourseDto>>((Course)It.IsAny<IEnumerable<Course>>())).Returns(new List<CourseDto>() {
-                                                                                                                    new CourseDto() { Id = 1, Name = "TestResult" }});
+        autoMapper.Setup(m => m.Map<IEnumerable<CourseDto>>((Course)It.IsAny<IEnumerable<Course>>()))
+            .Returns(new List<CourseDto>() {
+                    new CourseDto() { Id = 1, Name = "TestResult" }});
 
         var provider = new ServiceCollection()
                         .AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(GetCourseQuery).Assembly))

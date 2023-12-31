@@ -1,5 +1,4 @@
 ﻿using API.Helpers;
-using AutoMapper;
 using BLL.CQRS.Commands;
 using BLL.CQRS.Queries;
 using BLL.Dtos;
@@ -17,14 +16,13 @@ namespace Courses.Api.Controllers
     public class CourseController : BaseApiController
     {
         private readonly ICourseService _courseService;
-        public readonly IMapper _mapper;
         public readonly IMediator _mediator;
         public readonly IConfiguration _configuration;
 
-        public CourseController(IMapper mapper, ICourseService courseService, IMediator mediator, IConfiguration configuration)
+        public CourseController(ICourseService courseService, IMediator mediator, IConfiguration configuration)
         {
             _courseService = courseService;
-            _mapper = mapper;
+
             _mediator = mediator;
             _configuration = configuration;
         }
