@@ -53,7 +53,7 @@ namespace Courses.Api.Controllers
         }
 
         [HttpDelete]
-        public async Task<ActionResult<int>> DeleteTechnology([FromQuery] int id)
+        public async Task<ActionResult<bool>> DeleteTechnology([FromQuery] int id)
         {
             return Ok(await _mediator.Send(new DeleteTechologyCommand()
             {
@@ -92,7 +92,7 @@ namespace Courses.Api.Controllers
 
         [HttpPost]
         [Route("Details")]
-        public async Task<ActionResult<int>> InsertTechnolgyDetails([FromBody] TechnologyDetail technologyDetailDto)
+        public async Task<ActionResult<int>> InsertTechnolgyDetails([FromBody] TechnologyDetailDto technologyDetailDto)
         {
             return Ok(await _mediator.Send(new InsertTechologyDetailCommand() { TechologyDetails = technologyDetailDto }));
         }

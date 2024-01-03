@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace BLL.CQRS.Commands
 {
-    public record InsertTechologyCommand : IRequest<bool>
+    public record InsertTechologyCommand : IRequest<int>
     {
         public TechnologyDto Techology;
     }
 
-    public class InsertTechologyCommandHandler : IRequestHandler<InsertTechologyCommand, bool>
+    public class InsertTechologyCommandHandler : IRequestHandler<InsertTechologyCommand, int>
     {
         public readonly ITechnologyService _techologyService;
         public readonly IMapper _mapper;
@@ -22,10 +22,10 @@ namespace BLL.CQRS.Commands
             _techologyService = course;
             _mapper = mapper;
         }
-        public async Task<bool> Handle(InsertTechologyCommand request, CancellationToken cancellationToken)
+        public async Task<int> Handle(InsertTechologyCommand request, CancellationToken cancellationToken)
         {
-            var result = await _techologyService.InsertTechnologyAsync(_mapper.Map<Technology>(request.Techology), cancellationToken);
-            return true;
+            return await _techologyService.InsertTechnologyAsync(_mapper.Map<Technology>(request.Techology), cancellationToken);
+
         }
     }
 }

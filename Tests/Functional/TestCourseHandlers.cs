@@ -43,22 +43,22 @@ public class TestCourseHandlers
 
     }
     [Fact]
-    public async Task ShouldCallInsertCourseCommand()
+    public async Task ShouldCallInsertCourseCommandHandler()
     {
-        _courseService.Setup(x => x.InsertCourseAsync(It.IsAny<Course>(), It.IsAny<CancellationToken>())).Returns(Task.FromResult(1));
+        _courseService.Setup(x => x.InsertCourseAsync(It.IsAny<Course>(), It.IsAny<CancellationToken>())).Returns(Task.FromResult(5));
         var result = await _mediator.Send(new InsertCourseCommand(), CancellationToken.None);
-        Assert.Equal(1, result);
+        Assert.Equal(5, result);
     }
 
     [Fact]
-    public async Task ShouldCallUpdateCourseCommand()
+    public async Task ShouldCallUpdateCourseCommandHandler()
     {
-        _courseService.Setup(X => X.UpdateCourseAsync(It.IsAny<Course>(), It.IsAny<CancellationToken>())).Returns(Task.FromResult(1));
+        _courseService.Setup(X => X.UpdateCourseAsync(It.IsAny<Course>(), It.IsAny<CancellationToken>())).Returns(Task.FromResult(5));
         var result = await _mediator.Send(new UpdateCourseCommand());
-        Assert.Equal(1, result);
+        Assert.Equal(5, result);
     }
     [Fact]
-    public async Task ShouldCallDeleteCourseCommand()
+    public async Task ShouldCallDeleteCourseCommandHandler()
     {
         _courseService.Setup(x => x.DeleteCourseAsync(It.IsAny<int>(), It.IsAny<CancellationToken>())).Returns(Task.FromResult(true));
         var result = await _mediator.Send(new DeleteCourseCommand());
@@ -68,42 +68,32 @@ public class TestCourseHandlers
     [Fact]
     public async Task ShouldCallGetCourseDetailHandlerAndRetrieveCourseDetail()
     {
-        var _expectedCourseDetail = new List<CourseDetail>()
-        {
-                new CourseDetail()
-                {
-                    Id = 1,
-                    Description = "Description of Course 1",
-
-                },
-             };
-
         _autoMapper.Setup(m => m.Map<IEnumerable<CourseDetailDto>>((Course)It.IsAny<IEnumerable<CourseDetail>>()))
             .Returns(new List<CourseDetailDto>() {
                     new CourseDetailDto() { Id = 1, Description = "TestResult" }});
-        _courseService.Setup(x => x.GetCourseDetailsAsync(It.IsAny<SearchParamCourses>(), It.IsAny<CancellationToken>()))
-                .ReturnsAsync(_expectedCourseDetail);
+        _courseService.Setup(x => x.GetCourseDetailsAsync(It.IsAny<SearchParamCourses>(), It.IsAny<CancellationToken>()));
+
 
         var result = await _mediator.Send(new GetCourseDetailQuery());
         Assert.Equal("TestResult", result.Dto.ElementAt(0).Description);
     }
     [Fact]
-    public async Task ShouldCallInsertCourseDetailCommand()
+    public async Task ShouldCallInsertCourseDetailCommandHandler()
     {
-        _courseService.Setup(x => x.InsertCourseDetailAsync(It.IsAny<CourseDetail>(), It.IsAny<CancellationToken>())).Returns(Task.FromResult(1));
+        _courseService.Setup(x => x.InsertCourseDetailAsync(It.IsAny<CourseDetail>(), It.IsAny<CancellationToken>())).Returns(Task.FromResult(5));
         var result = await _mediator.Send(new InsertCourseDetailCommand(), CancellationToken.None);
-        Assert.Equal(1, result);
+        Assert.Equal(5, result);
     }
 
     [Fact]
-    public async Task ShouldCallUpdateCourseDetailCommand()
+    public async Task ShouldCallUpdateCourseDetailCommandHandler()
     {
-        _courseService.Setup(X => X.UpdateCourseDetailsAsync(It.IsAny<CourseDetail>(), It.IsAny<CancellationToken>())).Returns(Task.FromResult(1));
+        _courseService.Setup(X => X.UpdateCourseDetailsAsync(It.IsAny<CourseDetail>(), It.IsAny<CancellationToken>())).Returns(Task.FromResult(5));
         var result = await _mediator.Send(new UpdateCourseDetailCommand(), CancellationToken.None);
-        Assert.Equal(1, result);
+        Assert.Equal(5, result);
     }
     [Fact]
-    public async Task ShouldCallDeleteCourseDetailCommand()
+    public async Task ShouldCallDeleteCourseDetailCommandHandler()
     {
         _courseService.Setup(x => x.DeleteCourseAsync(It.IsAny<int>(), It.IsAny<CancellationToken>())).Returns(Task.FromResult(true));
         var result = await _mediator.Send(new DeleteCourseCommand());

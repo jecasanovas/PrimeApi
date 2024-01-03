@@ -1,0 +1,8447 @@
+SF:/home/kike/Projects/PrimeApi/BLL/Specification/BaseSpecification.cs
+FN:12,System.Int32 BLL.Specification.BaseSpecification`1::get_PageIndex()
+FNDA:9,System.Int32 BLL.Specification.BaseSpecification`1::get_PageIndex()
+DA:13,9
+FN:14,System.Linq.Expressions.Expression`1<System.Func`2<T,System.Object>>[] BLL.Specification.BaseSpecification`1::get_FieldsOrderBy()
+FNDA:6,System.Linq.Expressions.Expression`1<System.Func`2<T,System.Object>>[] BLL.Specification.BaseSpecification`1::get_FieldsOrderBy()
+DA:15,6
+FN:16,System.Linq.Expressions.Expression`1<System.Func`2<T,System.Object>>[] BLL.Specification.BaseSpecification`1::get_FieldsOrderByDesc()
+FNDA:6,System.Linq.Expressions.Expression`1<System.Func`2<T,System.Object>>[] BLL.Specification.BaseSpecification`1::get_FieldsOrderByDesc()
+DA:17,6
+FN:19,System.Void BLL.Specification.BaseSpecification`1::FieldsAddOrderBy(System.Linq.Expressions.Expression`1<System.Func`2<T,System.Object>>[])
+FNDA:0,System.Void BLL.Specification.BaseSpecification`1::FieldsAddOrderBy(System.Linq.Expressions.Expression`1<System.Func`2<T,System.Object>>[])
+DA:20,0
+DA:21,0
+DA:22,0
+FN:24,System.Void BLL.Specification.BaseSpecification`1::FieldsAddOrderByDesc(System.Linq.Expressions.Expression`1<System.Func`2<T,System.Object>>[])
+FNDA:0,System.Void BLL.Specification.BaseSpecification`1::FieldsAddOrderByDesc(System.Linq.Expressions.Expression`1<System.Func`2<T,System.Object>>[])
+DA:25,0
+DA:26,0
+DA:27,0
+FN:29,System.Int32 BLL.Specification.BaseSpecification`1::get_PageSize()
+FNDA:12,System.Int32 BLL.Specification.BaseSpecification`1::get_PageSize()
+DA:30,12
+FN:31,System.Boolean BLL.Specification.BaseSpecification`1::get_OnlyCount()
+FNDA:9,System.Boolean BLL.Specification.BaseSpecification`1::get_OnlyCount()
+DA:32,9
+FN:41,System.Void BLL.Specification.BaseSpecification`1::AddCondition(System.Linq.Expressions.Expression`1<System.Func`2<T,System.Boolean>>)
+FNDA:2,System.Void BLL.Specification.BaseSpecification`1::AddCondition(System.Linq.Expressions.Expression`1<System.Func`2<T,System.Boolean>>)
+DA:42,2
+DA:43,2
+DA:45,2
+FN:49,System.Collections.Generic.List`1<System.Linq.Expressions.Expression`1<System.Func`2<T,System.Object>>> BLL.Specification.BaseSpecification`1::get_Fields()
+FNDA:12,System.Collections.Generic.List`1<System.Linq.Expressions.Expression`1<System.Func`2<T,System.Object>>> BLL.Specification.BaseSpecification`1::get_Fields()
+DA:50,12
+FN:53,System.Linq.Expressions.Expression`1<System.Func`2<T,System.Boolean>> BLL.Specification.BaseSpecification`1::get_Criteria()
+FNDA:10,System.Linq.Expressions.Expression`1<System.Func`2<T,System.Boolean>> BLL.Specification.BaseSpecification`1::get_Criteria()
+DA:54,10
+FN:55,System.Collections.Generic.List`1<System.Linq.Expressions.Expression`1<System.Func`2<T,System.Object>>> BLL.Specification.BaseSpecification`1::get_Includes()
+FNDA:13,System.Collections.Generic.List`1<System.Linq.Expressions.Expression`1<System.Func`2<T,System.Object>>> BLL.Specification.BaseSpecification`1::get_Includes()
+DA:56,13
+FN:58,System.Linq.Expressions.Expression`1<System.Func`2<T,System.Object>> BLL.Specification.BaseSpecification`1::get_OrderBy()
+FNDA:14,System.Linq.Expressions.Expression`1<System.Func`2<T,System.Object>> BLL.Specification.BaseSpecification`1::get_OrderBy()
+DA:59,14
+FN:60,System.Linq.Expressions.Expression`1<System.Func`2<T,System.Object>> BLL.Specification.BaseSpecification`1::get_OrderByDescending()
+FNDA:6,System.Linq.Expressions.Expression`1<System.Func`2<T,System.Object>> BLL.Specification.BaseSpecification`1::get_OrderByDescending()
+DA:61,6
+FN:62,System.Int32 BLL.Specification.BaseSpecification`1::get_Take()
+FNDA:6,System.Int32 BLL.Specification.BaseSpecification`1::get_Take()
+DA:63,6
+FN:64,System.Int32 BLL.Specification.BaseSpecification`1::get_Skip()
+FNDA:6,System.Int32 BLL.Specification.BaseSpecification`1::get_Skip()
+DA:65,6
+FN:66,System.Boolean BLL.Specification.BaseSpecification`1::get_IsPagingEnabled()
+FNDA:9,System.Boolean BLL.Specification.BaseSpecification`1::get_IsPagingEnabled()
+DA:67,9
+FN:71,System.Void BLL.Specification.BaseSpecification`1::AddInclude(System.Linq.Expressions.Expression`1<System.Func`2<T,System.Object>>)
+FNDA:5,System.Void BLL.Specification.BaseSpecification`1::AddInclude(System.Linq.Expressions.Expression`1<System.Func`2<T,System.Object>>)
+DA:72,5
+DA:73,5
+DA:74,5
+FN:77,System.Void BLL.Specification.BaseSpecification`1::AddOrderBy(System.Linq.Expressions.Expression`1<System.Func`2<T,System.Object>>)
+FNDA:4,System.Void BLL.Specification.BaseSpecification`1::AddOrderBy(System.Linq.Expressions.Expression`1<System.Func`2<T,System.Object>>)
+DA:78,4
+DA:79,4
+DA:80,4
+FN:84,System.Void BLL.Specification.BaseSpecification`1::AddOrderByDescending(System.Linq.Expressions.Expression`1<System.Func`2<T,System.Object>>)
+FNDA:0,System.Void BLL.Specification.BaseSpecification`1::AddOrderByDescending(System.Linq.Expressions.Expression`1<System.Func`2<T,System.Object>>)
+DA:85,0
+DA:86,0
+DA:87,0
+FN:91,System.Void BLL.Specification.BaseSpecification`1::ApplyPaging(System.Nullable`1<System.Int32>,System.Nullable`1<System.Int32>)
+FNDA:3,System.Void BLL.Specification.BaseSpecification`1::ApplyPaging(System.Nullable`1<System.Int32>,System.Nullable`1<System.Int32>)
+DA:92,3
+DA:94,3
+DA:95,3
+DA:96,3
+DA:97,3
+DA:98,3
+DA:99,3
+DA:100,3
+BRDA:94,12,0,3
+BRDA:94,12,1,3
+FN:33,System.Void BLL.Specification.BaseSpecification`1::.ctor()
+FNDA:18,System.Void BLL.Specification.BaseSpecification`1::.ctor()
+DA:34,18
+DA:51,6
+DA:57,6
+FN:35,System.Void BLL.Specification.BaseSpecification`1::.ctor(System.Linq.Expressions.Expression`1<System.Func`2<T,System.Boolean>>)
+FNDA:0,System.Void BLL.Specification.BaseSpecification`1::.ctor(System.Linq.Expressions.Expression`1<System.Func`2<T,System.Boolean>>)
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+LF:46
+LH:33
+BRF:2
+BRH:2
+FNF:22
+FNH:18
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/Specification/QueryableExtensions.cs
+FN:12,System.Linq.IQueryable`1<T> BLL.Specification.QueryableExtensions::SelectMembers(System.Linq.IQueryable`1<T>,System.String[])
+FNDA:0,System.Linq.IQueryable`1<T> BLL.Specification.QueryableExtensions::SelectMembers(System.Linq.IQueryable`1<T>,System.String[])
+DA:13,0
+DA:14,0
+DA:15,0
+DA:16,0
+DA:17,0
+DA:18,0
+DA:19,0
+DA:20,0
+DA:21,0
+BRDA:15,57,0,0
+BRDA:15,57,1,0
+FN:23,System.Collections.Generic.List`1<System.String> BLL.Specification.QueryableExtensions::GetReturningFields(System.Collections.Generic.List`1<System.Linq.Expressions.Expression`1<System.Func`2<T,System.Object>>>)
+FNDA:0,System.Collections.Generic.List`1<System.String> BLL.Specification.QueryableExtensions::GetReturningFields(System.Collections.Generic.List`1<System.Linq.Expressions.Expression`1<System.Func`2<T,System.Object>>>)
+DA:24,0
+DA:26,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:39,0
+DA:41,0
+LF:22
+LH:0
+BRF:2
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/Specification/SpecificationEvaluator.cs
+FN:14,System.Int32 BLL.Specification.SpecificationEvaluator`1::get_Id()
+FNDA:0,System.Int32 BLL.Specification.SpecificationEvaluator`1::get_Id()
+DA:15,0
+FN:16,System.Linq.IQueryable`1<TEntity> BLL.Specification.SpecificationEvaluator`1::GetQuery(System.Linq.IQueryable`1<TEntity>,BLL.Specification.ISpecification`1<TEntity>)
+FNDA:6,System.Linq.IQueryable`1<TEntity> BLL.Specification.SpecificationEvaluator`1::GetQuery(System.Linq.IQueryable`1<TEntity>,BLL.Specification.ISpecification`1<TEntity>)
+DA:17,6
+DA:18,6
+DA:20,6
+DA:21,2
+DA:22,2
+DA:23,2
+DA:25,6
+DA:26,4
+DA:27,4
+DA:28,4
+DA:30,6
+DA:31,0
+DA:32,0
+DA:33,0
+DA:36,6
+DA:37,0
+DA:38,0
+DA:39,0
+DA:42,6
+DA:43,0
+DA:44,0
+DA:45,0
+DA:48,6
+DA:49,3
+DA:50,3
+DA:51,3
+DA:53,6
+DA:54,2
+DA:55,7
+DA:56,2
+DA:60,6
+DA:61,0
+DA:62,0
+DA:64,0
+DA:65,0
+DA:66,0
+DA:67,0
+DA:68,0
+DA:70,6
+DA:71,6
+BRDA:20,14,0,2
+BRDA:20,14,1,6
+BRDA:25,42,0,4
+BRDA:25,42,1,6
+BRDA:30,70,0,0
+BRDA:30,70,1,6
+BRDA:36,100,0,0
+BRDA:38,116,0,0
+BRDA:38,116,1,0
+BRDA:36,100,1,6
+BRDA:42,161,0,0
+BRDA:44,177,0,0
+BRDA:44,177,1,0
+BRDA:42,161,1,6
+BRDA:48,219,0,3
+BRDA:48,219,1,6
+BRDA:53,265,0,2
+BRDA:55,281,0,2
+BRDA:55,281,1,2
+BRDA:53,265,1,6
+BRDA:60,319,0,6
+BRDA:60,319,1,0
+BRDA:60,342,0,0
+BRDA:64,372,0,0
+BRDA:64,372,1,0
+BRDA:60,342,1,6
+LF:41
+LH:24
+BRF:26
+BRH:15
+FNF:2
+FNH:1
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/Services/AddressesService.cs
+FN:17,System.Void BLL.Services.AddressesService::.ctor(BLL.Interfaces.IUnitOfWork,BLL.Interfaces.Repositories.IGenericRepository`1<Core.Entities.Adresses>)
+FNDA:0,System.Void BLL.Services.AddressesService::.ctor(BLL.Interfaces.IUnitOfWork,BLL.Interfaces.Repositories.IGenericRepository`1<Core.Entities.Adresses>)
+DA:18,0
+DA:19,0
+DA:20,0
+DA:21,0
+DA:22,0
+FN:23,System.Void BLL.Services.AddressesService/<DeleteAddressesAsync>d__3::MoveNext()
+FNDA:0,System.Void BLL.Services.AddressesService/<DeleteAddressesAsync>d__3::MoveNext()
+DA:24,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:40,0
+FN:41,System.Void BLL.Services.AddressesService/<GetAddressessAsync>d__4::MoveNext()
+FNDA:0,System.Void BLL.Services.AddressesService/<GetAddressessAsync>d__4::MoveNext()
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+FN:46,System.Void BLL.Services.AddressesService/<GetTotalRowsAsync>d__5::MoveNext()
+FNDA:0,System.Void BLL.Services.AddressesService/<GetTotalRowsAsync>d__5::MoveNext()
+DA:47,0
+DA:48,0
+DA:49,0
+DA:50,0
+FN:51,System.Void BLL.Services.AddressesService/<InsertAddressesAsync>d__6::MoveNext()
+FNDA:0,System.Void BLL.Services.AddressesService/<InsertAddressesAsync>d__6::MoveNext()
+DA:52,0
+DA:53,0
+DA:54,0
+FN:55,System.Void BLL.Services.AddressesService/<UpdateAddressesAsync>d__7::MoveNext()
+FNDA:0,System.Void BLL.Services.AddressesService/<UpdateAddressesAsync>d__7::MoveNext()
+DA:56,0
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:63,0
+DA:64,0
+DA:65,0
+DA:66,0
+DA:69,0
+DA:70,0
+DA:71,0
+DA:72,0
+DA:76,0
+BRDA:60,198,0,0
+BRDA:60,198,1,0
+LF:43
+LH:0
+BRF:2
+BRH:0
+FNF:6
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/Services/CoursesService.cs
+FN:19,System.Void BLL.Services.CoursesService::.ctor(BLL.Interfaces.IUnitOfWork,BLL.Interfaces.Repositories.IGenericRepository`1<Core.Entities.Course>,BLL.Interfaces.Repositories.IGenericRepository`1<Core.Entities.CourseDetail>,BLL.Interfaces.IPhotoService)
+FNDA:7,System.Void BLL.Services.CoursesService::.ctor(BLL.Interfaces.IUnitOfWork,BLL.Interfaces.Repositories.IGenericRepository`1<Core.Entities.Course>,BLL.Interfaces.Repositories.IGenericRepository`1<Core.Entities.CourseDetail>,BLL.Interfaces.IPhotoService)
+DA:20,7
+DA:21,7
+DA:22,7
+DA:23,7
+DA:24,7
+DA:25,7
+DA:26,7
+DA:27,7
+FN:135,System.Void BLL.Services.CoursesService/<DeleteCourseAsync>d__16::MoveNext()
+FNDA:1,System.Void BLL.Services.CoursesService/<DeleteCourseAsync>d__16::MoveNext()
+DA:136,1
+DA:138,1
+DA:139,1
+DA:140,1
+DA:141,1
+DA:142,1
+DA:143,1
+DA:144,1
+DA:146,0
+DA:147,0
+DA:148,0
+DA:149,0
+DA:151,1
+FN:57,System.Void BLL.Services.CoursesService/<GetCourseDetailsAsync>d__8::MoveNext()
+FNDA:1,System.Void BLL.Services.CoursesService/<GetCourseDetailsAsync>d__8::MoveNext()
+DA:58,1
+DA:59,1
+DA:60,1
+DA:61,1
+FN:28,System.Void BLL.Services.CoursesService/<GetCoursebyIdAsync>d__5::MoveNext()
+FNDA:0,System.Void BLL.Services.CoursesService/<GetCoursebyIdAsync>d__5::MoveNext()
+DA:29,0
+DA:30,0
+DA:31,0
+FN:52,System.Void BLL.Services.CoursesService/<GetCoursesAsync>d__7::MoveNext()
+FNDA:1,System.Void BLL.Services.CoursesService/<GetCoursesAsync>d__7::MoveNext()
+DA:53,1
+DA:54,1
+DA:55,1
+DA:56,1
+FN:67,System.Void BLL.Services.CoursesService/<GetTotalDetailRowsAsysnc>d__10::MoveNext()
+FNDA:0,System.Void BLL.Services.CoursesService/<GetTotalDetailRowsAsysnc>d__10::MoveNext()
+DA:68,0
+DA:69,0
+DA:70,0
+DA:71,0
+FN:62,System.Void BLL.Services.CoursesService/<GetTotalRowsAsysnc>d__9::MoveNext()
+FNDA:0,System.Void BLL.Services.CoursesService/<GetTotalRowsAsysnc>d__9::MoveNext()
+DA:63,0
+DA:64,0
+DA:65,0
+DA:66,0
+FN:91,System.Void BLL.Services.CoursesService/<InsertCourseAsync>d__12::MoveNext()
+FNDA:1,System.Void BLL.Services.CoursesService/<InsertCourseAsync>d__12::MoveNext()
+DA:92,1
+DA:93,1
+DA:94,1
+FN:112,System.Void BLL.Services.CoursesService/<InsertCourseDetailAsync>d__14::MoveNext()
+FNDA:1,System.Void BLL.Services.CoursesService/<InsertCourseDetailAsync>d__14::MoveNext()
+DA:113,1
+DA:114,1
+DA:115,1
+FN:95,System.Void BLL.Services.CoursesService/<InsertCourseDetailsMasiveAsync>d__13::MoveNext()
+FNDA:0,System.Void BLL.Services.CoursesService/<InsertCourseDetailsMasiveAsync>d__13::MoveNext()
+DA:96,0
+DA:98,0
+DA:99,0
+DA:100,0
+DA:101,0
+DA:102,0
+DA:103,0
+DA:105,0
+DA:106,0
+DA:107,0
+DA:108,0
+DA:110,0
+FN:32,System.Void BLL.Services.CoursesService/<PostFileAsync>d__6::MoveNext()
+FNDA:0,System.Void BLL.Services.CoursesService/<PostFileAsync>d__6::MoveNext()
+DA:33,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:51,0
+FN:72,System.Void BLL.Services.CoursesService/<UpdateCourseAsync>d__11::MoveNext()
+FNDA:2,System.Void BLL.Services.CoursesService/<UpdateCourseAsync>d__11::MoveNext()
+DA:73,2
+DA:75,2
+DA:76,2
+DA:77,2
+DA:78,1
+DA:80,1
+DA:81,2
+DA:82,2
+DA:83,2
+DA:85,0
+DA:86,0
+DA:87,0
+DA:88,0
+DA:90,2
+BRDA:77,198,0,1
+BRDA:77,198,1,1
+FN:116,System.Void BLL.Services.CoursesService/<UpdateCourseDetailsAsync>d__15::MoveNext()
+FNDA:2,System.Void BLL.Services.CoursesService/<UpdateCourseDetailsAsync>d__15::MoveNext()
+DA:117,2
+DA:119,2
+DA:120,2
+DA:121,2
+DA:122,1
+DA:124,1
+DA:125,2
+DA:126,2
+DA:127,2
+DA:129,0
+DA:130,0
+DA:131,0
+DA:132,0
+DA:134,2
+BRDA:121,198,0,1
+BRDA:121,198,1,1
+LF:102
+LH:51
+BRF:4
+BRH:4
+FNF:13
+FNH:8
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/Services/PaymentInfoService.cs
+FN:23,System.Void BLL.Services.PaymentInfoService::.ctor(BLL.Interfaces.IUnitOfWork,BLL.Interfaces.Repositories.IGenericRepository`1<Core.Entities.PaymentInfo>)
+FNDA:0,System.Void BLL.Services.PaymentInfoService::.ctor(BLL.Interfaces.IUnitOfWork,BLL.Interfaces.Repositories.IGenericRepository`1<Core.Entities.PaymentInfo>)
+DA:24,0
+DA:25,0
+DA:26,0
+DA:27,0
+DA:28,0
+FN:30,System.Void BLL.Services.PaymentInfoService/<DeletePaymentAsync>d__3::MoveNext()
+FNDA:0,System.Void BLL.Services.PaymentInfoService/<DeletePaymentAsync>d__3::MoveNext()
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+FN:40,System.Void BLL.Services.PaymentInfoService/<GetPaymentAsync>d__4::MoveNext()
+FNDA:0,System.Void BLL.Services.PaymentInfoService/<GetPaymentAsync>d__4::MoveNext()
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+FN:46,System.Void BLL.Services.PaymentInfoService/<GetTotalRowsAsync>d__5::MoveNext()
+FNDA:0,System.Void BLL.Services.PaymentInfoService/<GetTotalRowsAsync>d__5::MoveNext()
+DA:47,0
+DA:48,0
+DA:49,0
+DA:50,0
+FN:52,System.Void BLL.Services.PaymentInfoService/<InsertPaymentAsync>d__6::MoveNext()
+FNDA:0,System.Void BLL.Services.PaymentInfoService/<InsertPaymentAsync>d__6::MoveNext()
+DA:53,0
+DA:54,0
+DA:55,0
+FN:57,System.Void BLL.Services.PaymentInfoService/<UpdatePaymentAsync>d__7::MoveNext()
+FNDA:0,System.Void BLL.Services.PaymentInfoService/<UpdatePaymentAsync>d__7::MoveNext()
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:63,0
+DA:64,0
+DA:65,0
+DA:66,0
+DA:67,0
+BRDA:60,170,0,0
+BRDA:60,170,1,0
+LF:33
+LH:0
+BRF:2
+BRH:0
+FNF:6
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/Services/PhotoService.cs
+FN:14,System.Void BLL.Services.PhotoService::.ctor(Microsoft.Extensions.Options.IOptions`1<BLL.Models.CloudinarySettings>)
+FNDA:0,System.Void BLL.Services.PhotoService::.ctor(Microsoft.Extensions.Options.IOptions`1<BLL.Models.CloudinarySettings>)
+DA:15,0
+DA:16,0
+DA:17,0
+DA:18,0
+DA:19,0
+DA:20,0
+DA:21,0
+DA:22,0
+DA:24,0
+DA:25,0
+FN:27,System.Void BLL.Services.PhotoService/<AddPhotoAsync>d__2::MoveNext()
+FNDA:0,System.Void BLL.Services.PhotoService/<AddPhotoAsync>d__2::MoveNext()
+DA:28,0
+DA:29,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:41,0
+DA:42,0
+BRDA:31,43,0,0
+BRDA:31,43,1,0
+FN:44,System.Void BLL.Services.PhotoService/<DeletePhotoAsync>d__3::MoveNext()
+FNDA:0,System.Void BLL.Services.PhotoService/<DeletePhotoAsync>d__3::MoveNext()
+DA:45,0
+DA:46,0
+DA:48,0
+DA:50,0
+DA:51,0
+LF:28
+LH:0
+BRF:2
+BRH:0
+FNF:3
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/Services/TeacherService.cs
+FN:19,System.Void BLL.Services.TeacherService::.ctor(BLL.Interfaces.IUnitOfWork,BLL.Interfaces.Repositories.IGenericRepository`1<Core.Entities.Teacher>,BLL.Interfaces.IPhotoService)
+FNDA:4,System.Void BLL.Services.TeacherService::.ctor(BLL.Interfaces.IUnitOfWork,BLL.Interfaces.Repositories.IGenericRepository`1<Core.Entities.Teacher>,BLL.Interfaces.IPhotoService)
+DA:20,4
+DA:21,4
+DA:22,4
+DA:23,4
+DA:24,4
+DA:25,4
+FN:80,System.Void BLL.Services.TeacherService/<DeleteTeacherAsync>d__9::MoveNext()
+FNDA:1,System.Void BLL.Services.TeacherService/<DeleteTeacherAsync>d__9::MoveNext()
+DA:81,1
+DA:83,1
+DA:84,1
+DA:85,1
+DA:86,1
+DA:87,1
+DA:88,1
+DA:89,1
+DA:91,0
+DA:92,0
+DA:93,0
+DA:94,0
+DA:96,1
+FN:26,System.Void BLL.Services.TeacherService/<GetTeachersAsync>d__4::MoveNext()
+FNDA:1,System.Void BLL.Services.TeacherService/<GetTeachersAsync>d__4::MoveNext()
+DA:27,1
+DA:28,1
+DA:29,1
+DA:30,1
+FN:32,System.Void BLL.Services.TeacherService/<GetTotalRowsAsync>d__5::MoveNext()
+FNDA:0,System.Void BLL.Services.TeacherService/<GetTotalRowsAsync>d__5::MoveNext()
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+FN:37,System.Void BLL.Services.TeacherService/<InsertTeacherAsync>d__6::MoveNext()
+FNDA:1,System.Void BLL.Services.TeacherService/<InsertTeacherAsync>d__6::MoveNext()
+DA:38,1
+DA:39,1
+DA:40,1
+FN:41,System.Void BLL.Services.TeacherService/<PostFileAsync>d__7::MoveNext()
+FNDA:0,System.Void BLL.Services.TeacherService/<PostFileAsync>d__7::MoveNext()
+DA:42,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:52,0
+DA:53,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:58,0
+DA:60,0
+FN:61,System.Void BLL.Services.TeacherService/<UpdateTeacherAsync>d__8::MoveNext()
+FNDA:2,System.Void BLL.Services.TeacherService/<UpdateTeacherAsync>d__8::MoveNext()
+DA:62,2
+DA:64,2
+DA:65,2
+DA:66,2
+DA:67,1
+DA:69,1
+DA:70,2
+DA:71,2
+DA:72,2
+DA:74,0
+DA:75,0
+DA:76,0
+DA:77,0
+DA:79,2
+BRDA:66,198,0,1
+BRDA:66,198,1,1
+LF:60
+LH:32
+BRF:2
+BRH:2
+FNF:7
+FNH:5
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/Services/TechnologyService.cs
+FN:24,System.Void BLL.Services.TechnologyService::.ctor(BLL.Interfaces.IUnitOfWork,BLL.Interfaces.Repositories.IGenericRepository`1<Core.Entities.Technology>,BLL.Interfaces.Repositories.IGenericRepository`1<Core.Entities.TechnologyDetail>)
+FNDA:8,System.Void BLL.Services.TechnologyService::.ctor(BLL.Interfaces.IUnitOfWork,BLL.Interfaces.Repositories.IGenericRepository`1<Core.Entities.Technology>,BLL.Interfaces.Repositories.IGenericRepository`1<Core.Entities.TechnologyDetail>)
+DA:25,8
+DA:26,8
+DA:27,8
+DA:28,8
+DA:29,8
+DA:30,8
+FN:31,System.Void BLL.Services.TechnologyService/<DeleteTechnologyAsync>d__4::MoveNext()
+FNDA:1,System.Void BLL.Services.TechnologyService/<DeleteTechnologyAsync>d__4::MoveNext()
+DA:32,1
+DA:34,1
+DA:35,1
+DA:36,1
+DA:37,1
+DA:38,1
+DA:39,1
+DA:40,1
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:46,1
+DA:47,1
+FN:48,System.Void BLL.Services.TechnologyService/<DeleteTechnologyDetailAsync>d__5::MoveNext()
+FNDA:1,System.Void BLL.Services.TechnologyService/<DeleteTechnologyDetailAsync>d__5::MoveNext()
+DA:49,1
+DA:51,1
+DA:52,1
+DA:53,1
+DA:54,1
+DA:55,1
+DA:56,1
+DA:57,1
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:65,1
+FN:66,System.Void BLL.Services.TechnologyService/<GetTechnologyAsync>d__6::MoveNext()
+FNDA:1,System.Void BLL.Services.TechnologyService/<GetTechnologyAsync>d__6::MoveNext()
+DA:67,1
+DA:68,1
+DA:69,1
+DA:70,1
+FN:71,System.Void BLL.Services.TechnologyService/<GetTechnologyDetailsAsync>d__7::MoveNext()
+FNDA:1,System.Void BLL.Services.TechnologyService/<GetTechnologyDetailsAsync>d__7::MoveNext()
+DA:72,1
+DA:73,1
+DA:74,1
+DA:75,1
+FN:76,System.Void BLL.Services.TechnologyService/<GetTotalRowsTechnologyAsync>d__8::MoveNext()
+FNDA:0,System.Void BLL.Services.TechnologyService/<GetTotalRowsTechnologyAsync>d__8::MoveNext()
+DA:77,0
+DA:78,0
+DA:79,0
+DA:80,0
+FN:81,System.Void BLL.Services.TechnologyService/<GetTotalRowsTechnologyDetailsAsync>d__9::MoveNext()
+FNDA:0,System.Void BLL.Services.TechnologyService/<GetTotalRowsTechnologyDetailsAsync>d__9::MoveNext()
+DA:82,0
+DA:83,0
+DA:84,0
+DA:85,0
+FN:86,System.Void BLL.Services.TechnologyService/<InsertTechnologyAsync>d__10::MoveNext()
+FNDA:1,System.Void BLL.Services.TechnologyService/<InsertTechnologyAsync>d__10::MoveNext()
+DA:87,1
+DA:88,1
+DA:89,1
+FN:90,System.Void BLL.Services.TechnologyService/<InsertTechnologyDetailAsync>d__11::MoveNext()
+FNDA:1,System.Void BLL.Services.TechnologyService/<InsertTechnologyDetailAsync>d__11::MoveNext()
+DA:91,1
+DA:92,1
+DA:93,1
+FN:94,System.Void BLL.Services.TechnologyService/<UpdateTechnologyAsync>d__12::MoveNext()
+FNDA:2,System.Void BLL.Services.TechnologyService/<UpdateTechnologyAsync>d__12::MoveNext()
+DA:95,2
+DA:97,2
+DA:98,2
+DA:99,2
+DA:100,1
+DA:102,1
+DA:104,2
+DA:105,2
+DA:106,2
+DA:108,0
+DA:109,0
+DA:110,0
+DA:111,0
+DA:113,2
+BRDA:99,198,0,1
+BRDA:99,198,1,1
+FN:116,System.Void BLL.Services.TechnologyService/<UpdateTechnologyDetailAsync>d__13::MoveNext()
+FNDA:2,System.Void BLL.Services.TechnologyService/<UpdateTechnologyDetailAsync>d__13::MoveNext()
+DA:117,2
+DA:119,2
+DA:120,2
+DA:121,2
+DA:122,1
+DA:124,1
+DA:126,2
+DA:127,2
+DA:128,2
+DA:130,0
+DA:131,0
+DA:132,0
+DA:133,0
+DA:135,2
+BRDA:121,198,0,1
+BRDA:121,198,1,1
+LF:83
+LH:59
+BRF:4
+BRH:4
+FNF:11
+FNH:9
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/Services/UserInfoService.cs
+FN:25,System.Void BLL.Services.UserService::.ctor(BLL.Interfaces.IUnitOfWork,AutoMapper.IMapper,BLL.Interfaces.Repositories.IGenericRepository`1<Core.Entities.UserInfo>,BLL.Interfaces.IPhotoService)
+FNDA:4,System.Void BLL.Services.UserService::.ctor(BLL.Interfaces.IUnitOfWork,AutoMapper.IMapper,BLL.Interfaces.Repositories.IGenericRepository`1<Core.Entities.UserInfo>,BLL.Interfaces.IPhotoService)
+DA:26,4
+DA:27,4
+DA:28,4
+DA:29,4
+DA:30,4
+DA:32,4
+FN:92,System.Void BLL.Services.UserService/<DeleteUserInfoAsync>d__9::MoveNext()
+FNDA:1,System.Void BLL.Services.UserService/<DeleteUserInfoAsync>d__9::MoveNext()
+DA:93,1
+DA:95,1
+DA:96,1
+DA:97,1
+DA:98,1
+DA:99,1
+DA:100,1
+DA:101,1
+DA:103,0
+DA:104,0
+DA:105,0
+DA:106,0
+DA:109,1
+FN:39,System.Void BLL.Services.UserService/<GetTotalRowsAsync>d__5::MoveNext()
+FNDA:0,System.Void BLL.Services.UserService/<GetTotalRowsAsync>d__5::MoveNext()
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+FN:33,System.Void BLL.Services.UserService/<GetUsersInfoAsync>d__4::MoveNext()
+FNDA:1,System.Void BLL.Services.UserService/<GetUsersInfoAsync>d__4::MoveNext()
+DA:34,1
+DA:35,1
+DA:36,1
+DA:37,1
+FN:46,System.Void BLL.Services.UserService/<InsertUserInfoAsync>d__6::MoveNext()
+FNDA:1,System.Void BLL.Services.UserService/<InsertUserInfoAsync>d__6::MoveNext()
+DA:47,1
+DA:48,1
+DA:49,1
+FN:51,System.Void BLL.Services.UserService/<PostFileAsync>d__7::MoveNext()
+FNDA:0,System.Void BLL.Services.UserService/<PostFileAsync>d__7::MoveNext()
+DA:52,0
+DA:54,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:63,0
+DA:65,0
+DA:66,0
+DA:67,0
+DA:68,0
+DA:70,0
+FN:72,System.Void BLL.Services.UserService/<UpdateUserInfoAsync>d__8::MoveNext()
+FNDA:2,System.Void BLL.Services.UserService/<UpdateUserInfoAsync>d__8::MoveNext()
+DA:73,2
+DA:75,2
+DA:76,2
+DA:77,2
+DA:78,1
+DA:80,1
+DA:81,2
+DA:82,2
+DA:83,2
+DA:85,0
+DA:86,0
+DA:87,0
+DA:88,0
+DA:90,2
+BRDA:77,198,0,1
+BRDA:77,198,1,1
+LF:60
+LH:32
+BRF:2
+BRH:2
+FNF:7
+FNH:5
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/SearchParams/SearchParam.cs
+FN:4,System.Int32 BLL.SearchParams.SearchParam::get_page()
+FNDA:16,System.Int32 BLL.SearchParams.SearchParam::get_page()
+DA:5,16
+FN:6,System.Int32 BLL.SearchParams.SearchParam::get_pageSize()
+FNDA:16,System.Int32 BLL.SearchParams.SearchParam::get_pageSize()
+DA:7,16
+LF:2
+LH:2
+BRF:0
+BRH:0
+FNF:2
+FNH:2
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/SearchParams/SearchParamsAddresses.cs
+FN:5,System.Nullable`1<System.Int32> BLL.SearchParams.SearchParamsAddresses::get_UserInfoId()
+FNDA:0,System.Nullable`1<System.Int32> BLL.SearchParams.SearchParamsAddresses::get_UserInfoId()
+DA:6,0
+FN:7,System.Int32 BLL.SearchParams.SearchParamsAddresses::get_onlOnlyCount()
+FNDA:0,System.Int32 BLL.SearchParams.SearchParamsAddresses::get_onlOnlyCount()
+DA:8,0
+FN:9,System.String BLL.SearchParams.SearchParamsAddresses::get_order()
+FNDA:0,System.String BLL.SearchParams.SearchParamsAddresses::get_order()
+DA:10,0
+FN:11,System.String BLL.SearchParams.SearchParamsAddresses::get_CP()
+FNDA:0,System.String BLL.SearchParams.SearchParamsAddresses::get_CP()
+DA:12,0
+FN:13,System.String BLL.SearchParams.SearchParamsAddresses::get_Street()
+FNDA:0,System.String BLL.SearchParams.SearchParamsAddresses::get_Street()
+DA:14,0
+LF:5
+LH:0
+BRF:0
+BRH:0
+FNF:5
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/SearchParams/SearchParamsPaymentInfo.cs
+FN:11,System.Nullable`1<System.Int32> BLL.SearchParams.SearchParamsPaymentInfo::get_UserInfoId()
+FNDA:0,System.Nullable`1<System.Int32> BLL.SearchParams.SearchParamsPaymentInfo::get_UserInfoId()
+DA:12,0
+FN:13,System.Int32 BLL.SearchParams.SearchParamsPaymentInfo::get_onlOnlyCount()
+FNDA:0,System.Int32 BLL.SearchParams.SearchParamsPaymentInfo::get_onlOnlyCount()
+DA:14,0
+FN:15,System.String BLL.SearchParams.SearchParamsPaymentInfo::get_order()
+FNDA:0,System.String BLL.SearchParams.SearchParamsPaymentInfo::get_order()
+DA:16,0
+FN:17,System.String BLL.SearchParams.SearchParamsPaymentInfo::get_Name()
+FNDA:0,System.String BLL.SearchParams.SearchParamsPaymentInfo::get_Name()
+DA:18,0
+FN:19,System.String BLL.SearchParams.SearchParamsPaymentInfo::get_CardHolder()
+FNDA:0,System.String BLL.SearchParams.SearchParamsPaymentInfo::get_CardHolder()
+DA:20,0
+LF:5
+LH:0
+BRF:0
+BRH:0
+FNF:5
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/SearchParams/SearchParamsTeachers.cs
+FN:11,System.String BLL.SearchParams.SearchParamTeachers::get_TeacherName()
+FNDA:0,System.String BLL.SearchParams.SearchParamTeachers::get_TeacherName()
+DA:12,0
+LF:1
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/SearchParams/SearchParamUsers.cs
+FN:10,System.Nullable`1<System.Int32> BLL.SearchParams.SearchParamUsers::get_id()
+FNDA:1,System.Nullable`1<System.Int32> BLL.SearchParams.SearchParamUsers::get_id()
+DA:11,1
+FN:12,System.String BLL.SearchParams.SearchParamUsers::get_Name()
+FNDA:1,System.String BLL.SearchParams.SearchParamUsers::get_Name()
+DA:13,1
+FN:14,System.String BLL.SearchParams.SearchParamUsers::get_Email()
+FNDA:1,System.String BLL.SearchParams.SearchParamUsers::get_Email()
+DA:15,1
+FN:16,System.String BLL.SearchParams.SearchParamUsers::get_Order()
+FNDA:1,System.String BLL.SearchParams.SearchParamUsers::get_Order()
+DA:17,1
+LF:4
+LH:4
+BRF:0
+BRH:0
+FNF:4
+FNH:4
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/SearchParams/SerchParamsCourses.cs
+FN:11,System.Nullable`1<System.Int32> BLL.SearchParams.SearchParamCourses::get_id()
+FNDA:1,System.Nullable`1<System.Int32> BLL.SearchParams.SearchParamCourses::get_id()
+DA:12,1
+FN:12,System.Nullable`1<System.Int32> BLL.SearchParams.SearchParamCourses::get_lessonID()
+FNDA:0,System.Nullable`1<System.Int32> BLL.SearchParams.SearchParamCourses::get_lessonID()
+DA:13,0
+FN:14,System.String BLL.SearchParams.SearchParamCourses::get_description()
+FNDA:0,System.String BLL.SearchParams.SearchParamCourses::get_description()
+DA:15,0
+FN:16,System.Int32 BLL.SearchParams.SearchParamCourses::get_CourseId()
+FNDA:1,System.Int32 BLL.SearchParams.SearchParamCourses::get_CourseId()
+DA:17,1
+FN:17,System.String BLL.SearchParams.SearchParamCourses::get_name()
+FNDA:1,System.String BLL.SearchParams.SearchParamCourses::get_name()
+DA:18,1
+FN:18,System.Object BLL.SearchParams.SearchParamCourses::get_Name()
+FNDA:0,System.Object BLL.SearchParams.SearchParamCourses::get_Name()
+DA:19,0
+FN:19,System.String BLL.SearchParams.SearchParamCourses::get_order()
+FNDA:2,System.String BLL.SearchParams.SearchParamCourses::get_order()
+DA:20,2
+FN:21,System.String BLL.SearchParams.SearchParamCourses::get_idteacher()
+FNDA:1,System.String BLL.SearchParams.SearchParamCourses::get_idteacher()
+DA:22,1
+FN:23,System.Boolean BLL.SearchParams.SearchParamCourses::get_onlycount()
+FNDA:0,System.Boolean BLL.SearchParams.SearchParamCourses::get_onlycount()
+DA:24,0
+FN:25,System.String BLL.SearchParams.SearchParamCourses::get_idtec()
+FNDA:1,System.String BLL.SearchParams.SearchParamCourses::get_idtec()
+DA:26,1
+FN:27,System.String BLL.SearchParams.SearchParamCourses::get_idtechdet()
+FNDA:1,System.String BLL.SearchParams.SearchParamCourses::get_idtechdet()
+DA:28,1
+LF:11
+LH:7
+BRF:0
+BRH:0
+FNF:11
+FNH:7
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/SearchParams/CloudinarySettings.cs
+FN:4,System.String BLL.Models.CloudinarySettings::get_CloudName()
+FNDA:0,System.String BLL.Models.CloudinarySettings::get_CloudName()
+DA:5,0
+FN:5,System.String BLL.Models.CloudinarySettings::get_ApiKey()
+FNDA:0,System.String BLL.Models.CloudinarySettings::get_ApiKey()
+DA:6,0
+FN:6,System.String BLL.Models.CloudinarySettings::get_ApiSecret()
+FNDA:0,System.String BLL.Models.CloudinarySettings::get_ApiSecret()
+DA:7,0
+LF:3
+LH:0
+BRF:0
+BRH:0
+FNF:3
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/Repositories/GenericRepository.cs
+FN:52,System.Linq.IQueryable`1<T> BLL.Reposititories.GenericRepository`1::ApplySpecification(BLL.Specification.ISpecification`1<T>)
+FNDA:6,System.Linq.IQueryable`1<T> BLL.Reposititories.GenericRepository`1::ApplySpecification(BLL.Specification.ISpecification`1<T>)
+DA:53,6
+DA:54,6
+DA:55,6
+DA:56,6
+FN:57,System.Void BLL.Reposititories.GenericRepository`1::Add(T)
+FNDA:6,System.Void BLL.Reposititories.GenericRepository`1::Add(T)
+DA:58,6
+DA:59,6
+DA:60,6
+FN:63,System.Void BLL.Reposititories.GenericRepository`1::AddRange(System.Collections.Generic.IEnumerable`1<T>)
+FNDA:0,System.Void BLL.Reposititories.GenericRepository`1::AddRange(System.Collections.Generic.IEnumerable`1<T>)
+DA:64,0
+DA:65,0
+DA:66,0
+FN:68,System.Void BLL.Reposititories.GenericRepository`1::Update(T)
+FNDA:6,System.Void BLL.Reposititories.GenericRepository`1::Update(T)
+DA:69,6
+DA:70,6
+DA:71,6
+DA:72,6
+FN:74,System.Void BLL.Reposititories.GenericRepository`1::Delete(T)
+FNDA:5,System.Void BLL.Reposititories.GenericRepository`1::Delete(T)
+DA:75,5
+DA:76,5
+DA:77,5
+FN:17,System.Void BLL.Reposititories.GenericRepository`1::.ctor(Core.DBContext.GestionCursosContext)
+FNDA:40,System.Void BLL.Reposititories.GenericRepository`1::.ctor(Core.DBContext.GestionCursosContext)
+DA:18,40
+DA:19,40
+DA:20,40
+DA:21,40
+FN:43,System.Void BLL.Reposititories.GenericRepository`1/<CountAsync>d__6::MoveNext()
+FNDA:0,System.Void BLL.Reposititories.GenericRepository`1/<CountAsync>d__6::MoveNext()
+DA:44,0
+DA:45,0
+DA:46,0
+FN:48,System.Void BLL.Reposititories.GenericRepository`1/<CountAsync>d__7::MoveNext()
+FNDA:0,System.Void BLL.Reposititories.GenericRepository`1/<CountAsync>d__7::MoveNext()
+DA:49,0
+DA:50,0
+DA:51,0
+FN:23,System.Void BLL.Reposititories.GenericRepository`1/<GetByIdAsync>d__2::MoveNext()
+FNDA:5,System.Void BLL.Reposititories.GenericRepository`1/<GetByIdAsync>d__2::MoveNext()
+DA:24,5
+DA:25,5
+DA:26,5
+FN:33,System.Void BLL.Reposititories.GenericRepository`1/<GetEntityWithSpec>d__4::MoveNext()
+FNDA:0,System.Void BLL.Reposititories.GenericRepository`1/<GetEntityWithSpec>d__4::MoveNext()
+DA:34,0
+DA:35,0
+DA:36,0
+FN:28,System.Void BLL.Reposititories.GenericRepository`1/<ListAllAsync>d__3::MoveNext()
+FNDA:0,System.Void BLL.Reposititories.GenericRepository`1/<ListAllAsync>d__3::MoveNext()
+DA:29,0
+DA:30,0
+DA:31,0
+FN:38,System.Void BLL.Reposititories.GenericRepository`1/<ListAsync>d__5::MoveNext()
+FNDA:6,System.Void BLL.Reposititories.GenericRepository`1/<ListAsync>d__5::MoveNext()
+DA:39,6
+DA:40,6
+DA:41,6
+FN:78,System.Void BLL.Reposititories.GenericRepository`1/<SaveChangesAsync>d__13::MoveNext()
+FNDA:0,System.Void BLL.Reposititories.GenericRepository`1/<SaveChangesAsync>d__13::MoveNext()
+DA:79,0
+DA:80,0
+DA:82,0
+LF:42
+LH:24
+BRF:0
+BRH:0
+FNF:13
+FNH:7
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/Repositories/UnitOfWork.cs
+FN:46,System.Void BLL.Reposititories.UnitOfWork::Dispose()
+FNDA:0,System.Void BLL.Reposititories.UnitOfWork::Dispose()
+DA:47,0
+DA:48,0
+DA:49,0
+FN:51,BLL.Interfaces.Repositories.IGenericRepository`1<TEntity> BLL.Reposititories.UnitOfWork::Repository()
+FNDA:19,BLL.Interfaces.Repositories.IGenericRepository`1<TEntity> BLL.Reposititories.UnitOfWork::Repository()
+DA:52,19
+DA:53,36
+DA:55,19
+DA:57,19
+DA:58,17
+DA:59,17
+DA:60,17
+DA:62,17
+DA:63,17
+DA:65,19
+DA:66,19
+BRDA:53,12,0,17
+BRDA:53,12,1,19
+BRDA:57,58,0,17
+BRDA:57,58,1,19
+FN:18,System.Void BLL.Reposititories.UnitOfWork::.ctor(Core.DBContext.GestionCursosContext)
+FNDA:23,System.Void BLL.Reposititories.UnitOfWork::.ctor(Core.DBContext.GestionCursosContext)
+DA:19,23
+DA:20,23
+DA:21,23
+DA:22,23
+FN:24,System.Void BLL.Reposititories.UnitOfWork/<BeginTransactionAsync>d__4::MoveNext()
+FNDA:17,System.Void BLL.Reposititories.UnitOfWork/<BeginTransactionAsync>d__4::MoveNext()
+DA:25,17
+DA:26,17
+DA:27,17
+FN:35,System.Void BLL.Reposititories.UnitOfWork/<CommitTransactionAsync>d__6::MoveNext()
+FNDA:17,System.Void BLL.Reposititories.UnitOfWork/<CommitTransactionAsync>d__6::MoveNext()
+DA:36,17
+DA:37,17
+DA:38,17
+FN:29,System.Void BLL.Reposititories.UnitOfWork/<CompleteAsync>d__5::MoveNext()
+FNDA:17,System.Void BLL.Reposititories.UnitOfWork/<CompleteAsync>d__5::MoveNext()
+DA:30,17
+DA:31,17
+DA:32,17
+FN:41,System.Void BLL.Reposititories.UnitOfWork/<RollbackTransactionAsync>d__7::MoveNext()
+FNDA:0,System.Void BLL.Reposititories.UnitOfWork/<RollbackTransactionAsync>d__7::MoveNext()
+DA:42,0
+DA:43,0
+DA:44,0
+LF:30
+LH:24
+BRF:4
+BRH:4
+FNF:7
+FNH:5
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/Parameters/AddressesParams.cs
+FN:13,System.Void BLL.Parameters.AddressesParams::.ctor(BLL.SearchParams.SearchParamsAddresses,System.Boolean)
+FNDA:0,System.Void BLL.Parameters.AddressesParams::.ctor(BLL.SearchParams.SearchParamsAddresses,System.Boolean)
+DA:14,0
+DA:15,0
+DA:16,0
+DA:17,0
+DA:18,0
+DA:19,0
+DA:22,0
+DA:23,0
+DA:26,0
+DA:27,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:52,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:58,0
+DA:60,0
+DA:62,0
+DA:67,0
+BRDA:26,190,0,0
+BRDA:26,190,1,0
+BRDA:26,228,0,0
+BRDA:26,228,1,0
+BRDA:44,324,0,0
+BRDA:44,324,1,0
+BRDA:44,347,0,0
+BRDA:44,347,1,0
+BRDA:50,436,0,0
+BRDA:50,436,1,0
+BRDA:51,474,0,0
+BRDA:51,474,1,0
+BRDA:34,7,0,0
+BRDA:34,7,1,0
+BRDA:34,30,0,0
+BRDA:35,46,0,0
+BRDA:35,46,1,0
+BRDA:34,30,1,0
+BRDA:37,229,0,0
+BRDA:37,229,1,0
+BRDA:37,252,0,0
+BRDA:38,270,0,0
+BRDA:38,270,1,0
+BRDA:37,252,1,0
+LF:39
+LH:0
+BRF:24
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/Parameters/CoursesDetailParams.cs
+FN:13,System.Void BLL.Parameters.CourseDetailsParam::.ctor(BLL.SearchParams.SearchParamCourses,System.Boolean)
+FNDA:1,System.Void BLL.Parameters.CourseDetailsParam::.ctor(BLL.SearchParams.SearchParamCourses,System.Boolean)
+DA:14,1
+DA:15,1
+DA:16,1
+DA:17,1
+DA:18,1
+DA:19,1
+DA:20,1
+DA:22,1
+DA:23,0
+DA:25,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:40,1
+DA:41,1
+DA:42,1
+DA:43,1
+DA:45,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:51,1
+DA:52,0
+DA:53,0
+DA:54,0
+DA:55,0
+DA:57,0
+DA:60,0
+DA:62,0
+DA:63,0
+DA:64,1
+BRDA:22,126,0,0
+BRDA:22,126,1,1
+BRDA:22,162,0,0
+BRDA:22,162,1,1
+BRDA:40,253,0,1
+BRDA:40,253,1,0
+BRDA:40,276,0,1
+BRDA:40,276,1,0
+BRDA:46,383,0,0
+BRDA:46,383,1,0
+BRDA:47,421,0,0
+BRDA:47,421,1,0
+BRDA:51,465,0,0
+BRDA:51,465,1,1
+BRDA:30,7,0,0
+BRDA:30,7,1,0
+BRDA:30,30,0,0
+BRDA:31,46,0,0
+BRDA:31,46,1,0
+BRDA:30,30,1,0
+BRDA:33,244,0,0
+BRDA:33,244,1,0
+BRDA:33,267,0,0
+BRDA:34,285,0,0
+BRDA:34,285,1,0
+BRDA:33,267,1,0
+LF:41
+LH:14
+BRF:26
+BRH:5
+FNF:1
+FNH:1
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/Parameters/CoursesParams.cs
+FN:15,System.Void BLL.Parameters.CoursesParams::.ctor(BLL.SearchParams.SearchParamCourses,System.Boolean)
+FNDA:1,System.Void BLL.Parameters.CoursesParams::.ctor(BLL.SearchParams.SearchParamCourses,System.Boolean)
+DA:16,1
+DA:17,1
+DA:22,1
+DA:23,1
+DA:24,1
+DA:28,1
+DA:29,1
+DA:30,1
+DA:31,1
+DA:37,1
+DA:38,1
+DA:41,1
+DA:42,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:52,0
+DA:53,0
+DA:54,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:59,1
+DA:60,1
+DA:61,1
+DA:62,1
+DA:64,0
+DA:65,0
+DA:66,0
+DA:67,0
+DA:70,1
+DA:72,1
+DA:73,0
+DA:74,0
+DA:75,0
+DA:76,0
+DA:78,1
+DA:80,1
+DA:81,0
+DA:82,0
+DA:83,0
+DA:84,0
+DA:87,1
+DA:89,1
+DA:90,0
+DA:91,0
+DA:92,0
+DA:93,0
+DA:97,1
+DA:98,1
+DA:99,1
+DA:100,1
+DA:101,1
+DA:102,1
+DA:104,1
+DA:106,1
+DA:109,1
+BRDA:41,402,0,0
+BRDA:41,402,1,1
+BRDA:41,440,0,0
+BRDA:41,440,1,1
+BRDA:59,536,0,1
+BRDA:59,536,1,0
+BRDA:59,559,0,1
+BRDA:59,559,1,0
+BRDA:65,648,0,0
+BRDA:65,648,1,0
+BRDA:66,686,0,0
+BRDA:66,686,1,0
+BRDA:72,739,0,0
+BRDA:72,739,1,1
+BRDA:72,774,0,0
+BRDA:72,774,1,1
+BRDA:80,857,0,0
+BRDA:80,857,1,1
+BRDA:80,892,0,0
+BRDA:80,892,1,1
+BRDA:89,975,0,0
+BRDA:89,975,1,1
+BRDA:89,1010,0,0
+BRDA:89,1010,1,1
+BRDA:49,7,0,0
+BRDA:49,7,1,0
+BRDA:49,30,0,0
+BRDA:50,46,0,0
+BRDA:50,46,1,0
+BRDA:49,30,1,0
+BRDA:52,249,0,0
+BRDA:52,249,1,0
+BRDA:52,272,0,0
+BRDA:53,290,0,0
+BRDA:53,290,1,0
+BRDA:52,272,1,0
+LF:62
+LH:31
+BRF:36
+BRH:10
+FNF:1
+FNH:1
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/Parameters/GenericParams.cs
+FN:8,System.Void BLL.Parameters.GenericParams`1::.ctor(BLL.SearchParams.SearchParam,System.Boolean)
+FNDA:2,System.Void BLL.Parameters.GenericParams`1::.ctor(BLL.SearchParams.SearchParam,System.Boolean)
+DA:9,2
+DA:10,2
+DA:12,2
+DA:13,2
+DA:14,2
+DA:17,2
+LF:6
+LH:6
+BRF:0
+BRH:0
+FNF:1
+FNH:1
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/Parameters/PaymentInfoParam.cs
+FN:16,System.Void BLL.Parameters.PaymentInfoParam::.ctor(BLL.SearchParams.SearchParamsPaymentInfo,System.Boolean)
+FNDA:0,System.Void BLL.Parameters.PaymentInfoParam::.ctor(BLL.SearchParams.SearchParamsPaymentInfo,System.Boolean)
+DA:17,0
+DA:18,0
+DA:19,0
+DA:20,0
+DA:21,0
+DA:25,0
+DA:26,0
+DA:29,0
+DA:30,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:50,0
+DA:52,0
+DA:53,0
+DA:54,0
+DA:55,0
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:63,0
+DA:65,0
+DA:70,0
+BRDA:29,126,0,0
+BRDA:29,126,1,0
+BRDA:29,162,0,0
+BRDA:29,162,1,0
+BRDA:47,258,0,0
+BRDA:47,258,1,0
+BRDA:47,281,0,0
+BRDA:47,281,1,0
+BRDA:53,373,0,0
+BRDA:53,373,1,0
+BRDA:54,411,0,0
+BRDA:54,411,1,0
+BRDA:37,7,0,0
+BRDA:37,7,1,0
+BRDA:37,30,0,0
+BRDA:38,46,0,0
+BRDA:38,46,1,0
+BRDA:37,30,1,0
+BRDA:40,229,0,0
+BRDA:40,229,1,0
+BRDA:40,252,0,0
+BRDA:41,270,0,0
+BRDA:41,270,1,0
+BRDA:40,252,1,0
+LF:38
+LH:0
+BRF:24
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/Parameters/TeacherParams.cs
+FN:15,System.Void BLL.Parameters.TeacherParams::.ctor(BLL.SearchParams.SearchParamTeachers,System.Boolean)
+FNDA:1,System.Void BLL.Parameters.TeacherParams::.ctor(BLL.SearchParams.SearchParamTeachers,System.Boolean)
+DA:16,1
+DA:17,1
+DA:19,1
+DA:20,1
+DA:21,1
+DA:24,1
+DA:30,1
+DA:33,1
+DA:35,1
+LF:9
+LH:9
+BRF:0
+BRH:0
+FNF:1
+FNH:1
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/Parameters/UserParams.cs
+FN:15,System.Void BLL.Parameters.UserParam::.ctor(BLL.SearchParams.SearchParamUsers,System.Boolean)
+FNDA:1,System.Void BLL.Parameters.UserParam::.ctor(BLL.SearchParams.SearchParamUsers,System.Boolean)
+DA:16,1
+DA:17,1
+DA:19,1
+DA:20,1
+DA:21,1
+DA:24,1
+DA:25,1
+DA:28,1
+DA:29,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:46,1
+DA:47,1
+DA:48,1
+DA:49,1
+DA:51,0
+DA:52,0
+DA:53,0
+DA:54,0
+DA:57,1
+DA:58,1
+DA:59,1
+DA:60,1
+DA:63,1
+DA:65,1
+DA:68,1
+BRDA:28,126,0,0
+BRDA:28,126,1,1
+BRDA:28,162,0,0
+BRDA:28,162,1,1
+BRDA:46,258,0,1
+BRDA:46,258,1,0
+BRDA:46,281,0,1
+BRDA:46,281,1,0
+BRDA:52,373,0,0
+BRDA:52,373,1,0
+BRDA:53,411,0,0
+BRDA:53,411,1,0
+BRDA:36,7,0,0
+BRDA:36,7,1,0
+BRDA:36,30,0,0
+BRDA:37,46,0,0
+BRDA:37,46,1,0
+BRDA:36,30,1,0
+BRDA:39,229,0,0
+BRDA:39,229,1,0
+BRDA:39,252,0,0
+BRDA:40,270,0,0
+BRDA:40,270,1,0
+BRDA:39,252,1,0
+LF:38
+LH:19
+BRF:24
+BRH:4
+FNF:1
+FNH:1
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/Dtos/AddressDto.cs
+FN:7,System.String BLL.Dtos.AddressDto::get_FirstName()
+FNDA:0,System.String BLL.Dtos.AddressDto::get_FirstName()
+DA:8,0
+FN:10,System.String BLL.Dtos.AddressDto::get_LastName()
+FNDA:0,System.String BLL.Dtos.AddressDto::get_LastName()
+DA:11,0
+FN:13,System.String BLL.Dtos.AddressDto::get_Street()
+FNDA:0,System.String BLL.Dtos.AddressDto::get_Street()
+DA:14,0
+FN:16,System.String BLL.Dtos.AddressDto::get_City()
+FNDA:0,System.String BLL.Dtos.AddressDto::get_City()
+DA:17,0
+FN:19,System.String BLL.Dtos.AddressDto::get_State()
+FNDA:0,System.String BLL.Dtos.AddressDto::get_State()
+DA:20,0
+FN:22,System.String BLL.Dtos.AddressDto::get_Zipcode()
+FNDA:0,System.String BLL.Dtos.AddressDto::get_Zipcode()
+DA:23,0
+LF:6
+LH:0
+BRF:0
+BRH:0
+FNF:6
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/Dtos/AddressesDto.cs
+FN:4,System.Int32 BLL.Dtos.AddressesDto::get_Id()
+FNDA:0,System.Int32 BLL.Dtos.AddressesDto::get_Id()
+DA:5,0
+FN:5,System.String BLL.Dtos.AddressesDto::get_Direction()
+FNDA:0,System.String BLL.Dtos.AddressesDto::get_Direction()
+DA:6,0
+FN:6,System.Char BLL.Dtos.AddressesDto::get_TypeOfDirection()
+FNDA:0,System.Char BLL.Dtos.AddressesDto::get_TypeOfDirection()
+DA:7,0
+FN:7,System.String BLL.Dtos.AddressesDto::get_CP()
+FNDA:0,System.String BLL.Dtos.AddressesDto::get_CP()
+DA:8,0
+FN:8,System.Int32 BLL.Dtos.AddressesDto::get_CountryId()
+FNDA:0,System.Int32 BLL.Dtos.AddressesDto::get_CountryId()
+DA:9,0
+FN:9,System.String BLL.Dtos.AddressesDto::get_Description()
+FNDA:0,System.String BLL.Dtos.AddressesDto::get_Description()
+DA:10,0
+FN:10,System.String BLL.Dtos.AddressesDto::get_Telephone()
+FNDA:0,System.String BLL.Dtos.AddressesDto::get_Telephone()
+DA:11,0
+FN:11,System.Int32 BLL.Dtos.AddressesDto::get_UserInfoId()
+FNDA:0,System.Int32 BLL.Dtos.AddressesDto::get_UserInfoId()
+DA:12,0
+FN:12,System.Char BLL.Dtos.AddressesDto::get_TypeOfDocument()
+FNDA:0,System.Char BLL.Dtos.AddressesDto::get_TypeOfDocument()
+DA:13,0
+FN:13,System.String BLL.Dtos.AddressesDto::get_Document()
+FNDA:0,System.String BLL.Dtos.AddressesDto::get_Document()
+DA:14,0
+LF:10
+LH:0
+BRF:0
+BRH:0
+FNF:10
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/Dtos/CountryDto.cs
+FN:4,System.String BLL.Dtos.CountryDto::get_CountryDesc()
+FNDA:0,System.String BLL.Dtos.CountryDto::get_CountryDesc()
+DA:5,0
+LF:1
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/Dtos/CourseDetailDto.cs
+FN:4,System.Int32 BLL.Dtos.CourseDetailDto::get_Id()
+FNDA:2,System.Int32 BLL.Dtos.CourseDetailDto::get_Id()
+DA:5,2
+FN:5,System.Int32 BLL.Dtos.CourseDetailDto::get_LessonId()
+FNDA:0,System.Int32 BLL.Dtos.CourseDetailDto::get_LessonId()
+DA:6,0
+FN:6,System.String BLL.Dtos.CourseDetailDto::get_Description()
+FNDA:4,System.String BLL.Dtos.CourseDetailDto::get_Description()
+DA:7,4
+FN:7,System.Int32 BLL.Dtos.CourseDetailDto::get_CourseId()
+FNDA:0,System.Int32 BLL.Dtos.CourseDetailDto::get_CourseId()
+DA:8,0
+LF:4
+LH:2
+BRF:0
+BRH:0
+FNF:4
+FNH:2
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/Dtos/CourseDetailUploadDto.cs
+FN:4,System.Int32 BLL.Dtos.CourseDetailUploadDto::get_LessonId()
+FNDA:0,System.Int32 BLL.Dtos.CourseDetailUploadDto::get_LessonId()
+DA:5,0
+FN:5,System.String BLL.Dtos.CourseDetailUploadDto::get_Description()
+FNDA:0,System.String BLL.Dtos.CourseDetailUploadDto::get_Description()
+DA:6,0
+LF:2
+LH:0
+BRF:0
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/Dtos/CourseDto.cs
+FN:6,System.Int32 BLL.Dtos.CourseDto::get_Id()
+FNDA:2,System.Int32 BLL.Dtos.CourseDto::get_Id()
+DA:7,2
+FN:7,System.Int32 BLL.Dtos.CourseDto::get_TeacherId()
+FNDA:0,System.Int32 BLL.Dtos.CourseDto::get_TeacherId()
+DA:8,0
+FN:8,System.String BLL.Dtos.CourseDto::get_TeacherName()
+FNDA:0,System.String BLL.Dtos.CourseDto::get_TeacherName()
+DA:9,0
+FN:9,System.String BLL.Dtos.CourseDto::get_CountryName()
+FNDA:0,System.String BLL.Dtos.CourseDto::get_CountryName()
+DA:10,0
+FN:10,System.String BLL.Dtos.CourseDto::get_Name()
+FNDA:4,System.String BLL.Dtos.CourseDto::get_Name()
+DA:11,4
+FN:11,System.String BLL.Dtos.CourseDto::get_Url()
+FNDA:0,System.String BLL.Dtos.CourseDto::get_Url()
+DA:12,0
+FN:12,System.Int32 BLL.Dtos.CourseDto::get_TechnologyId()
+FNDA:0,System.Int32 BLL.Dtos.CourseDto::get_TechnologyId()
+DA:13,0
+FN:13,System.String BLL.Dtos.CourseDto::get_TechnologyName()
+FNDA:0,System.String BLL.Dtos.CourseDto::get_TechnologyName()
+DA:14,0
+FN:14,System.String BLL.Dtos.CourseDto::get_TechnologyDetailsName()
+FNDA:0,System.String BLL.Dtos.CourseDto::get_TechnologyDetailsName()
+DA:15,0
+FN:15,System.String BLL.Dtos.CourseDto::get_TeacherPhoto()
+FNDA:0,System.String BLL.Dtos.CourseDto::get_TeacherPhoto()
+DA:16,0
+FN:16,System.String BLL.Dtos.CourseDto::get_TeacherDescription()
+FNDA:0,System.String BLL.Dtos.CourseDto::get_TeacherDescription()
+DA:17,0
+FN:17,System.Int32 BLL.Dtos.CourseDto::get_TechnologyDetailsId()
+FNDA:0,System.Int32 BLL.Dtos.CourseDto::get_TechnologyDetailsId()
+DA:18,0
+FN:18,System.String BLL.Dtos.CourseDto::get_Description()
+FNDA:0,System.String BLL.Dtos.CourseDto::get_Description()
+DA:19,0
+FN:19,System.String BLL.Dtos.CourseDto::get_SeachKeywords()
+FNDA:0,System.String BLL.Dtos.CourseDto::get_SeachKeywords()
+DA:20,0
+FN:20,System.String BLL.Dtos.CourseDto::get_Photo()
+FNDA:0,System.String BLL.Dtos.CourseDto::get_Photo()
+DA:21,0
+FN:21,System.String BLL.Dtos.CourseDto::get_CourseDetails()
+FNDA:0,System.String BLL.Dtos.CourseDto::get_CourseDetails()
+DA:22,0
+LF:16
+LH:2
+BRF:0
+BRH:0
+FNF:16
+FNH:2
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/Dtos/DataResults.cs
+FN:5,System.Collections.Generic.IEnumerable`1<T> BLL.Dtos.DataResults`1::get_Dto()
+FNDA:12,System.Collections.Generic.IEnumerable`1<T> BLL.Dtos.DataResults`1::get_Dto()
+DA:6,12
+FN:6,System.Int32 BLL.Dtos.DataResults`1::get_Results()
+FNDA:8,System.Int32 BLL.Dtos.DataResults`1::get_Results()
+DA:7,8
+LF:2
+LH:2
+BRF:0
+BRH:0
+FNF:2
+FNH:2
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/Dtos/PaymentInfoDto.cs
+FN:4,System.Int32 BLL.Dtos.PaymentInfoDto::get_Id()
+FNDA:0,System.Int32 BLL.Dtos.PaymentInfoDto::get_Id()
+DA:5,0
+FN:5,System.Int32 BLL.Dtos.PaymentInfoDto::get_UserInfoId()
+FNDA:0,System.Int32 BLL.Dtos.PaymentInfoDto::get_UserInfoId()
+DA:6,0
+FN:6,System.String BLL.Dtos.PaymentInfoDto::get_Name()
+FNDA:0,System.String BLL.Dtos.PaymentInfoDto::get_Name()
+DA:7,0
+FN:7,System.String BLL.Dtos.PaymentInfoDto::get_CardHolderName()
+FNDA:0,System.String BLL.Dtos.PaymentInfoDto::get_CardHolderName()
+DA:8,0
+FN:8,System.String BLL.Dtos.PaymentInfoDto::get_CardNumber()
+FNDA:0,System.String BLL.Dtos.PaymentInfoDto::get_CardNumber()
+DA:9,0
+FN:9,System.String BLL.Dtos.PaymentInfoDto::get_MonthExp()
+FNDA:0,System.String BLL.Dtos.PaymentInfoDto::get_MonthExp()
+DA:10,0
+FN:10,System.String BLL.Dtos.PaymentInfoDto::get_YearExp()
+FNDA:0,System.String BLL.Dtos.PaymentInfoDto::get_YearExp()
+DA:11,0
+FN:11,System.String BLL.Dtos.PaymentInfoDto::get_CCV()
+FNDA:0,System.String BLL.Dtos.PaymentInfoDto::get_CCV()
+DA:12,0
+LF:8
+LH:0
+BRF:0
+BRH:0
+FNF:8
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/Dtos/TeacherDto.cs
+FN:4,System.Int32 BLL.Dtos.TeacherDto::get_Id()
+FNDA:1,System.Int32 BLL.Dtos.TeacherDto::get_Id()
+DA:5,1
+FN:5,System.String BLL.Dtos.TeacherDto::get_Name()
+FNDA:2,System.String BLL.Dtos.TeacherDto::get_Name()
+DA:6,2
+FN:6,System.String BLL.Dtos.TeacherDto::get_Surname()
+FNDA:0,System.String BLL.Dtos.TeacherDto::get_Surname()
+DA:7,0
+FN:7,System.Int32 BLL.Dtos.TeacherDto::get_CountryId()
+FNDA:0,System.Int32 BLL.Dtos.TeacherDto::get_CountryId()
+DA:8,0
+FN:8,System.String BLL.Dtos.TeacherDto::get_CountryName()
+FNDA:0,System.String BLL.Dtos.TeacherDto::get_CountryName()
+DA:9,0
+FN:9,System.String BLL.Dtos.TeacherDto::get_UrlSite()
+FNDA:0,System.String BLL.Dtos.TeacherDto::get_UrlSite()
+DA:10,0
+FN:10,System.String BLL.Dtos.TeacherDto::get_UrlSocial()
+FNDA:0,System.String BLL.Dtos.TeacherDto::get_UrlSocial()
+DA:11,0
+FN:11,System.String BLL.Dtos.TeacherDto::get_Photo()
+FNDA:0,System.String BLL.Dtos.TeacherDto::get_Photo()
+DA:12,0
+FN:12,System.String BLL.Dtos.TeacherDto::get_description()
+FNDA:0,System.String BLL.Dtos.TeacherDto::get_description()
+DA:13,0
+LF:9
+LH:2
+BRF:0
+BRH:0
+FNF:9
+FNH:2
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/Dtos/TechnologyDetailDto.cs
+FN:4,System.Int32 BLL.Dtos.TechnologyDetailDto::get_Id()
+FNDA:1,System.Int32 BLL.Dtos.TechnologyDetailDto::get_Id()
+DA:5,1
+FN:5,System.Int32 BLL.Dtos.TechnologyDetailDto::get_TechnologyId()
+FNDA:0,System.Int32 BLL.Dtos.TechnologyDetailDto::get_TechnologyId()
+DA:6,0
+FN:6,System.String BLL.Dtos.TechnologyDetailDto::get_Description()
+FNDA:2,System.String BLL.Dtos.TechnologyDetailDto::get_Description()
+DA:7,2
+LF:3
+LH:2
+BRF:0
+BRH:0
+FNF:3
+FNH:2
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/Dtos/TechnologyDto.cs
+FN:4,System.Int32 BLL.Dtos.TechnologyDto::get_Id()
+FNDA:1,System.Int32 BLL.Dtos.TechnologyDto::get_Id()
+DA:5,1
+FN:5,System.String BLL.Dtos.TechnologyDto::get_Description()
+FNDA:2,System.String BLL.Dtos.TechnologyDto::get_Description()
+DA:6,2
+LF:2
+LH:2
+BRF:0
+BRH:0
+FNF:2
+FNH:2
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/Dtos/UserInfoDto.cs
+FN:4,System.Int32 BLL.Dtos.UserInfoDto::get_Id()
+FNDA:1,System.Int32 BLL.Dtos.UserInfoDto::get_Id()
+DA:5,1
+FN:5,System.String BLL.Dtos.UserInfoDto::get_Name()
+FNDA:2,System.String BLL.Dtos.UserInfoDto::get_Name()
+DA:6,2
+FN:6,System.String BLL.Dtos.UserInfoDto::get_Surname()
+FNDA:0,System.String BLL.Dtos.UserInfoDto::get_Surname()
+DA:7,0
+FN:7,System.Int32 BLL.Dtos.UserInfoDto::get_CountryId()
+FNDA:0,System.Int32 BLL.Dtos.UserInfoDto::get_CountryId()
+DA:8,0
+FN:8,System.String BLL.Dtos.UserInfoDto::get_Telephone()
+FNDA:0,System.String BLL.Dtos.UserInfoDto::get_Telephone()
+DA:9,0
+FN:9,System.String BLL.Dtos.UserInfoDto::get_Email()
+FNDA:0,System.String BLL.Dtos.UserInfoDto::get_Email()
+DA:10,0
+FN:10,System.String BLL.Dtos.UserInfoDto::get_Role()
+FNDA:0,System.String BLL.Dtos.UserInfoDto::get_Role()
+DA:11,0
+FN:11,System.String BLL.Dtos.UserInfoDto::get_Password()
+FNDA:0,System.String BLL.Dtos.UserInfoDto::get_Password()
+DA:12,0
+FN:12,System.Boolean BLL.Dtos.UserInfoDto::get_DoubleFactor()
+FNDA:0,System.Boolean BLL.Dtos.UserInfoDto::get_DoubleFactor()
+DA:13,0
+FN:13,System.String BLL.Dtos.UserInfoDto::get_Description()
+FNDA:0,System.String BLL.Dtos.UserInfoDto::get_Description()
+DA:14,0
+FN:14,System.String BLL.Dtos.UserInfoDto::get_Photo()
+FNDA:0,System.String BLL.Dtos.UserInfoDto::get_Photo()
+DA:15,0
+LF:11
+LH:2
+BRF:0
+BRH:0
+FNF:11
+FNH:2
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/CQRS/Queries/GetAddressesQuery.cs
+FN:12,System.Void BLL.CQRS.Queries.GetAddressesQuery::.ctor(BLL.CQRS.Queries.GetAddressesQuery)
+FNDA:0,System.Void BLL.CQRS.Queries.GetAddressesQuery::.ctor(BLL.CQRS.Queries.GetAddressesQuery)
+DA:13,0
+FN:21,System.Void BLL.CQRS.Queries.GetAddressesQueryHandler::.ctor(BLL.Interfaces.Services.IAddressesService,AutoMapper.IMapper)
+FNDA:0,System.Void BLL.CQRS.Queries.GetAddressesQueryHandler::.ctor(BLL.Interfaces.Services.IAddressesService,AutoMapper.IMapper)
+DA:22,0
+DA:23,0
+DA:24,0
+DA:25,0
+DA:26,0
+FN:28,System.Void BLL.CQRS.Queries.GetAddressesQueryHandler/<Handle>d__3::MoveNext()
+FNDA:0,System.Void BLL.CQRS.Queries.GetAddressesQueryHandler/<Handle>d__3::MoveNext()
+DA:29,0
+DA:30,0
+DA:32,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+LF:15
+LH:0
+BRF:0
+BRH:0
+FNF:3
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/CQRS/Queries/GetCourseDetailQuery.cs
+FN:11,System.Void BLL.CQRS.Queries.GetCourseDetailQuery::.ctor(BLL.CQRS.Queries.GetCourseDetailQuery)
+FNDA:0,System.Void BLL.CQRS.Queries.GetCourseDetailQuery::.ctor(BLL.CQRS.Queries.GetCourseDetailQuery)
+DA:12,0
+FN:20,System.Void BLL.CQRS.Queries.GetCourseDetailQueryHandler::.ctor(BLL.Interfaces.ICourseService,AutoMapper.IMapper)
+FNDA:1,System.Void BLL.CQRS.Queries.GetCourseDetailQueryHandler::.ctor(BLL.Interfaces.ICourseService,AutoMapper.IMapper)
+DA:21,1
+DA:22,1
+DA:23,1
+DA:24,1
+DA:25,1
+FN:27,System.Void BLL.CQRS.Queries.GetCourseDetailQueryHandler/<Handle>d__3::MoveNext()
+FNDA:1,System.Void BLL.CQRS.Queries.GetCourseDetailQueryHandler/<Handle>d__3::MoveNext()
+DA:28,1
+DA:29,1
+DA:31,1
+DA:33,1
+DA:34,1
+DA:35,1
+DA:36,1
+DA:37,1
+DA:39,1
+LF:15
+LH:14
+BRF:0
+BRH:0
+FNF:3
+FNH:2
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/CQRS/Queries/GetCourseQuery.cs
+FN:12,System.Void BLL.CQRS.Queries.GetCourseQuery::.ctor(BLL.CQRS.Queries.GetCourseQuery)
+FNDA:0,System.Void BLL.CQRS.Queries.GetCourseQuery::.ctor(BLL.CQRS.Queries.GetCourseQuery)
+DA:13,0
+FN:21,System.Void BLL.CQRS.Queries.GetCourseQueryHandler::.ctor(BLL.Interfaces.ICourseService,AutoMapper.IMapper)
+FNDA:1,System.Void BLL.CQRS.Queries.GetCourseQueryHandler::.ctor(BLL.Interfaces.ICourseService,AutoMapper.IMapper)
+DA:22,1
+DA:23,1
+DA:24,1
+DA:25,1
+DA:26,1
+FN:28,System.Void BLL.CQRS.Queries.GetCourseQueryHandler/<Handle>d__3::MoveNext()
+FNDA:1,System.Void BLL.CQRS.Queries.GetCourseQueryHandler/<Handle>d__3::MoveNext()
+DA:29,1
+DA:30,1
+DA:32,1
+DA:33,1
+DA:34,1
+DA:35,1
+DA:36,1
+DA:37,1
+DA:38,1
+DA:40,1
+LF:16
+LH:15
+BRF:0
+BRH:0
+FNF:3
+FNH:2
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/CQRS/Queries/GetPaymentInfoQuery.cs
+FN:11,System.Void BLL.CQRS.Queries.GetPaymentInfoQuery::.ctor(BLL.CQRS.Queries.GetPaymentInfoQuery)
+FNDA:0,System.Void BLL.CQRS.Queries.GetPaymentInfoQuery::.ctor(BLL.CQRS.Queries.GetPaymentInfoQuery)
+DA:12,0
+FN:20,System.Void BLL.CQRS.Queries.GetPaymentInfoQueryHandler::.ctor(BLL.Interfaces.Services.IPaymentInfoService,AutoMapper.IMapper)
+FNDA:0,System.Void BLL.CQRS.Queries.GetPaymentInfoQueryHandler::.ctor(BLL.Interfaces.Services.IPaymentInfoService,AutoMapper.IMapper)
+DA:21,0
+DA:22,0
+DA:23,0
+DA:24,0
+DA:25,0
+FN:27,System.Void BLL.CQRS.Queries.GetPaymentInfoQueryHandler/<Handle>d__3::MoveNext()
+FNDA:0,System.Void BLL.CQRS.Queries.GetPaymentInfoQueryHandler/<Handle>d__3::MoveNext()
+DA:28,0
+DA:29,0
+DA:31,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:39,0
+LF:15
+LH:0
+BRF:0
+BRH:0
+FNF:3
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/CQRS/Queries/GetTeacherQuery.cs
+FN:11,System.Void BLL.CQRS.Queries.GetTeacherQuery::.ctor(BLL.CQRS.Queries.GetTeacherQuery)
+FNDA:0,System.Void BLL.CQRS.Queries.GetTeacherQuery::.ctor(BLL.CQRS.Queries.GetTeacherQuery)
+DA:12,0
+FN:20,System.Void BLL.CQRS.Queries.GetTeacherQueryHandler::.ctor(BLL.Interfaces.ITeacherService,AutoMapper.IMapper)
+FNDA:1,System.Void BLL.CQRS.Queries.GetTeacherQueryHandler::.ctor(BLL.Interfaces.ITeacherService,AutoMapper.IMapper)
+DA:21,1
+DA:22,1
+DA:23,1
+DA:24,1
+DA:25,1
+FN:27,System.Void BLL.CQRS.Queries.GetTeacherQueryHandler/<Handle>d__3::MoveNext()
+FNDA:1,System.Void BLL.CQRS.Queries.GetTeacherQueryHandler/<Handle>d__3::MoveNext()
+DA:28,1
+DA:30,1
+DA:32,1
+DA:34,1
+DA:35,1
+DA:36,1
+DA:37,1
+DA:38,1
+DA:39,1
+LF:15
+LH:14
+BRF:0
+BRH:0
+FNF:3
+FNH:2
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/CQRS/Queries/GetTechnologyDetailQuery.cs
+FN:11,System.Void BLL.CQRS.Queries.GetTechnologyDetailQuery::.ctor(BLL.CQRS.Queries.GetTechnologyDetailQuery)
+FNDA:0,System.Void BLL.CQRS.Queries.GetTechnologyDetailQuery::.ctor(BLL.CQRS.Queries.GetTechnologyDetailQuery)
+DA:12,0
+FN:20,System.Void BLL.CQRS.Queries.GetTechnologyDetailQueryHandler::.ctor(BLL.Interfaces.Services.ITechnologyService,AutoMapper.IMapper)
+FNDA:1,System.Void BLL.CQRS.Queries.GetTechnologyDetailQueryHandler::.ctor(BLL.Interfaces.Services.ITechnologyService,AutoMapper.IMapper)
+DA:21,1
+DA:22,1
+DA:23,1
+DA:24,1
+DA:25,1
+FN:27,System.Void BLL.CQRS.Queries.GetTechnologyDetailQueryHandler/<Handle>d__3::MoveNext()
+FNDA:1,System.Void BLL.CQRS.Queries.GetTechnologyDetailQueryHandler/<Handle>d__3::MoveNext()
+DA:28,1
+DA:29,1
+DA:30,1
+DA:31,1
+LF:10
+LH:9
+BRF:0
+BRH:0
+FNF:3
+FNH:2
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/CQRS/Queries/GetTechnologyQuery.cs
+FN:17,System.Void BLL.CQRS.Queries.GetTechnologyQuery::.ctor(BLL.CQRS.Queries.GetTechnologyQuery)
+FNDA:0,System.Void BLL.CQRS.Queries.GetTechnologyQuery::.ctor(BLL.CQRS.Queries.GetTechnologyQuery)
+DA:18,0
+FN:26,System.Void BLL.CQRS.Queries.GetTechnologyQueryHandler::.ctor(BLL.Interfaces.Services.ITechnologyService,AutoMapper.IMapper)
+FNDA:1,System.Void BLL.CQRS.Queries.GetTechnologyQueryHandler::.ctor(BLL.Interfaces.Services.ITechnologyService,AutoMapper.IMapper)
+DA:27,1
+DA:28,1
+DA:29,1
+DA:30,1
+DA:31,1
+FN:33,System.Void BLL.CQRS.Queries.GetTechnologyQueryHandler/<Handle>d__3::MoveNext()
+FNDA:1,System.Void BLL.CQRS.Queries.GetTechnologyQueryHandler/<Handle>d__3::MoveNext()
+DA:34,1
+DA:35,1
+DA:36,1
+DA:37,1
+LF:10
+LH:9
+BRF:0
+BRH:0
+FNF:3
+FNH:2
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/CQRS/Queries/GetUserInfoQuery.cs
+FN:11,System.Void BLL.CQRS.Queries.GetUserInfoQuery::.ctor(BLL.CQRS.Queries.GetUserInfoQuery)
+FNDA:0,System.Void BLL.CQRS.Queries.GetUserInfoQuery::.ctor(BLL.CQRS.Queries.GetUserInfoQuery)
+DA:12,0
+FN:20,System.Void BLL.CQRS.Queries.GetUserInfoQueryHandler::.ctor(AutoMapper.IMapper,BLL.Interfaces.Services.IUserInfoService)
+FNDA:1,System.Void BLL.CQRS.Queries.GetUserInfoQueryHandler::.ctor(AutoMapper.IMapper,BLL.Interfaces.Services.IUserInfoService)
+DA:21,1
+DA:22,1
+DA:23,1
+DA:24,1
+DA:25,1
+FN:27,System.Void BLL.CQRS.Queries.GetUserInfoQueryHandler/<Handle>d__3::MoveNext()
+FNDA:1,System.Void BLL.CQRS.Queries.GetUserInfoQueryHandler/<Handle>d__3::MoveNext()
+DA:28,1
+DA:29,1
+DA:31,1
+DA:33,1
+DA:34,1
+DA:35,1
+DA:36,1
+DA:37,1
+DA:38,1
+LF:15
+LH:14
+BRF:0
+BRH:0
+FNF:3
+FNH:2
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/CQRS/Commands/DeleteAddressesCommand.cs
+FN:7,System.Void BLL.CQRS.Commands.DeleteAddressesCommand::.ctor(BLL.CQRS.Commands.DeleteAddressesCommand)
+FNDA:0,System.Void BLL.CQRS.Commands.DeleteAddressesCommand::.ctor(BLL.CQRS.Commands.DeleteAddressesCommand)
+DA:8,0
+FN:15,System.Void BLL.CQRS.Commands.DeleteAddressesCommandHandler::.ctor(BLL.Interfaces.Services.IAddressesService)
+FNDA:0,System.Void BLL.CQRS.Commands.DeleteAddressesCommandHandler::.ctor(BLL.Interfaces.Services.IAddressesService)
+DA:16,0
+DA:17,0
+DA:18,0
+DA:19,0
+FN:21,System.Void BLL.CQRS.Commands.DeleteAddressesCommandHandler/<Handle>d__2::MoveNext()
+FNDA:0,System.Void BLL.CQRS.Commands.DeleteAddressesCommandHandler/<Handle>d__2::MoveNext()
+DA:22,0
+DA:23,0
+DA:24,0
+LF:8
+LH:0
+BRF:0
+BRH:0
+FNF:3
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/CQRS/Commands/DeleteCourseCommand.cs
+FN:7,System.Void BLL.CQRS.Commands.DeleteCourseCommand::.ctor(BLL.CQRS.Commands.DeleteCourseCommand)
+FNDA:0,System.Void BLL.CQRS.Commands.DeleteCourseCommand::.ctor(BLL.CQRS.Commands.DeleteCourseCommand)
+DA:8,0
+FN:14,System.Void BLL.CQRS.Commands.DeleteCourseCommandHandler::.ctor(BLL.Interfaces.ICourseService)
+FNDA:2,System.Void BLL.CQRS.Commands.DeleteCourseCommandHandler::.ctor(BLL.Interfaces.ICourseService)
+DA:15,2
+DA:16,2
+DA:17,2
+DA:18,2
+FN:19,System.Void BLL.CQRS.Commands.DeleteCourseCommandHandler/<Handle>d__2::MoveNext()
+FNDA:2,System.Void BLL.CQRS.Commands.DeleteCourseCommandHandler/<Handle>d__2::MoveNext()
+DA:20,2
+DA:21,2
+DA:22,2
+DA:23,2
+LF:9
+LH:8
+BRF:0
+BRH:0
+FNF:3
+FNH:2
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/CQRS/Commands/DeleteCourseDetailCommand.cs
+FN:7,System.Void BLL.CQRS.Commands.DeleteCourseDetailCommand::.ctor(BLL.CQRS.Commands.DeleteCourseDetailCommand)
+FNDA:0,System.Void BLL.CQRS.Commands.DeleteCourseDetailCommand::.ctor(BLL.CQRS.Commands.DeleteCourseDetailCommand)
+DA:8,0
+FN:14,System.Void BLL.CQRS.Commands.DeleteCourseDetailCommandHandler::.ctor(BLL.Interfaces.ICourseService)
+FNDA:0,System.Void BLL.CQRS.Commands.DeleteCourseDetailCommandHandler::.ctor(BLL.Interfaces.ICourseService)
+DA:15,0
+DA:16,0
+DA:17,0
+DA:18,0
+FN:19,System.Void BLL.CQRS.Commands.DeleteCourseDetailCommandHandler/<Handle>d__2::MoveNext()
+FNDA:0,System.Void BLL.CQRS.Commands.DeleteCourseDetailCommandHandler/<Handle>d__2::MoveNext()
+DA:20,0
+DA:21,0
+DA:22,0
+LF:8
+LH:0
+BRF:0
+BRH:0
+FNF:3
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/CQRS/Commands/DeletePayInfoCommand.cs
+FN:11,System.Void BLL.CQRS.Commands.DeletePaymentInfoCommand::.ctor(BLL.CQRS.Commands.DeletePaymentInfoCommand)
+FNDA:0,System.Void BLL.CQRS.Commands.DeletePaymentInfoCommand::.ctor(BLL.CQRS.Commands.DeletePaymentInfoCommand)
+DA:12,0
+FN:20,System.Void BLL.CQRS.Commands.DeletePaymentInfoCommandHandler::.ctor(BLL.Interfaces.Services.IPaymentInfoService,AutoMapper.IMapper)
+FNDA:0,System.Void BLL.CQRS.Commands.DeletePaymentInfoCommandHandler::.ctor(BLL.Interfaces.Services.IPaymentInfoService,AutoMapper.IMapper)
+DA:21,0
+DA:22,0
+DA:23,0
+DA:24,0
+DA:25,0
+FN:26,System.Void BLL.CQRS.Commands.DeletePaymentInfoCommandHandler/<Handle>d__3::MoveNext()
+FNDA:0,System.Void BLL.CQRS.Commands.DeletePaymentInfoCommandHandler/<Handle>d__3::MoveNext()
+DA:27,0
+DA:28,0
+DA:29,0
+LF:9
+LH:0
+BRF:0
+BRH:0
+FNF:3
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/CQRS/Commands/DeleteTeacherCommand.cs
+FN:9,System.Void BLL.CQRS.Commands.DeleteTeacherCommand::.ctor(BLL.CQRS.Commands.DeleteTeacherCommand)
+FNDA:0,System.Void BLL.CQRS.Commands.DeleteTeacherCommand::.ctor(BLL.CQRS.Commands.DeleteTeacherCommand)
+DA:10,0
+FN:18,System.Void BLL.CQRS.Commands.DeleteTeacherCommandHandler::.ctor(BLL.Interfaces.ITeacherService,AutoMapper.IMapper)
+FNDA:1,System.Void BLL.CQRS.Commands.DeleteTeacherCommandHandler::.ctor(BLL.Interfaces.ITeacherService,AutoMapper.IMapper)
+DA:19,1
+DA:20,1
+DA:21,1
+DA:22,1
+DA:23,1
+FN:24,System.Void BLL.CQRS.Commands.DeleteTeacherCommandHandler/<Handle>d__3::MoveNext()
+FNDA:1,System.Void BLL.CQRS.Commands.DeleteTeacherCommandHandler/<Handle>d__3::MoveNext()
+DA:25,1
+DA:26,1
+DA:27,1
+LF:9
+LH:8
+BRF:0
+BRH:0
+FNF:3
+FNH:2
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/CQRS/Commands/DeleteTechologyCommand.cs
+FN:10,System.Void BLL.CQRS.Commands.DeleteTechologyCommand::.ctor(BLL.CQRS.Commands.DeleteTechologyCommand)
+FNDA:0,System.Void BLL.CQRS.Commands.DeleteTechologyCommand::.ctor(BLL.CQRS.Commands.DeleteTechologyCommand)
+DA:11,0
+FN:19,System.Void BLL.CQRS.Commands.DeleteTechologyCommandHandler::.ctor(BLL.Interfaces.Services.ITechnologyService,AutoMapper.IMapper)
+FNDA:1,System.Void BLL.CQRS.Commands.DeleteTechologyCommandHandler::.ctor(BLL.Interfaces.Services.ITechnologyService,AutoMapper.IMapper)
+DA:20,1
+DA:21,1
+DA:22,1
+DA:23,1
+DA:24,1
+FN:25,System.Void BLL.CQRS.Commands.DeleteTechologyCommandHandler/<Handle>d__3::MoveNext()
+FNDA:1,System.Void BLL.CQRS.Commands.DeleteTechologyCommandHandler/<Handle>d__3::MoveNext()
+DA:26,1
+DA:27,1
+DA:28,1
+DA:29,1
+LF:10
+LH:9
+BRF:0
+BRH:0
+FNF:3
+FNH:2
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/CQRS/Commands/DeleteTechologyDetailCommand.cs
+FN:10,System.Void BLL.CQRS.Commands.DeleteTechologyDetailCommand::.ctor(BLL.CQRS.Commands.DeleteTechologyDetailCommand)
+FNDA:0,System.Void BLL.CQRS.Commands.DeleteTechologyDetailCommand::.ctor(BLL.CQRS.Commands.DeleteTechologyDetailCommand)
+DA:11,0
+FN:19,System.Void BLL.CQRS.Commands.DeleteTechologyDetailsCommandHandler::.ctor(BLL.Interfaces.Services.ITechnologyService,AutoMapper.IMapper)
+FNDA:1,System.Void BLL.CQRS.Commands.DeleteTechologyDetailsCommandHandler::.ctor(BLL.Interfaces.Services.ITechnologyService,AutoMapper.IMapper)
+DA:20,1
+DA:21,1
+DA:22,1
+DA:23,1
+DA:24,1
+FN:25,System.Void BLL.CQRS.Commands.DeleteTechologyDetailsCommandHandler/<Handle>d__3::MoveNext()
+FNDA:1,System.Void BLL.CQRS.Commands.DeleteTechologyDetailsCommandHandler/<Handle>d__3::MoveNext()
+DA:26,1
+DA:27,1
+DA:28,1
+DA:29,1
+LF:10
+LH:9
+BRF:0
+BRH:0
+FNF:3
+FNH:2
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/CQRS/Commands/DeleteUserInfoCommand.cs
+FN:7,System.Void BLL.CQRS.Commands.DeleteUserInfoCommand::.ctor(BLL.CQRS.Commands.DeleteUserInfoCommand)
+FNDA:0,System.Void BLL.CQRS.Commands.DeleteUserInfoCommand::.ctor(BLL.CQRS.Commands.DeleteUserInfoCommand)
+DA:8,0
+FN:16,System.Void BLL.CQRS.Commands.DeleteUserInfoCommandHandler::.ctor(BLL.Interfaces.Services.IUserInfoService)
+FNDA:1,System.Void BLL.CQRS.Commands.DeleteUserInfoCommandHandler::.ctor(BLL.Interfaces.Services.IUserInfoService)
+DA:17,1
+DA:18,1
+DA:19,1
+DA:20,1
+FN:21,System.Void BLL.CQRS.Commands.DeleteUserInfoCommandHandler/<Handle>d__2::MoveNext()
+FNDA:1,System.Void BLL.CQRS.Commands.DeleteUserInfoCommandHandler/<Handle>d__2::MoveNext()
+DA:22,1
+DA:23,1
+DA:24,1
+LF:8
+LH:7
+BRF:0
+BRH:0
+FNF:3
+FNH:2
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/CQRS/Commands/InsertAddressesCommand.cs
+FN:10,System.Void BLL.CQRS.Commands.InsertAddressesCommand::.ctor(BLL.CQRS.Commands.InsertAddressesCommand)
+FNDA:0,System.Void BLL.CQRS.Commands.InsertAddressesCommand::.ctor(BLL.CQRS.Commands.InsertAddressesCommand)
+DA:11,0
+FN:19,System.Void BLL.CQRS.Commands.InsertAddressesCommandHandler::.ctor(BLL.Interfaces.Services.IAddressesService,AutoMapper.IMapper)
+FNDA:0,System.Void BLL.CQRS.Commands.InsertAddressesCommandHandler::.ctor(BLL.Interfaces.Services.IAddressesService,AutoMapper.IMapper)
+DA:20,0
+DA:21,0
+DA:22,0
+DA:23,0
+DA:24,0
+FN:26,System.Void BLL.CQRS.Commands.InsertAddressesCommandHandler/<Handle>d__3::MoveNext()
+FNDA:0,System.Void BLL.CQRS.Commands.InsertAddressesCommandHandler/<Handle>d__3::MoveNext()
+DA:27,0
+DA:28,0
+DA:29,0
+LF:9
+LH:0
+BRF:0
+BRH:0
+FNF:3
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/CQRS/Commands/InsertCourseCommand.cs
+FN:10,System.Void BLL.CQRS.Commands.InsertCourseCommand::.ctor(BLL.CQRS.Commands.InsertCourseCommand)
+FNDA:0,System.Void BLL.CQRS.Commands.InsertCourseCommand::.ctor(BLL.CQRS.Commands.InsertCourseCommand)
+DA:11,0
+FN:20,System.Void BLL.CQRS.Commands.InsertCourseCommandHandler::.ctor(BLL.Interfaces.ICourseService,AutoMapper.IMapper)
+FNDA:1,System.Void BLL.CQRS.Commands.InsertCourseCommandHandler::.ctor(BLL.Interfaces.ICourseService,AutoMapper.IMapper)
+DA:21,1
+DA:22,1
+DA:23,1
+DA:24,1
+DA:25,1
+FN:27,System.Void BLL.CQRS.Commands.InsertCourseCommandHandler/<Handle>d__3::MoveNext()
+FNDA:1,System.Void BLL.CQRS.Commands.InsertCourseCommandHandler/<Handle>d__3::MoveNext()
+DA:28,1
+DA:29,1
+DA:31,1
+LF:9
+LH:8
+BRF:0
+BRH:0
+FNF:3
+FNH:2
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/CQRS/Commands/InsertCourseDetailCommand.cs
+FN:11,System.Void BLL.CQRS.Commands.InsertCourseDetailCommand::.ctor(BLL.CQRS.Commands.InsertCourseDetailCommand)
+FNDA:0,System.Void BLL.CQRS.Commands.InsertCourseDetailCommand::.ctor(BLL.CQRS.Commands.InsertCourseDetailCommand)
+DA:12,0
+FN:23,System.Void BLL.CQRS.Commands.InsertCourseDetailCommandHandler::.ctor(BLL.Interfaces.ICourseService,AutoMapper.IMapper)
+FNDA:1,System.Void BLL.CQRS.Commands.InsertCourseDetailCommandHandler::.ctor(BLL.Interfaces.ICourseService,AutoMapper.IMapper)
+DA:24,1
+DA:25,1
+DA:26,1
+DA:27,1
+DA:28,1
+FN:31,System.Void BLL.CQRS.Commands.InsertCourseDetailCommandHandler/<Handle>d__3::MoveNext()
+FNDA:1,System.Void BLL.CQRS.Commands.InsertCourseDetailCommandHandler/<Handle>d__3::MoveNext()
+DA:32,1
+DA:33,1
+DA:34,1
+LF:9
+LH:8
+BRF:0
+BRH:0
+FNF:3
+FNH:2
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/CQRS/Commands/InsertCourseDetailMasiveCommand.cs
+FN:14,System.Void BLL.CQRS.Commands.InsertCourseDetailMasiveCommand::.ctor(BLL.CQRS.Commands.InsertCourseDetailMasiveCommand)
+FNDA:0,System.Void BLL.CQRS.Commands.InsertCourseDetailMasiveCommand::.ctor(BLL.CQRS.Commands.InsertCourseDetailMasiveCommand)
+DA:15,0
+FN:26,System.Void BLL.CQRS.Commands.InsertCourseDetailMasiveCommandHandler::.ctor(BLL.Interfaces.ICourseService,AutoMapper.IMapper)
+FNDA:0,System.Void BLL.CQRS.Commands.InsertCourseDetailMasiveCommandHandler::.ctor(BLL.Interfaces.ICourseService,AutoMapper.IMapper)
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+FN:34,System.Void BLL.CQRS.Commands.InsertCourseDetailMasiveCommandHandler/<Handle>d__3::MoveNext()
+FNDA:0,System.Void BLL.CQRS.Commands.InsertCourseDetailMasiveCommandHandler/<Handle>d__3::MoveNext()
+DA:35,0
+DA:36,0
+DA:37,0
+DA:39,0
+LF:10
+LH:0
+BRF:0
+BRH:0
+FNF:3
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/CQRS/Commands/InsertPaymentInfoCommand.cs
+FN:12,System.Void BLL.CQRS.Commands.InsertPaymentInfoCommand::.ctor(BLL.CQRS.Commands.InsertPaymentInfoCommand)
+FNDA:0,System.Void BLL.CQRS.Commands.InsertPaymentInfoCommand::.ctor(BLL.CQRS.Commands.InsertPaymentInfoCommand)
+DA:13,0
+FN:21,System.Void BLL.CQRS.Commands.InsertPaymentInfoCommandHandler::.ctor(BLL.Interfaces.Services.IPaymentInfoService,AutoMapper.IMapper)
+FNDA:0,System.Void BLL.CQRS.Commands.InsertPaymentInfoCommandHandler::.ctor(BLL.Interfaces.Services.IPaymentInfoService,AutoMapper.IMapper)
+DA:22,0
+DA:23,0
+DA:24,0
+DA:25,0
+DA:26,0
+FN:27,System.Void BLL.CQRS.Commands.InsertPaymentInfoCommandHandler/<Handle>d__3::MoveNext()
+FNDA:0,System.Void BLL.CQRS.Commands.InsertPaymentInfoCommandHandler/<Handle>d__3::MoveNext()
+DA:28,0
+DA:29,0
+DA:30,0
+LF:9
+LH:0
+BRF:0
+BRH:0
+FNF:3
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/CQRS/Commands/InsertTeacherCommand.cs
+FN:10,System.Void BLL.CQRS.Commands.InsertTeacherCommand::.ctor(BLL.CQRS.Commands.InsertTeacherCommand)
+FNDA:0,System.Void BLL.CQRS.Commands.InsertTeacherCommand::.ctor(BLL.CQRS.Commands.InsertTeacherCommand)
+DA:11,0
+FN:19,System.Void BLL.CQRS.Commands.InsertTeacherCommandHandler::.ctor(BLL.Interfaces.ITeacherService,AutoMapper.IMapper)
+FNDA:1,System.Void BLL.CQRS.Commands.InsertTeacherCommandHandler::.ctor(BLL.Interfaces.ITeacherService,AutoMapper.IMapper)
+DA:20,1
+DA:21,1
+DA:22,1
+DA:23,1
+DA:24,1
+FN:25,System.Void BLL.CQRS.Commands.InsertTeacherCommandHandler/<Handle>d__3::MoveNext()
+FNDA:1,System.Void BLL.CQRS.Commands.InsertTeacherCommandHandler/<Handle>d__3::MoveNext()
+DA:26,1
+DA:27,1
+DA:28,1
+LF:9
+LH:8
+BRF:0
+BRH:0
+FNF:3
+FNH:2
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/CQRS/Commands/InsertTechologyCommand.cs
+FN:10,System.Void BLL.CQRS.Commands.InsertTechologyCommand::.ctor(BLL.CQRS.Commands.InsertTechologyCommand)
+FNDA:0,System.Void BLL.CQRS.Commands.InsertTechologyCommand::.ctor(BLL.CQRS.Commands.InsertTechologyCommand)
+DA:11,0
+FN:19,System.Void BLL.CQRS.Commands.InsertTechologyCommandHandler::.ctor(BLL.Interfaces.Services.ITechnologyService,AutoMapper.IMapper)
+FNDA:1,System.Void BLL.CQRS.Commands.InsertTechologyCommandHandler::.ctor(BLL.Interfaces.Services.ITechnologyService,AutoMapper.IMapper)
+DA:20,1
+DA:21,1
+DA:22,1
+DA:23,1
+DA:24,1
+FN:25,System.Void BLL.CQRS.Commands.InsertTechologyCommandHandler/<Handle>d__3::MoveNext()
+FNDA:1,System.Void BLL.CQRS.Commands.InsertTechologyCommandHandler/<Handle>d__3::MoveNext()
+DA:26,1
+DA:27,1
+DA:29,1
+LF:9
+LH:8
+BRF:0
+BRH:0
+FNF:3
+FNH:2
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/CQRS/Commands/InsertTechologyDetailCommand.cs
+FN:10,System.Void BLL.CQRS.Commands.InsertTechologyDetailCommand::.ctor(BLL.CQRS.Commands.InsertTechologyDetailCommand)
+FNDA:0,System.Void BLL.CQRS.Commands.InsertTechologyDetailCommand::.ctor(BLL.CQRS.Commands.InsertTechologyDetailCommand)
+DA:11,0
+FN:19,System.Void BLL.CQRS.Commands.InsertTechologyDetailCommandHandler::.ctor(BLL.Interfaces.Services.ITechnologyService,AutoMapper.IMapper)
+FNDA:1,System.Void BLL.CQRS.Commands.InsertTechologyDetailCommandHandler::.ctor(BLL.Interfaces.Services.ITechnologyService,AutoMapper.IMapper)
+DA:20,1
+DA:21,1
+DA:22,1
+DA:23,1
+DA:24,1
+FN:25,System.Void BLL.CQRS.Commands.InsertTechologyDetailCommandHandler/<Handle>d__3::MoveNext()
+FNDA:1,System.Void BLL.CQRS.Commands.InsertTechologyDetailCommandHandler/<Handle>d__3::MoveNext()
+DA:26,1
+DA:27,1
+DA:29,1
+LF:9
+LH:8
+BRF:0
+BRH:0
+FNF:3
+FNH:2
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/CQRS/Commands/InsertUserInfoCommand.cs
+FN:10,System.Void BLL.CQRS.Commands.InsertUserInfoCommand::.ctor(BLL.CQRS.Commands.InsertUserInfoCommand)
+FNDA:0,System.Void BLL.CQRS.Commands.InsertUserInfoCommand::.ctor(BLL.CQRS.Commands.InsertUserInfoCommand)
+DA:11,0
+FN:20,System.Void BLL.CQRS.Commands.InsertUserInfoCommandHandler::.ctor(BLL.Interfaces.Services.IUserInfoService,AutoMapper.IMapper)
+FNDA:1,System.Void BLL.CQRS.Commands.InsertUserInfoCommandHandler::.ctor(BLL.Interfaces.Services.IUserInfoService,AutoMapper.IMapper)
+DA:21,1
+DA:22,1
+DA:23,1
+DA:24,1
+DA:25,1
+FN:28,System.Void BLL.CQRS.Commands.InsertUserInfoCommandHandler/<Handle>d__3::MoveNext()
+FNDA:1,System.Void BLL.CQRS.Commands.InsertUserInfoCommandHandler/<Handle>d__3::MoveNext()
+DA:29,1
+DA:30,1
+DA:32,1
+LF:9
+LH:8
+BRF:0
+BRH:0
+FNF:3
+FNH:2
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/CQRS/Commands/UpdateAddressesCommand.cs
+FN:10,System.Void BLL.CQRS.Commands.UpdateAddressesCommand::.ctor(BLL.CQRS.Commands.UpdateAddressesCommand)
+FNDA:0,System.Void BLL.CQRS.Commands.UpdateAddressesCommand::.ctor(BLL.CQRS.Commands.UpdateAddressesCommand)
+DA:11,0
+FN:19,System.Void BLL.CQRS.Commands.UpdateAddressesCommandHandler::.ctor(BLL.Interfaces.Services.IAddressesService,AutoMapper.IMapper)
+FNDA:0,System.Void BLL.CQRS.Commands.UpdateAddressesCommandHandler::.ctor(BLL.Interfaces.Services.IAddressesService,AutoMapper.IMapper)
+DA:20,0
+DA:21,0
+DA:22,0
+DA:23,0
+DA:24,0
+FN:26,System.Void BLL.CQRS.Commands.UpdateAddressesCommandHandler/<Handle>d__3::MoveNext()
+FNDA:0,System.Void BLL.CQRS.Commands.UpdateAddressesCommandHandler/<Handle>d__3::MoveNext()
+DA:27,0
+DA:28,0
+DA:29,0
+LF:9
+LH:0
+BRF:0
+BRH:0
+FNF:3
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/CQRS/Commands/UpdateCourseCommand.cs
+FN:11,System.Void BLL.CQRS.Commands.UpdateCourseCommand::.ctor(BLL.CQRS.Commands.UpdateCourseCommand)
+FNDA:0,System.Void BLL.CQRS.Commands.UpdateCourseCommand::.ctor(BLL.CQRS.Commands.UpdateCourseCommand)
+DA:12,0
+FN:21,System.Void BLL.CQRS.Commands.UpdateCourseCommandHandler::.ctor(BLL.Interfaces.ICourseService,AutoMapper.IMapper)
+FNDA:1,System.Void BLL.CQRS.Commands.UpdateCourseCommandHandler::.ctor(BLL.Interfaces.ICourseService,AutoMapper.IMapper)
+DA:22,1
+DA:23,1
+DA:24,1
+DA:25,1
+DA:26,1
+FN:29,System.Void BLL.CQRS.Commands.UpdateCourseCommandHandler/<Handle>d__3::MoveNext()
+FNDA:1,System.Void BLL.CQRS.Commands.UpdateCourseCommandHandler/<Handle>d__3::MoveNext()
+DA:30,1
+DA:31,1
+DA:32,1
+LF:9
+LH:8
+BRF:0
+BRH:0
+FNF:3
+FNH:2
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/CQRS/Commands/UpdateCourseDetailCommand.cs
+FN:10,System.Void BLL.CQRS.Commands.UpdateCourseDetailCommand::.ctor(BLL.CQRS.Commands.UpdateCourseDetailCommand)
+FNDA:0,System.Void BLL.CQRS.Commands.UpdateCourseDetailCommand::.ctor(BLL.CQRS.Commands.UpdateCourseDetailCommand)
+DA:11,0
+FN:23,System.Void BLL.CQRS.Commands.UpdateCourseDetailCommandHandler::.ctor(BLL.Interfaces.ICourseService,AutoMapper.IMapper)
+FNDA:1,System.Void BLL.CQRS.Commands.UpdateCourseDetailCommandHandler::.ctor(BLL.Interfaces.ICourseService,AutoMapper.IMapper)
+DA:24,1
+DA:25,1
+DA:26,1
+DA:27,1
+DA:28,1
+FN:31,System.Void BLL.CQRS.Commands.UpdateCourseDetailCommandHandler/<Handle>d__3::MoveNext()
+FNDA:1,System.Void BLL.CQRS.Commands.UpdateCourseDetailCommandHandler/<Handle>d__3::MoveNext()
+DA:32,1
+DA:33,1
+DA:34,1
+LF:9
+LH:8
+BRF:0
+BRH:0
+FNF:3
+FNH:2
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/CQRS/Commands/UpdatePaymentInfoCommand.cs
+FN:11,System.Void BLL.CQRS.Commands.UpdatePaymentInfoCommand::.ctor(BLL.CQRS.Commands.UpdatePaymentInfoCommand)
+FNDA:0,System.Void BLL.CQRS.Commands.UpdatePaymentInfoCommand::.ctor(BLL.CQRS.Commands.UpdatePaymentInfoCommand)
+DA:12,0
+FN:20,System.Void BLL.CQRS.Commands.UpdatePaymentInfoCommandHandler::.ctor(BLL.Interfaces.Services.IPaymentInfoService,AutoMapper.IMapper)
+FNDA:0,System.Void BLL.CQRS.Commands.UpdatePaymentInfoCommandHandler::.ctor(BLL.Interfaces.Services.IPaymentInfoService,AutoMapper.IMapper)
+DA:21,0
+DA:22,0
+DA:23,0
+DA:24,0
+DA:25,0
+FN:26,System.Void BLL.CQRS.Commands.UpdatePaymentInfoCommandHandler/<Handle>d__3::MoveNext()
+FNDA:0,System.Void BLL.CQRS.Commands.UpdatePaymentInfoCommandHandler/<Handle>d__3::MoveNext()
+DA:27,0
+DA:28,0
+DA:29,0
+LF:9
+LH:0
+BRF:0
+BRH:0
+FNF:3
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/CQRS/Commands/UpdateTeacherCommand.cs
+FN:11,System.Void BLL.CQRS.Commands.UpdateTeacherCommand::.ctor(BLL.CQRS.Commands.UpdateTeacherCommand)
+FNDA:0,System.Void BLL.CQRS.Commands.UpdateTeacherCommand::.ctor(BLL.CQRS.Commands.UpdateTeacherCommand)
+DA:12,0
+FN:20,System.Void BLL.CQRS.Commands.UpdateTeacherCommandHandler::.ctor(BLL.Interfaces.ITeacherService,AutoMapper.IMapper)
+FNDA:1,System.Void BLL.CQRS.Commands.UpdateTeacherCommandHandler::.ctor(BLL.Interfaces.ITeacherService,AutoMapper.IMapper)
+DA:21,1
+DA:22,1
+DA:23,1
+DA:24,1
+DA:25,1
+FN:26,System.Void BLL.CQRS.Commands.UpdateTeacherCommandHandler/<Handle>d__3::MoveNext()
+FNDA:1,System.Void BLL.CQRS.Commands.UpdateTeacherCommandHandler/<Handle>d__3::MoveNext()
+DA:27,1
+DA:28,1
+DA:29,1
+LF:9
+LH:8
+BRF:0
+BRH:0
+FNF:3
+FNH:2
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/CQRS/Commands/UpdateTechnologyCommand.cs
+FN:10,System.Void BLL.CQRS.Commands.UpdateTechologyCommand::.ctor(BLL.CQRS.Commands.UpdateTechologyCommand)
+FNDA:0,System.Void BLL.CQRS.Commands.UpdateTechologyCommand::.ctor(BLL.CQRS.Commands.UpdateTechologyCommand)
+DA:11,0
+FN:19,System.Void BLL.CQRS.Commands.UpdateTechologyCommandHandler::.ctor(BLL.Interfaces.Services.ITechnologyService,AutoMapper.IMapper)
+FNDA:1,System.Void BLL.CQRS.Commands.UpdateTechologyCommandHandler::.ctor(BLL.Interfaces.Services.ITechnologyService,AutoMapper.IMapper)
+DA:20,1
+DA:21,1
+DA:22,1
+DA:23,1
+DA:24,1
+FN:25,System.Void BLL.CQRS.Commands.UpdateTechologyCommandHandler/<Handle>d__3::MoveNext()
+FNDA:1,System.Void BLL.CQRS.Commands.UpdateTechologyCommandHandler/<Handle>d__3::MoveNext()
+DA:26,1
+DA:27,1
+DA:28,1
+LF:9
+LH:8
+BRF:0
+BRH:0
+FNF:3
+FNH:2
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/CQRS/Commands/UpdateTechologyDetailCommand.cs
+FN:10,System.Void BLL.CQRS.Commands.UpdateTechologyDetailCommand::.ctor(BLL.CQRS.Commands.UpdateTechologyDetailCommand)
+FNDA:0,System.Void BLL.CQRS.Commands.UpdateTechologyDetailCommand::.ctor(BLL.CQRS.Commands.UpdateTechologyDetailCommand)
+DA:11,0
+FN:19,System.Void BLL.CQRS.Commands.UpdateTechologyDetailCommandHandler::.ctor(BLL.Interfaces.Services.ITechnologyService,AutoMapper.IMapper)
+FNDA:1,System.Void BLL.CQRS.Commands.UpdateTechologyDetailCommandHandler::.ctor(BLL.Interfaces.Services.ITechnologyService,AutoMapper.IMapper)
+DA:20,1
+DA:21,1
+DA:22,1
+DA:23,1
+DA:24,1
+FN:25,System.Void BLL.CQRS.Commands.UpdateTechologyDetailCommandHandler/<Handle>d__3::MoveNext()
+FNDA:1,System.Void BLL.CQRS.Commands.UpdateTechologyDetailCommandHandler/<Handle>d__3::MoveNext()
+DA:26,1
+DA:27,1
+DA:29,1
+LF:9
+LH:8
+BRF:0
+BRH:0
+FNF:3
+FNH:2
+end_of_record
+SF:/home/kike/Projects/PrimeApi/BLL/CQRS/Commands/UpdateUserInfoCommand.cs
+FN:10,System.Void BLL.CQRS.Commands.UpdateUserInfoCommand::.ctor(BLL.CQRS.Commands.UpdateUserInfoCommand)
+FNDA:0,System.Void BLL.CQRS.Commands.UpdateUserInfoCommand::.ctor(BLL.CQRS.Commands.UpdateUserInfoCommand)
+DA:11,0
+FN:20,System.Void BLL.CQRS.Commands.UpdateUserInfoCommandHandler::.ctor(BLL.Interfaces.Services.IUserInfoService,AutoMapper.IMapper)
+FNDA:1,System.Void BLL.CQRS.Commands.UpdateUserInfoCommandHandler::.ctor(BLL.Interfaces.Services.IUserInfoService,AutoMapper.IMapper)
+DA:21,1
+DA:22,1
+DA:23,1
+DA:24,1
+DA:25,1
+FN:26,System.Void BLL.CQRS.Commands.UpdateUserInfoCommandHandler/<Handle>d__3::MoveNext()
+FNDA:1,System.Void BLL.CQRS.Commands.UpdateUserInfoCommandHandler/<Handle>d__3::MoveNext()
+DA:27,1
+DA:28,1
+DA:30,1
+LF:9
+LH:8
+BRF:0
+BRH:0
+FNF:3
+FNH:2
+end_of_record
+SF:/home/kike/Projects/PrimeApi/FunctionalTests/TestGestionCursosContext.cs
+FN:6,System.Void TestGestionCursosContext::.ctor()
+FNDA:0,System.Void TestGestionCursosContext::.ctor()
+DA:7,0
+DA:8,0
+DA:9,0
+DA:10,0
+DA:11,0
+DA:12,0
+DA:13,0
+DA:14,0
+DA:15,0
+DA:16,0
+DA:17,0
+DA:18,0
+LF:12
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/FunctionalTests/TestGetCourseQuery.cs
+FN:16,System.Void GetCourseQueryTests::.ctor()
+FNDA:0,System.Void GetCourseQueryTests::.ctor()
+DA:17,0
+DA:18,0
+DA:19,0
+DA:20,0
+DA:21,0
+DA:22,0
+DA:23,0
+DA:24,0
+DA:25,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:43,0
+DA:44,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:50,0
+DA:52,0
+FN:55,System.Void GetCourseQueryTests/<TestQueryAsync>d__2::MoveNext()
+FNDA:0,System.Void GetCourseQueryTests/<TestQueryAsync>d__2::MoveNext()
+DA:56,0
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:66,0
+DA:67,0
+DA:68,0
+DA:69,0
+DA:71,0
+LF:42
+LH:0
+BRF:0
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/home/kike/.nuget/packages/microsoft.net.test.sdk/17.6.0/build/netcoreapp3.1/Microsoft.NET.Test.Sdk.Program.cs
+FN:3,System.Void AutoGeneratedProgram::Main(System.String[])
+FNDA:0,System.Void AutoGeneratedProgram::Main(System.String[])
+DA:4,0
+LF:1
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/FunctionalTests/TestCourses.cs
+FN:14,System.Void Testing.TestCourses::.ctor()
+FNDA:0,System.Void Testing.TestCourses::.ctor()
+DA:15,0
+DA:16,0
+DA:17,0
+DA:18,0
+DA:19,0
+DA:20,0
+DA:21,0
+DA:22,0
+DA:24,0
+DA:25,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:46,0
+FN:108,System.Void Testing.TestCourses/<CanDeleteCourse>d__4::MoveNext()
+FNDA:0,System.Void Testing.TestCourses/<CanDeleteCourse>d__4::MoveNext()
+DA:109,0
+DA:110,0
+DA:112,0
+DA:113,0
+DA:114,0
+DA:115,0
+DA:116,0
+DA:117,0
+DA:118,0
+DA:119,0
+DA:120,0
+DA:121,0
+DA:122,0
+DA:123,0
+DA:125,0
+DA:126,0
+DA:127,0
+DA:130,0
+FN:49,System.Void Testing.TestCourses/<CanIsertCourse>d__2::MoveNext()
+FNDA:0,System.Void Testing.TestCourses/<CanIsertCourse>d__2::MoveNext()
+DA:50,0
+DA:51,0
+DA:53,0
+DA:54,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:65,0
+DA:66,0
+DA:67,0
+DA:68,0
+DA:69,0
+FN:72,System.Void Testing.TestCourses/<CanUpdateCourse>d__3::MoveNext()
+FNDA:0,System.Void Testing.TestCourses/<CanUpdateCourse>d__3::MoveNext()
+DA:73,0
+DA:74,0
+DA:76,0
+DA:77,0
+DA:78,0
+DA:79,0
+DA:80,0
+DA:81,0
+DA:82,0
+DA:83,0
+DA:84,0
+DA:85,0
+DA:86,0
+DA:87,0
+DA:89,0
+DA:90,0
+DA:91,0
+DA:92,0
+DA:93,0
+DA:94,0
+DA:95,0
+DA:96,0
+DA:97,0
+DA:98,0
+DA:99,0
+DA:100,0
+DA:102,0
+DA:103,0
+DA:104,0
+DA:105,0
+DA:106,0
+FN:132,System.Void Testing.TestCourses/<GetCourseData>d__5::MoveNext()
+FNDA:0,System.Void Testing.TestCourses/<GetCourseData>d__5::MoveNext()
+DA:133,0
+DA:135,0
+DA:136,0
+DA:137,0
+DA:138,0
+DA:139,0
+DA:140,0
+DA:141,0
+DA:142,0
+DA:143,0
+DA:144,0
+DA:145,0
+DA:146,0
+DA:147,0
+DA:149,0
+DA:150,0
+DA:151,0
+DA:152,0
+DA:153,0
+DA:154,0
+DA:155,0
+DA:157,0
+DA:158,0
+DA:159,0
+LF:121
+LH:0
+BRF:0
+BRH:0
+FNF:5
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/FunctionalTests/TestCoursesDetail.cs
+FN:14,System.Void Testing.TestCoursesDetail::.ctor()
+FNDA:0,System.Void Testing.TestCoursesDetail::.ctor()
+DA:15,0
+DA:16,0
+DA:17,0
+DA:19,0
+FN:73,System.Void Testing.TestCoursesDetail/<CanDeleteCourseDetail>d__4::MoveNext()
+FNDA:0,System.Void Testing.TestCoursesDetail/<CanDeleteCourseDetail>d__4::MoveNext()
+DA:74,0
+DA:75,0
+DA:77,0
+DA:78,0
+DA:79,0
+DA:80,0
+DA:81,0
+DA:82,0
+DA:83,0
+DA:84,0
+DA:85,0
+DA:88,0
+FN:22,System.Void Testing.TestCoursesDetail/<CanIsertCourseDetail>d__2::MoveNext()
+FNDA:0,System.Void Testing.TestCoursesDetail/<CanIsertCourseDetail>d__2::MoveNext()
+DA:23,0
+DA:24,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+FN:42,System.Void Testing.TestCoursesDetail/<CanUpdateCourseDetail>d__3::MoveNext()
+FNDA:0,System.Void Testing.TestCoursesDetail/<CanUpdateCourseDetail>d__3::MoveNext()
+DA:43,0
+DA:45,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:52,0
+DA:53,0
+DA:54,0
+DA:55,0
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:63,0
+DA:64,0
+DA:65,0
+DA:67,0
+DA:68,0
+DA:69,0
+DA:70,0
+DA:71,0
+FN:90,System.Void Testing.TestCoursesDetail/<GetCourseDetail>d__5::MoveNext()
+FNDA:0,System.Void Testing.TestCoursesDetail/<GetCourseDetail>d__5::MoveNext()
+DA:91,0
+DA:92,0
+DA:93,0
+DA:94,0
+DA:95,0
+DA:96,0
+DA:97,0
+DA:98,0
+DA:99,0
+DA:100,0
+DA:101,0
+DA:102,0
+DA:103,0
+DA:104,0
+DA:105,0
+DA:106,0
+DA:107,0
+DA:108,0
+LF:72
+LH:0
+BRF:0
+BRH:0
+FNF:5
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/FunctionalTests/TestTeacher.cs
+FN:14,System.Void Testing.TestTeacher::.ctor()
+FNDA:0,System.Void Testing.TestTeacher::.ctor()
+DA:15,0
+DA:16,0
+DA:17,0
+DA:18,0
+DA:19,0
+DA:20,0
+DA:21,0
+DA:22,0
+DA:24,0
+DA:25,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+FN:96,System.Void Testing.TestTeacher/<CanDeleteTeacher>d__4::MoveNext()
+FNDA:0,System.Void Testing.TestTeacher/<CanDeleteTeacher>d__4::MoveNext()
+DA:97,0
+DA:98,0
+DA:100,0
+DA:101,0
+DA:102,0
+DA:103,0
+DA:104,0
+DA:105,0
+DA:106,0
+DA:107,0
+DA:108,0
+DA:109,0
+DA:110,0
+DA:112,0
+DA:113,0
+DA:114,0
+DA:117,0
+FN:39,System.Void Testing.TestTeacher/<CanInsertTeacher>d__2::MoveNext()
+FNDA:0,System.Void Testing.TestTeacher/<CanInsertTeacher>d__2::MoveNext()
+DA:40,0
+DA:41,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:52,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:58,0
+DA:59,0
+FN:62,System.Void Testing.TestTeacher/<CanUpdateTeacher>d__3::MoveNext()
+FNDA:0,System.Void Testing.TestTeacher/<CanUpdateTeacher>d__3::MoveNext()
+DA:63,0
+DA:64,0
+DA:66,0
+DA:67,0
+DA:68,0
+DA:69,0
+DA:70,0
+DA:71,0
+DA:72,0
+DA:73,0
+DA:74,0
+DA:75,0
+DA:76,0
+DA:78,0
+DA:79,0
+DA:80,0
+DA:81,0
+DA:82,0
+DA:83,0
+DA:84,0
+DA:85,0
+DA:86,0
+DA:87,0
+DA:88,0
+DA:90,0
+DA:91,0
+DA:92,0
+DA:93,0
+DA:94,0
+FN:119,System.Void Testing.TestTeacher/<GetCourseData>d__5::MoveNext()
+FNDA:0,System.Void Testing.TestTeacher/<GetCourseData>d__5::MoveNext()
+DA:120,0
+DA:122,0
+DA:124,0
+DA:125,0
+DA:126,0
+DA:127,0
+DA:128,0
+DA:129,0
+DA:130,0
+DA:131,0
+DA:132,0
+DA:133,0
+DA:134,0
+DA:136,0
+DA:137,0
+DA:138,0
+DA:139,0
+DA:140,0
+DA:141,0
+DA:142,0
+DA:144,0
+DA:145,0
+DA:146,0
+LF:107
+LH:0
+BRF:0
+BRH:0
+FNF:5
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/FunctionalTests/TestTechnology.cs
+FN:14,System.Void Testing.TestTechnology::.ctor()
+FNDA:0,System.Void Testing.TestTechnology::.ctor()
+DA:15,0
+DA:16,0
+DA:17,0
+DA:19,0
+FN:66,System.Void Testing.TestTechnology/<CanDeleteTechology>d__4::MoveNext()
+FNDA:0,System.Void Testing.TestTechnology/<CanDeleteTechology>d__4::MoveNext()
+DA:67,0
+DA:68,0
+DA:70,0
+DA:71,0
+DA:72,0
+DA:73,0
+DA:74,0
+DA:75,0
+DA:76,0
+DA:77,0
+DA:78,0
+DA:79,0
+FN:22,System.Void Testing.TestTechnology/<CanIsertTechnology>d__2::MoveNext()
+FNDA:0,System.Void Testing.TestTechnology/<CanIsertTechnology>d__2::MoveNext()
+DA:23,0
+DA:24,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+FN:39,System.Void Testing.TestTechnology/<CanUpdateTechnology>d__3::MoveNext()
+FNDA:0,System.Void Testing.TestTechnology/<CanUpdateTechnology>d__3::MoveNext()
+DA:40,0
+DA:42,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:50,0
+DA:53,0
+DA:54,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:63,0
+FN:81,System.Void Testing.TestTechnology/<GetTechnlogy>d__5::MoveNext()
+FNDA:0,System.Void Testing.TestTechnology/<GetTechnlogy>d__5::MoveNext()
+DA:82,0
+DA:83,0
+DA:85,0
+DA:86,0
+DA:87,0
+DA:88,0
+DA:89,0
+DA:90,0
+DA:93,0
+DA:94,0
+DA:95,0
+DA:96,0
+DA:97,0
+DA:98,0
+DA:99,0
+DA:100,0
+DA:101,0
+LF:63
+LH:0
+BRF:0
+BRH:0
+FNF:5
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/FunctionalTests/TestTechnologyDetail.cs
+FN:15,System.Void Testing.TestTechnologyDetail::.ctor()
+FNDA:0,System.Void Testing.TestTechnologyDetail::.ctor()
+DA:16,0
+DA:17,0
+DA:18,0
+DA:20,0
+FN:69,System.Void Testing.TestTechnologyDetail/<CanDeleteTechologyDetail>d__4::MoveNext()
+FNDA:0,System.Void Testing.TestTechnologyDetail/<CanDeleteTechologyDetail>d__4::MoveNext()
+DA:70,0
+DA:72,0
+DA:74,0
+DA:75,0
+DA:76,0
+DA:77,0
+DA:78,0
+DA:79,0
+DA:80,0
+DA:81,0
+DA:83,0
+DA:84,0
+DA:85,0
+FN:23,System.Void Testing.TestTechnologyDetail/<CanIsertTechnologyDetail>d__2::MoveNext()
+FNDA:0,System.Void Testing.TestTechnologyDetail/<CanIsertTechnologyDetail>d__2::MoveNext()
+DA:24,0
+DA:25,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+FN:41,System.Void Testing.TestTechnologyDetail/<CanUpdateTechnologyDetail>d__3::MoveNext()
+FNDA:0,System.Void Testing.TestTechnologyDetail/<CanUpdateTechnologyDetail>d__3::MoveNext()
+DA:42,0
+DA:43,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:52,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:58,0
+DA:59,0
+DA:60,0
+DA:62,0
+DA:63,0
+DA:64,0
+DA:65,0
+DA:66,0
+FN:87,System.Void Testing.TestTechnologyDetail/<GetTechnlogyDetail>d__5::MoveNext()
+FNDA:0,System.Void Testing.TestTechnologyDetail/<GetTechnlogyDetail>d__5::MoveNext()
+DA:88,0
+DA:89,0
+DA:91,0
+DA:92,0
+DA:93,0
+DA:94,0
+DA:95,0
+DA:96,0
+DA:97,0
+DA:99,0
+DA:100,0
+DA:101,0
+DA:102,0
+DA:103,0
+DA:104,0
+DA:105,0
+DA:106,0
+LF:67
+LH:0
+BRF:0
+BRH:0
+FNF:5
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/PrimeApi/Program.cs
+FN:20,System.Void Program::<Main>$(System.String[])
+FNDA:0,System.Void Program::<Main>$(System.String[])
+DA:21,0
+DA:22,0
+DA:23,0
+DA:25,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:41,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:52,0
+DA:53,0
+DA:56,0
+DA:57,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:63,0
+DA:64,0
+DA:65,0
+DA:66,0
+DA:67,0
+DA:68,0
+DA:69,0
+DA:70,0
+DA:71,0
+DA:73,0
+DA:76,0
+DA:77,0
+DA:78,0
+DA:79,0
+DA:80,0
+DA:81,0
+DA:82,0
+DA:86,0
+DA:87,0
+DA:89,0
+DA:90,0
+DA:92,0
+DA:96,0
+BRDA:76,589,0,0
+BRDA:76,589,1,0
+LF:52
+LH:0
+BRF:2
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/PrimeApi/Migrations/AppIdentityDb/20211101165526_identity.cs
+FN:8,System.Void Courses.Migrations.AppIdentityDb.identity::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+FNDA:0,System.Void Courses.Migrations.AppIdentityDb.identity::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+DA:9,0
+DA:10,0
+DA:11,0
+DA:12,0
+DA:13,0
+DA:14,0
+DA:15,0
+DA:16,0
+DA:17,0
+DA:18,0
+DA:19,0
+DA:20,0
+DA:21,0
+DA:22,0
+DA:24,0
+DA:25,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:50,0
+DA:51,0
+DA:52,0
+DA:53,0
+DA:54,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:63,0
+DA:64,0
+DA:65,0
+DA:66,0
+DA:67,0
+DA:68,0
+DA:69,0
+DA:71,0
+DA:72,0
+DA:73,0
+DA:74,0
+DA:75,0
+DA:76,0
+DA:77,0
+DA:78,0
+DA:79,0
+DA:80,0
+DA:81,0
+DA:82,0
+DA:83,0
+DA:84,0
+DA:85,0
+DA:86,0
+DA:87,0
+DA:88,0
+DA:89,0
+DA:90,0
+DA:91,0
+DA:92,0
+DA:93,0
+DA:94,0
+DA:96,0
+DA:97,0
+DA:98,0
+DA:99,0
+DA:100,0
+DA:101,0
+DA:102,0
+DA:103,0
+DA:104,0
+DA:105,0
+DA:106,0
+DA:107,0
+DA:108,0
+DA:109,0
+DA:110,0
+DA:111,0
+DA:112,0
+DA:113,0
+DA:114,0
+DA:115,0
+DA:117,0
+DA:118,0
+DA:119,0
+DA:120,0
+DA:121,0
+DA:122,0
+DA:123,0
+DA:124,0
+DA:125,0
+DA:126,0
+DA:127,0
+DA:128,0
+DA:129,0
+DA:130,0
+DA:131,0
+DA:132,0
+DA:133,0
+DA:134,0
+DA:135,0
+DA:137,0
+DA:138,0
+DA:139,0
+DA:140,0
+DA:141,0
+DA:142,0
+DA:143,0
+DA:144,0
+DA:145,0
+DA:146,0
+DA:147,0
+DA:148,0
+DA:149,0
+DA:150,0
+DA:151,0
+DA:152,0
+DA:153,0
+DA:154,0
+DA:155,0
+DA:156,0
+DA:157,0
+DA:158,0
+DA:159,0
+DA:161,0
+DA:162,0
+DA:163,0
+DA:164,0
+DA:165,0
+DA:166,0
+DA:167,0
+DA:168,0
+DA:169,0
+DA:170,0
+DA:171,0
+DA:172,0
+DA:173,0
+DA:174,0
+DA:175,0
+DA:176,0
+DA:177,0
+DA:178,0
+DA:179,0
+DA:181,0
+DA:182,0
+DA:183,0
+DA:184,0
+DA:185,0
+DA:186,0
+DA:188,0
+DA:189,0
+DA:190,0
+DA:191,0
+DA:193,0
+DA:194,0
+DA:195,0
+DA:196,0
+DA:197,0
+DA:198,0
+DA:200,0
+DA:201,0
+DA:202,0
+DA:203,0
+DA:205,0
+DA:206,0
+DA:207,0
+DA:208,0
+DA:210,0
+DA:211,0
+DA:212,0
+DA:213,0
+DA:215,0
+DA:216,0
+DA:217,0
+DA:218,0
+DA:220,0
+DA:221,0
+DA:222,0
+DA:223,0
+DA:224,0
+DA:225,0
+DA:226,0
+FN:228,System.Void Courses.Migrations.AppIdentityDb.identity::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+FNDA:0,System.Void Courses.Migrations.AppIdentityDb.identity::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+DA:229,0
+DA:230,0
+DA:231,0
+DA:233,0
+DA:234,0
+DA:236,0
+DA:237,0
+DA:239,0
+DA:240,0
+DA:242,0
+DA:243,0
+DA:245,0
+DA:246,0
+DA:248,0
+DA:249,0
+DA:251,0
+DA:252,0
+DA:253,0
+LF:221
+LH:0
+BRF:0
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/PrimeApi/Migrations/AppIdentityDb/20211101165526_identity.Designer.cs
+FN:15,System.Void Courses.Migrations.AppIdentityDb.identity::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+FNDA:0,System.Void Courses.Migrations.AppIdentityDb.identity::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+DA:16,0
+DA:18,0
+DA:19,0
+DA:20,0
+DA:21,0
+DA:23,0
+DA:24,0
+DA:25,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:52,0
+DA:53,0
+DA:54,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:63,0
+DA:64,0
+DA:66,0
+DA:67,0
+DA:68,0
+DA:69,0
+DA:70,0
+DA:71,0
+DA:72,0
+DA:73,0
+DA:74,0
+DA:75,0
+DA:76,0
+DA:77,0
+DA:78,0
+DA:79,0
+DA:80,0
+DA:81,0
+DA:82,0
+DA:83,0
+DA:84,0
+DA:85,0
+DA:86,0
+DA:87,0
+DA:88,0
+DA:89,0
+DA:90,0
+DA:91,0
+DA:92,0
+DA:93,0
+DA:94,0
+DA:95,0
+DA:96,0
+DA:97,0
+DA:98,0
+DA:99,0
+DA:100,0
+DA:101,0
+DA:102,0
+DA:103,0
+DA:104,0
+DA:105,0
+DA:106,0
+DA:107,0
+DA:108,0
+DA:109,0
+DA:110,0
+DA:111,0
+DA:112,0
+DA:113,0
+DA:114,0
+DA:115,0
+DA:116,0
+DA:117,0
+DA:118,0
+DA:119,0
+DA:120,0
+DA:121,0
+DA:122,0
+DA:123,0
+DA:124,0
+DA:125,0
+DA:126,0
+DA:127,0
+DA:128,0
+DA:129,0
+DA:130,0
+DA:131,0
+DA:132,0
+DA:133,0
+DA:134,0
+DA:136,0
+DA:137,0
+DA:138,0
+DA:139,0
+DA:140,0
+DA:141,0
+DA:142,0
+DA:143,0
+DA:144,0
+DA:145,0
+DA:146,0
+DA:147,0
+DA:148,0
+DA:149,0
+DA:150,0
+DA:151,0
+DA:152,0
+DA:153,0
+DA:154,0
+DA:155,0
+DA:156,0
+DA:157,0
+DA:158,0
+DA:159,0
+DA:160,0
+DA:161,0
+DA:163,0
+DA:164,0
+DA:165,0
+DA:166,0
+DA:167,0
+DA:168,0
+DA:169,0
+DA:170,0
+DA:171,0
+DA:172,0
+DA:173,0
+DA:174,0
+DA:175,0
+DA:176,0
+DA:177,0
+DA:178,0
+DA:179,0
+DA:180,0
+DA:181,0
+DA:182,0
+DA:183,0
+DA:184,0
+DA:185,0
+DA:187,0
+DA:188,0
+DA:189,0
+DA:190,0
+DA:191,0
+DA:192,0
+DA:193,0
+DA:194,0
+DA:195,0
+DA:196,0
+DA:197,0
+DA:198,0
+DA:199,0
+DA:200,0
+DA:201,0
+DA:202,0
+DA:203,0
+DA:204,0
+DA:205,0
+DA:206,0
+DA:207,0
+DA:208,0
+DA:209,0
+DA:211,0
+DA:212,0
+DA:213,0
+DA:214,0
+DA:215,0
+DA:216,0
+DA:217,0
+DA:218,0
+DA:219,0
+DA:220,0
+DA:221,0
+DA:222,0
+DA:223,0
+DA:224,0
+DA:225,0
+DA:226,0
+DA:227,0
+DA:228,0
+DA:229,0
+DA:230,0
+DA:231,0
+DA:233,0
+DA:234,0
+DA:235,0
+DA:236,0
+DA:237,0
+DA:238,0
+DA:239,0
+DA:240,0
+DA:241,0
+DA:242,0
+DA:243,0
+DA:244,0
+DA:245,0
+DA:246,0
+DA:248,0
+DA:249,0
+DA:250,0
+DA:251,0
+DA:252,0
+DA:253,0
+DA:254,0
+DA:255,0
+DA:256,0
+DA:257,0
+DA:258,0
+DA:259,0
+DA:260,0
+DA:261,0
+DA:262,0
+DA:263,0
+DA:264,0
+DA:265,0
+DA:267,0
+DA:268,0
+DA:269,0
+DA:270,0
+DA:271,0
+DA:272,0
+DA:273,0
+DA:274,0
+DA:276,0
+DA:277,0
+DA:278,0
+DA:279,0
+DA:280,0
+DA:281,0
+DA:282,0
+DA:283,0
+DA:285,0
+DA:286,0
+DA:287,0
+DA:288,0
+DA:289,0
+DA:290,0
+DA:291,0
+DA:292,0
+DA:294,0
+DA:295,0
+DA:296,0
+DA:297,0
+DA:298,0
+DA:299,0
+DA:300,0
+DA:301,0
+DA:303,0
+DA:304,0
+DA:305,0
+DA:306,0
+DA:307,0
+DA:308,0
+DA:309,0
+DA:310,0
+DA:311,0
+DA:312,0
+DA:313,0
+DA:314,0
+DA:315,0
+DA:316,0
+DA:318,0
+DA:319,0
+DA:320,0
+DA:321,0
+DA:322,0
+DA:323,0
+DA:324,0
+DA:325,0
+DA:327,0
+DA:328,0
+DA:329,0
+DA:330,0
+DA:332,0
+LF:300
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/PrimeApi/Migrations/AppIdentityDb/AppIdentityDbContextModelSnapshot.cs
+FN:14,System.Void Courses.Migrations.AppIdentityDb.AppIdentityDbContextModelSnapshot::BuildModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+FNDA:0,System.Void Courses.Migrations.AppIdentityDb.AppIdentityDbContextModelSnapshot::BuildModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+DA:15,0
+DA:17,0
+DA:18,0
+DA:19,0
+DA:20,0
+DA:22,0
+DA:23,0
+DA:24,0
+DA:25,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:52,0
+DA:53,0
+DA:54,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:63,0
+DA:65,0
+DA:66,0
+DA:67,0
+DA:68,0
+DA:69,0
+DA:70,0
+DA:71,0
+DA:72,0
+DA:73,0
+DA:74,0
+DA:75,0
+DA:76,0
+DA:77,0
+DA:78,0
+DA:79,0
+DA:80,0
+DA:81,0
+DA:82,0
+DA:83,0
+DA:84,0
+DA:85,0
+DA:86,0
+DA:87,0
+DA:88,0
+DA:89,0
+DA:90,0
+DA:91,0
+DA:92,0
+DA:93,0
+DA:94,0
+DA:95,0
+DA:96,0
+DA:97,0
+DA:98,0
+DA:99,0
+DA:100,0
+DA:101,0
+DA:102,0
+DA:103,0
+DA:104,0
+DA:105,0
+DA:106,0
+DA:107,0
+DA:108,0
+DA:109,0
+DA:110,0
+DA:111,0
+DA:112,0
+DA:113,0
+DA:114,0
+DA:115,0
+DA:116,0
+DA:117,0
+DA:118,0
+DA:119,0
+DA:120,0
+DA:121,0
+DA:122,0
+DA:123,0
+DA:124,0
+DA:125,0
+DA:126,0
+DA:127,0
+DA:128,0
+DA:129,0
+DA:130,0
+DA:131,0
+DA:132,0
+DA:133,0
+DA:135,0
+DA:136,0
+DA:137,0
+DA:138,0
+DA:139,0
+DA:140,0
+DA:141,0
+DA:142,0
+DA:143,0
+DA:144,0
+DA:145,0
+DA:146,0
+DA:147,0
+DA:148,0
+DA:149,0
+DA:150,0
+DA:151,0
+DA:152,0
+DA:153,0
+DA:154,0
+DA:155,0
+DA:156,0
+DA:157,0
+DA:158,0
+DA:159,0
+DA:160,0
+DA:162,0
+DA:163,0
+DA:164,0
+DA:165,0
+DA:166,0
+DA:167,0
+DA:168,0
+DA:169,0
+DA:170,0
+DA:171,0
+DA:172,0
+DA:173,0
+DA:174,0
+DA:175,0
+DA:176,0
+DA:177,0
+DA:178,0
+DA:179,0
+DA:180,0
+DA:181,0
+DA:182,0
+DA:183,0
+DA:184,0
+DA:186,0
+DA:187,0
+DA:188,0
+DA:189,0
+DA:190,0
+DA:191,0
+DA:192,0
+DA:193,0
+DA:194,0
+DA:195,0
+DA:196,0
+DA:197,0
+DA:198,0
+DA:199,0
+DA:200,0
+DA:201,0
+DA:202,0
+DA:203,0
+DA:204,0
+DA:205,0
+DA:206,0
+DA:207,0
+DA:208,0
+DA:210,0
+DA:211,0
+DA:212,0
+DA:213,0
+DA:214,0
+DA:215,0
+DA:216,0
+DA:217,0
+DA:218,0
+DA:219,0
+DA:220,0
+DA:221,0
+DA:222,0
+DA:223,0
+DA:224,0
+DA:225,0
+DA:226,0
+DA:227,0
+DA:228,0
+DA:229,0
+DA:230,0
+DA:232,0
+DA:233,0
+DA:234,0
+DA:235,0
+DA:236,0
+DA:237,0
+DA:238,0
+DA:239,0
+DA:240,0
+DA:241,0
+DA:242,0
+DA:243,0
+DA:244,0
+DA:245,0
+DA:247,0
+DA:248,0
+DA:249,0
+DA:250,0
+DA:251,0
+DA:252,0
+DA:253,0
+DA:254,0
+DA:255,0
+DA:256,0
+DA:257,0
+DA:258,0
+DA:259,0
+DA:260,0
+DA:261,0
+DA:262,0
+DA:263,0
+DA:264,0
+DA:266,0
+DA:267,0
+DA:268,0
+DA:269,0
+DA:270,0
+DA:271,0
+DA:272,0
+DA:273,0
+DA:275,0
+DA:276,0
+DA:277,0
+DA:278,0
+DA:279,0
+DA:280,0
+DA:281,0
+DA:282,0
+DA:284,0
+DA:285,0
+DA:286,0
+DA:287,0
+DA:288,0
+DA:289,0
+DA:290,0
+DA:291,0
+DA:293,0
+DA:294,0
+DA:295,0
+DA:296,0
+DA:297,0
+DA:298,0
+DA:299,0
+DA:300,0
+DA:302,0
+DA:303,0
+DA:304,0
+DA:305,0
+DA:306,0
+DA:307,0
+DA:308,0
+DA:309,0
+DA:310,0
+DA:311,0
+DA:312,0
+DA:313,0
+DA:314,0
+DA:315,0
+DA:317,0
+DA:318,0
+DA:319,0
+DA:320,0
+DA:321,0
+DA:322,0
+DA:323,0
+DA:324,0
+DA:326,0
+DA:327,0
+DA:328,0
+DA:329,0
+DA:331,0
+LF:300
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/PrimeApi/Api/Helpers/MappingProfiles.cs
+FN:8,System.Void Courses.Helpers.MappingProfiles::.ctor()
+FNDA:0,System.Void Courses.Helpers.MappingProfiles::.ctor()
+DA:9,0
+DA:10,0
+DA:11,0
+DA:12,0
+DA:13,0
+DA:14,0
+DA:15,0
+DA:16,0
+DA:17,0
+DA:18,0
+DA:19,0
+DA:20,0
+DA:21,0
+DA:22,0
+DA:23,0
+DA:24,0
+DA:25,0
+DA:26,0
+DA:28,0
+LF:19
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/PrimeApi/Api/Extensions/ApplicationServicesExtensions.cs
+FN:15,Microsoft.Extensions.DependencyInjection.IServiceCollection Courses.API.Extensions.ApplicationServicesExtensions::AddApplicationServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+FNDA:0,Microsoft.Extensions.DependencyInjection.IServiceCollection Courses.API.Extensions.ApplicationServicesExtensions::AddApplicationServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+DA:16,0
+DA:17,0
+DA:19,0
+DA:20,0
+DA:21,0
+DA:22,0
+DA:23,0
+DA:24,0
+DA:25,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:38,0
+DA:39,0
+LF:22
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/PrimeApi/Api/Errors/ApiException.cs
+FN:11,System.String Courses.API.Errors.ApiException::get_Details()
+FNDA:0,System.String Courses.API.Errors.ApiException::get_Details()
+DA:12,0
+FN:6,System.Void Courses.API.Errors.ApiException::.ctor(System.Int32,System.String,System.String)
+FNDA:0,System.Void Courses.API.Errors.ApiException::.ctor(System.Int32,System.String,System.String)
+DA:7,0
+DA:8,0
+DA:9,0
+DA:10,0
+BRDA:7,4,0,0
+BRDA:7,4,1,0
+LF:5
+LH:0
+BRF:2
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/PrimeApi/Api/Errors/ApiResponse.cs
+FN:16,System.Int32 Courses.API.Errors.ApiResponse::get_StatusCode()
+FNDA:0,System.Int32 Courses.API.Errors.ApiResponse::get_StatusCode()
+DA:17,0
+FN:17,System.String Courses.API.Errors.ApiResponse::get_Message()
+FNDA:0,System.String Courses.API.Errors.ApiResponse::get_Message()
+DA:18,0
+FN:20,System.String Courses.API.Errors.ApiResponse::GetDefaultMessageForStatusCode(System.Int32)
+FNDA:0,System.String Courses.API.Errors.ApiResponse::GetDefaultMessageForStatusCode(System.Int32)
+DA:21,0
+DA:22,0
+DA:23,0
+DA:24,0
+DA:25,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+BRDA:22,12,0,0
+BRDA:22,12,1,0
+BRDA:22,12,2,0
+BRDA:22,12,5,0
+BRDA:22,45,1,0
+BRDA:22,12,3,0
+BRDA:22,12,4,0
+BRDA:22,45,0,0
+FN:6,System.Void Courses.API.Errors.ApiResponse::.ctor(System.Int32,System.String)
+FNDA:0,System.Void Courses.API.Errors.ApiResponse::.ctor(System.Int32,System.String)
+DA:7,0
+DA:8,0
+DA:9,0
+DA:10,0
+DA:11,0
+DA:12,0
+DA:13,0
+DA:15,0
+BRDA:10,29,0,0
+BRDA:10,29,1,0
+LF:20
+LH:0
+BRF:10
+BRH:0
+FNF:4
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/PrimeApi/Api/Errors/ApiValidationErrorResponse.cs
+FN:10,System.Collections.Generic.IEnumerable`1<System.String> Courses.API.Errors.ApiValidationErrorResponse::get_Errors()
+FNDA:0,System.Collections.Generic.IEnumerable`1<System.String> Courses.API.Errors.ApiValidationErrorResponse::get_Errors()
+DA:11,0
+FN:7,System.Void Courses.API.Errors.ApiValidationErrorResponse::.ctor()
+FNDA:0,System.Void Courses.API.Errors.ApiValidationErrorResponse::.ctor()
+DA:8,0
+DA:9,0
+DA:10,0
+LF:4
+LH:0
+BRF:0
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/PrimeApi/Api/Controllers/CountryController.cs
+FN:13,System.Void Courses.Api.Controllers.CountryController::.ctor(BLL.Interfaces.Repositories.IGenericRepository`1<Core.Entities.Country>)
+FNDA:0,System.Void Courses.Api.Controllers.CountryController::.ctor(BLL.Interfaces.Repositories.IGenericRepository`1<Core.Entities.Country>)
+DA:14,0
+DA:15,0
+DA:16,0
+DA:17,0
+FN:24,System.Void Courses.Api.Controllers.CountryController/<Country>d__2::MoveNext()
+FNDA:0,System.Void Courses.Api.Controllers.CountryController/<Country>d__2::MoveNext()
+DA:25,0
+DA:26,0
+DA:27,0
+FN:31,System.Void Courses.Api.Controllers.CountryController/<TestAsync>d__3::MoveNext()
+FNDA:0,System.Void Courses.Api.Controllers.CountryController/<TestAsync>d__3::MoveNext()
+DA:32,0
+DA:33,0
+DA:36,0
+DA:39,0
+DA:42,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:50,0
+DA:51,0
+LF:20
+LH:0
+BRF:0
+BRH:0
+FNF:3
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/PrimeApi/Api/Controllers/CourseController.cs
+FN:21,System.Void Courses.Api.Controllers.CourseController::.ctor(BLL.Interfaces.ICourseService,MediatR.IMediator,Microsoft.Extensions.Configuration.IConfiguration)
+FNDA:6,System.Void Courses.Api.Controllers.CourseController::.ctor(BLL.Interfaces.ICourseService,MediatR.IMediator,Microsoft.Extensions.Configuration.IConfiguration)
+DA:22,6
+DA:23,6
+DA:24,6
+DA:26,6
+DA:27,6
+DA:28,6
+FN:31,System.Void Courses.Api.Controllers.CourseController/<Course>d__4::MoveNext()
+FNDA:1,System.Void Courses.Api.Controllers.CourseController/<Course>d__4::MoveNext()
+DA:32,1
+DA:34,1
+DA:35,1
+DA:36,1
+DA:37,1
+DA:38,1
+DA:39,1
+DA:41,0
+DA:42,0
+DA:43,0
+DA:45,1
+FN:50,System.Void Courses.Api.Controllers.CourseController/<CourseDetails>d__5::MoveNext()
+FNDA:1,System.Void Courses.Api.Controllers.CourseController/<CourseDetails>d__5::MoveNext()
+DA:51,1
+DA:53,1
+DA:54,1
+DA:55,1
+DA:56,1
+DA:57,1
+DA:58,1
+DA:60,0
+DA:61,0
+DA:62,0
+DA:64,1
+FN:139,System.Void Courses.Api.Controllers.CourseController/<DeleteCourse>d__10::MoveNext()
+FNDA:1,System.Void Courses.Api.Controllers.CourseController/<DeleteCourse>d__10::MoveNext()
+DA:140,1
+DA:142,1
+DA:143,1
+DA:144,1
+DA:145,1
+DA:146,1
+DA:149,0
+DA:150,0
+DA:151,0
+DA:154,1
+FN:157,System.Void Courses.Api.Controllers.CourseController/<DownloadIndex>d__11::MoveNext()
+FNDA:0,System.Void Courses.Api.Controllers.CourseController/<DownloadIndex>d__11::MoveNext()
+DA:158,0
+DA:159,0
+DA:160,0
+DA:161,0
+DA:162,0
+DA:163,0
+DA:164,0
+DA:165,0
+DA:166,0
+DA:167,0
+DA:169,0
+DA:171,0
+DA:172,0
+DA:173,0
+DA:174,0
+DA:175,0
+DA:176,0
+DA:177,0
+DA:178,0
+BRDA:177,469,0,0
+BRDA:177,469,1,0
+FN:200,System.Void Courses.Api.Controllers.CourseController/<Index>d__13::MoveNext()
+FNDA:0,System.Void Courses.Api.Controllers.CourseController/<Index>d__13::MoveNext()
+DA:201,0
+DA:203,0
+DA:204,0
+DA:205,0
+DA:207,0
+DA:208,0
+DA:209,0
+DA:210,0
+DA:212,0
+DA:213,0
+DA:214,0
+DA:215,0
+DA:216,0
+DA:218,0
+DA:220,0
+DA:221,0
+DA:222,0
+DA:224,0
+BRDA:207,100,0,0
+BRDA:207,100,1,0
+BRDA:207,112,0,0
+BRDA:207,112,1,0
+BRDA:207,162,0,0
+BRDA:207,162,1,0
+FN:85,System.Void Courses.Api.Controllers.CourseController/<InsertCourse>d__7::MoveNext()
+FNDA:0,System.Void Courses.Api.Controllers.CourseController/<InsertCourse>d__7::MoveNext()
+DA:86,0
+DA:88,0
+DA:89,0
+DA:90,0
+DA:91,0
+DA:92,0
+DA:95,0
+DA:96,0
+DA:97,0
+DA:99,0
+FN:122,System.Void Courses.Api.Controllers.CourseController/<InsertCourseDetail>d__9::MoveNext()
+FNDA:1,System.Void Courses.Api.Controllers.CourseController/<InsertCourseDetail>d__9::MoveNext()
+DA:123,1
+DA:125,1
+DA:126,1
+DA:127,1
+DA:128,1
+DA:129,1
+DA:131,0
+DA:132,0
+DA:133,0
+DA:135,1
+FN:183,System.Void Courses.Api.Controllers.CourseController/<PostFile>d__12::MoveNext()
+FNDA:0,System.Void Courses.Api.Controllers.CourseController/<PostFile>d__12::MoveNext()
+DA:184,0
+DA:186,0
+DA:187,0
+DA:188,0
+DA:189,0
+DA:191,0
+DA:192,0
+DA:193,0
+DA:195,0
+BRDA:188,60,0,0
+BRDA:188,60,1,0
+BRDA:188,86,0,0
+BRDA:188,86,1,0
+FN:68,System.Void Courses.Api.Controllers.CourseController/<UpdateCourse>d__6::MoveNext()
+FNDA:1,System.Void Courses.Api.Controllers.CourseController/<UpdateCourse>d__6::MoveNext()
+DA:69,1
+DA:71,1
+DA:72,1
+DA:73,1
+DA:74,1
+DA:75,1
+DA:77,0
+DA:78,0
+DA:79,0
+DA:81,1
+FN:104,System.Void Courses.Api.Controllers.CourseController/<UpdateCourseDetail>d__8::MoveNext()
+FNDA:1,System.Void Courses.Api.Controllers.CourseController/<UpdateCourseDetail>d__8::MoveNext()
+DA:105,1
+DA:107,1
+DA:108,1
+DA:109,1
+DA:110,1
+DA:111,1
+DA:113,0
+DA:114,0
+DA:115,0
+DA:117,1
+LF:124
+LH:50
+BRF:12
+BRH:0
+FNF:11
+FNH:7
+end_of_record
+SF:/home/kike/Projects/PrimeApi/PrimeApi/Api/Controllers/TeacherController.cs
+FN:20,System.Void Courses.Api.Controllers.TeacherController::.ctor(AutoMapper.IMapper,MediatR.IMediator,BLL.Interfaces.ITeacherService)
+FNDA:0,System.Void Courses.Api.Controllers.TeacherController::.ctor(AutoMapper.IMapper,MediatR.IMediator,BLL.Interfaces.ITeacherService)
+DA:21,0
+DA:22,0
+DA:23,0
+DA:24,0
+DA:25,0
+DA:26,0
+FN:67,System.Void Courses.Api.Controllers.TeacherController/<CreateTeacher>d__6::MoveNext()
+FNDA:0,System.Void Courses.Api.Controllers.TeacherController/<CreateTeacher>d__6::MoveNext()
+DA:68,0
+DA:70,0
+DA:71,0
+DA:72,0
+DA:73,0
+DA:74,0
+DA:76,0
+DA:77,0
+DA:78,0
+DA:80,0
+FN:84,System.Void Courses.Api.Controllers.TeacherController/<DeleteTeacher>d__7::MoveNext()
+FNDA:0,System.Void Courses.Api.Controllers.TeacherController/<DeleteTeacher>d__7::MoveNext()
+DA:85,0
+DA:87,0
+DA:88,0
+DA:89,0
+DA:90,0
+DA:91,0
+DA:93,0
+DA:94,0
+DA:95,0
+DA:97,0
+FN:102,System.Void Courses.Api.Controllers.TeacherController/<PostFile>d__8::MoveNext()
+FNDA:0,System.Void Courses.Api.Controllers.TeacherController/<PostFile>d__8::MoveNext()
+DA:103,0
+DA:105,0
+DA:106,0
+DA:107,0
+DA:108,0
+DA:109,0
+DA:111,0
+DA:112,0
+DA:115,0
+DA:116,0
+DA:117,0
+DA:119,0
+BRDA:107,66,0,0
+BRDA:107,66,1,0
+BRDA:107,88,0,0
+BRDA:107,88,1,0
+FN:30,System.Void Courses.Api.Controllers.TeacherController/<Teacher>d__4::MoveNext()
+FNDA:0,System.Void Courses.Api.Controllers.TeacherController/<Teacher>d__4::MoveNext()
+DA:31,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:39,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:46,0
+FN:50,System.Void Courses.Api.Controllers.TeacherController/<UpdateTeacher>d__5::MoveNext()
+FNDA:0,System.Void Courses.Api.Controllers.TeacherController/<UpdateTeacher>d__5::MoveNext()
+DA:51,0
+DA:53,0
+DA:54,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:63,0
+LF:59
+LH:0
+BRF:4
+BRH:0
+FNF:6
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/PrimeApi/Api/Controllers/TechnologyController.cs
+FN:20,System.Void Courses.Api.Controllers.TechnologyController::.ctor(MediatR.IMediator,BLL.Interfaces.Services.ITechnologyService)
+FNDA:0,System.Void Courses.Api.Controllers.TechnologyController::.ctor(MediatR.IMediator,BLL.Interfaces.Services.ITechnologyService)
+DA:21,0
+DA:22,0
+DA:23,0
+DA:24,0
+DA:25,0
+FN:56,System.Void Courses.Api.Controllers.TechnologyController/<DeleteTechnology>d__6::MoveNext()
+FNDA:0,System.Void Courses.Api.Controllers.TechnologyController/<DeleteTechnology>d__6::MoveNext()
+DA:57,0
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:63,0
+FN:67,System.Void Courses.Api.Controllers.TechnologyController/<DeleteTechnologyDetails>d__7::MoveNext()
+FNDA:0,System.Void Courses.Api.Controllers.TechnologyController/<DeleteTechnologyDetails>d__7::MoveNext()
+DA:68,0
+DA:69,0
+DA:70,0
+DA:71,0
+DA:72,0
+DA:74,0
+FN:95,System.Void Courses.Api.Controllers.TechnologyController/<InsertTechnolgyDetails>d__10::MoveNext()
+FNDA:0,System.Void Courses.Api.Controllers.TechnologyController/<InsertTechnolgyDetails>d__10::MoveNext()
+DA:96,0
+DA:97,0
+DA:98,0
+FN:46,System.Void Courses.Api.Controllers.TechnologyController/<InsertTechnology>d__5::MoveNext()
+FNDA:0,System.Void Courses.Api.Controllers.TechnologyController/<InsertTechnology>d__5::MoveNext()
+DA:47,0
+DA:48,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:53,0
+FN:28,System.Void Courses.Api.Controllers.TechnologyController/<Technology>d__3::MoveNext()
+FNDA:0,System.Void Courses.Api.Controllers.TechnologyController/<Technology>d__3::MoveNext()
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+FN:78,System.Void Courses.Api.Controllers.TechnologyController/<TechnologyDetails>d__8::MoveNext()
+FNDA:0,System.Void Courses.Api.Controllers.TechnologyController/<TechnologyDetails>d__8::MoveNext()
+DA:79,0
+DA:80,0
+DA:81,0
+DA:82,0
+DA:83,0
+DA:84,0
+FN:36,System.Void Courses.Api.Controllers.TechnologyController/<UpdateTechnology>d__4::MoveNext()
+FNDA:0,System.Void Courses.Api.Controllers.TechnologyController/<UpdateTechnology>d__4::MoveNext()
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:43,0
+FN:88,System.Void Courses.Api.Controllers.TechnologyController/<UpdateTechnologyDetails>d__9::MoveNext()
+FNDA:0,System.Void Courses.Api.Controllers.TechnologyController/<UpdateTechnologyDetails>d__9::MoveNext()
+DA:89,0
+DA:90,0
+DA:91,0
+LF:47
+LH:0
+BRF:0
+BRH:0
+FNF:9
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/PrimeApi/Api/Controllers/UserInfoController.cs
+FN:23,System.Void Courses.Api.Controllers.UserInfoController::.ctor(AutoMapper.IMapper,MediatR.IMediator,BLL.Interfaces.Services.IUserInfoService)
+FNDA:0,System.Void Courses.Api.Controllers.UserInfoController::.ctor(AutoMapper.IMapper,MediatR.IMediator,BLL.Interfaces.Services.IUserInfoService)
+DA:24,0
+DA:25,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+FN:90,System.Void Courses.Api.Controllers.UserInfoController/<DeleteUser>d__7::MoveNext()
+FNDA:0,System.Void Courses.Api.Controllers.UserInfoController/<DeleteUser>d__7::MoveNext()
+DA:91,0
+DA:94,0
+DA:95,0
+DA:97,0
+DA:98,0
+DA:99,0
+DA:101,0
+FN:33,System.Void Courses.Api.Controllers.UserInfoController/<GetUsersInfo>d__4::MoveNext()
+FNDA:0,System.Void Courses.Api.Controllers.UserInfoController/<GetUsersInfo>d__4::MoveNext()
+DA:34,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:48,0
+FN:71,System.Void Courses.Api.Controllers.UserInfoController/<InsertUserInfo>d__6::MoveNext()
+FNDA:0,System.Void Courses.Api.Controllers.UserInfoController/<InsertUserInfo>d__6::MoveNext()
+DA:72,0
+DA:75,0
+DA:76,0
+DA:77,0
+DA:78,0
+DA:79,0
+DA:81,0
+DA:82,0
+DA:83,0
+DA:86,0
+FN:105,System.Void Courses.Api.Controllers.UserInfoController/<PostFile>d__8::MoveNext()
+FNDA:0,System.Void Courses.Api.Controllers.UserInfoController/<PostFile>d__8::MoveNext()
+DA:106,0
+DA:108,0
+DA:109,0
+DA:110,0
+DA:111,0
+DA:112,0
+DA:113,0
+DA:115,0
+DA:117,0
+DA:118,0
+DA:119,0
+DA:121,0
+BRDA:109,45,0,0
+BRDA:109,45,1,0
+BRDA:110,67,0,0
+BRDA:110,67,1,0
+BRDA:110,88,0,0
+BRDA:110,88,1,0
+FN:52,System.Void Courses.Api.Controllers.UserInfoController/<UpdateUserInfo>d__5::MoveNext()
+FNDA:0,System.Void Courses.Api.Controllers.UserInfoController/<UpdateUserInfo>d__5::MoveNext()
+DA:53,0
+DA:56,0
+DA:57,0
+DA:58,0
+DA:59,0
+DA:60,0
+DA:62,0
+DA:63,0
+DA:64,0
+DA:67,0
+LF:56
+LH:0
+BRF:6
+BRH:0
+FNF:6
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/PrimeApi/Reports.cs
+FN:14,System.Void PrimeApi.Reports::CreateReport(System.Collections.Generic.IEnumerable`1<T>,System.String,System.Boolean)
+FNDA:0,System.Void PrimeApi.Reports::CreateReport(System.Collections.Generic.IEnumerable`1<T>,System.String,System.Boolean)
+DA:15,0
+DA:16,0
+DA:17,0
+DA:18,0
+DA:20,0
+DA:21,0
+DA:22,0
+DA:23,0
+DA:24,0
+DA:25,0
+DA:26,0
+BRDA:16,4,0,0
+BRDA:16,4,1,0
+FN:28,System.Void PrimeApi.Reports::CreateCsv(System.Collections.Generic.IEnumerable`1<T>,System.String)
+FNDA:0,System.Void PrimeApi.Reports::CreateCsv(System.Collections.Generic.IEnumerable`1<T>,System.String)
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:46,0
+BRDA:31,33,0,0
+BRDA:31,33,1,0
+BRDA:40,132,1,0
+BRDA:40,132,0,0
+FN:47,System.Void PrimeApi.Reports::CSVtoExcel(System.String)
+FNDA:0,System.Void PrimeApi.Reports::CSVtoExcel(System.String)
+DA:48,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:52,0
+DA:53,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:58,0
+DA:59,0
+DA:61,0
+DA:62,0
+DA:63,0
+DA:64,0
+DA:66,0
+DA:67,0
+DA:68,0
+DA:70,0
+DA:72,0
+DA:73,0
+DA:74,0
+DA:75,0
+DA:76,0
+DA:77,0
+DA:78,0
+DA:79,0
+DA:80,0
+DA:82,0
+DA:83,0
+DA:84,0
+DA:85,0
+DA:86,0
+DA:87,0
+BRDA:55,113,1,0
+BRDA:55,113,0,0
+BRDA:66,336,1,0
+BRDA:72,315,1,0
+BRDA:74,222,0,0
+BRDA:74,222,1,0
+BRDA:74,230,0,0
+BRDA:74,230,1,0
+BRDA:72,315,0,0
+BRDA:66,336,0,0
+BRDA:80,418,1,0
+BRDA:80,418,0,0
+FN:89,System.Collections.Generic.IEnumerable`1<BLL.Dtos.CourseDetailDto> PrimeApi.Reports::ReadCsv(System.String,System.Int32)
+FNDA:0,System.Collections.Generic.IEnumerable`1<BLL.Dtos.CourseDetailDto> PrimeApi.Reports::ReadCsv(System.String,System.Int32)
+DA:90,0
+DA:91,0
+DA:92,0
+DA:93,0
+DA:94,0
+DA:95,0
+DA:96,0
+DA:97,0
+DA:98,0
+DA:99,0
+DA:100,0
+DA:101,0
+DA:102,0
+DA:103,0
+DA:104,0
+DA:105,0
+DA:106,0
+DA:107,0
+DA:108,0
+DA:109,0
+DA:110,0
+DA:111,0
+DA:112,0
+DA:113,0
+BRDA:99,140,1,0
+BRDA:99,140,0,0
+LF:85
+LH:0
+BRF:20
+BRH:0
+FNF:4
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/PrimeApi/Migrations/20220211185141_InitialCreate.cs
+FN:9,System.Void PrimeApi.Migrations.InitialCreate::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+FNDA:0,System.Void PrimeApi.Migrations.InitialCreate::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+DA:10,0
+DA:11,0
+DA:12,0
+DA:13,0
+DA:14,0
+DA:15,0
+DA:16,0
+DA:17,0
+DA:18,0
+DA:19,0
+DA:20,0
+DA:21,0
+DA:22,0
+DA:24,0
+DA:25,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:51,0
+DA:52,0
+DA:53,0
+DA:54,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:63,0
+DA:64,0
+DA:65,0
+DA:66,0
+DA:67,0
+DA:68,0
+DA:69,0
+DA:70,0
+DA:71,0
+DA:72,0
+DA:73,0
+DA:75,0
+DA:76,0
+DA:77,0
+DA:78,0
+DA:79,0
+DA:80,0
+DA:81,0
+DA:82,0
+DA:83,0
+DA:84,0
+DA:85,0
+DA:86,0
+DA:87,0
+DA:88,0
+DA:89,0
+DA:90,0
+DA:91,0
+DA:92,0
+DA:93,0
+DA:94,0
+DA:95,0
+DA:96,0
+DA:97,0
+DA:98,0
+DA:99,0
+DA:100,0
+DA:101,0
+DA:102,0
+DA:103,0
+DA:104,0
+DA:105,0
+DA:106,0
+DA:107,0
+DA:108,0
+DA:109,0
+DA:110,0
+DA:111,0
+DA:113,0
+DA:114,0
+DA:115,0
+DA:116,0
+DA:117,0
+DA:118,0
+DA:119,0
+DA:120,0
+DA:121,0
+DA:122,0
+DA:123,0
+DA:124,0
+DA:125,0
+DA:126,0
+DA:127,0
+DA:128,0
+DA:129,0
+DA:130,0
+DA:131,0
+DA:132,0
+DA:134,0
+DA:135,0
+DA:136,0
+DA:137,0
+DA:139,0
+DA:140,0
+DA:141,0
+DA:142,0
+DA:144,0
+DA:145,0
+DA:146,0
+DA:147,0
+DA:149,0
+DA:150,0
+DA:151,0
+DA:152,0
+DA:154,0
+DA:155,0
+DA:156,0
+DA:157,0
+DA:158,0
+FN:160,System.Void PrimeApi.Migrations.InitialCreate::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+FNDA:0,System.Void PrimeApi.Migrations.InitialCreate::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+DA:161,0
+DA:162,0
+DA:163,0
+DA:165,0
+DA:166,0
+DA:168,0
+DA:169,0
+DA:171,0
+DA:172,0
+DA:174,0
+DA:175,0
+DA:177,0
+DA:178,0
+DA:179,0
+LF:153
+LH:0
+BRF:0
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/PrimeApi/Migrations/20220211185141_InitialCreate.Designer.cs
+FN:17,System.Void PrimeApi.Migrations.InitialCreate::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+FNDA:0,System.Void PrimeApi.Migrations.InitialCreate::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+DA:18,0
+DA:20,0
+DA:21,0
+DA:22,0
+DA:24,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:52,0
+DA:53,0
+DA:54,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:63,0
+DA:64,0
+DA:65,0
+DA:66,0
+DA:67,0
+DA:68,0
+DA:69,0
+DA:70,0
+DA:71,0
+DA:72,0
+DA:73,0
+DA:74,0
+DA:75,0
+DA:76,0
+DA:77,0
+DA:78,0
+DA:79,0
+DA:80,0
+DA:81,0
+DA:82,0
+DA:83,0
+DA:85,0
+DA:86,0
+DA:87,0
+DA:88,0
+DA:89,0
+DA:90,0
+DA:91,0
+DA:92,0
+DA:93,0
+DA:94,0
+DA:95,0
+DA:96,0
+DA:97,0
+DA:98,0
+DA:99,0
+DA:100,0
+DA:101,0
+DA:102,0
+DA:103,0
+DA:104,0
+DA:105,0
+DA:106,0
+DA:107,0
+DA:109,0
+DA:110,0
+DA:111,0
+DA:112,0
+DA:113,0
+DA:114,0
+DA:115,0
+DA:116,0
+DA:117,0
+DA:118,0
+DA:119,0
+DA:120,0
+DA:121,0
+DA:122,0
+DA:123,0
+DA:124,0
+DA:125,0
+DA:126,0
+DA:127,0
+DA:128,0
+DA:129,0
+DA:130,0
+DA:131,0
+DA:132,0
+DA:133,0
+DA:134,0
+DA:135,0
+DA:136,0
+DA:137,0
+DA:138,0
+DA:139,0
+DA:140,0
+DA:142,0
+DA:143,0
+DA:144,0
+DA:145,0
+DA:146,0
+DA:147,0
+DA:148,0
+DA:149,0
+DA:150,0
+DA:151,0
+DA:152,0
+DA:153,0
+DA:154,0
+DA:155,0
+DA:156,0
+DA:158,0
+DA:159,0
+DA:160,0
+DA:161,0
+DA:162,0
+DA:163,0
+DA:164,0
+DA:165,0
+DA:166,0
+DA:167,0
+DA:168,0
+DA:169,0
+DA:170,0
+DA:171,0
+DA:172,0
+DA:173,0
+DA:174,0
+DA:175,0
+DA:177,0
+DA:178,0
+DA:179,0
+DA:180,0
+DA:181,0
+DA:182,0
+DA:183,0
+DA:184,0
+DA:185,0
+DA:186,0
+DA:187,0
+DA:188,0
+DA:189,0
+DA:190,0
+DA:191,0
+DA:192,0
+DA:193,0
+DA:194,0
+DA:195,0
+DA:196,0
+DA:197,0
+DA:198,0
+DA:199,0
+DA:200,0
+DA:201,0
+DA:202,0
+DA:204,0
+DA:205,0
+DA:206,0
+DA:207,0
+DA:208,0
+DA:209,0
+DA:210,0
+DA:211,0
+DA:213,0
+DA:214,0
+DA:215,0
+DA:216,0
+DA:217,0
+DA:218,0
+DA:219,0
+DA:220,0
+DA:221,0
+DA:222,0
+DA:224,0
+DA:225,0
+DA:226,0
+DA:227,0
+DA:229,0
+LF:199
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/PrimeApi/Migrations/20220228120214_migration28022022.cs
+FN:9,System.Void PrimeApi.Migrations.migration28022022::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+FNDA:0,System.Void PrimeApi.Migrations.migration28022022::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+DA:10,0
+DA:11,0
+DA:12,0
+DA:13,0
+DA:14,0
+DA:15,0
+DA:16,0
+DA:17,0
+DA:18,0
+DA:19,0
+DA:20,0
+DA:21,0
+DA:22,0
+DA:23,0
+DA:24,0
+DA:25,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:52,0
+DA:53,0
+DA:54,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:63,0
+DA:64,0
+DA:65,0
+DA:66,0
+DA:68,0
+DA:69,0
+DA:70,0
+DA:71,0
+DA:73,0
+DA:74,0
+DA:75,0
+DA:76,0
+DA:78,0
+DA:79,0
+DA:80,0
+DA:81,0
+DA:82,0
+FN:84,System.Void PrimeApi.Migrations.migration28022022::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+FNDA:0,System.Void PrimeApi.Migrations.migration28022022::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+DA:85,0
+DA:86,0
+DA:87,0
+DA:89,0
+DA:90,0
+DA:91,0
+LF:75
+LH:0
+BRF:0
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/PrimeApi/Migrations/20220228120214_migration28022022.Designer.cs
+FN:18,System.Void PrimeApi.Migrations.migration28022022::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+FNDA:0,System.Void PrimeApi.Migrations.migration28022022::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+DA:19,0
+DA:21,0
+DA:22,0
+DA:23,0
+DA:25,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:52,0
+DA:53,0
+DA:54,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:58,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:63,0
+DA:64,0
+DA:65,0
+DA:66,0
+DA:67,0
+DA:68,0
+DA:69,0
+DA:70,0
+DA:71,0
+DA:72,0
+DA:73,0
+DA:74,0
+DA:76,0
+DA:77,0
+DA:78,0
+DA:79,0
+DA:80,0
+DA:81,0
+DA:82,0
+DA:83,0
+DA:84,0
+DA:85,0
+DA:86,0
+DA:87,0
+DA:88,0
+DA:89,0
+DA:90,0
+DA:91,0
+DA:92,0
+DA:93,0
+DA:94,0
+DA:95,0
+DA:96,0
+DA:97,0
+DA:98,0
+DA:99,0
+DA:100,0
+DA:101,0
+DA:102,0
+DA:103,0
+DA:104,0
+DA:105,0
+DA:106,0
+DA:107,0
+DA:108,0
+DA:109,0
+DA:110,0
+DA:111,0
+DA:112,0
+DA:113,0
+DA:114,0
+DA:115,0
+DA:116,0
+DA:117,0
+DA:119,0
+DA:120,0
+DA:121,0
+DA:122,0
+DA:123,0
+DA:124,0
+DA:125,0
+DA:126,0
+DA:127,0
+DA:128,0
+DA:129,0
+DA:130,0
+DA:131,0
+DA:132,0
+DA:133,0
+DA:134,0
+DA:135,0
+DA:136,0
+DA:137,0
+DA:138,0
+DA:139,0
+DA:140,0
+DA:141,0
+DA:143,0
+DA:144,0
+DA:145,0
+DA:146,0
+DA:147,0
+DA:148,0
+DA:149,0
+DA:150,0
+DA:151,0
+DA:152,0
+DA:153,0
+DA:154,0
+DA:155,0
+DA:156,0
+DA:157,0
+DA:158,0
+DA:159,0
+DA:160,0
+DA:161,0
+DA:162,0
+DA:163,0
+DA:164,0
+DA:165,0
+DA:166,0
+DA:167,0
+DA:168,0
+DA:169,0
+DA:170,0
+DA:171,0
+DA:172,0
+DA:173,0
+DA:174,0
+DA:176,0
+DA:177,0
+DA:178,0
+DA:179,0
+DA:180,0
+DA:181,0
+DA:182,0
+DA:183,0
+DA:184,0
+DA:185,0
+DA:186,0
+DA:187,0
+DA:188,0
+DA:189,0
+DA:190,0
+DA:192,0
+DA:193,0
+DA:194,0
+DA:195,0
+DA:196,0
+DA:197,0
+DA:198,0
+DA:199,0
+DA:200,0
+DA:201,0
+DA:202,0
+DA:203,0
+DA:204,0
+DA:205,0
+DA:206,0
+DA:207,0
+DA:208,0
+DA:209,0
+DA:211,0
+DA:212,0
+DA:213,0
+DA:214,0
+DA:215,0
+DA:216,0
+DA:217,0
+DA:218,0
+DA:219,0
+DA:220,0
+DA:221,0
+DA:222,0
+DA:223,0
+DA:224,0
+DA:225,0
+DA:226,0
+DA:227,0
+DA:228,0
+DA:229,0
+DA:230,0
+DA:231,0
+DA:232,0
+DA:233,0
+DA:234,0
+DA:235,0
+DA:236,0
+DA:237,0
+DA:238,0
+DA:239,0
+DA:240,0
+DA:241,0
+DA:242,0
+DA:243,0
+DA:244,0
+DA:245,0
+DA:246,0
+DA:247,0
+DA:248,0
+DA:249,0
+DA:250,0
+DA:251,0
+DA:252,0
+DA:253,0
+DA:254,0
+DA:256,0
+DA:257,0
+DA:258,0
+DA:259,0
+DA:260,0
+DA:261,0
+DA:262,0
+DA:263,0
+DA:264,0
+DA:265,0
+DA:266,0
+DA:267,0
+DA:268,0
+DA:269,0
+DA:270,0
+DA:272,0
+DA:273,0
+DA:274,0
+DA:275,0
+DA:276,0
+DA:277,0
+DA:278,0
+DA:279,0
+DA:280,0
+DA:281,0
+DA:282,0
+DA:283,0
+DA:284,0
+DA:285,0
+DA:286,0
+DA:287,0
+DA:288,0
+DA:289,0
+DA:290,0
+DA:291,0
+DA:292,0
+DA:293,0
+DA:294,0
+DA:295,0
+DA:296,0
+DA:297,0
+DA:299,0
+DA:300,0
+DA:301,0
+DA:302,0
+DA:303,0
+DA:304,0
+DA:305,0
+DA:306,0
+DA:308,0
+DA:309,0
+DA:310,0
+DA:311,0
+DA:312,0
+DA:313,0
+DA:314,0
+DA:315,0
+DA:316,0
+DA:317,0
+DA:319,0
+DA:320,0
+DA:321,0
+DA:322,0
+DA:323,0
+DA:324,0
+DA:325,0
+DA:326,0
+DA:327,0
+DA:328,0
+DA:330,0
+DA:331,0
+DA:332,0
+DA:333,0
+DA:335,0
+DA:336,0
+DA:337,0
+DA:338,0
+DA:340,0
+LF:304
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/PrimeApi/Migrations/20220303075535_030320222.cs
+FN:9,System.Void PrimeApi.Migrations._030320222::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+FNDA:0,System.Void PrimeApi.Migrations._030320222::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+DA:10,0
+DA:11,0
+DA:12,0
+DA:13,0
+DA:14,0
+DA:16,0
+DA:17,0
+DA:18,0
+DA:19,0
+DA:20,0
+DA:22,0
+DA:23,0
+DA:24,0
+DA:25,0
+DA:26,0
+DA:27,0
+FN:29,System.Void PrimeApi.Migrations._030320222::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+FNDA:0,System.Void PrimeApi.Migrations._030320222::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+LF:28
+LH:0
+BRF:0
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/PrimeApi/Migrations/20220303075535_030320222.Designer.cs
+FN:18,System.Void PrimeApi.Migrations._030320222::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+FNDA:0,System.Void PrimeApi.Migrations._030320222::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+DA:19,0
+DA:21,0
+DA:22,0
+DA:23,0
+DA:25,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:52,0
+DA:53,0
+DA:54,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:63,0
+DA:64,0
+DA:66,0
+DA:67,0
+DA:68,0
+DA:69,0
+DA:70,0
+DA:71,0
+DA:72,0
+DA:73,0
+DA:74,0
+DA:75,0
+DA:76,0
+DA:77,0
+DA:78,0
+DA:79,0
+DA:80,0
+DA:82,0
+DA:83,0
+DA:84,0
+DA:85,0
+DA:86,0
+DA:87,0
+DA:88,0
+DA:89,0
+DA:90,0
+DA:91,0
+DA:92,0
+DA:93,0
+DA:94,0
+DA:95,0
+DA:96,0
+DA:97,0
+DA:98,0
+DA:99,0
+DA:100,0
+DA:101,0
+DA:102,0
+DA:103,0
+DA:104,0
+DA:105,0
+DA:106,0
+DA:107,0
+DA:108,0
+DA:109,0
+DA:110,0
+DA:111,0
+DA:112,0
+DA:113,0
+DA:114,0
+DA:115,0
+DA:116,0
+DA:117,0
+DA:118,0
+DA:119,0
+DA:120,0
+DA:121,0
+DA:122,0
+DA:123,0
+DA:125,0
+DA:126,0
+DA:127,0
+DA:128,0
+DA:129,0
+DA:130,0
+DA:131,0
+DA:132,0
+DA:133,0
+DA:134,0
+DA:135,0
+DA:136,0
+DA:137,0
+DA:138,0
+DA:139,0
+DA:140,0
+DA:141,0
+DA:142,0
+DA:143,0
+DA:144,0
+DA:145,0
+DA:146,0
+DA:147,0
+DA:149,0
+DA:150,0
+DA:151,0
+DA:152,0
+DA:153,0
+DA:154,0
+DA:155,0
+DA:156,0
+DA:157,0
+DA:158,0
+DA:159,0
+DA:160,0
+DA:161,0
+DA:162,0
+DA:163,0
+DA:164,0
+DA:165,0
+DA:166,0
+DA:167,0
+DA:168,0
+DA:169,0
+DA:170,0
+DA:171,0
+DA:172,0
+DA:173,0
+DA:174,0
+DA:175,0
+DA:176,0
+DA:177,0
+DA:178,0
+DA:179,0
+DA:180,0
+DA:182,0
+DA:183,0
+DA:184,0
+DA:185,0
+DA:186,0
+DA:187,0
+DA:188,0
+DA:189,0
+DA:190,0
+DA:191,0
+DA:192,0
+DA:193,0
+DA:194,0
+DA:195,0
+DA:196,0
+DA:198,0
+DA:199,0
+DA:200,0
+DA:201,0
+DA:202,0
+DA:203,0
+DA:204,0
+DA:205,0
+DA:206,0
+DA:207,0
+DA:208,0
+DA:209,0
+DA:210,0
+DA:211,0
+DA:212,0
+DA:213,0
+DA:214,0
+DA:215,0
+DA:217,0
+DA:218,0
+DA:219,0
+DA:220,0
+DA:221,0
+DA:222,0
+DA:223,0
+DA:224,0
+DA:225,0
+DA:226,0
+DA:227,0
+DA:228,0
+DA:229,0
+DA:230,0
+DA:231,0
+DA:232,0
+DA:233,0
+DA:234,0
+DA:235,0
+DA:236,0
+DA:237,0
+DA:238,0
+DA:239,0
+DA:240,0
+DA:241,0
+DA:242,0
+DA:243,0
+DA:244,0
+DA:245,0
+DA:246,0
+DA:247,0
+DA:248,0
+DA:249,0
+DA:250,0
+DA:251,0
+DA:252,0
+DA:253,0
+DA:254,0
+DA:255,0
+DA:256,0
+DA:257,0
+DA:258,0
+DA:259,0
+DA:260,0
+DA:262,0
+DA:263,0
+DA:264,0
+DA:265,0
+DA:266,0
+DA:267,0
+DA:268,0
+DA:269,0
+DA:270,0
+DA:271,0
+DA:272,0
+DA:273,0
+DA:274,0
+DA:275,0
+DA:276,0
+DA:278,0
+DA:279,0
+DA:280,0
+DA:281,0
+DA:282,0
+DA:283,0
+DA:284,0
+DA:285,0
+DA:286,0
+DA:287,0
+DA:288,0
+DA:289,0
+DA:290,0
+DA:291,0
+DA:292,0
+DA:293,0
+DA:294,0
+DA:295,0
+DA:296,0
+DA:297,0
+DA:298,0
+DA:299,0
+DA:300,0
+DA:301,0
+DA:302,0
+DA:303,0
+DA:305,0
+DA:306,0
+DA:307,0
+DA:308,0
+DA:309,0
+DA:310,0
+DA:311,0
+DA:312,0
+DA:314,0
+DA:315,0
+DA:316,0
+DA:317,0
+DA:318,0
+DA:319,0
+DA:320,0
+DA:321,0
+DA:322,0
+DA:323,0
+DA:325,0
+DA:326,0
+DA:327,0
+DA:328,0
+DA:329,0
+DA:330,0
+DA:331,0
+DA:332,0
+DA:333,0
+DA:334,0
+DA:336,0
+DA:337,0
+DA:338,0
+DA:339,0
+DA:341,0
+DA:342,0
+DA:343,0
+DA:344,0
+DA:346,0
+LF:310
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/PrimeApi/Migrations/20220307132623_addressmigration.cs
+FN:9,System.Void PrimeApi.Migrations.addressmigration::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+FNDA:0,System.Void PrimeApi.Migrations.addressmigration::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+DA:10,0
+DA:11,0
+DA:12,0
+DA:13,0
+DA:14,0
+DA:16,0
+DA:17,0
+DA:18,0
+DA:19,0
+DA:20,0
+DA:21,0
+DA:22,0
+DA:23,0
+DA:24,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+FN:40,System.Void PrimeApi.Migrations.addressmigration::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+FNDA:0,System.Void PrimeApi.Migrations.addressmigration::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:50,0
+DA:51,0
+DA:52,0
+DA:53,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+LF:45
+LH:0
+BRF:0
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/PrimeApi/Migrations/20220307132623_addressmigration.Designer.cs
+FN:17,System.Void PrimeApi.Migrations.addressmigration::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+FNDA:0,System.Void PrimeApi.Migrations.addressmigration::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+DA:18,0
+DA:20,0
+DA:21,0
+DA:22,0
+DA:24,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:52,0
+DA:53,0
+DA:54,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:63,0
+DA:64,0
+DA:65,0
+DA:66,0
+DA:67,0
+DA:68,0
+DA:69,0
+DA:70,0
+DA:72,0
+DA:73,0
+DA:74,0
+DA:75,0
+DA:76,0
+DA:77,0
+DA:78,0
+DA:79,0
+DA:80,0
+DA:81,0
+DA:82,0
+DA:83,0
+DA:84,0
+DA:85,0
+DA:86,0
+DA:88,0
+DA:89,0
+DA:90,0
+DA:91,0
+DA:92,0
+DA:93,0
+DA:94,0
+DA:95,0
+DA:96,0
+DA:97,0
+DA:98,0
+DA:99,0
+DA:100,0
+DA:101,0
+DA:102,0
+DA:103,0
+DA:104,0
+DA:105,0
+DA:106,0
+DA:107,0
+DA:108,0
+DA:109,0
+DA:110,0
+DA:111,0
+DA:112,0
+DA:113,0
+DA:114,0
+DA:115,0
+DA:116,0
+DA:117,0
+DA:118,0
+DA:119,0
+DA:120,0
+DA:121,0
+DA:122,0
+DA:123,0
+DA:124,0
+DA:125,0
+DA:126,0
+DA:127,0
+DA:128,0
+DA:129,0
+DA:131,0
+DA:132,0
+DA:133,0
+DA:134,0
+DA:135,0
+DA:136,0
+DA:137,0
+DA:138,0
+DA:139,0
+DA:140,0
+DA:141,0
+DA:142,0
+DA:143,0
+DA:144,0
+DA:145,0
+DA:146,0
+DA:147,0
+DA:148,0
+DA:149,0
+DA:150,0
+DA:151,0
+DA:152,0
+DA:153,0
+DA:155,0
+DA:156,0
+DA:157,0
+DA:158,0
+DA:159,0
+DA:160,0
+DA:161,0
+DA:162,0
+DA:163,0
+DA:164,0
+DA:165,0
+DA:166,0
+DA:167,0
+DA:168,0
+DA:169,0
+DA:170,0
+DA:171,0
+DA:172,0
+DA:173,0
+DA:174,0
+DA:175,0
+DA:176,0
+DA:177,0
+DA:178,0
+DA:179,0
+DA:180,0
+DA:181,0
+DA:182,0
+DA:183,0
+DA:184,0
+DA:185,0
+DA:186,0
+DA:188,0
+DA:189,0
+DA:190,0
+DA:191,0
+DA:192,0
+DA:193,0
+DA:194,0
+DA:195,0
+DA:196,0
+DA:197,0
+DA:198,0
+DA:199,0
+DA:200,0
+DA:201,0
+DA:202,0
+DA:204,0
+DA:205,0
+DA:206,0
+DA:207,0
+DA:208,0
+DA:209,0
+DA:210,0
+DA:211,0
+DA:212,0
+DA:213,0
+DA:214,0
+DA:215,0
+DA:216,0
+DA:217,0
+DA:218,0
+DA:219,0
+DA:220,0
+DA:221,0
+DA:223,0
+DA:224,0
+DA:225,0
+DA:226,0
+DA:227,0
+DA:228,0
+DA:229,0
+DA:230,0
+DA:231,0
+DA:232,0
+DA:233,0
+DA:234,0
+DA:235,0
+DA:236,0
+DA:237,0
+DA:238,0
+DA:239,0
+DA:240,0
+DA:241,0
+DA:242,0
+DA:243,0
+DA:244,0
+DA:245,0
+DA:246,0
+DA:247,0
+DA:248,0
+DA:249,0
+DA:250,0
+DA:251,0
+DA:252,0
+DA:253,0
+DA:254,0
+DA:255,0
+DA:256,0
+DA:257,0
+DA:258,0
+DA:259,0
+DA:260,0
+DA:261,0
+DA:262,0
+DA:263,0
+DA:264,0
+DA:265,0
+DA:266,0
+DA:268,0
+DA:269,0
+DA:270,0
+DA:271,0
+DA:272,0
+DA:273,0
+DA:274,0
+DA:275,0
+DA:276,0
+DA:277,0
+DA:278,0
+DA:279,0
+DA:280,0
+DA:281,0
+DA:282,0
+DA:283,0
+DA:285,0
+DA:286,0
+DA:287,0
+DA:288,0
+DA:289,0
+DA:290,0
+DA:291,0
+DA:292,0
+DA:293,0
+DA:294,0
+DA:295,0
+DA:296,0
+DA:297,0
+DA:298,0
+DA:299,0
+DA:300,0
+DA:301,0
+DA:302,0
+DA:303,0
+DA:304,0
+DA:305,0
+DA:306,0
+DA:307,0
+DA:308,0
+DA:309,0
+DA:310,0
+DA:312,0
+DA:313,0
+DA:314,0
+DA:315,0
+DA:316,0
+DA:317,0
+DA:318,0
+DA:319,0
+DA:321,0
+DA:322,0
+DA:323,0
+DA:324,0
+DA:325,0
+DA:326,0
+DA:327,0
+DA:328,0
+DA:329,0
+DA:330,0
+DA:332,0
+DA:333,0
+DA:334,0
+DA:335,0
+DA:336,0
+DA:337,0
+DA:338,0
+DA:339,0
+DA:340,0
+DA:341,0
+DA:343,0
+DA:344,0
+DA:345,0
+DA:346,0
+DA:348,0
+DA:349,0
+DA:350,0
+DA:351,0
+DA:353,0
+LF:318
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/PrimeApi/Migrations/20220309150426_teacherdesc.cs
+FN:9,System.Void PrimeApi.Migrations.teacherdesc::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+FNDA:0,System.Void PrimeApi.Migrations.teacherdesc::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+DA:10,0
+DA:11,0
+DA:12,0
+DA:13,0
+DA:14,0
+DA:15,0
+DA:16,0
+FN:18,System.Void PrimeApi.Migrations.teacherdesc::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+FNDA:0,System.Void PrimeApi.Migrations.teacherdesc::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+DA:19,0
+DA:20,0
+DA:21,0
+DA:22,0
+DA:23,0
+LF:12
+LH:0
+BRF:0
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/PrimeApi/Migrations/20220309150426_teacherdesc.Designer.cs
+FN:17,System.Void PrimeApi.Migrations.teacherdesc::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+FNDA:0,System.Void PrimeApi.Migrations.teacherdesc::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+DA:18,0
+DA:20,0
+DA:21,0
+DA:22,0
+DA:24,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:52,0
+DA:53,0
+DA:54,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:63,0
+DA:64,0
+DA:65,0
+DA:66,0
+DA:67,0
+DA:68,0
+DA:69,0
+DA:70,0
+DA:72,0
+DA:73,0
+DA:74,0
+DA:75,0
+DA:76,0
+DA:77,0
+DA:78,0
+DA:79,0
+DA:80,0
+DA:81,0
+DA:82,0
+DA:83,0
+DA:84,0
+DA:85,0
+DA:86,0
+DA:88,0
+DA:89,0
+DA:90,0
+DA:91,0
+DA:92,0
+DA:93,0
+DA:94,0
+DA:95,0
+DA:96,0
+DA:97,0
+DA:98,0
+DA:99,0
+DA:100,0
+DA:101,0
+DA:102,0
+DA:103,0
+DA:104,0
+DA:105,0
+DA:106,0
+DA:107,0
+DA:108,0
+DA:109,0
+DA:110,0
+DA:111,0
+DA:112,0
+DA:113,0
+DA:114,0
+DA:115,0
+DA:116,0
+DA:117,0
+DA:118,0
+DA:119,0
+DA:120,0
+DA:121,0
+DA:122,0
+DA:123,0
+DA:124,0
+DA:125,0
+DA:126,0
+DA:127,0
+DA:128,0
+DA:129,0
+DA:131,0
+DA:132,0
+DA:133,0
+DA:134,0
+DA:135,0
+DA:136,0
+DA:137,0
+DA:138,0
+DA:139,0
+DA:140,0
+DA:141,0
+DA:142,0
+DA:143,0
+DA:144,0
+DA:145,0
+DA:146,0
+DA:147,0
+DA:148,0
+DA:149,0
+DA:150,0
+DA:151,0
+DA:152,0
+DA:153,0
+DA:155,0
+DA:156,0
+DA:157,0
+DA:158,0
+DA:159,0
+DA:160,0
+DA:161,0
+DA:162,0
+DA:163,0
+DA:164,0
+DA:165,0
+DA:166,0
+DA:167,0
+DA:168,0
+DA:169,0
+DA:170,0
+DA:171,0
+DA:172,0
+DA:173,0
+DA:174,0
+DA:175,0
+DA:176,0
+DA:177,0
+DA:178,0
+DA:179,0
+DA:180,0
+DA:181,0
+DA:182,0
+DA:183,0
+DA:184,0
+DA:185,0
+DA:186,0
+DA:187,0
+DA:188,0
+DA:189,0
+DA:191,0
+DA:192,0
+DA:193,0
+DA:194,0
+DA:195,0
+DA:196,0
+DA:197,0
+DA:198,0
+DA:199,0
+DA:200,0
+DA:201,0
+DA:202,0
+DA:203,0
+DA:204,0
+DA:205,0
+DA:207,0
+DA:208,0
+DA:209,0
+DA:210,0
+DA:211,0
+DA:212,0
+DA:213,0
+DA:214,0
+DA:215,0
+DA:216,0
+DA:217,0
+DA:218,0
+DA:219,0
+DA:220,0
+DA:221,0
+DA:222,0
+DA:223,0
+DA:224,0
+DA:226,0
+DA:227,0
+DA:228,0
+DA:229,0
+DA:230,0
+DA:231,0
+DA:232,0
+DA:233,0
+DA:234,0
+DA:235,0
+DA:236,0
+DA:237,0
+DA:238,0
+DA:239,0
+DA:240,0
+DA:241,0
+DA:242,0
+DA:243,0
+DA:244,0
+DA:245,0
+DA:246,0
+DA:247,0
+DA:248,0
+DA:249,0
+DA:250,0
+DA:251,0
+DA:252,0
+DA:253,0
+DA:254,0
+DA:255,0
+DA:256,0
+DA:257,0
+DA:258,0
+DA:259,0
+DA:260,0
+DA:261,0
+DA:262,0
+DA:263,0
+DA:264,0
+DA:265,0
+DA:266,0
+DA:267,0
+DA:268,0
+DA:269,0
+DA:271,0
+DA:272,0
+DA:273,0
+DA:274,0
+DA:275,0
+DA:276,0
+DA:277,0
+DA:278,0
+DA:279,0
+DA:280,0
+DA:281,0
+DA:282,0
+DA:283,0
+DA:284,0
+DA:285,0
+DA:286,0
+DA:288,0
+DA:289,0
+DA:290,0
+DA:291,0
+DA:292,0
+DA:293,0
+DA:294,0
+DA:295,0
+DA:296,0
+DA:297,0
+DA:298,0
+DA:299,0
+DA:300,0
+DA:301,0
+DA:302,0
+DA:303,0
+DA:304,0
+DA:305,0
+DA:306,0
+DA:307,0
+DA:308,0
+DA:309,0
+DA:310,0
+DA:311,0
+DA:312,0
+DA:313,0
+DA:315,0
+DA:316,0
+DA:317,0
+DA:318,0
+DA:319,0
+DA:320,0
+DA:321,0
+DA:322,0
+DA:324,0
+DA:325,0
+DA:326,0
+DA:327,0
+DA:328,0
+DA:329,0
+DA:330,0
+DA:331,0
+DA:332,0
+DA:333,0
+DA:335,0
+DA:336,0
+DA:337,0
+DA:338,0
+DA:339,0
+DA:340,0
+DA:341,0
+DA:342,0
+DA:343,0
+DA:344,0
+DA:346,0
+DA:347,0
+DA:348,0
+DA:349,0
+DA:351,0
+DA:352,0
+DA:353,0
+DA:354,0
+DA:356,0
+LF:321
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/PrimeApi/Migrations/20220318065433_payment.cs
+FN:9,System.Void PrimeApi.Migrations.payment::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+FNDA:0,System.Void PrimeApi.Migrations.payment::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+DA:10,0
+DA:11,0
+DA:12,0
+DA:13,0
+DA:14,0
+DA:15,0
+DA:16,0
+DA:17,0
+DA:18,0
+DA:19,0
+DA:20,0
+DA:21,0
+DA:22,0
+DA:23,0
+DA:24,0
+DA:25,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+FN:42,System.Void PrimeApi.Migrations.payment::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+FNDA:0,System.Void PrimeApi.Migrations.payment::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+DA:43,0
+DA:44,0
+DA:45,0
+DA:46,0
+LF:34
+LH:0
+BRF:0
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/PrimeApi/Migrations/20220318065433_payment.Designer.cs
+FN:17,System.Void PrimeApi.Migrations.payment::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+FNDA:0,System.Void PrimeApi.Migrations.payment::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+DA:18,0
+DA:20,0
+DA:21,0
+DA:22,0
+DA:24,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:52,0
+DA:53,0
+DA:54,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:63,0
+DA:64,0
+DA:65,0
+DA:66,0
+DA:67,0
+DA:68,0
+DA:69,0
+DA:70,0
+DA:72,0
+DA:73,0
+DA:74,0
+DA:75,0
+DA:76,0
+DA:77,0
+DA:78,0
+DA:79,0
+DA:80,0
+DA:81,0
+DA:82,0
+DA:83,0
+DA:84,0
+DA:85,0
+DA:86,0
+DA:88,0
+DA:89,0
+DA:90,0
+DA:91,0
+DA:92,0
+DA:93,0
+DA:94,0
+DA:95,0
+DA:96,0
+DA:97,0
+DA:98,0
+DA:99,0
+DA:100,0
+DA:101,0
+DA:102,0
+DA:103,0
+DA:104,0
+DA:105,0
+DA:106,0
+DA:107,0
+DA:108,0
+DA:109,0
+DA:110,0
+DA:111,0
+DA:112,0
+DA:113,0
+DA:114,0
+DA:115,0
+DA:116,0
+DA:117,0
+DA:118,0
+DA:119,0
+DA:120,0
+DA:121,0
+DA:122,0
+DA:123,0
+DA:124,0
+DA:125,0
+DA:126,0
+DA:127,0
+DA:128,0
+DA:129,0
+DA:131,0
+DA:132,0
+DA:133,0
+DA:134,0
+DA:135,0
+DA:136,0
+DA:137,0
+DA:138,0
+DA:139,0
+DA:140,0
+DA:141,0
+DA:142,0
+DA:143,0
+DA:144,0
+DA:145,0
+DA:146,0
+DA:147,0
+DA:148,0
+DA:149,0
+DA:150,0
+DA:151,0
+DA:152,0
+DA:153,0
+DA:155,0
+DA:156,0
+DA:157,0
+DA:158,0
+DA:159,0
+DA:160,0
+DA:161,0
+DA:162,0
+DA:163,0
+DA:164,0
+DA:165,0
+DA:166,0
+DA:167,0
+DA:168,0
+DA:169,0
+DA:170,0
+DA:171,0
+DA:172,0
+DA:173,0
+DA:174,0
+DA:175,0
+DA:176,0
+DA:177,0
+DA:178,0
+DA:179,0
+DA:180,0
+DA:181,0
+DA:182,0
+DA:183,0
+DA:184,0
+DA:185,0
+DA:186,0
+DA:187,0
+DA:188,0
+DA:189,0
+DA:191,0
+DA:192,0
+DA:193,0
+DA:194,0
+DA:195,0
+DA:196,0
+DA:197,0
+DA:198,0
+DA:199,0
+DA:200,0
+DA:201,0
+DA:202,0
+DA:203,0
+DA:204,0
+DA:205,0
+DA:206,0
+DA:207,0
+DA:208,0
+DA:209,0
+DA:210,0
+DA:211,0
+DA:212,0
+DA:213,0
+DA:214,0
+DA:215,0
+DA:216,0
+DA:217,0
+DA:218,0
+DA:219,0
+DA:220,0
+DA:221,0
+DA:222,0
+DA:223,0
+DA:224,0
+DA:225,0
+DA:227,0
+DA:228,0
+DA:229,0
+DA:230,0
+DA:231,0
+DA:232,0
+DA:233,0
+DA:234,0
+DA:235,0
+DA:236,0
+DA:237,0
+DA:238,0
+DA:239,0
+DA:240,0
+DA:241,0
+DA:243,0
+DA:244,0
+DA:245,0
+DA:246,0
+DA:247,0
+DA:248,0
+DA:249,0
+DA:250,0
+DA:251,0
+DA:252,0
+DA:253,0
+DA:254,0
+DA:255,0
+DA:256,0
+DA:257,0
+DA:258,0
+DA:259,0
+DA:260,0
+DA:262,0
+DA:263,0
+DA:264,0
+DA:265,0
+DA:266,0
+DA:267,0
+DA:268,0
+DA:269,0
+DA:270,0
+DA:271,0
+DA:272,0
+DA:273,0
+DA:274,0
+DA:275,0
+DA:276,0
+DA:277,0
+DA:278,0
+DA:279,0
+DA:280,0
+DA:281,0
+DA:282,0
+DA:283,0
+DA:284,0
+DA:285,0
+DA:286,0
+DA:287,0
+DA:288,0
+DA:289,0
+DA:290,0
+DA:291,0
+DA:292,0
+DA:293,0
+DA:294,0
+DA:295,0
+DA:296,0
+DA:297,0
+DA:298,0
+DA:299,0
+DA:300,0
+DA:301,0
+DA:302,0
+DA:303,0
+DA:304,0
+DA:305,0
+DA:307,0
+DA:308,0
+DA:309,0
+DA:310,0
+DA:311,0
+DA:312,0
+DA:313,0
+DA:314,0
+DA:315,0
+DA:316,0
+DA:317,0
+DA:318,0
+DA:319,0
+DA:320,0
+DA:321,0
+DA:322,0
+DA:324,0
+DA:325,0
+DA:326,0
+DA:327,0
+DA:328,0
+DA:329,0
+DA:330,0
+DA:331,0
+DA:332,0
+DA:333,0
+DA:334,0
+DA:335,0
+DA:336,0
+DA:337,0
+DA:338,0
+DA:339,0
+DA:340,0
+DA:341,0
+DA:342,0
+DA:343,0
+DA:344,0
+DA:345,0
+DA:346,0
+DA:347,0
+DA:348,0
+DA:349,0
+DA:351,0
+DA:352,0
+DA:353,0
+DA:354,0
+DA:355,0
+DA:356,0
+DA:357,0
+DA:358,0
+DA:360,0
+DA:361,0
+DA:362,0
+DA:363,0
+DA:364,0
+DA:365,0
+DA:366,0
+DA:367,0
+DA:369,0
+DA:370,0
+DA:371,0
+DA:372,0
+DA:373,0
+DA:374,0
+DA:375,0
+DA:376,0
+DA:377,0
+DA:378,0
+DA:380,0
+DA:381,0
+DA:382,0
+DA:383,0
+DA:384,0
+DA:385,0
+DA:386,0
+DA:387,0
+DA:388,0
+DA:389,0
+DA:391,0
+DA:392,0
+DA:393,0
+DA:394,0
+DA:396,0
+DA:397,0
+DA:398,0
+DA:399,0
+DA:400,0
+DA:401,0
+DA:403,0
+LF:366
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/PrimeApi/Migrations/GestionCursosContextModelSnapshot.cs
+FN:15,System.Void PrimeApi.Migrations.GestionCursosContextModelSnapshot::BuildModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+FNDA:0,System.Void PrimeApi.Migrations.GestionCursosContextModelSnapshot::BuildModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+DA:16,0
+DA:18,0
+DA:19,0
+DA:20,0
+DA:22,0
+DA:24,0
+DA:25,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+DA:41,0
+DA:42,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:52,0
+DA:53,0
+DA:54,0
+DA:55,0
+DA:56,0
+DA:57,0
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:63,0
+DA:64,0
+DA:65,0
+DA:66,0
+DA:67,0
+DA:68,0
+DA:70,0
+DA:71,0
+DA:72,0
+DA:73,0
+DA:74,0
+DA:75,0
+DA:76,0
+DA:77,0
+DA:78,0
+DA:79,0
+DA:80,0
+DA:81,0
+DA:82,0
+DA:83,0
+DA:84,0
+DA:86,0
+DA:87,0
+DA:88,0
+DA:89,0
+DA:90,0
+DA:91,0
+DA:92,0
+DA:93,0
+DA:94,0
+DA:95,0
+DA:96,0
+DA:97,0
+DA:98,0
+DA:99,0
+DA:100,0
+DA:101,0
+DA:102,0
+DA:103,0
+DA:104,0
+DA:105,0
+DA:106,0
+DA:107,0
+DA:108,0
+DA:109,0
+DA:110,0
+DA:111,0
+DA:112,0
+DA:113,0
+DA:114,0
+DA:115,0
+DA:116,0
+DA:117,0
+DA:118,0
+DA:119,0
+DA:120,0
+DA:121,0
+DA:122,0
+DA:123,0
+DA:124,0
+DA:125,0
+DA:126,0
+DA:127,0
+DA:129,0
+DA:130,0
+DA:131,0
+DA:132,0
+DA:133,0
+DA:134,0
+DA:135,0
+DA:136,0
+DA:137,0
+DA:138,0
+DA:139,0
+DA:140,0
+DA:141,0
+DA:142,0
+DA:143,0
+DA:144,0
+DA:145,0
+DA:146,0
+DA:147,0
+DA:148,0
+DA:149,0
+DA:150,0
+DA:151,0
+DA:153,0
+DA:154,0
+DA:155,0
+DA:156,0
+DA:157,0
+DA:158,0
+DA:159,0
+DA:160,0
+DA:161,0
+DA:162,0
+DA:163,0
+DA:164,0
+DA:165,0
+DA:166,0
+DA:167,0
+DA:168,0
+DA:169,0
+DA:170,0
+DA:171,0
+DA:172,0
+DA:173,0
+DA:174,0
+DA:175,0
+DA:176,0
+DA:177,0
+DA:178,0
+DA:179,0
+DA:180,0
+DA:181,0
+DA:182,0
+DA:183,0
+DA:184,0
+DA:185,0
+DA:186,0
+DA:187,0
+DA:189,0
+DA:190,0
+DA:191,0
+DA:192,0
+DA:193,0
+DA:194,0
+DA:195,0
+DA:196,0
+DA:197,0
+DA:198,0
+DA:199,0
+DA:200,0
+DA:201,0
+DA:202,0
+DA:203,0
+DA:204,0
+DA:205,0
+DA:206,0
+DA:207,0
+DA:208,0
+DA:209,0
+DA:210,0
+DA:211,0
+DA:212,0
+DA:213,0
+DA:214,0
+DA:215,0
+DA:216,0
+DA:217,0
+DA:218,0
+DA:219,0
+DA:220,0
+DA:221,0
+DA:222,0
+DA:223,0
+DA:225,0
+DA:226,0
+DA:227,0
+DA:228,0
+DA:229,0
+DA:230,0
+DA:231,0
+DA:232,0
+DA:233,0
+DA:234,0
+DA:235,0
+DA:236,0
+DA:237,0
+DA:238,0
+DA:239,0
+DA:241,0
+DA:242,0
+DA:243,0
+DA:244,0
+DA:245,0
+DA:246,0
+DA:247,0
+DA:248,0
+DA:249,0
+DA:250,0
+DA:251,0
+DA:252,0
+DA:253,0
+DA:254,0
+DA:255,0
+DA:256,0
+DA:257,0
+DA:258,0
+DA:260,0
+DA:261,0
+DA:262,0
+DA:263,0
+DA:264,0
+DA:265,0
+DA:266,0
+DA:267,0
+DA:268,0
+DA:269,0
+DA:270,0
+DA:271,0
+DA:272,0
+DA:273,0
+DA:274,0
+DA:275,0
+DA:276,0
+DA:277,0
+DA:278,0
+DA:279,0
+DA:280,0
+DA:281,0
+DA:282,0
+DA:283,0
+DA:284,0
+DA:285,0
+DA:286,0
+DA:287,0
+DA:288,0
+DA:289,0
+DA:290,0
+DA:291,0
+DA:292,0
+DA:293,0
+DA:294,0
+DA:295,0
+DA:296,0
+DA:297,0
+DA:298,0
+DA:299,0
+DA:300,0
+DA:301,0
+DA:302,0
+DA:303,0
+DA:305,0
+DA:306,0
+DA:307,0
+DA:308,0
+DA:309,0
+DA:310,0
+DA:311,0
+DA:312,0
+DA:313,0
+DA:314,0
+DA:315,0
+DA:316,0
+DA:317,0
+DA:318,0
+DA:319,0
+DA:320,0
+DA:322,0
+DA:323,0
+DA:324,0
+DA:325,0
+DA:326,0
+DA:327,0
+DA:328,0
+DA:329,0
+DA:330,0
+DA:331,0
+DA:332,0
+DA:333,0
+DA:334,0
+DA:335,0
+DA:336,0
+DA:337,0
+DA:338,0
+DA:339,0
+DA:340,0
+DA:341,0
+DA:342,0
+DA:343,0
+DA:344,0
+DA:345,0
+DA:346,0
+DA:347,0
+DA:349,0
+DA:350,0
+DA:351,0
+DA:352,0
+DA:353,0
+DA:354,0
+DA:355,0
+DA:356,0
+DA:358,0
+DA:359,0
+DA:360,0
+DA:361,0
+DA:362,0
+DA:363,0
+DA:364,0
+DA:365,0
+DA:367,0
+DA:368,0
+DA:369,0
+DA:370,0
+DA:371,0
+DA:372,0
+DA:373,0
+DA:374,0
+DA:375,0
+DA:376,0
+DA:378,0
+DA:379,0
+DA:380,0
+DA:381,0
+DA:382,0
+DA:383,0
+DA:384,0
+DA:385,0
+DA:386,0
+DA:387,0
+DA:389,0
+DA:390,0
+DA:391,0
+DA:392,0
+DA:394,0
+DA:395,0
+DA:396,0
+DA:397,0
+DA:398,0
+DA:399,0
+DA:401,0
+LF:366
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/PrimeApi/Api/Helpers/FileUtilities.cs
+FN:6,System.Void PrimeApi.Api.Helpers.FileUtilities/<CreateFile>d__0::MoveNext()
+FNDA:0,System.Void PrimeApi.Api.Helpers.FileUtilities/<CreateFile>d__0::MoveNext()
+DA:7,0
+DA:8,0
+DA:9,0
+DA:10,0
+DA:11,0
+DA:12,0
+DA:13,0
+DA:15,0
+DA:17,0
+DA:18,0
+DA:19,0
+DA:21,0
+DA:22,0
+DA:23,0
+DA:24,0
+DA:25,0
+BRDA:9,43,0,0
+BRDA:9,43,1,0
+LF:16
+LH:0
+BRF:2
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/PrimeApi/Api/Controllers/AddressesController.cs
+FN:16,System.Void PrimeApi.Api.Controllers.AddressesController::.ctor(MediatR.IMediator)
+FNDA:0,System.Void PrimeApi.Api.Controllers.AddressesController::.ctor(MediatR.IMediator)
+DA:17,0
+DA:18,0
+DA:19,0
+DA:20,0
+FN:76,System.Void PrimeApi.Api.Controllers.AddressesController/<DeleteAddress>d__5::MoveNext()
+FNDA:0,System.Void PrimeApi.Api.Controllers.AddressesController/<DeleteAddress>d__5::MoveNext()
+DA:77,0
+DA:79,0
+DA:80,0
+DA:81,0
+DA:82,0
+DA:83,0
+DA:85,0
+DA:86,0
+DA:87,0
+DA:89,0
+FN:24,System.Void PrimeApi.Api.Controllers.AddressesController/<GetAddresses>d__2::MoveNext()
+FNDA:0,System.Void PrimeApi.Api.Controllers.AddressesController/<GetAddresses>d__2::MoveNext()
+DA:25,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:38,0
+FN:59,System.Void PrimeApi.Api.Controllers.AddressesController/<InsertAddress>d__4::MoveNext()
+FNDA:0,System.Void PrimeApi.Api.Controllers.AddressesController/<InsertAddress>d__4::MoveNext()
+DA:60,0
+DA:62,0
+DA:63,0
+DA:64,0
+DA:65,0
+DA:66,0
+DA:68,0
+DA:69,0
+DA:70,0
+DA:72,0
+FN:42,System.Void PrimeApi.Api.Controllers.AddressesController/<UpdateAddress>d__3::MoveNext()
+FNDA:0,System.Void PrimeApi.Api.Controllers.AddressesController/<UpdateAddress>d__3::MoveNext()
+DA:43,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:51,0
+DA:52,0
+DA:53,0
+DA:55,0
+LF:45
+LH:0
+BRF:0
+BRH:0
+FNF:5
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/PrimeApi/Api/Controllers/PaymentInfoController.cs
+FN:16,System.Void PrimeApi.Api.Controllers.PaymentInfoController::.ctor(MediatR.IMediator)
+FNDA:0,System.Void PrimeApi.Api.Controllers.PaymentInfoController::.ctor(MediatR.IMediator)
+DA:17,0
+DA:18,0
+DA:19,0
+DA:20,0
+FN:73,System.Void PrimeApi.Api.Controllers.PaymentInfoController/<DeletePaymentInfo>d__5::MoveNext()
+FNDA:0,System.Void PrimeApi.Api.Controllers.PaymentInfoController/<DeletePaymentInfo>d__5::MoveNext()
+DA:74,0
+DA:76,0
+DA:77,0
+DA:78,0
+DA:79,0
+DA:80,0
+DA:82,0
+DA:83,0
+DA:84,0
+DA:86,0
+FN:23,System.Void PrimeApi.Api.Controllers.PaymentInfoController/<GetPaymentInfo>d__2::MoveNext()
+FNDA:0,System.Void PrimeApi.Api.Controllers.PaymentInfoController/<GetPaymentInfo>d__2::MoveNext()
+DA:24,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:37,0
+FN:56,System.Void PrimeApi.Api.Controllers.PaymentInfoController/<InsertPaymentInfo>d__4::MoveNext()
+FNDA:0,System.Void PrimeApi.Api.Controllers.PaymentInfoController/<InsertPaymentInfo>d__4::MoveNext()
+DA:57,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:62,0
+DA:63,0
+DA:65,0
+DA:66,0
+DA:67,0
+DA:70,0
+FN:40,System.Void PrimeApi.Api.Controllers.PaymentInfoController/<UpdatePaymentInfo>d__3::MoveNext()
+FNDA:0,System.Void PrimeApi.Api.Controllers.PaymentInfoController/<UpdatePaymentInfo>d__3::MoveNext()
+DA:41,0
+DA:43,0
+DA:44,0
+DA:45,0
+DA:46,0
+DA:47,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:53,0
+LF:45
+LH:0
+BRF:0
+BRH:0
+FNF:5
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/PrimeApi/Api/Middleware/ExceptionMiddleware.cs
+FN:16,System.Void API.Middleware.ExceptionMiddleware::.ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger`1<API.Middleware.ExceptionMiddleware>,Microsoft.Extensions.Hosting.IHostEnvironment)
+FNDA:0,System.Void API.Middleware.ExceptionMiddleware::.ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger`1<API.Middleware.ExceptionMiddleware>,Microsoft.Extensions.Hosting.IHostEnvironment)
+DA:17,0
+DA:18,0
+DA:19,0
+DA:20,0
+DA:21,0
+DA:22,0
+FN:24,System.Void API.Middleware.ExceptionMiddleware/<InvokeAsync>d__4::MoveNext()
+FNDA:0,System.Void API.Middleware.ExceptionMiddleware/<InvokeAsync>d__4::MoveNext()
+DA:25,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:34,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:40,0
+DA:42,0
+DA:44,0
+DA:45,0
+DA:46,0
+BRDA:36,310,0,0
+BRDA:36,310,1,0
+LF:23
+LH:0
+BRF:2
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/PrimeApi/Api/Helpers/Pagination.cs
+FN:14,System.Int32 API.Helpers.Pagination`1::get_PageIndex()
+FNDA:2,System.Int32 API.Helpers.Pagination`1::get_PageIndex()
+DA:15,2
+FN:15,System.Int32 API.Helpers.Pagination`1::get_PageSize()
+FNDA:2,System.Int32 API.Helpers.Pagination`1::get_PageSize()
+DA:16,2
+FN:16,System.Int32 API.Helpers.Pagination`1::get_Count()
+FNDA:2,System.Int32 API.Helpers.Pagination`1::get_Count()
+DA:17,2
+FN:17,System.Collections.Generic.IReadOnlyList`1<T> API.Helpers.Pagination`1::get_Data()
+FNDA:4,System.Collections.Generic.IReadOnlyList`1<T> API.Helpers.Pagination`1::get_Data()
+DA:18,4
+FN:6,System.Void API.Helpers.Pagination`1::.ctor(System.Int32,System.Int32,System.Int32,System.Collections.Generic.IReadOnlyList`1<T>)
+FNDA:2,System.Void API.Helpers.Pagination`1::.ctor(System.Int32,System.Int32,System.Int32,System.Collections.Generic.IReadOnlyList`1<T>)
+DA:7,2
+DA:8,2
+DA:9,2
+DA:10,2
+DA:11,2
+DA:12,2
+DA:13,2
+LF:11
+LH:11
+BRF:0
+BRH:0
+FNF:5
+FNH:5
+end_of_record
+SF:/home/kike/Projects/PrimeApi/PrimeApi/Api/Controllers/AccountController.cs
+FN:32,Microsoft.AspNetCore.Mvc.ActionResult`1<System.Boolean> API.Controllers.AccountController::CanActivate()
+FNDA:0,Microsoft.AspNetCore.Mvc.ActionResult`1<System.Boolean> API.Controllers.AccountController::CanActivate()
+DA:33,0
+DA:34,0
+DA:35,0
+FN:21,System.Void API.Controllers.AccountController::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<Identity.Models.AppUser>,Microsoft.AspNetCore.Identity.SignInManager`1<Identity.Models.AppUser>,Identity.Interfaces.ITokenService,AutoMapper.IMapper)
+FNDA:0,System.Void API.Controllers.AccountController::.ctor(Microsoft.AspNetCore.Identity.UserManager`1<Identity.Models.AppUser>,Microsoft.AspNetCore.Identity.SignInManager`1<Identity.Models.AppUser>,Identity.Interfaces.ITokenService,AutoMapper.IMapper)
+DA:22,0
+DA:23,0
+DA:24,0
+DA:25,0
+DA:26,0
+DA:27,0
+DA:28,0
+FN:56,System.Void API.Controllers.AccountController/<CheckEmailExistsAsync>d__7::MoveNext()
+FNDA:0,System.Void API.Controllers.AccountController/<CheckEmailExistsAsync>d__7::MoveNext()
+DA:57,0
+DA:58,0
+DA:59,0
+FN:41,System.Void API.Controllers.AccountController/<GetCurrentUser>d__6::MoveNext()
+FNDA:0,System.Void API.Controllers.AccountController/<GetCurrentUser>d__6::MoveNext()
+DA:42,0
+DA:43,0
+DA:47,0
+DA:48,0
+DA:49,0
+DA:50,0
+DA:51,0
+DA:52,0
+DA:53,0
+FN:63,System.Void API.Controllers.AccountController/<GetUserAddress>d__8::MoveNext()
+FNDA:0,System.Void API.Controllers.AccountController/<GetUserAddress>d__8::MoveNext()
+DA:64,0
+DA:65,0
+DA:67,0
+DA:68,0
+FN:86,System.Void API.Controllers.AccountController/<Login>d__10::MoveNext()
+FNDA:0,System.Void API.Controllers.AccountController/<Login>d__10::MoveNext()
+DA:87,0
+DA:88,0
+DA:90,0
+DA:92,0
+DA:94,0
+DA:96,0
+DA:97,0
+DA:98,0
+DA:99,0
+DA:100,0
+DA:101,0
+DA:102,0
+BRDA:90,180,0,0
+BRDA:90,180,1,0
+BRDA:94,388,0,0
+BRDA:94,388,1,0
+FN:104,System.Void API.Controllers.AccountController/<Register>d__11::MoveNext()
+FNDA:0,System.Void API.Controllers.AccountController/<Register>d__11::MoveNext()
+DA:105,0
+DA:106,0
+DA:107,0
+DA:108,0
+DA:111,0
+DA:112,0
+DA:113,0
+DA:114,0
+DA:115,0
+DA:116,0
+DA:118,0
+DA:120,0
+DA:122,0
+DA:123,0
+DA:124,0
+DA:125,0
+DA:126,0
+DA:127,0
+DA:128,0
+BRDA:106,52,0,0
+BRDA:106,52,1,0
+BRDA:120,333,0,0
+BRDA:120,333,1,0
+FN:132,System.Void API.Controllers.AccountController/<ResetPassword>d__12::MoveNext()
+FNDA:0,System.Void API.Controllers.AccountController/<ResetPassword>d__12::MoveNext()
+DA:133,0
+DA:134,0
+DA:135,0
+DA:137,0
+DA:139,0
+DA:141,0
+DA:142,0
+BRDA:139,494,0,0
+BRDA:139,494,1,0
+FN:72,System.Void API.Controllers.AccountController/<UpdateUserAddress>d__9::MoveNext()
+FNDA:0,System.Void API.Controllers.AccountController/<UpdateUserAddress>d__9::MoveNext()
+DA:73,0
+DA:74,0
+DA:76,0
+DA:78,0
+DA:80,0
+DA:82,0
+DA:83,0
+BRDA:80,360,0,0
+BRDA:80,360,1,0
+LF:71
+LH:0
+BRF:12
+BRH:0
+FNF:9
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/Identity/Services/Pagination.cs
+FN:14,System.Int32 BLL.Paginator.Pagination`1::get_PageIndex()
+FNDA:0,System.Int32 BLL.Paginator.Pagination`1::get_PageIndex()
+DA:15,0
+FN:15,System.Int32 BLL.Paginator.Pagination`1::get_PageSize()
+FNDA:0,System.Int32 BLL.Paginator.Pagination`1::get_PageSize()
+DA:16,0
+FN:16,System.Int32 BLL.Paginator.Pagination`1::get_Count()
+FNDA:0,System.Int32 BLL.Paginator.Pagination`1::get_Count()
+DA:17,0
+FN:17,System.Collections.Generic.IReadOnlyList`1<T> BLL.Paginator.Pagination`1::get_Data()
+FNDA:0,System.Collections.Generic.IReadOnlyList`1<T> BLL.Paginator.Pagination`1::get_Data()
+DA:18,0
+FN:6,System.Void BLL.Paginator.Pagination`1::.ctor(System.Int32,System.Int32,System.Int32,System.Collections.Generic.IReadOnlyList`1<T>)
+FNDA:0,System.Void BLL.Paginator.Pagination`1::.ctor(System.Int32,System.Int32,System.Int32,System.Collections.Generic.IReadOnlyList`1<T>)
+DA:7,0
+DA:8,0
+DA:9,0
+DA:10,0
+DA:11,0
+DA:12,0
+DA:13,0
+LF:11
+LH:0
+BRF:0
+BRH:0
+FNF:5
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/Identity/Extensions/UserManagerExtensions.cs
+FN:13,System.Boolean API.Extensions.UserManagerExtensions/<>c::<FindByUserByClaimsPrincipleWithAddressAsync>b__0_0(System.Security.Claims.Claim)
+FNDA:0,System.Boolean API.Extensions.UserManagerExtensions/<>c::<FindByUserByClaimsPrincipleWithAddressAsync>b__0_0(System.Security.Claims.Claim)
+DA:14,0
+FN:20,System.Boolean API.Extensions.UserManagerExtensions/<>c::<FindByEmailFromClaimsPrinciple>b__1_0(System.Security.Claims.Claim)
+FNDA:0,System.Boolean API.Extensions.UserManagerExtensions/<>c::<FindByEmailFromClaimsPrinciple>b__1_0(System.Security.Claims.Claim)
+DA:21,0
+FN:19,System.Void API.Extensions.UserManagerExtensions/<FindByEmailFromClaimsPrinciple>d__1::MoveNext()
+FNDA:0,System.Void API.Extensions.UserManagerExtensions/<FindByEmailFromClaimsPrinciple>d__1::MoveNext()
+DA:20,0
+DA:23,0
+DA:24,0
+BRDA:21,42,0,0
+BRDA:21,42,1,0
+BRDA:21,54,0,0
+BRDA:21,54,1,0
+BRDA:21,97,0,0
+BRDA:21,97,1,0
+FN:12,System.Void API.Extensions.UserManagerExtensions/<FindByUserByClaimsPrincipleWithAddressAsync>d__0::MoveNext()
+FNDA:0,System.Void API.Extensions.UserManagerExtensions/<FindByUserByClaimsPrincipleWithAddressAsync>d__0::MoveNext()
+DA:13,0
+DA:16,0
+DA:17,0
+BRDA:14,42,0,0
+BRDA:14,42,1,0
+BRDA:14,54,0,0
+BRDA:14,54,1,0
+BRDA:14,97,0,0
+BRDA:14,97,1,0
+LF:8
+LH:0
+BRF:12
+BRH:0
+FNF:4
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/Identity/Services/TokenService.cs
+FN:23,System.String Identity.services.TokenService::CreateToken(Identity.Models.AppUser)
+FNDA:0,System.String Identity.services.TokenService::CreateToken(Identity.Models.AppUser)
+DA:24,0
+DA:25,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:31,0
+DA:33,0
+DA:34,0
+DA:35,0
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:41,0
+DA:43,0
+DA:45,0
+DA:46,0
+FN:16,System.Void Identity.services.TokenService::.ctor(Microsoft.Extensions.Configuration.IConfiguration)
+FNDA:0,System.Void Identity.services.TokenService::.ctor(Microsoft.Extensions.Configuration.IConfiguration)
+DA:17,0
+DA:18,0
+DA:19,0
+DA:20,0
+DA:21,0
+LF:23
+LH:0
+BRF:0
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/Identity/Models/Address.cs
+FN:4,System.Int32 Identity.Models.Address::get_Id()
+FNDA:0,System.Int32 Identity.Models.Address::get_Id()
+DA:5,0
+FN:5,System.String Identity.Models.Address::get_FirstName()
+FNDA:0,System.String Identity.Models.Address::get_FirstName()
+DA:6,0
+FN:6,System.String Identity.Models.Address::get_LastName()
+FNDA:0,System.String Identity.Models.Address::get_LastName()
+DA:7,0
+FN:7,System.String Identity.Models.Address::get_Street()
+FNDA:0,System.String Identity.Models.Address::get_Street()
+DA:8,0
+FN:8,System.String Identity.Models.Address::get_City()
+FNDA:0,System.String Identity.Models.Address::get_City()
+DA:9,0
+FN:9,System.String Identity.Models.Address::get_State()
+FNDA:0,System.String Identity.Models.Address::get_State()
+DA:10,0
+FN:10,System.String Identity.Models.Address::get_Zipcode()
+FNDA:0,System.String Identity.Models.Address::get_Zipcode()
+DA:11,0
+FN:11,System.String Identity.Models.Address::get_AppUserId()
+FNDA:0,System.String Identity.Models.Address::get_AppUserId()
+DA:12,0
+FN:12,Identity.Models.AppUser Identity.Models.Address::get_AppUser()
+FNDA:0,Identity.Models.AppUser Identity.Models.Address::get_AppUser()
+DA:13,0
+LF:9
+LH:0
+BRF:0
+BRH:0
+FNF:9
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/Identity/Models/AppUser.cs
+FN:6,System.String Identity.Models.AppUser::get_DisplayName()
+FNDA:0,System.String Identity.Models.AppUser::get_DisplayName()
+DA:7,0
+FN:7,Identity.Models.Address Identity.Models.AppUser::get_Address()
+FNDA:0,Identity.Models.Address Identity.Models.AppUser::get_Address()
+DA:8,0
+LF:2
+LH:0
+BRF:0
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/Identity/Extensions/ClaimsPrincipalExtensions.cs
+FN:8,System.String Identity.Extensions.ClaimsPrincipalExtensions::RetrieveEmailFromPrincipal(System.Security.Claims.ClaimsPrincipal)
+FNDA:0,System.String Identity.Extensions.ClaimsPrincipalExtensions::RetrieveEmailFromPrincipal(System.Security.Claims.ClaimsPrincipal)
+DA:9,0
+DA:10,0
+DA:11,0
+BRDA:10,2,0,0
+BRDA:10,2,1,0
+BRDA:10,14,0,0
+BRDA:10,14,1,0
+BRDA:10,57,0,0
+BRDA:10,57,1,0
+LF:3
+LH:0
+BRF:6
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/Identity/Extensions/IdentityServiceExtensions.cs
+FN:14,Microsoft.Extensions.DependencyInjection.IServiceCollection Identity.Extensions.IdentityServiceExtensions::AddIdentityServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
+FNDA:0,Microsoft.Extensions.DependencyInjection.IServiceCollection Identity.Extensions.IdentityServiceExtensions::AddIdentityServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
+DA:15,0
+DA:16,0
+DA:18,0
+DA:19,0
+DA:20,0
+DA:22,0
+DA:23,0
+DA:24,0
+DA:25,0
+DA:26,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+DA:35,0
+DA:36,0
+LF:19
+LH:0
+BRF:0
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/Identity/Dto/LoginDto.cs
+FN:4,System.String Identity.Dto.LoginDto::get_Email()
+FNDA:0,System.String Identity.Dto.LoginDto::get_Email()
+DA:5,0
+FN:5,System.String Identity.Dto.LoginDto::get_Password()
+FNDA:0,System.String Identity.Dto.LoginDto::get_Password()
+DA:6,0
+LF:2
+LH:0
+BRF:0
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/Identity/Dto/RegisterDto.cs
+FN:7,System.String Identity.Dto.RegisterDto::get_DisplayName()
+FNDA:0,System.String Identity.Dto.RegisterDto::get_DisplayName()
+DA:8,0
+FN:11,System.String Identity.Dto.RegisterDto::get_Email()
+FNDA:0,System.String Identity.Dto.RegisterDto::get_Email()
+DA:12,0
+FN:14,System.String Identity.Dto.RegisterDto::get_Password()
+FNDA:0,System.String Identity.Dto.RegisterDto::get_Password()
+DA:15,0
+LF:3
+LH:0
+BRF:0
+BRH:0
+FNF:3
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/Identity/Dto/UserDto.cs
+FN:4,System.String Identity.Dto.UserDto::get_Email()
+FNDA:0,System.String Identity.Dto.UserDto::get_Email()
+DA:5,0
+FN:5,System.String Identity.Dto.UserDto::get_DisplayName()
+FNDA:0,System.String Identity.Dto.UserDto::get_DisplayName()
+DA:6,0
+FN:6,System.String Identity.Dto.UserDto::get_Token()
+FNDA:0,System.String Identity.Dto.UserDto::get_Token()
+DA:7,0
+LF:3
+LH:0
+BRF:0
+BRH:0
+FNF:3
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/Identity/DbContext/AppIdentityDbContext.cs
+FN:14,System.Void Identity.DbContext.AppIdentityDbContext::OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)
+FNDA:0,System.Void Identity.DbContext.AppIdentityDbContext::OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)
+DA:15,0
+DA:16,0
+DA:17,0
+DA:18,0
+DA:21,0
+DA:23,0
+DA:24,0
+DA:25,0
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:31,0
+DA:32,0
+DA:33,0
+FN:9,System.Void Identity.DbContext.AppIdentityDbContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1<Identity.DbContext.AppIdentityDbContext>)
+FNDA:0,System.Void Identity.DbContext.AppIdentityDbContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1<Identity.DbContext.AppIdentityDbContext>)
+DA:10,0
+DA:11,0
+DA:12,0
+LF:18
+LH:0
+BRF:0
+BRH:0
+FNF:2
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/Core/Entities/Adresses.cs
+FN:11,System.String Core.Entities.Adresses::get_Direction()
+FNDA:0,System.String Core.Entities.Adresses::get_Direction()
+DA:12,0
+FN:12,System.Char Core.Entities.Adresses::get_TypeOfDirection()
+FNDA:0,System.Char Core.Entities.Adresses::get_TypeOfDirection()
+DA:13,0
+FN:14,System.String Core.Entities.Adresses::get_Telephone()
+FNDA:0,System.String Core.Entities.Adresses::get_Telephone()
+DA:15,0
+FN:16,System.String Core.Entities.Adresses::get_Description()
+FNDA:0,System.String Core.Entities.Adresses::get_Description()
+DA:17,0
+FN:18,System.Int32 Core.Entities.Adresses::get_UserInfoId()
+FNDA:0,System.Int32 Core.Entities.Adresses::get_UserInfoId()
+DA:19,0
+FN:20,System.String Core.Entities.Adresses::get_CP()
+FNDA:0,System.String Core.Entities.Adresses::get_CP()
+DA:21,0
+FN:21,System.Int32 Core.Entities.Adresses::get_CountryId()
+FNDA:0,System.Int32 Core.Entities.Adresses::get_CountryId()
+DA:22,0
+FN:22,Core.Entities.Country Core.Entities.Adresses::get_Country()
+FNDA:0,Core.Entities.Country Core.Entities.Adresses::get_Country()
+DA:23,0
+FN:23,System.Char Core.Entities.Adresses::get_TypeOfDocument()
+FNDA:0,System.Char Core.Entities.Adresses::get_TypeOfDocument()
+DA:24,0
+FN:25,System.String Core.Entities.Adresses::get_Document()
+FNDA:0,System.String Core.Entities.Adresses::get_Document()
+DA:26,0
+LF:10
+LH:0
+BRF:0
+BRH:0
+FNF:10
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/Core/Entities/BaseEntity.cs
+FN:4,System.Int32 Core.Entities.BaseEntity::get_Id()
+FNDA:56,System.Int32 Core.Entities.BaseEntity::get_Id()
+DA:5,56
+LF:1
+LH:1
+BRF:0
+BRH:0
+FNF:1
+FNH:1
+end_of_record
+SF:/home/kike/Projects/PrimeApi/Core/Entities/Country.cs
+FN:5,System.String Core.Entities.Country::get_CountryDesc()
+FNDA:8,System.String Core.Entities.Country::get_CountryDesc()
+DA:6,8
+LF:1
+LH:1
+BRF:0
+BRH:0
+FNF:1
+FNH:1
+end_of_record
+SF:/home/kike/Projects/PrimeApi/Core/Entities/Course.cs
+FN:9,System.String Core.Entities.Course::get_Name()
+FNDA:8,System.String Core.Entities.Course::get_Name()
+DA:10,8
+FN:10,System.Int32 Core.Entities.Course::get_TeacherId()
+FNDA:5,System.Int32 Core.Entities.Course::get_TeacherId()
+DA:11,5
+FN:11,Core.Entities.Teacher Core.Entities.Course::get_Teacher()
+FNDA:0,Core.Entities.Teacher Core.Entities.Course::get_Teacher()
+DA:12,0
+FN:12,System.String Core.Entities.Course::get_Url()
+FNDA:5,System.String Core.Entities.Course::get_Url()
+DA:13,5
+FN:13,System.Int32 Core.Entities.Course::get_TechnologyId()
+FNDA:5,System.Int32 Core.Entities.Course::get_TechnologyId()
+DA:14,5
+FN:14,Core.Entities.Technology Core.Entities.Course::get_Technology()
+FNDA:0,Core.Entities.Technology Core.Entities.Course::get_Technology()
+DA:15,0
+FN:15,System.Int32 Core.Entities.Course::get_TechnologyDetailsId()
+FNDA:5,System.Int32 Core.Entities.Course::get_TechnologyDetailsId()
+DA:16,5
+FN:16,Core.Entities.TechnologyDetail Core.Entities.Course::get_TechnologyDetails()
+FNDA:0,Core.Entities.TechnologyDetail Core.Entities.Course::get_TechnologyDetails()
+DA:17,0
+FN:17,System.String Core.Entities.Course::get_Description()
+FNDA:5,System.String Core.Entities.Course::get_Description()
+DA:18,5
+FN:18,System.String Core.Entities.Course::get_SeachKeywords()
+FNDA:0,System.String Core.Entities.Course::get_SeachKeywords()
+DA:19,0
+FN:19,System.String Core.Entities.Course::get_Photo()
+FNDA:5,System.String Core.Entities.Course::get_Photo()
+DA:20,5
+FN:20,System.Collections.Generic.List`1<Core.Entities.CourseDetail> Core.Entities.Course::get_CourseDetail()
+FNDA:0,System.Collections.Generic.List`1<Core.Entities.CourseDetail> Core.Entities.Course::get_CourseDetail()
+DA:21,0
+LF:12
+LH:7
+BRF:0
+BRH:0
+FNF:12
+FNH:7
+end_of_record
+SF:/home/kike/Projects/PrimeApi/Core/Entities/CourseDetail.cs
+FN:6,System.Int32 Core.Entities.CourseDetail::get_Lessonid()
+FNDA:4,System.Int32 Core.Entities.CourseDetail::get_Lessonid()
+DA:7,4
+FN:7,System.String Core.Entities.CourseDetail::get_Description()
+FNDA:7,System.String Core.Entities.CourseDetail::get_Description()
+DA:8,7
+FN:9,System.Int32 Core.Entities.CourseDetail::get_Courseid()
+FNDA:6,System.Int32 Core.Entities.CourseDetail::get_Courseid()
+DA:10,6
+LF:3
+LH:3
+BRF:0
+BRH:0
+FNF:3
+FNH:3
+end_of_record
+SF:/home/kike/Projects/PrimeApi/Core/Entities/PaymentInfo.cs
+FN:10,System.Int32 Core.Entities.PaymentInfo::get_UserInfoId()
+FNDA:0,System.Int32 Core.Entities.PaymentInfo::get_UserInfoId()
+DA:11,0
+FN:11,System.String Core.Entities.PaymentInfo::get_Name()
+FNDA:0,System.String Core.Entities.PaymentInfo::get_Name()
+DA:12,0
+FN:13,System.String Core.Entities.PaymentInfo::get_CardHolderName()
+FNDA:0,System.String Core.Entities.PaymentInfo::get_CardHolderName()
+DA:14,0
+FN:15,System.String Core.Entities.PaymentInfo::get_CardNumber()
+FNDA:0,System.String Core.Entities.PaymentInfo::get_CardNumber()
+DA:16,0
+FN:17,System.String Core.Entities.PaymentInfo::get_MonthExp()
+FNDA:0,System.String Core.Entities.PaymentInfo::get_MonthExp()
+DA:18,0
+FN:19,System.String Core.Entities.PaymentInfo::get_YearExp()
+FNDA:0,System.String Core.Entities.PaymentInfo::get_YearExp()
+DA:20,0
+FN:21,System.String Core.Entities.PaymentInfo::get_CCV()
+FNDA:0,System.String Core.Entities.PaymentInfo::get_CCV()
+DA:22,0
+LF:7
+LH:0
+BRF:0
+BRH:0
+FNF:7
+FNH:0
+end_of_record
+SF:/home/kike/Projects/PrimeApi/Core/Entities/Teacher.cs
+FN:9,System.String Core.Entities.Teacher::get_Name()
+FNDA:12,System.String Core.Entities.Teacher::get_Name()
+DA:10,12
+FN:10,System.String Core.Entities.Teacher::get_Surname()
+FNDA:9,System.String Core.Entities.Teacher::get_Surname()
+DA:11,9
+FN:12,System.Int32 Core.Entities.Teacher::get_CountryId()
+FNDA:9,System.Int32 Core.Entities.Teacher::get_CountryId()
+DA:13,9
+FN:13,Core.Entities.Country Core.Entities.Teacher::get_Country()
+FNDA:0,Core.Entities.Country Core.Entities.Teacher::get_Country()
+DA:14,0
+FN:15,System.String Core.Entities.Teacher::get_UrlSite()
+FNDA:9,System.String Core.Entities.Teacher::get_UrlSite()
+DA:16,9
+FN:16,System.String Core.Entities.Teacher::get_UrlSocial()
+FNDA:9,System.String Core.Entities.Teacher::get_UrlSocial()
+DA:17,9
+FN:17,System.String Core.Entities.Teacher::get_Photo()
+FNDA:1,System.String Core.Entities.Teacher::get_Photo()
+DA:18,1
+FN:20,System.String Core.Entities.Teacher::get_description()
+FNDA:8,System.String Core.Entities.Teacher::get_description()
+DA:21,8
+LF:8
+LH:7
+BRF:0
+BRH:0
+FNF:8
+FNH:7
+end_of_record
+SF:/home/kike/Projects/PrimeApi/Core/Entities/Technology.cs
+FN:8,System.String Core.Entities.Technology::get_Description()
+FNDA:16,System.String Core.Entities.Technology::get_Description()
+DA:9,16
+LF:1
+LH:1
+BRF:0
+BRH:0
+FNF:1
+FNH:1
+end_of_record
+SF:/home/kike/Projects/PrimeApi/Core/Entities/TechnologyDetails.cs
+FN:4,System.String Core.Entities.TechnologyDetail::get_Description()
+FNDA:16,System.String Core.Entities.TechnologyDetail::get_Description()
+DA:5,16
+FN:5,System.Int32 Core.Entities.TechnologyDetail::get_TechnologyId()
+FNDA:13,System.Int32 Core.Entities.TechnologyDetail::get_TechnologyId()
+DA:6,13
+LF:2
+LH:2
+BRF:0
+BRH:0
+FNF:2
+FNH:2
+end_of_record
+SF:/home/kike/Projects/PrimeApi/Core/Entities/UserInfo.cs
+FN:10,System.String Core.Entities.UserInfo::get_Name()
+FNDA:8,System.String Core.Entities.UserInfo::get_Name()
+DA:11,8
+FN:11,System.String Core.Entities.UserInfo::get_Surname()
+FNDA:4,System.String Core.Entities.UserInfo::get_Surname()
+DA:12,4
+FN:13,System.Int32 Core.Entities.UserInfo::get_CountryId()
+FNDA:0,System.Int32 Core.Entities.UserInfo::get_CountryId()
+DA:14,0
+FN:14,Core.Entities.Country Core.Entities.UserInfo::get_Country()
+FNDA:0,Core.Entities.Country Core.Entities.UserInfo::get_Country()
+DA:15,0
+FN:16,System.String Core.Entities.UserInfo::get_Telephone()
+FNDA:0,System.String Core.Entities.UserInfo::get_Telephone()
+DA:17,0
+FN:17,System.String Core.Entities.UserInfo::get_Email()
+FNDA:0,System.String Core.Entities.UserInfo::get_Email()
+DA:18,0
+FN:18,System.String Core.Entities.UserInfo::get_Role()
+FNDA:0,System.String Core.Entities.UserInfo::get_Role()
+DA:19,0
+FN:19,System.String Core.Entities.UserInfo::get_Password()
+FNDA:0,System.String Core.Entities.UserInfo::get_Password()
+DA:20,0
+FN:20,System.Boolean Core.Entities.UserInfo::get_DoubleFactor()
+FNDA:0,System.Boolean Core.Entities.UserInfo::get_DoubleFactor()
+DA:21,0
+FN:21,System.String Core.Entities.UserInfo::get_Description()
+FNDA:1,System.String Core.Entities.UserInfo::get_Description()
+DA:22,1
+FN:23,System.String Core.Entities.UserInfo::get_Photo()
+FNDA:1,System.String Core.Entities.UserInfo::get_Photo()
+DA:24,1
+FN:25,System.Collections.Generic.List`1<Core.Entities.Adresses> Core.Entities.UserInfo::get_Adresses()
+FNDA:0,System.Collections.Generic.List`1<Core.Entities.Adresses> Core.Entities.UserInfo::get_Adresses()
+DA:26,0
+FN:27,System.Collections.Generic.List`1<Core.Entities.PaymentInfo> Core.Entities.UserInfo::get_Payment()
+FNDA:0,System.Collections.Generic.List`1<Core.Entities.PaymentInfo> Core.Entities.UserInfo::get_Payment()
+DA:28,0
+LF:13
+LH:4
+BRF:0
+BRH:0
+FNF:13
+FNH:4
+end_of_record
+SF:/home/kike/Projects/PrimeApi/Core/DBContext/GestionCursosContext.cs
+FN:17,System.Void Core.DBContext.GestionCursosContext::OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)
+FNDA:23,System.Void Core.DBContext.GestionCursosContext::OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)
+DA:18,23
+DA:19,230
+DA:20,23
+DA:21,230
+DA:22,23
+DA:23,23
+FN:25,Microsoft.EntityFrameworkCore.DbSet`1<Core.Entities.Country> Core.DBContext.GestionCursosContext::get_Countries()
+FNDA:31,Microsoft.EntityFrameworkCore.DbSet`1<Core.Entities.Country> Core.DBContext.GestionCursosContext::get_Countries()
+DA:26,31
+FN:26,Microsoft.EntityFrameworkCore.DbSet`1<Core.Entities.Course> Core.DBContext.GestionCursosContext::get_Courses()
+FNDA:31,Microsoft.EntityFrameworkCore.DbSet`1<Core.Entities.Course> Core.DBContext.GestionCursosContext::get_Courses()
+DA:27,31
+FN:27,Microsoft.EntityFrameworkCore.DbSet`1<Core.Entities.CourseDetail> Core.DBContext.GestionCursosContext::get_CourseDetails()
+FNDA:26,Microsoft.EntityFrameworkCore.DbSet`1<Core.Entities.CourseDetail> Core.DBContext.GestionCursosContext::get_CourseDetails()
+DA:28,26
+FN:28,Microsoft.EntityFrameworkCore.DbSet`1<Core.Entities.Teacher> Core.DBContext.GestionCursosContext::get_Teachers()
+FNDA:34,Microsoft.EntityFrameworkCore.DbSet`1<Core.Entities.Teacher> Core.DBContext.GestionCursosContext::get_Teachers()
+DA:29,34
+FN:29,Microsoft.EntityFrameworkCore.DbSet`1<Core.Entities.Technology> Core.DBContext.GestionCursosContext::get_Technologies()
+FNDA:34,Microsoft.EntityFrameworkCore.DbSet`1<Core.Entities.Technology> Core.DBContext.GestionCursosContext::get_Technologies()
+DA:30,34
+FN:30,Microsoft.EntityFrameworkCore.DbSet`1<Core.Entities.TechnologyDetail> Core.DBContext.GestionCursosContext::get_TechnologyDetails()
+FNDA:34,Microsoft.EntityFrameworkCore.DbSet`1<Core.Entities.TechnologyDetail> Core.DBContext.GestionCursosContext::get_TechnologyDetails()
+DA:31,34
+FN:31,Microsoft.EntityFrameworkCore.DbSet`1<Core.Entities.UserInfo> Core.DBContext.GestionCursosContext::get_UserInfo()
+FNDA:29,Microsoft.EntityFrameworkCore.DbSet`1<Core.Entities.UserInfo> Core.DBContext.GestionCursosContext::get_UserInfo()
+DA:32,29
+FN:32,Microsoft.EntityFrameworkCore.DbSet`1<Core.Entities.Adresses> Core.DBContext.GestionCursosContext::get_Adresses()
+FNDA:23,Microsoft.EntityFrameworkCore.DbSet`1<Core.Entities.Adresses> Core.DBContext.GestionCursosContext::get_Adresses()
+DA:33,23
+FN:34,Microsoft.EntityFrameworkCore.DbSet`1<Core.Entities.PaymentInfo> Core.DBContext.GestionCursosContext::get_PaymentInfo()
+FNDA:23,Microsoft.EntityFrameworkCore.DbSet`1<Core.Entities.PaymentInfo> Core.DBContext.GestionCursosContext::get_PaymentInfo()
+DA:35,23
+FN:8,System.Void Core.DBContext.GestionCursosContext::.ctor()
+FNDA:0,System.Void Core.DBContext.GestionCursosContext::.ctor()
+DA:9,0
+DA:10,0
+DA:11,0
+FN:13,System.Void Core.DBContext.GestionCursosContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1<Core.DBContext.GestionCursosContext>)
+FNDA:23,System.Void Core.DBContext.GestionCursosContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1<Core.DBContext.GestionCursosContext>)
+DA:14,23
+DA:15,23
+DA:16,23
+LF:21
+LH:18
+BRF:0
+BRH:0
+FNF:12
+FNH:11
+end_of_record

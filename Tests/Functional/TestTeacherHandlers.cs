@@ -45,7 +45,7 @@ public class TestTeacherHandlers
 
     }
     [Fact]
-    public async Task ShouldCallInsertTeacherCommand()
+    public async Task ShouldCallInsertTeacherCommandHandler()
     {
         _teacherService.Setup(x => x.InsertTeacherAsync(It.IsAny<Teacher>(), It.IsAny<CancellationToken>())).Returns(Task.FromResult(1));
         var result = await _mediator.Send(new InsertTeacherCommand(), CancellationToken.None);
@@ -53,14 +53,14 @@ public class TestTeacherHandlers
     }
 
     [Fact]
-    public async Task ShouldCallUpdateTeacherCommand()
+    public async Task ShouldCallUpdateTeacherCommandHandler()
     {
         _teacherService.Setup(x => x.UpdateTeacherAsync(It.IsAny<Teacher>(), It.IsAny<CancellationToken>())).Returns(Task.FromResult(1));
         var result = await _mediator.Send(new UpdateTeacherCommand());
         Assert.Equal(1, result);
     }
     [Fact]
-    public async Task ShouldCallDeleteTeacherCommand()
+    public async Task ShouldCallDeleteTeacherCommandHandler()
     {
         _teacherService.Setup(x => x.DeleteTeacherAsync(It.IsAny<int>(), It.IsAny<CancellationToken>())).Returns(Task.FromResult(true));
         var result = await _mediator.Send(new DeleteTeacherCommand());

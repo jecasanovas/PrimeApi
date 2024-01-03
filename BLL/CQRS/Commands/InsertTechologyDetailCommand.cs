@@ -10,7 +10,7 @@ namespace BLL.CQRS.Commands
 {
     public record InsertTechologyDetailCommand : IRequest<int>
     {
-        public TechnologyDetail TechologyDetails;
+        public TechnologyDetailDto TechologyDetails;
     }
 
     public class InsertTechologyDetailCommandHandler : IRequestHandler<InsertTechologyDetailCommand, int>

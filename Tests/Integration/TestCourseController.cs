@@ -1,3 +1,9 @@
+using API.Helpers;
+using BLL.CQRS.Commands;
+using BLL.CQRS.Queries;
+using BLL.Dtos;
+using BLL.Interfaces;
+using BLL.SearchParams;
 using Courses.Api.Controllers;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -28,7 +34,7 @@ public class CourseControllerTests
     [Fact]
     public async Task ShouldCallGetCourseControllerAndRetrieveCourses()
     {
-        var result = new DataResults<CourseDto>()
+        var expectedresult = new DataResults<CourseDto>()
         {
             Results = 1,
             Dto = new List<CourseDto>()
@@ -40,43 +46,97 @@ public class CourseControllerTests
 
                 }
         };
-        _mediatorMock.Setup(Mediator => Mediator.Send(It.IsAny<GetCourseQuery>(), It.IsAny<System.Threading.CancellationToken>())).ReturnsAsync(result);
+        _mediatorMock.Setup(Mediator => Mediator.Send(It.IsAny<GetCourseQuery>(), It.IsAny<System.Threading.CancellationToken>())).ReturnsAsync(expectedresult);
         var resultData = await _courseController.Course(new SearchParamCourses()
         {
             page = 1,
             pageSize = 1
         });
+        var result = ((Pagination<CourseDto>)((OkObjectResult)resultData.Result!).Value!).Data[0].Name;
 
+        Assert.Equal("CourseMock", result);
+    }
+
+
+    [Fact]
+    public async Task ShouldCallCourseControllerAndInsertCourse()
+    {
+        _mediatorMock.Setup(x => x.Send(It.IsAny<InsertCourseCommand>(), It.IsAny<CancellationToken>())).ReturnsAsync(5);
+        var resultData = await _courseController.InsertCourse(new CourseDto());
+
+        Assert.Equal(5, ((OkObjectResult)resultData.Result!).Value);
+    }
+    [Fact]
+    public async Task ShouldCallCourseControllerAndUpdateCourse()
+    {
+        _mediatorMock.Setup(x => x.Send(It.IsAny<UpdateCourseCommand>(), It.IsAny<CancellationToken>())).ReturnsAsync(5);
+        var resultData = await _courseController.UpdateCourse(new CourseDto());
+
+        Assert.Equal(5, ((OkObjectResult)resultData.Result!).Value);
+    }
+
+    [Fact]
+    public async Task ShouldCallCourseControllerAndDeleteCourse()
+    {
+        _mediatorMock.Setup(X => X.Send(It.IsAny<DeleteCourseCommand>(), It.IsAny<CancellationToken>())).ReturnsAsync(true);
+        var resultData = await _courseController.DeleteCourse(5);
+        Assert.True(resultData.Value);
 
     }
+
+
+    [Fact]
+    public async Task ShouldCallGetCourseControllerAndRetrieveCourseDetail()
+    {
+        var expectedresult = new DataResults<CourseDetailDto>()
+        {
+            Results = 1,
+            Dto = new List<CourseDetailDto>()
+                        {
+                            new CourseDetailDto() {
+                                Id= 1,
+                                Description = "CourseDetailTest"
+                           }
+
+                }
+        };
+        _mediatorMock.Setup(x => x.Send(It.IsAny<GetCourseDetailQuery>(), It.IsAny<System.Threading.CancellationToken>())).ReturnsAsync(expectedresult);
+        var resultData = await _courseController.CourseDetails(new SearchParamCourses()
+        {
+            page = 1,
+            pageSize = 1
+        });
+        var result = ((Pagination<CourseDetailDto>)((OkObjectResult)resultData.Result!).Value!).Data[0].Description;
+
+        Assert.Equal("CourseDetailTest", result);
+    }
+
+
+    [Fact]
+    public async Task ShouldCallCourseControllerAndInsertCourseDetail()
+    {
+        _mediatorMock.Setup(x => x.Send(It.IsAny<InsertCourseDetailCommand>(), It.IsAny<CancellationToken>())).ReturnsAsync(5);
+        var resultData = await _courseController.InsertCourseDetail(new CourseDetailDto());
+
+        Assert.Equal(5, ((OkObjectResult)resultData).Value);
+    }
+    [Fact]
+    public async Task ShouldCallCourseControllerAndUpdateCourseDetail()
+    {
+        _mediatorMock.Setup(x => x.Send(It.IsAny<UpdateCourseDetailCommand>(), It.IsAny<CancellationToken>())).ReturnsAsync(5);
+        var resultData = await _courseController.UpdateCourseDetail(new CourseDetailDto());
+        Assert.Equal(5, ((OkObjectResult)resultData).Value);
+    }
+
+    /* [Fact]
+     public async Task ShouldCallCourseControllerAndDeleteCourseDetail()
+     {
+         _mediatorMock.Setup(X => X.Send(It.IsAny<DeleteCourseDetailCommand>(), It.IsAny<CancellationToken>())).ReturnsAsync(true);
+         var resultData = await _courseController.del(5);
+         Assert.True(resultData.Value);
+
+     }*/
 }
 
 
-public async Task ShouldCallCourseControllerAndInsertCourse()
-{
-    _mediatorMock.Setup(x => x.Send(It.IsAny<InsertCourseCommand>(), It.IsAny<CancellationToken>())).ReturnsAsync(5);
-    var resultData = await _courseController.InsertCourse(new CourseDto());
-
-    Assert.Equal(5, ((OkObjectResult)resultData.Result!).Value);
-}
-[Fact]
-public async Task ShouldCallCourseControllerAndUpdateCourse()
-{
-    _mediatorMock.Setup(x => x.Send(It.IsAny<UpdateCourseCommand>(), It.IsAny<CancellationToken>())).ReturnsAsync(5);
-    var resultData = await _courseController.UpdateCourse(new CourseDto());
-
-    Assert.Equal(5, ((OkObjectResult)resultData.Result!).Value);
-}
-
-[Fact]
-public async Task ShouldCallCourseControllerAndDeleteCourse()
-{
-    _mediatorMock.Setup(X => X.Send(It.IsAny<DeleteCourseCommand>(), It.IsAny<CancellationToken>())).ReturnsAsync(true);
-    var resultData = await _courseController.DeleteCourse(5);
-    Assert.True(resultData.Value);
-
-}
-
-
-}
 
