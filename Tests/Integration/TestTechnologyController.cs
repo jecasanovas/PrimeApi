@@ -37,7 +37,7 @@ public class TestTechnologyController
                         {
                             new() {
                                 Id= 1,
-                                Description = "TechnlogyTest"
+                                Description = "TechnologyTest"
                            }
 
                 };
@@ -86,20 +86,20 @@ public class TestTechnologyController
                         {
                             new() {
                                 Id= 1,
-                                Description = "TechnlogyDetailTest"
+                                Description = "TechnologyDetailTest"
                            }
 
                 };
 
 
         _mediatorMock.Setup(x => x.Send(It.IsAny<GetTechnologyDetailQuery>(), It.IsAny<System.Threading.CancellationToken>())).ReturnsAsync(expectedresult);
-        var resultData = await _technologyController.Technology(new SearchParamTeachers()
+        var resultData = await _technologyController.TechnologyDetails(new SearchParam()
         {
             page = 1,
             pageSize = 1
         });
         var result = ((IList<TechnologyDetailDto>)((OkObjectResult)resultData.Result!).Value!)[0].Description;
-        Assert.Equal("TechnlogyDetailTest", result);
+        Assert.Equal("TechnologyDetailTest", result);
     }
 
 
