@@ -27,7 +27,7 @@ namespace BLL.CQRS.Queries
         public async Task<DataResults<CourseDetailDto>> Handle(GetCourseDetailQuery request, CancellationToken cancellationToken)
         {
             var courses = await _courseService.GetCourseDetailsAsync(request.searchParams, cancellationToken);
-            //Count results without pagination active, for paging info
+
             var nrows = await _courseService.GetTotalDetailRowsAsysnc(request.searchParams, cancellationToken);
 
             return new DataResults<CourseDetailDto>()

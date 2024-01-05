@@ -28,7 +28,7 @@ namespace Courses.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<Pagination<CourseDto>>> Course([FromQuery] SearchParamCourses searchParameters)
+        public async Task<ActionResult<Paginator<CourseDto>>> Course([FromQuery] SearchParamCourses searchParameters)
         {
             try
             {
@@ -36,7 +36,7 @@ namespace Courses.Api.Controllers
                 {
                     searchParams = searchParameters
                 });
-                return Ok(new Pagination<CourseDto>(searchParameters.page, searchParameters.pageSize, result.Results, (IReadOnlyList<CourseDto>)result.Dto));
+                return Ok(new Paginator<CourseDto>(searchParameters.page, searchParameters.pageSize, result.Results, (IReadOnlyList<CourseDto>)result.Dto));
             }
             catch (Exception ex)
             {
@@ -47,7 +47,7 @@ namespace Courses.Api.Controllers
         [HttpGet]
         [Authorize]
         [Route("Detail")]
-        public async Task<ActionResult<Pagination<CourseDetailDto>>> CourseDetails([FromQuery] SearchParamCourses searchParameters)
+        public async Task<ActionResult<Paginator<CourseDetailDto>>> CourseDetails([FromQuery] SearchParamCourses searchParameters)
         {
             try
             {
@@ -55,7 +55,7 @@ namespace Courses.Api.Controllers
                 {
                     searchParams = searchParameters
                 });
-                return Ok(new Pagination<CourseDetailDto>(searchParameters.page, searchParameters.pageSize, result.Results, (IReadOnlyList<CourseDetailDto>)result.Dto));
+                return Ok(new Paginator<CourseDetailDto>(searchParameters.page, searchParameters.pageSize, result.Results, (IReadOnlyList<CourseDetailDto>)result.Dto));
             }
             catch (Exception ex)
             {
@@ -101,7 +101,7 @@ namespace Courses.Api.Controllers
         [HttpPut]
         [Authorize]
         [Route("Detail")]
-        public async Task<ActionResult> UpdateCourseDetail([FromBody] CourseDetailDto courseDetailDto)
+        public async Task<ActionResult<int>> UpdateCourseDetail([FromBody] CourseDetailDto courseDetailDto)
         {
             try
             {
@@ -119,7 +119,7 @@ namespace Courses.Api.Controllers
         [HttpPost]
         [Authorize]
         [Route("Detail")]
-        public async Task<ActionResult> InsertCourseDetail([FromBody] CourseDetailDto courseDetailDto)
+        public async Task<ActionResult<int>> InsertCourseDetail([FromBody] CourseDetailDto courseDetailDto)
         {
             try
             {
@@ -140,10 +140,10 @@ namespace Courses.Api.Controllers
         {
             try
             {
-                return await _mediator.Send(new DeleteCourseCommand()
+                return Ok(await _mediator.Send(new DeleteCourseCommand()
                 {
                     CourseId = id
-                });
+                }));
 
             }
             catch (Exception ex)
@@ -197,7 +197,7 @@ namespace Courses.Api.Controllers
         [Authorize]
         [HttpPost]
         [Route("Upload")]
-        public async Task<ActionResult<CourseDetailDto>> Index(int id)
+        public async Task<ActionResult<bool>> Index(int id)
         {
             try
             {

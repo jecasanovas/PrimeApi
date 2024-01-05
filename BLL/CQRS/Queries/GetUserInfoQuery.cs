@@ -27,7 +27,7 @@ namespace BLL.CQRS.Queries
         public async Task<DataResults<UserInfoDto>> Handle(GetUserInfoQuery request, CancellationToken cancellationToken)
         {
             var result = await _userInfoService.GetUsersInfoAsync(request.searchParams, cancellationToken);
-            //Count results without pagination active, for paging info
+
             var nrows = await _userInfoService.GetTotalRowsAsync(request.searchParams, cancellationToken);
 
             return new DataResults<UserInfoDto>()

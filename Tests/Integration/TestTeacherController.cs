@@ -64,7 +64,7 @@ public class TestTeacherController
         _mediatorMock.Setup(x => x.Send(It.IsAny<InsertTeacherCommand>(), It.IsAny<CancellationToken>())).ReturnsAsync(5);
         var resultData = await _teacherController.CreateTeacher(new TeacherDto());
 
-        Assert.Equal(5, ((OkObjectResult)resultData).Value);
+        Assert.Equal(5, (int)((OkObjectResult)resultData.Result!).Value!);
     }
     [Fact]
     public async Task ShouldCallTeacherControllerAndUpdateTeacher()
@@ -72,7 +72,7 @@ public class TestTeacherController
         _mediatorMock.Setup(x => x.Send(It.IsAny<UpdateTeacherCommand>(), It.IsAny<CancellationToken>())).ReturnsAsync(5);
         var resultData = await _teacherController.UpdateTeacher(new TeacherDto());
 
-        Assert.Equal(5, ((OkObjectResult)resultData.Result!).Value);
+        Assert.Equal(5, (int)((OkObjectResult)resultData.Result!).Value!);
     }
 
     [Fact]
@@ -80,6 +80,6 @@ public class TestTeacherController
     {
         _mediatorMock.Setup(X => X.Send(It.IsAny<DeleteTeacherCommand>(), It.IsAny<CancellationToken>())).ReturnsAsync(true);
         var resultData = await _teacherController.DeleteTeacher(5);
-        Assert.Equal(true, ((OkObjectResult)resultData).Value);
+        Assert.True((bool)((OkObjectResult)resultData.Result!).Value!);
     }
 }

@@ -30,7 +30,7 @@ public class TestUserInfoController
         _mediatorMock = new Mock<IMediator>();
         _userService = new Mock<IUserInfoService>();
         _mapper = new Mock<IMapper>();
-        _userInfoController = new UserInfoController(_mapper.Object,_mediatorMock.Object, _userService.Object);
+        _userInfoController = new UserInfoController(_mapper.Object, _mediatorMock.Object, _userService.Object);
     }
 
     [Fact]
@@ -57,7 +57,8 @@ public class TestUserInfoController
             page = 1,
             pageSize = 1
         });
-        var result = ((Pagination<UserInfoDto>)((OkObjectResult)resultData.Result!).Value!).Data[0].Name;
+
+        var result = ((Paginator<UserInfoDto>)((OkObjectResult)resultData.Result!).Value!).Data[0].Name;
         Assert.Equal("UserMock", result);
     }
 
@@ -67,7 +68,7 @@ public class TestUserInfoController
     {
         _mediatorMock.Setup(x => x.Send(It.IsAny<InsertUserInfoCommand>(), It.IsAny<CancellationToken>())).ReturnsAsync(5);
         var resultData = await _userInfoController.InsertUserInfo(new UserInfoDto());
-        Assert.Equal(5, ((OkObjectResult)resultData).Value);
+        Assert.Equal(5, (int)((OkObjectResult)resultData.Result!).Value!);
     }
     [Fact]
     public async Task ShouldCallUserInfoControllerAndUpdateUser()
@@ -75,7 +76,7 @@ public class TestUserInfoController
         _mediatorMock.Setup(x => x.Send(It.IsAny<UpdateUserInfoCommand>(), It.IsAny<CancellationToken>())).ReturnsAsync(5);
         var resultData = await _userInfoController.UpdateUserInfo(new UserInfoDto());
 
-        Assert.Equal(5, ((OkObjectResult)resultData.Result!).Value);
+        Assert.Equal(5, (int)((OkObjectResult)resultData.Result!).Value!);
     }
 
     [Fact]
@@ -83,8 +84,6 @@ public class TestUserInfoController
     {
         _mediatorMock.Setup(x => x.Send(It.IsAny<DeleteUserInfoCommand>(), It.IsAny<CancellationToken>())).ReturnsAsync(true);
         var resultData = await _userInfoController.DeleteUser(5);
-        Assert.True  ((bool)((OkObjectResult)resultData).Value);
-
-   
-
+        Assert.True((bool)((OkObjectResult)resultData.Result!).Value!);
+    }
 }

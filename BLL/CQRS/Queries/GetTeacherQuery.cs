@@ -28,7 +28,7 @@ namespace BLL.CQRS.Queries
         {
 
             var teachers = await _teacherService.GetTeachersAsync(request.searchParams, cancellationToken);
-            //Count results without pagination active, for paging info
+
             var nrows = await _teacherService.GetTotalRowsAsync(request.searchParams, cancellationToken);
 
             return new DataResults<TeacherDto>()

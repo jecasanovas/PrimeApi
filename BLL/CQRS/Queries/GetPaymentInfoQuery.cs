@@ -27,7 +27,7 @@ namespace BLL.CQRS.Queries
         public async Task<DataResults<PaymentInfoDto>> Handle(GetPaymentInfoQuery request, CancellationToken cancellationToken)
         {
             var paymentResult = await _paymentInfoService.GetPaymentAsync(request.searchParams, cancellationToken);
-            //Count results without pagination active, for paging info
+
             var nrows = await _paymentInfoService.GetTotalRowsAsync(request.searchParams, cancellationToken);
 
             return new DataResults<PaymentInfoDto>()

@@ -30,7 +30,7 @@ namespace Courses.Api.Controllers
 
         [HttpGet]
         [Authorize]
-        public async Task<ActionResult<Pagination<UserInfoDto>>> GetUsersInfo([FromQuery] SearchParamUsers searchParameters)
+        public async Task<ActionResult<Paginator<UserInfoDto>>> GetUsersInfo([FromQuery] SearchParamUsers searchParameters)
         {
             try
             {
@@ -38,7 +38,7 @@ namespace Courses.Api.Controllers
                 {
                     searchParams = searchParameters
                 });
-                return new Pagination<UserInfoDto>(searchParameters.page, searchParameters.pageSize, result.Results, (IReadOnlyList<UserInfoDto>)result.Dto);
+                return Ok(new Paginator<UserInfoDto>(searchParameters.page, searchParameters.pageSize, result.Results, (IReadOnlyList<UserInfoDto>)result.Dto));
 
             }
             catch (Exception ex)
@@ -49,7 +49,7 @@ namespace Courses.Api.Controllers
 
         [Authorize]
         [HttpPut]
-        public async Task<ActionResult<UserInfoDto>> UpdateUserInfo([FromBody] UserInfoDto UserInfoDto)
+        public async Task<ActionResult<int>> UpdateUserInfo([FromBody] UserInfoDto UserInfoDto)
         {
 
             try
@@ -68,12 +68,11 @@ namespace Courses.Api.Controllers
 
         [Authorize]
         [HttpPost]
-        public async Task<ActionResult> InsertUserInfo([FromBody] UserInfoDto UserInfoDto)
+        public async Task<ActionResult<int>> InsertUserInfo([FromBody] UserInfoDto UserInfoDto)
         {
-
             try
             {
-                return Ok(await _mediator.Send(new UpdateUserInfoCommand()
+                return Ok(await _mediator.Send(new InsertUserInfoCommand()
                 {
                     userInfoDto = UserInfoDto
                 }));
@@ -87,12 +86,15 @@ namespace Courses.Api.Controllers
 
         [Authorize]
         [HttpDelete]
-        public async Task<ActionResult> DeleteUser([FromQuery] int id)
+        public async Task<ActionResult<bool>> DeleteUser([FromQuery] int id)
         {
 
             try
             {
-                return Ok(await _userInfoService.DeleteUserInfoAsync(id, CancellationToken.None));
+                return Ok(await _mediator.Send(new DeleteUserInfoCommand()
+                {
+                    UserInfoId = id
+                }));
             }
             catch (Exception ex)
             {
@@ -102,7 +104,7 @@ namespace Courses.Api.Controllers
         [Authorize]
         [HttpPost]
         [Route("File")]
-        public async Task<ActionResult> PostFile(int id)
+        public async Task<ActionResult<UserInfoDto>> PostFile(int id)
         {
             try
             {

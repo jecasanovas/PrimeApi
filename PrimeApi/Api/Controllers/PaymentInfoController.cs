@@ -20,7 +20,7 @@ namespace PrimeApi.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<Pagination<PaymentInfoDto>>> GetPaymentInfo([FromQuery] SearchParamsPaymentInfo searchParameters)
+        public async Task<ActionResult<Paginator<PaymentInfoDto>>> GetPaymentInfo([FromQuery] SearchParamsPaymentInfo searchParameters)
         {
             try
             {
@@ -28,7 +28,7 @@ namespace PrimeApi.Api.Controllers
                 {
                     searchParams = searchParameters
                 });
-                return new Pagination<PaymentInfoDto>(searchParameters.page, searchParameters.pageSize, result.Results, (IReadOnlyList<PaymentInfoDto>)result.Dto);
+                return new Paginator<PaymentInfoDto>(searchParameters.page, searchParameters.pageSize, result.Results, (IReadOnlyList<PaymentInfoDto>)result.Dto);
             }
             catch (Exception ex)
             {
@@ -37,7 +37,7 @@ namespace PrimeApi.Api.Controllers
         }
 
         [HttpPut]
-        public async Task<ActionResult<AddressDto>> UpdatePaymentInfo([FromBody] PaymentInfoDto paymentInfo)
+        public async Task<ActionResult<int>> UpdatePaymentInfo([FromBody] PaymentInfoDto paymentInfo)
         {
             try
             {
@@ -53,7 +53,7 @@ namespace PrimeApi.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> InsertPaymentInfo([FromBody] PaymentInfoDto paymentInfo)
+        public async Task<ActionResult<int>> InsertPaymentInfo([FromBody] PaymentInfoDto paymentInfo)
         {
             try
             {
@@ -70,7 +70,7 @@ namespace PrimeApi.Api.Controllers
         }
 
         [HttpDelete]
-        public async Task<ActionResult<int>> DeletePaymentInfo([FromQuery] int id)
+        public async Task<ActionResult<bool>> DeletePaymentInfo([FromQuery] int id)
         {
             try
             {

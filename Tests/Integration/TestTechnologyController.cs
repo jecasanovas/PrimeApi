@@ -18,7 +18,6 @@ namespace Tests.Integration;
 
 public class TestTechnologyController
 {
-    private readonly Mock<ITechnologyService> _technologyServiceMock;
     private readonly TechnologyController _technologyController;
 
     private readonly Mock<IMediator> _mediatorMock;
@@ -26,8 +25,7 @@ public class TestTechnologyController
     public TestTechnologyController()
     {
         _mediatorMock = new Mock<IMediator>();
-        _technologyServiceMock = new Mock<ITechnologyService>();
-        _technologyController = new TechnologyController(_mediatorMock.Object, _technologyServiceMock.Object);
+        _technologyController = new TechnologyController(_mediatorMock.Object);
     }
 
     [Fact]
@@ -60,7 +58,7 @@ public class TestTechnologyController
         _mediatorMock.Setup(x => x.Send(It.IsAny<InsertTechologyCommand>(), It.IsAny<CancellationToken>())).ReturnsAsync(5);
         var resultData = await _technologyController.InsertTechnology(new TechnologyDto());
 
-        Assert.Equal(5, ((OkObjectResult)resultData.Result!).Value);
+        Assert.Equal(5, (int)((OkObjectResult)resultData.Result!).Value!);
     }
     [Fact]
     public async Task ShouldCallTechnologyControllerAndUpdateTechnology()
@@ -68,7 +66,7 @@ public class TestTechnologyController
         _mediatorMock.Setup(x => x.Send(It.IsAny<UpdateTechologyCommand>(), It.IsAny<CancellationToken>())).ReturnsAsync(5);
         var resultData = await _technologyController.UpdateTechnology(new TechnologyDto());
 
-        Assert.Equal(5, ((OkObjectResult)resultData.Result!).Value);
+        Assert.Equal(5, (int)((OkObjectResult)resultData.Result!).Value!);
     }
 
     [Fact]
@@ -109,7 +107,7 @@ public class TestTechnologyController
         _mediatorMock.Setup(x => x.Send(It.IsAny<InsertTechologyDetailCommand>(), It.IsAny<CancellationToken>())).ReturnsAsync(5);
         var resultData = await _technologyController.InsertTechnolgyDetails(new TechnologyDetailDto());
 
-        Assert.Equal(5, ((OkObjectResult)resultData.Result!).Value);
+        Assert.Equal(5, (int)((OkObjectResult)resultData.Result!).Value!);
     }
     [Fact]
     public async Task ShouldCallTechnologyControllerAndUpdateTechnologyDetail()
@@ -117,7 +115,7 @@ public class TestTechnologyController
         _mediatorMock.Setup(x => x.Send(It.IsAny<UpdateTechologyCommand>(), It.IsAny<CancellationToken>())).ReturnsAsync(5);
         var resultData = await _technologyController.UpdateTechnology(new TechnologyDto());
 
-        Assert.Equal(5, ((OkObjectResult)resultData.Result!).Value);
+        Assert.Equal(5, (int)((OkObjectResult)resultData.Result!).Value!);
     }
 
     [Fact]

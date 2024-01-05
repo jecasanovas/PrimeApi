@@ -21,7 +21,7 @@ namespace PrimeApi.Api.Controllers
 
         [Authorize]
         [HttpGet]
-        public async Task<ActionResult<Pagination<AddressesDto>>> GetAddresses([FromQuery] SearchParamsAddresses searchParameters)
+        public async Task<ActionResult<Paginator<AddressesDto>>> GetAddresses([FromQuery] SearchParamsAddresses searchParameters)
         {
             try
             {
@@ -29,7 +29,7 @@ namespace PrimeApi.Api.Controllers
                 {
                     searchParams = searchParameters
                 });
-                return new Pagination<AddressesDto>(searchParameters.page, searchParameters.pageSize, result.Results, (IReadOnlyList<AddressesDto>)result.Dto);
+                return new Paginator<AddressesDto>(searchParameters.page, searchParameters.pageSize, result.Results, (IReadOnlyList<AddressesDto>)result.Dto);
             }
             catch (Exception ex)
             {
@@ -39,7 +39,7 @@ namespace PrimeApi.Api.Controllers
 
         [Authorize]
         [HttpPut]
-        public async Task<ActionResult<AddressDto>> UpdateAddress([FromBody] AddressesDto addressDto)
+        public async Task<ActionResult<int>> UpdateAddress([FromBody] AddressesDto addressDto)
         {
             try
             {
@@ -56,7 +56,7 @@ namespace PrimeApi.Api.Controllers
 
         [Authorize]
         [HttpPost]
-        public async Task<ActionResult> InsertAddress([FromBody] AddressesDto addressDto)
+        public async Task<ActionResult<int>> InsertAddress([FromBody] AddressesDto addressDto)
         {
             try
             {
@@ -73,7 +73,7 @@ namespace PrimeApi.Api.Controllers
 
         [Authorize]
         [HttpDelete]
-        public async Task<ActionResult> DeleteAddress([FromQuery] int id)
+        public async Task<ActionResult<bool>> DeleteAddress([FromQuery] int id)
         {
             try
             {

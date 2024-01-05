@@ -27,7 +27,7 @@ namespace Courses.Api.Controllers
 
         [HttpGet]
         [Authorize]
-        public async Task<ActionResult<Pagination<TeacherDto>>> Teacher([FromQuery] SearchParamTeachers searchParameters)
+        public async Task<ActionResult<Paginator<TeacherDto>>> Teacher([FromQuery] SearchParamTeachers searchParameters)
         {
             try
             {
@@ -36,7 +36,7 @@ namespace Courses.Api.Controllers
                     searchParams = searchParameters
                 });
 
-                return new Pagination<TeacherDto>(searchParameters.page, searchParameters.pageSize, result.Results, (IReadOnlyList<TeacherDto>)result.Dto);
+                return new Paginator<TeacherDto>(searchParameters.page, searchParameters.pageSize, result.Results, (IReadOnlyList<TeacherDto>)result.Dto);
 
             }
             catch (Exception ex)
@@ -47,7 +47,7 @@ namespace Courses.Api.Controllers
 
         [Authorize]
         [HttpPut]
-        public async Task<ActionResult<TeacherDto>> UpdateTeacher([FromBody] TeacherDto teacherDto)
+        public async Task<ActionResult<int>> UpdateTeacher([FromBody] TeacherDto teacherDto)
         {
             try
             {
@@ -64,7 +64,7 @@ namespace Courses.Api.Controllers
 
         [Authorize]
         [HttpPost]
-        public async Task<ActionResult> CreateTeacher([FromBody] TeacherDto teacherDto)
+        public async Task<ActionResult<int>> CreateTeacher([FromBody] TeacherDto teacherDto)
         {
             try
             {
@@ -81,7 +81,7 @@ namespace Courses.Api.Controllers
 
         [Authorize]
         [HttpDelete]
-        public async Task<ActionResult> DeleteTeacher([FromQuery] int id)
+        public async Task<ActionResult<bool>> DeleteTeacher([FromQuery] int id)
         {
             try
             {
@@ -106,7 +106,7 @@ namespace Courses.Api.Controllers
                 var file = Request.Form.Files[0];
                 if (file == null || file.Length == 0)
                 {
-                    return BadRequest();
+                    return NoContent();
                 }
                 var result = await _teacherService.PostFileAsync(id, Request.Form.Files[0], CancellationToken.None);
                 return Ok(_mapper.Map<TeacherDto>(result));

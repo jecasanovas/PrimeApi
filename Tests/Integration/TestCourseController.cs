@@ -52,7 +52,7 @@ public class CourseControllerTests
             page = 1,
             pageSize = 1
         });
-        var result = ((Pagination<CourseDto>)((OkObjectResult)resultData.Result!).Value!).Data[0].Name;
+        var result = ((Paginator<CourseDto>)((OkObjectResult)resultData.Result!).Value!).Data[0].Name;
 
         Assert.Equal("CourseMock", result);
     }
@@ -64,7 +64,7 @@ public class CourseControllerTests
         _mediatorMock.Setup(x => x.Send(It.IsAny<InsertCourseCommand>(), It.IsAny<CancellationToken>())).ReturnsAsync(5);
         var resultData = await _courseController.InsertCourse(new CourseDto());
 
-        Assert.Equal(5, ((OkObjectResult)resultData.Result!).Value);
+        Assert.Equal(5, (int)((OkObjectResult)resultData.Result!).Value!);
     }
     [Fact]
     public async Task ShouldCallCourseControllerAndUpdateCourse()
@@ -72,7 +72,7 @@ public class CourseControllerTests
         _mediatorMock.Setup(x => x.Send(It.IsAny<UpdateCourseCommand>(), It.IsAny<CancellationToken>())).ReturnsAsync(5);
         var resultData = await _courseController.UpdateCourse(new CourseDto());
 
-        Assert.Equal(5, ((OkObjectResult)resultData.Result!).Value);
+        Assert.Equal(5, (int)((OkObjectResult)resultData.Result!).Value!);
     }
 
     [Fact]
@@ -80,7 +80,7 @@ public class CourseControllerTests
     {
         _mediatorMock.Setup(X => X.Send(It.IsAny<DeleteCourseCommand>(), It.IsAny<CancellationToken>())).ReturnsAsync(true);
         var resultData = await _courseController.DeleteCourse(5);
-        Assert.True(resultData.Value);
+        Assert.True((bool)((OkObjectResult)resultData.Result!).Value!);
 
     }
 
@@ -106,7 +106,7 @@ public class CourseControllerTests
             page = 1,
             pageSize = 1
         });
-        var result = ((Pagination<CourseDetailDto>)((OkObjectResult)resultData.Result!).Value!).Data[0].Description;
+        var result = ((Paginator<CourseDetailDto>)((OkObjectResult)resultData.Result!).Value!).Data[0].Description;
 
         Assert.Equal("CourseDetailTest", result);
     }
@@ -118,14 +118,14 @@ public class CourseControllerTests
         _mediatorMock.Setup(x => x.Send(It.IsAny<InsertCourseDetailCommand>(), It.IsAny<CancellationToken>())).ReturnsAsync(5);
         var resultData = await _courseController.InsertCourseDetail(new CourseDetailDto());
 
-        Assert.Equal(5, ((OkObjectResult)resultData).Value);
+        Assert.Equal(5, (int)((OkObjectResult)resultData.Result!).Value!);
     }
     [Fact]
     public async Task ShouldCallCourseControllerAndUpdateCourseDetail()
     {
         _mediatorMock.Setup(x => x.Send(It.IsAny<UpdateCourseDetailCommand>(), It.IsAny<CancellationToken>())).ReturnsAsync(5);
         var resultData = await _courseController.UpdateCourseDetail(new CourseDetailDto());
-        Assert.Equal(5, ((OkObjectResult)resultData).Value);
+        Assert.Equal(5, (int)((OkObjectResult)resultData.Result!).Value!);
     }
 
     /* [Fact]
